@@ -1,0 +1,2944 @@
+/* ════════════════════════════════════════════════════════════════
+   CE JOUR-LÀ — V5
+   Design system cohérent pour livre A4
+   ════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* Palette luxe moderne */
+  --nuit: #1B2838;
+  --ardoise: #3D4F5F;
+  --taupe: #8B7D6B;
+  --gris: #A8A8A8;
+  --perle: #E8E6E3;
+  --creme: #F5F3F0;
+  --ivoire: #FFFEF9;
+  --blanc: #FFFFFF;
+  
+  /* Accents élégants */
+  --or: #BFA265;
+  --bronze: #A67C52;
+  --terracotta: #C17F59;
+  --rose: #C4A4A4;
+  --corail: #E8B4A0;
+  --foret: #2D4A3E;
+  
+  /* Typo */
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Source Sans 3', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+  
+  /* A4 strict */
+  --page-w: 210mm;
+  --page-h: 297mm;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--sans);
+  font-size: 10pt;
+  line-height: 1.5;
+  color: var(--nuit);
+  background: #9A9A9A;
+}
+
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  margin: 10mm auto;
+  background: var(--ivoire);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; page-break-after: always; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   01-affiche-journal.html
+   ═══════════════════════════════════════════════════════════ */
+    .p1 {
+      background: var(--blanc);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    
+    .p1-bandeau {
+      background: var(--nuit);
+      padding: 2mm 5mm;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 7pt;
+      color: var(--perle);
+    }
+    
+    .p1-masthead {
+      text-align: center;
+      padding: 5mm 8mm 4mm;
+      border-bottom: 3px double var(--nuit);
+      background: linear-gradient(180deg, var(--ivoire) 0%, var(--blanc) 100%);
+    }
+    
+    .p1-titre {
+      font-family: var(--serif);
+      font-size: 42pt;
+      font-weight: 900;
+      color: var(--nuit);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    
+    .p1-date-main {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--or);
+      margin-top: 2mm;
+      letter-spacing: 0.1em;
+    }
+    
+    /* Grille principale 2 colonnes égales */
+    .p1-content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 4mm;
+      gap: 4mm;
+      min-height: 0;
+      overflow: hidden;
+    }
+    
+    /* COLONNE GAUCHE */
+    .p1-left {
+      display: flex;
+      flex-direction: column;
+      gap: 3mm;
+    }
+    
+    .p1-headline {
+      font-family: var(--serif);
+      font-size: 16pt;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--nuit);
+      border-left: 4px solid var(--or);
+      padding-left: 3mm;
+    }
+    
+    .p1-chapeau {
+      font-size: 8pt;
+      line-height: 1.5;
+      color: var(--ardoise);
+    }
+    
+    .p1-image {
+      flex: 1;
+      min-height: 50mm;
+      background: var(--perle);
+      overflow: hidden;
+      border: 1px solid var(--perle);
+    }
+    
+    .p1-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .p1-caption {
+      font-size: 6pt;
+      font-style: italic;
+      color: var(--taupe);
+    }
+    
+    /* Ambiance du jour - fond crème élégant */
+    .p1-ambiance {
+      background: var(--creme);
+      padding: 4mm;
+      border: 1px solid var(--or);
+      border-radius: 2mm;
+    }
+    
+    .p1-ambiance-titre {
+      font-family: var(--mono);
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--or);
+      margin-bottom: 3mm;
+      text-align: center;
+    }
+    
+    .p1-ambiance-grid {
+      display: flex;
+      gap: 3mm;
+    }
+    
+    .p1-ambiance-item {
+      flex: 1;
+      text-align: center;
+      padding: 3mm;
+      background: var(--blanc);
+      border-radius: 2mm;
+    }
+    
+    .p1-ambiance-icon { font-size: 18pt; }
+    
+    .p1-ambiance-value {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--nuit);
+    }
+    
+    .p1-ambiance-label {
+      font-size: 6pt;
+      color: var(--taupe);
+    }
+    
+    /* COLONNE DROITE */
+    .p1-right {
+      display: flex;
+      flex-direction: column;
+      gap: 3mm;
+    }
+    
+    .p1-bloc {
+      padding: 3mm;
+      background: var(--creme);
+      border-left: 3px solid var(--or);
+    }
+    
+    .p1-bloc-titre {
+      font-family: var(--mono);
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--or);
+      margin-bottom: 2mm;
+    }
+    
+    .p1-histoire-item {
+      font-size: 7pt;
+      margin-bottom: 1.5mm;
+      line-height: 1.3;
+    }
+    
+    /* Film */
+    .p1-film-titre {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 600;
+      color: var(--nuit);
+    }
+    
+    .p1-film-desc {
+      font-size: 7pt;
+      color: var(--ardoise);
+      line-height: 1.5;
+      margin-top: 1mm;
+    }
+    
+    /* Horoscope - fond ivoire subtil, pas jaune pétant */
+    .p1-horoscope {
+      flex: 1;
+      background: var(--ivoire);
+      padding: 4mm;
+      border: 1px solid var(--or);
+      border-radius: 2mm;
+    }
+    
+    .p1-horoscope .p1-bloc-titre {
+      color: var(--or);
+    }
+    
+    .p1-horoscope-signe {
+      font-family: var(--serif);
+      font-size: 14pt;
+      font-weight: 700;
+      color: var(--nuit);
+      margin-bottom: 2mm;
+    }
+    
+    .p1-horoscope-txt {
+      font-size: 8pt;
+      line-height: 1.6;
+      color: var(--ardoise);
+      font-style: italic;
+    }
+    
+    /* NASA - plus grand */
+    .p1-nasa {
+      background: var(--nuit);
+      padding: 3mm;
+      display: grid;
+      grid-template-columns: 40mm 1fr;
+      gap: 3mm;
+      align-items: center;
+      border-radius: 2mm;
+    }
+    
+    .p1-nasa-img {
+      height: 35mm;
+      overflow: hidden;
+      border-radius: 1mm;
+    }
+    
+    .p1-nasa-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .p1-nasa-content {}
+    
+    .p1-nasa-titre {
+      color: var(--or);
+      font-family: var(--mono);
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2mm;
+    }
+    
+    .p1-nasa-caption {
+      color: var(--perle);
+      font-size: 7pt;
+      line-height: 1.5;
+    }
+    
+    .p1-footer {
+      background: var(--nuit);
+      color: var(--blanc);
+      padding: 4mm 5mm;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2mm;
+    }
+    
+    .p1-footer-txt {
+      font-size: 9pt;
+      font-family: var(--serif);
+    }
+    
+    .p1-footer-num {
+      font-family: var(--serif);
+      font-size: 16pt;
+      font-weight: 700;
+      color: var(--or);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   02-carte-identite.html
+   ═══════════════════════════════════════════════════════════ */
+    .p2 {
+      background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%);
+      padding: 5mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p2-card {
+      flex: 1;
+      border: 2px solid var(--or);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: linear-gradient(135deg, rgba(191,162,101,0.03) 0%, transparent 50%, rgba(191,162,101,0.03) 100%);
+      overflow: hidden;
+    }
+    
+    /* Coins décoratifs */
+    .p2-corner {
+      position: absolute;
+      width: 12mm;
+      height: 12mm;
+      border: 2px solid var(--or);
+    }
+    .p2-corner-tl { top: 3mm; left: 3mm; border-right: none; border-bottom: none; }
+    .p2-corner-tr { top: 3mm; right: 3mm; border-left: none; border-bottom: none; }
+    .p2-corner-bl { bottom: 3mm; left: 3mm; border-right: none; border-top: none; }
+    .p2-corner-br { bottom: 3mm; right: 3mm; border-left: none; border-top: none; }
+    
+    /* Header */
+    .p2-header {
+      text-align: center;
+      padding: 5mm 8mm 4mm;
+      border-bottom: 1px solid rgba(191,162,101,0.3);
+    }
+    
+    .p2-stars {
+      color: var(--or);
+      font-size: 11pt;
+      letter-spacing: 0.3em;
+      margin-bottom: 2mm;
+      text-shadow: 0 0 10px rgba(191,162,101,0.5);
+    }
+    
+    .p2-rank {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--or);
+      margin-bottom: 2mm;
+    }
+    
+    .p2-name {
+      font-family: var(--serif);
+      font-size: 38pt;
+      font-weight: 700;
+      color: var(--blanc);
+      line-height: 1;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 30px rgba(191,162,101,0.3);
+    }
+    
+    .p2-birth {
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: var(--perle);
+      margin-top: 2mm;
+    }
+    
+    /* Corps principal */
+    .p2-body {
+      flex: 1;
+      display: flex;
+      gap: 5mm;
+      padding: 5mm 6mm;
+      overflow: hidden;
+    }
+    
+    /* Colonne gauche : Avatar + Stats */
+    .p2-left {
+      width: 75mm;
+      display: flex;
+      flex-direction: column;
+      gap: 3mm;
+      flex-shrink: 0;
+    }
+    
+    .p2-avatar-frame {
+      flex: 1;
+      border: 3px solid var(--or);
+      background: linear-gradient(135deg, var(--nuit) 0%, #243447 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 60mm;
+    }
+    
+    .p2-avatar-frame::before {
+      content: '';
+      position: absolute;
+      inset: 2mm;
+      border: 1px solid rgba(191,162,101,0.3);
+    }
+    
+    .p2-initiale {
+      font-family: var(--serif);
+      font-size: 72pt;
+      font-weight: 700;
+      color: var(--or);
+      opacity: 0.5;
+      text-shadow: 0 0 40px rgba(191,162,101,0.4);
+    }
+    
+    .p2-level {
+      background: linear-gradient(135deg, var(--or) 0%, #D4AF37 100%);
+      color: var(--nuit);
+      padding: 2mm 4mm;
+      font-family: var(--mono);
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: center;
+    }
+    
+    /* Stats barres */
+    .p2-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm;
+    }
+    
+    .p2-stat-box {
+      background: rgba(191,162,101,0.1);
+      padding: 2mm 3mm;
+      border: 1px solid rgba(191,162,101,0.2);
+    }
+    
+    .p2-stat-label {
+      font-family: var(--mono);
+      font-size: 6pt;
+      color: var(--or);
+      text-transform: uppercase;
+      margin-bottom: 1mm;
+    }
+    
+    .p2-stat-bar {
+      height: 4mm;
+      background: rgba(255,255,255,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .p2-stat-bar::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, var(--or), var(--corail));
+    }
+    
+    .p2-stat-box:nth-child(1) .p2-stat-bar::after { width: 95%; }
+    .p2-stat-box:nth-child(2) .p2-stat-bar::after { width: 88%; }
+    .p2-stat-box:nth-child(3) .p2-stat-bar::after { width: 100%; }
+    .p2-stat-box:nth-child(4) .p2-stat-bar::after { width: 92%; }
+    
+    /* Colonne droite : Traits */
+    .p2-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+      min-width: 0;
+    }
+    
+    .p2-traits-title {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--or);
+      padding-bottom: 2mm;
+      border-bottom: 1px solid rgba(191,162,101,0.3);
+    }
+    
+    .p2-trait {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      padding: 3mm;
+      background: rgba(255,255,255,0.02);
+      border-left: 3px solid;
+    }
+    
+    .p2-trait:nth-child(2) { border-left-color: var(--or); }
+    .p2-trait:nth-child(3) { border-left-color: var(--corail); }
+    .p2-trait:nth-child(4) { border-left-color: var(--rose); }
+    .p2-trait:nth-child(5) { border-left-color: var(--bronze); }
+    
+    .p2-trait-icon {
+      width: 10mm;
+      height: 10mm;
+      background: rgba(255,255,255,0.05);
+      border-radius: 2mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14pt;
+      flex-shrink: 0;
+    }
+    
+    .p2-trait-content {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    .p2-trait-label {
+      font-family: var(--mono);
+      font-size: 6pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(191,162,101,0.8);
+      margin-bottom: 1mm;
+    }
+    
+    .p2-trait-value {
+      font-family: var(--serif);
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--blanc);
+    }
+    
+    /* Pouvoir spécial */
+    .p2-power {
+      margin-top: auto;
+      background: linear-gradient(135deg, rgba(191,162,101,0.15) 0%, rgba(191,162,101,0.05) 100%);
+      padding: 4mm;
+      border: 1px solid rgba(191,162,101,0.3);
+      text-align: center;
+    }
+    
+    .p2-power-label {
+      font-family: var(--mono);
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--or);
+      margin-bottom: 2mm;
+    }
+    
+    .p2-power-name {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--or);
+    }
+    
+    /* Footer devise */
+    .p2-footer {
+      padding: 4mm 8mm;
+      text-align: center;
+      border-top: 1px solid rgba(191,162,101,0.3);
+    }
+    
+    .p2-ornament {
+      color: var(--or);
+      font-size: 9pt;
+      letter-spacing: 0.5em;
+      margin-bottom: 2mm;
+    }
+    
+    .p2-motto {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-style: italic;
+      color: var(--blanc);
+    }
+    
+    .p2-num {
+      position: absolute;
+      bottom: 5mm;
+      right: 8mm;
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: rgba(191,162,101,0.5);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   03-chronique.html
+   ═══════════════════════════════════════════════════════════ */
+    .p3 {
+      background: var(--ivoire);
+      padding: 10mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .p3-cadre {
+      width: 100%;
+      height: 100%;
+      padding: 8mm 12mm;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--taupe);
+    }
+    
+    /* Double bordure */
+    .p3-cadre::before {
+      content: '';
+      position: absolute;
+      inset: 2mm;
+      border: 1px solid var(--or);
+    }
+    
+    /* Coins décoratifs */
+    .p3-coin {
+      position: absolute;
+      font-size: 14pt;
+      color: var(--or);
+    }
+    .p3-coin-tl { top: 3mm; left: 5mm; }
+    .p3-coin-tr { top: 3mm; right: 5mm; }
+    .p3-coin-bl { bottom: 3mm; left: 5mm; }
+    .p3-coin-br { bottom: 3mm; right: 5mm; }
+    
+    .p3-header {
+      text-align: center;
+      margin-bottom: 5mm;
+      padding-bottom: 5mm;
+      border-bottom: 1px solid var(--or);
+    }
+    
+    .p3-ornament {
+      color: var(--or);
+      font-size: 10pt;
+      letter-spacing: 0.5em;
+      margin-bottom: 3mm;
+    }
+    
+    .p3-surtitle {
+      font-family: var(--mono);
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--taupe);
+      margin-bottom: 2mm;
+    }
+    
+    .p3-titre {
+      font-family: var(--serif);
+      font-size: 24pt;
+      font-weight: 700;
+      color: var(--nuit);
+      line-height: 1.2;
+    }
+    
+    .p3-date {
+      font-family: var(--serif);
+      font-size: 10pt;
+      font-style: italic;
+      color: var(--taupe);
+      margin-top: 2mm;
+    }
+    
+    .p3-sep {
+      width: 40mm;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 3mm auto 0;
+    }
+    
+    .p3-body {
+      flex: 1;
+      column-count: 2;
+      column-gap: 8mm;
+      overflow: hidden;
+    }
+    
+    .p3-texte {
+      font-size: 9.5pt;
+      line-height: 1.8;
+      text-align: justify;
+      color: var(--nuit);
+    }
+    
+    .p3-lettrine {
+      font-family: var(--serif);
+      font-size: 48pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.85;
+      margin-right: 3mm;
+      margin-top: 2mm;
+      color: var(--or);
+    }
+    
+    .p3-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4mm;
+      margin-top: 4mm;
+      border-top: 1px solid var(--perle);
+    }
+    
+    .p3-footer-left {
+      font-family: var(--serif);
+      font-size: 8pt;
+      color: var(--taupe);
+    }
+    
+    .p3-footer-center {
+      color: var(--or);
+      font-size: 8pt;
+    }
+    
+    .p3-footer-right {
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   04-moodboard.html
+   ═══════════════════════════════════════════════════════════ */
+    .p4 {
+      background: var(--bronze);
+      padding: 5mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p4-header {
+      background: linear-gradient(135deg, var(--nuit) 0%, #2a3a4a 100%);
+      padding: 5mm 8mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3mm;
+    }
+    
+    .p4-annee {
+      font-family: var(--serif);
+      font-size: 42pt;
+      font-weight: 900;
+      color: var(--ivoire);
+      line-height: 1;
+    }
+    
+    .p4-title-zone {
+      text-align: right;
+    }
+    
+    .p4-title {
+      font-family: var(--serif);
+      font-size: 20pt;
+      font-weight: 600;
+      color: var(--or);
+    }
+    
+    .p4-subtitle {
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: var(--perle);
+      margin-top: 1mm;
+    }
+    
+    /* Grille principale */
+    .p4-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+      gap: 3mm;
+    }
+    
+    .p4-card {
+      background: var(--ivoire);
+      padding: 3mm;
+      position: relative;
+    }
+    
+    .p4-card-titre {
+      font-family: var(--mono);
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--or);
+      margin-bottom: 2mm;
+      padding-bottom: 1mm;
+      border-bottom: 1px solid var(--perle);
+    }
+    
+    /* Grande image */
+    .p4-grande-image {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+    
+    .p4-image {
+      height: 60mm;
+      background: var(--perle);
+      margin-bottom: 2mm;
+      overflow: hidden;
+    }
+    
+    .p4-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .p4-image-caption {
+      font-size: 7pt;
+      font-style: italic;
+      color: var(--taupe);
+      text-align: center;
+    }
+    
+    /* Culture */
+    .p4-culture {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    
+    .p4-culture-item {
+      font-size: 8pt;
+      margin-bottom: 2mm;
+      line-height: 1.3;
+    }
+    
+    .p4-culture-item span {
+      color: var(--taupe);
+    }
+    
+    /* Chanson - CENTRÉE */
+    .p4-chanson {
+      grid-column: 3;
+      grid-row: 1;
+      background: var(--nuit);
+      color: var(--blanc);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .p4-chanson .p4-card-titre { 
+      color: var(--or); 
+      border-bottom-color: rgba(191,162,101,0.3);
+      width: 100%;
+    }
+    
+    .p4-chanson-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .p4-chanson-titre {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 600;
+      color: var(--or);
+    }
+    
+    .p4-chanson-artiste {
+      font-size: 8pt;
+      color: var(--perle);
+      font-style: italic;
+      margin-top: 2mm;
+    }
+    
+    /* Image 2 */
+    .p4-image2 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    
+    /* Événements */
+    .p4-events {
+      grid-column: 3;
+      grid-row: 2;
+    }
+    
+    .p4-event-item {
+      font-size: 7pt;
+      margin-bottom: 2mm;
+      padding-left: 3mm;
+      border-left: 2px solid var(--or);
+    }
+    
+    /* Enfance avec emojis */
+    .p4-enfance {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    
+    .p4-enfance-item {
+      font-size: 7pt;
+      margin-bottom: 2mm;
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+    
+    .p4-enfance-icon { font-size: 10pt; }
+    
+    /* Image 3 */
+    .p4-image3 {
+      grid-column: 2;
+      grid-row: 3;
+    }
+    
+    /* Chiffres */
+    .p4-chiffres {
+      grid-column: 3;
+      grid-row: 3;
+    }
+    
+    .p4-chiffre-item {
+      font-size: 7pt;
+      margin-bottom: 2mm;
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+    
+    .p4-chiffre-icon {
+      width: 5mm;
+      height: 5mm;
+      background: var(--or);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6pt;
+      color: var(--blanc);
+    }
+    
+    /* Bottom : Célébrité + Prix */
+    .p4-bottom {
+      grid-column: 1 / 4;
+      grid-row: 4;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 3mm;
+      background: transparent;
+      padding: 0;
+    }
+    
+    .p4-celebrite {
+      background: var(--or);
+      padding: 4mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .p4-celebrite-label {
+      font-family: var(--mono);
+      font-size: 7pt;
+      text-transform: uppercase;
+      color: var(--nuit);
+      opacity: 0.7;
+    }
+    
+    .p4-celebrite-nom {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--nuit);
+      margin-top: 1mm;
+    }
+    
+    /* Prix */
+    .p4-prix {
+      background: var(--ivoire);
+      padding: 4mm;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    .p4-prix-item {
+      text-align: center;
+    }
+    
+    .p4-prix-icon {
+      font-size: 16pt;
+      margin-bottom: 2mm;
+    }
+    
+    .p4-prix-value {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--nuit);
+    }
+    
+    .p4-prix-label {
+      font-family: var(--mono);
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--nuit);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .p4-num {
+      position: absolute;
+      bottom: 3mm;
+      right: 5mm;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--ivoire);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   05-nostalgie.html
+   ═══════════════════════════════════════════════════════════ */
+    .p5 {
+      background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%);
+      padding: 5mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p5-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4mm;
+      padding-bottom: 3mm;
+      border-bottom: 3px solid var(--nuit);
+      position: relative;
+    }
+    
+    .p5-header::after {
+      content: '✦';
+      position: absolute;
+      bottom: -7pt;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--creme);
+      padding: 0 3mm;
+      color: var(--or);
+      font-size: 9pt;
+    }
+    
+    .p5-titre {
+      font-family: var(--serif);
+      font-size: 24pt;
+      font-weight: 700;
+      color: var(--nuit);
+    }
+    
+    .p5-age {
+      font-family: var(--serif);
+      font-size: 12pt;
+      color: var(--or);
+      font-style: italic;
+      background: var(--nuit);
+      padding: 2mm 5mm;
+      color: var(--or);
+    }
+    
+    /* Journée - prend plus d'espace */
+    .p5-journee {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+      margin-bottom: 4mm;
+      flex: 1;
+    }
+    
+    .p5-moment {
+      background: var(--blanc);
+      padding: 4mm;
+      display: flex;
+      flex-direction: column;
+      border-radius: 2mm;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Bande colorée en haut */
+    .p5-moment::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3mm;
+    }
+    
+    .p5-moment:nth-child(1)::before { background: linear-gradient(90deg, var(--or), var(--corail)); }
+    .p5-moment:nth-child(2)::before { background: linear-gradient(90deg, var(--corail), var(--rose)); }
+    .p5-moment:nth-child(3)::before { background: linear-gradient(90deg, var(--rose), var(--nuit)); }
+    
+    .p5-moment-header {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+      margin-bottom: 3mm;
+      margin-top: 1mm;
+      padding-bottom: 2mm;
+      border-bottom: 1px solid var(--perle);
+    }
+    
+    .p5-moment-icon {
+      width: 12mm;
+      height: 12mm;
+      background: var(--nuit);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14pt;
+    }
+    
+    .p5-moment-label {
+      font-family: var(--serif);
+      font-size: 13pt;
+      font-weight: 600;
+      color: var(--nuit);
+    }
+    
+    .p5-moment-txt {
+      flex: 1;
+      font-size: 9pt;
+      line-height: 1.7;
+      color: var(--ardoise);
+    }
+    
+    /* Catégories */
+    .p5-categories {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2mm;
+      margin-bottom: 4mm;
+    }
+    
+    .p5-cat {
+      background: var(--blanc);
+      padding: 3mm;
+      border-radius: 2mm;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      position: relative;
+    }
+    
+    .p5-cat::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      border-radius: 2mm 0 0 2mm;
+    }
+    
+    .p5-cat:nth-child(1)::before { background: var(--or); }
+    .p5-cat:nth-child(2)::before { background: var(--corail); }
+    .p5-cat:nth-child(3)::before { background: var(--rose); }
+    .p5-cat:nth-child(4)::before { background: var(--bronze); }
+    .p5-cat:nth-child(5)::before { background: var(--nuit); }
+    .p5-cat:nth-child(6)::before { background: var(--or); }
+    
+    .p5-cat-titre {
+      font-family: var(--mono);
+      font-size: 6pt;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--or);
+      margin-bottom: 1.5mm;
+    }
+    
+    .p5-cat-list {
+      font-size: 7pt;
+      line-height: 1.5;
+      color: var(--ardoise);
+    }
+    
+    /* Expressions - PLUS GRAND pour 2 lignes */
+    .p5-expressions {
+      background: var(--nuit);
+      padding: 5mm 6mm;
+      border-radius: 2mm;
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      flex-wrap: wrap;
+    }
+    
+    .p5-exp-label {
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: var(--or);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+    
+    .p5-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3mm;
+      flex: 1;
+    }
+    
+    .p5-tag {
+      background: var(--blanc);
+      padding: 2.5mm 5mm;
+      border-radius: 8mm;
+      font-size: 8pt;
+      color: var(--nuit);
+      font-weight: 500;
+    }
+    
+    .p5-num {
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+      margin-top: 2mm;
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   06-timeline.html
+   ═══════════════════════════════════════════════════════════ */
+    .p6 {
+      background: linear-gradient(180deg, var(--ivoire) 0%, var(--creme) 100%);
+      padding: 5mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p6-header {
+      text-align: center;
+      margin-bottom: 3mm;
+    }
+    
+    .p6-ornament {
+      color: var(--or);
+      font-size: 10pt;
+      letter-spacing: 0.3em;
+    }
+    
+    .p6-titre {
+      font-family: var(--serif);
+      font-size: 24pt;
+      font-weight: 700;
+      color: var(--nuit);
+      margin: 2mm 0;
+    }
+    
+    .p6-subtitle {
+      font-family: var(--mono);
+      font-size: 7pt;
+      color: var(--taupe);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    
+    /* Timeline container */
+    .p6-timeline {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 0 5mm;
+    }
+    
+    /* Ligne centrale */
+    .p6-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(
+        180deg,
+        var(--or) 0%,
+        var(--corail) 25%,
+        var(--rose) 50%,
+        var(--bronze) 75%,
+        var(--or) 100%
+      );
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    
+    .p6-events {
+      display: flex;
+      flex-direction: column;
+      gap: 2mm;
+      position: relative;
+    }
+    
+    /* Event row */
+    .p6-event {
+      display: grid;
+      grid-template-columns: 1fr 14mm 1fr;
+      align-items: center;
+      gap: 2mm;
+    }
+    
+    /* Card */
+    .p6-event-card {
+      background: var(--blanc);
+      padding: 3mm;
+      border-radius: 2mm;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    
+    /* Alternance : impair = gauche, pair = droite */
+    .p6-event:nth-child(odd) .p6-event-card {
+      grid-column: 1;
+      text-align: right;
+      border-right: 4px solid;
+    }
+    
+    .p6-event:nth-child(even) .p6-event-card {
+      grid-column: 3;
+      text-align: left;
+      border-left: 4px solid;
+    }
+    
+    /* Couleurs alternées */
+    .p6-event:nth-child(1) .p6-event-card { border-color: var(--or); }
+    .p6-event:nth-child(2) .p6-event-card { border-color: var(--corail); }
+    .p6-event:nth-child(3) .p6-event-card { border-color: var(--rose); }
+    .p6-event:nth-child(4) .p6-event-card { border-color: var(--bronze); }
+    .p6-event:nth-child(5) .p6-event-card { border-color: var(--nuit); }
+    .p6-event:nth-child(6) .p6-event-card { border-color: var(--or); }
+    
+    /* Dot au centre */
+    .p6-event-dot {
+      grid-column: 2;
+      grid-row: 1;
+      width: 12mm;
+      height: 12mm;
+      background: var(--blanc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11pt;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 1;
+      border: 3px solid;
+      justify-self: center;
+    }
+    
+    .p6-event:nth-child(1) .p6-event-dot { border-color: var(--or); }
+    .p6-event:nth-child(2) .p6-event-dot { border-color: var(--corail); }
+    .p6-event:nth-child(3) .p6-event-dot { border-color: var(--rose); }
+    .p6-event:nth-child(4) .p6-event-dot { border-color: var(--bronze); }
+    .p6-event:nth-child(5) .p6-event-dot { border-color: var(--nuit); }
+    .p6-event:nth-child(6) .p6-event-dot { border-color: var(--or); }
+    
+    .p6-event-annee {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--or);
+    }
+    
+    .p6-event-titre {
+      font-family: var(--serif);
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--nuit);
+      margin-top: 1mm;
+    }
+    
+    .p6-event-cat {
+      font-family: var(--mono);
+      font-size: 5pt;
+      color: var(--taupe);
+      text-transform: uppercase;
+      margin-top: 1mm;
+    }
+    
+    /* ENCART SÉPARATEUR */
+    .p6-separator {
+      margin: 4mm 0;
+      padding: 3mm;
+      background: var(--nuit);
+      text-align: center;
+      position: relative;
+    }
+    
+    .p6-separator-text {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--or);
+    }
+    
+    .p6-separator::before,
+    .p6-separator::after {
+      content: '✦';
+      color: var(--or);
+      margin: 0 3mm;
+      font-size: 8pt;
+    }
+    
+    /* Sections Culture et Sport */
+    .p6-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+    
+    .p6-section {
+      background: var(--blanc);
+      padding: 4mm;
+      border-radius: 2mm;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    
+    .p6-section-culture {
+      border-top: 4px solid var(--or);
+    }
+    
+    .p6-section-sport {
+      border-top: 4px solid var(--corail);
+    }
+    
+    .p6-section-titre {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--or);
+      margin-bottom: 3mm;
+    }
+    
+    .p6-section-sport .p6-section-titre {
+      color: var(--corail);
+    }
+    
+    .p6-section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm;
+    }
+    
+    .p6-section-item {
+      padding: 2mm;
+      background: var(--creme);
+      border-radius: 1mm;
+    }
+    
+    .p6-section-item-label {
+      font-family: var(--mono);
+      font-size: 5pt;
+      color: var(--taupe);
+      text-transform: uppercase;
+    }
+    
+    .p6-section-item-value {
+      font-size: 8pt;
+      font-weight: 500;
+      color: var(--nuit);
+      margin-top: 1mm;
+    }
+    
+    .p6-num {
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+      margin-top: 2mm;
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   07-fiction.html
+   ═══════════════════════════════════════════════════════════ */
+    .p7 {
+      background: var(--nuit);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Image plus petite */
+    .p7-hero {
+      height: 60mm;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .p7-hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .p7-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(27,40,56,0) 0%,
+        rgba(27,40,56,0.5) 50%,
+        rgba(27,40,56,1) 100%
+      );
+    }
+    
+    /* Titre sur l'image */
+    .p7-titre-zone {
+      position: absolute;
+      bottom: 5mm;
+      left: 8mm;
+      right: 8mm;
+    }
+    
+    .p7-label {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--nuit);
+      background: var(--or);
+      padding: 2mm 4mm;
+      margin-bottom: 3mm;
+    }
+    
+    .p7-titre {
+      font-family: var(--serif);
+      font-size: 26pt;
+      font-weight: 700;
+      color: var(--blanc);
+      line-height: 1.1;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    
+    /* Contenu - plus grand */
+    .p7-content {
+      flex: 1;
+      padding: 6mm 10mm 8mm;
+      display: flex;
+      flex-direction: column;
+      background: var(--ivoire);
+      position: relative;
+    }
+    
+    /* Coins décoratifs */
+    .p7-content::before {
+      content: '❧';
+      position: absolute;
+      top: 4mm;
+      left: 6mm;
+      color: var(--or);
+      font-size: 14pt;
+    }
+    
+    .p7-content::after {
+      content: '☙';
+      position: absolute;
+      top: 4mm;
+      right: 6mm;
+      color: var(--or);
+      font-size: 14pt;
+    }
+    
+    .p7-accroche {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-style: italic;
+      color: var(--ardoise);
+      text-align: center;
+      padding: 3mm 10mm;
+      margin-bottom: 4mm;
+      border-bottom: 1px solid var(--or);
+      position: relative;
+    }
+    
+    .p7-accroche::after {
+      content: '✦';
+      position: absolute;
+      bottom: -6pt;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ivoire);
+      padding: 0 3mm;
+      color: var(--or);
+    }
+    
+    .p7-body {
+      flex: 1;
+      column-count: 2;
+      column-gap: 8mm;
+    }
+    
+    .p7-texte {
+      font-size: 9.5pt;
+      line-height: 1.85;
+      text-align: justify;
+      color: var(--nuit);
+    }
+    
+    .p7-texte::first-letter {
+      font-family: var(--serif);
+      font-size: 48pt;
+      font-weight: 700;
+      float: left;
+      line-height: 0.8;
+      margin-right: 3mm;
+      margin-top: 3mm;
+      color: var(--or);
+    }
+    
+    /* Footer */
+    .p7-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 4mm;
+      margin-top: 4mm;
+      border-top: 1px solid var(--perle);
+    }
+    
+    .p7-genre {
+      font-family: var(--mono);
+      font-size: 8pt;
+      padding: 2mm 5mm;
+      background: var(--nuit);
+      color: var(--or);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .p7-caption {
+      font-size: 7pt;
+      font-style: italic;
+      color: var(--taupe);
+    }
+    
+    .p7-num {
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   08-miroir.html
+   ═══════════════════════════════════════════════════════════ */
+    .p8 {
+      background: var(--nuit);
+      padding: 15mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .p8-cadre {
+      width: 100%;
+      height: 100%;
+      background: var(--ivoire);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20mm;
+    }
+    
+    /* Bordure dorée multiple */
+    .p8-cadre::before {
+      content: '';
+      position: absolute;
+      inset: 5mm;
+      border: 2px solid var(--or);
+    }
+    
+    .p8-cadre::after {
+      content: '';
+      position: absolute;
+      inset: 8mm;
+      border: 1px solid var(--bronze);
+    }
+    
+    /* Coins décoratifs */
+    .p8-coin {
+      position: absolute;
+      width: 15mm;
+      height: 15mm;
+      color: var(--or);
+      font-size: 14pt;
+    }
+    
+    .p8-coin-tl { top: 10mm; left: 10mm; }
+    .p8-coin-tr { top: 10mm; right: 10mm; }
+    .p8-coin-bl { bottom: 10mm; left: 10mm; }
+    .p8-coin-br { bottom: 10mm; right: 10mm; }
+    
+    .p8-content {
+      max-width: 140mm;
+      text-align: center;
+    }
+    
+    .p8-ornament {
+      color: var(--or);
+      font-size: 16pt;
+      letter-spacing: 0.8em;
+      margin-bottom: 8mm;
+    }
+    
+    .p8-titre {
+      font-family: var(--serif);
+      font-size: 20pt;
+      font-weight: 600;
+      color: var(--nuit);
+      margin-bottom: 6mm;
+      letter-spacing: 0.15em;
+    }
+    
+    .p8-sep {
+      width: 60mm;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 0 auto 10mm;
+    }
+    
+    .p8-texte {
+      font-family: var(--serif);
+      font-size: 14pt;
+      font-style: italic;
+      line-height: 2.4;
+      color: var(--nuit);
+    }
+    
+    .p8-sep2 {
+      width: 60mm;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 10mm auto 6mm;
+    }
+    
+    .p8-signature {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--taupe);
+    }
+    
+    .p8-ornament2 {
+      color: var(--or);
+      font-size: 16pt;
+      letter-spacing: 0.8em;
+      margin-top: 8mm;
+    }
+    
+    .p8-num {
+      position: absolute;
+      bottom: 12mm;
+      right: 15mm;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   09-journee.html
+   ═══════════════════════════════════════════════════════════ */
+    .p9 {
+      background: var(--ivoire);
+      padding: 10mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p9-header {
+      text-align: center;
+      padding: 6mm;
+      background: var(--or);
+      color: var(--blanc);
+      margin-bottom: 5mm;
+    }
+    
+    .p9-annee {
+      font-family: var(--serif);
+      font-size: 48pt;
+      font-weight: 900;
+      line-height: 1;
+    }
+    
+    .p9-titre {
+      font-size: 12pt;
+      margin-top: 2mm;
+      opacity: 0.9;
+    }
+    
+    .p9-moments {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+    }
+    
+    .p9-moment {
+      flex: 1;
+      display: flex;
+      border: 1px solid var(--argent);
+      background: var(--blanc);
+    }
+    
+    .p9-heure {
+      width: 50mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4mm;
+      border-right: 1px solid var(--argent);
+    }
+    
+    .p9-matin .p9-heure { background: #FEF9E7; }
+    .p9-midi .p9-heure { background: #FEF5E7; }
+    .p9-aprem .p9-heure { background: #FDEBD0; }
+    .p9-soir .p9-heure { background: #F8E6D5; }
+    
+    .p9-heure-icon {
+      font-size: 28pt;
+    }
+    
+    .p9-heure-label {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--or);
+      margin-top: 2mm;
+    }
+    
+    .p9-contenu {
+      flex: 1;
+      padding: 4mm 5mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .p9-texte {
+      font-size: 10pt;
+      line-height: 1.6;
+      color: var(--nuit);
+      margin-bottom: 3mm;
+    }
+    
+    .p9-sensory {
+      font-size: 9pt;
+      font-style: italic;
+      color: var(--gris);
+      padding-left: 4mm;
+      border-left: 2px solid var(--or);
+    }
+    
+    .p9-footer {
+      background: var(--perle);
+      padding: 4mm;
+      text-align: center;
+      font-size: 9pt;
+      color: var(--gris);
+      font-style: italic;
+    }
+    
+    .p9-num {
+      font-family: var(--mono);
+      margin-top: 2mm;
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   10-stats.html
+   ═══════════════════════════════════════════════════════════ */
+    .p10 {
+      background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%);
+      padding: 6mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p10-header {
+      text-align: center;
+      margin-bottom: 4mm;
+    }
+    
+    .p10-ornament {
+      color: var(--or);
+      font-size: 10pt;
+      letter-spacing: 0.5em;
+    }
+    
+    .p10-titre {
+      font-family: var(--serif);
+      font-size: 26pt;
+      font-weight: 700;
+      color: var(--nuit);
+      margin: 2mm 0;
+    }
+    
+    .p10-sep {
+      width: 50mm;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 0 auto;
+    }
+    
+    .p10-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+    }
+    
+    /* Temps vécu - bandeau impactant */
+    .p10-temps {
+      display: flex;
+      justify-content: center;
+      gap: 4mm;
+      padding: 4mm;
+      background: var(--nuit);
+      border-radius: 2mm;
+    }
+    
+    .p10-temps-item {
+      text-align: center;
+      padding: 3mm 6mm;
+      flex: 1;
+    }
+    
+    .p10-temps-value {
+      font-family: var(--serif);
+      font-size: 18pt;
+      font-weight: 700;
+      color: var(--or);
+    }
+    
+    .p10-temps-label {
+      font-family: var(--mono);
+      font-size: 6pt;
+      color: var(--perle);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 1mm;
+    }
+    
+    /* Stats personnelles - cards élégantes */
+    .p10-perso {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+    }
+    
+    .p10-stat {
+      background: var(--blanc);
+      padding: 4mm;
+      text-align: center;
+      border-radius: 2mm;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid;
+    }
+    
+    .p10-stat:nth-child(1) { border-bottom-color: var(--or); }
+    .p10-stat:nth-child(2) { border-bottom-color: var(--corail); }
+    .p10-stat:nth-child(3) { border-bottom-color: var(--rose); }
+    .p10-stat:nth-child(4) { border-bottom-color: var(--bronze); }
+    .p10-stat:nth-child(5) { border-bottom-color: var(--nuit); }
+    .p10-stat:nth-child(6) { border-bottom-color: var(--or); }
+    
+    .p10-stat-icon {
+      font-size: 22pt;
+      margin-bottom: 2mm;
+    }
+    
+    .p10-stat-value {
+      font-family: var(--serif);
+      font-size: 13pt;
+      font-weight: 700;
+      color: var(--nuit);
+    }
+    
+    .p10-stat-label {
+      font-family: var(--mono);
+      font-size: 6pt;
+      color: var(--taupe);
+      text-transform: uppercase;
+      margin-top: 1mm;
+    }
+    
+    /* Prix d'époque - style vintage */
+    .p10-prix {
+      background: var(--blanc);
+      padding: 4mm;
+      border-radius: 2mm;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border-left: 4px solid var(--or);
+    }
+    
+    .p10-prix-titre {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--or);
+      text-align: center;
+      margin-bottom: 3mm;
+    }
+    
+    .p10-prix-grid {
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    .p10-prix-item {
+      text-align: center;
+      padding: 2mm 4mm;
+    }
+    
+    .p10-prix-icon {
+      font-size: 20pt;
+      margin-bottom: 2mm;
+    }
+    
+    .p10-prix-value {
+      font-family: var(--serif);
+      font-size: 13pt;
+      font-weight: 700;
+      color: var(--nuit);
+    }
+    
+    .p10-prix-label {
+      font-family: var(--mono);
+      font-size: 6pt;
+      color: var(--taupe);
+      text-transform: uppercase;
+    }
+    
+    /* Le monde - 2x3 grid bien rempli */
+    .p10-monde {
+      flex: 1;
+      background: var(--nuit);
+      padding: 5mm;
+      border-radius: 2mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p10-monde-titre {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--or);
+      text-align: center;
+      margin-bottom: 4mm;
+    }
+    
+    .p10-monde-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+      gap: 3mm;
+    }
+    
+    .p10-monde-item {
+      text-align: center;
+      padding: 4mm;
+      background: rgba(255,255,255,0.05);
+      border-radius: 2mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .p10-monde-value {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--or);
+    }
+    
+    .p10-monde-label {
+      font-family: var(--mono);
+      font-size: 6pt;
+      color: var(--perle);
+      text-transform: uppercase;
+      margin-top: 2mm;
+    }
+    
+    .p10-num {
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+      margin-top: 2mm;
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   11-message.html
+   ═══════════════════════════════════════════════════════════ */
+    .p11 {
+      background: linear-gradient(135deg, var(--creme) 0%, var(--perle) 100%);
+      padding: 10mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    /* Motif décoratif en fond */
+    .p11::before {
+      content: '✦';
+      position: absolute;
+      top: 15mm;
+      left: 15mm;
+      font-size: 60pt;
+      color: rgba(191,162,101,0.05);
+    }
+    
+    .p11::after {
+      content: '✦';
+      position: absolute;
+      bottom: 15mm;
+      right: 15mm;
+      font-size: 60pt;
+      color: rgba(191,162,101,0.05);
+    }
+    
+    .p11-lettre {
+      width: 100%;
+      max-width: 165mm;
+      background: var(--blanc);
+      padding: 12mm 15mm;
+      position: relative;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+      border-radius: 2mm;
+    }
+    
+    /* Bordure gauche décorative */
+    .p11-lettre::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5mm;
+      background: linear-gradient(180deg, var(--or) 0%, var(--corail) 50%, var(--rose) 100%);
+      border-radius: 2mm 0 0 2mm;
+    }
+    
+    /* Coins dorés */
+    .p11-coin {
+      position: absolute;
+      width: 10mm;
+      height: 10mm;
+      border: 2px solid var(--or);
+    }
+    
+    .p11-coin-tl { top: 8mm; left: 10mm; border-right: none; border-bottom: none; }
+    .p11-coin-tr { top: 8mm; right: 8mm; border-left: none; border-bottom: none; }
+    .p11-coin-bl { bottom: 8mm; left: 10mm; border-right: none; border-top: none; }
+    .p11-coin-br { bottom: 8mm; right: 8mm; border-left: none; border-top: none; }
+    
+    .p11-header {
+      text-align: center;
+      margin-bottom: 6mm;
+      padding-left: 5mm;
+    }
+    
+    .p11-ornament {
+      color: var(--or);
+      font-size: 12pt;
+      letter-spacing: 0.5em;
+    }
+    
+    .p11-titre {
+      font-family: var(--serif);
+      font-size: 24pt;
+      font-weight: 600;
+      color: var(--nuit);
+      margin: 3mm 0;
+    }
+    
+    .p11-date {
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: var(--taupe);
+    }
+    
+    .p11-sep {
+      width: 40mm;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 5mm auto;
+    }
+    
+    .p11-destinataire {
+      font-family: var(--serif);
+      font-size: 14pt;
+      font-style: italic;
+      color: var(--or);
+      margin-bottom: 5mm;
+      padding-left: 5mm;
+    }
+    
+    .p11-corps {
+      font-size: 11pt;
+      line-height: 2.2;
+      color: var(--nuit);
+      margin-bottom: 8mm;
+      min-height: 90mm;
+      padding-left: 5mm;
+    }
+    
+    .p11-signature {
+      text-align: right;
+      margin-top: 6mm;
+      padding-top: 5mm;
+      border-top: 1px solid var(--perle);
+    }
+    
+    .p11-sig-text {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-style: italic;
+      color: var(--taupe);
+    }
+    
+    .p11-sig-prenom {
+      font-family: var(--serif);
+      font-size: 18pt;
+      font-weight: 600;
+      color: var(--nuit);
+      margin-top: 3mm;
+    }
+    
+    .p11-footer {
+      text-align: center;
+      margin-top: 6mm;
+      padding-left: 5mm;
+    }
+    
+    .p11-ornament2 {
+      color: var(--or);
+      font-size: 10pt;
+      letter-spacing: 0.5em;
+    }
+    
+    .p11-num {
+      position: absolute;
+      bottom: 10mm;
+      right: 12mm;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   12-conclusion.html
+   ═══════════════════════════════════════════════════════════ */
+    .p12 {
+      background: var(--ivoire);
+      padding: 12mm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .p12-content {
+      max-width: 160mm;
+      text-align: center;
+    }
+    
+    .p12-ornament {
+      color: var(--or);
+      font-size: 12pt;
+      letter-spacing: 0.5em;
+      margin-bottom: 6mm;
+    }
+    
+    .p12-titre {
+      font-family: var(--serif);
+      font-size: 28pt;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--nuit);
+      line-height: 1.3;
+      margin-bottom: 6mm;
+    }
+    
+    .p12-sep {
+      width: 60mm;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 0 auto 8mm;
+    }
+    
+    .p12-paragraphe1 {
+      font-size: 11pt;
+      line-height: 2;
+      color: var(--nuit);
+      margin-bottom: 8mm;
+    }
+    
+    /* Qualités SUBTILES - juste du texte élégant */
+    .p12-qualites {
+      font-family: var(--serif);
+      font-size: 13pt;
+      font-style: italic;
+      color: var(--or);
+      margin: 8mm 0;
+      line-height: 1.8;
+    }
+    
+    .p12-qualites span {
+      position: relative;
+    }
+    
+    .p12-qualites span::before {
+      content: '✦';
+      font-size: 8pt;
+      margin-right: 2mm;
+      opacity: 0.6;
+    }
+    
+    .p12-paragraphe2 {
+      font-size: 11pt;
+      line-height: 2;
+      color: var(--nuit);
+      margin-bottom: 10mm;
+    }
+    
+    /* Message final subtil */
+    .p12-final {
+      padding: 6mm 10mm;
+      border-top: 1px solid var(--or);
+      border-bottom: 1px solid var(--or);
+      margin: 6mm 0;
+    }
+    
+    .p12-final-txt {
+      font-family: var(--serif);
+      font-size: 12pt;
+      font-style: italic;
+      color: var(--ardoise);
+      line-height: 1.8;
+    }
+    
+    .p12-ornament2 {
+      color: var(--or);
+      font-size: 12pt;
+      letter-spacing: 0.5em;
+      margin-top: 6mm;
+    }
+    
+    .p12-num {
+      position: absolute;
+      bottom: 10mm;
+      right: 12mm;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--taupe);
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   13-certificat.html
+   ═══════════════════════════════════════════════════════════ */
+    .p13 {
+      background: var(--perle);
+      padding: 10mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .p13-diplome {
+      width: 100%;
+      height: 100%;
+      background: var(--ivoire);
+      border: 3px solid var(--or);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15mm;
+    }
+    
+    /* Cadre intérieur */
+    .p13-diplome::before {
+      content: '';
+      position: absolute;
+      inset: 6mm;
+      border: 1px solid var(--or);
+    }
+    
+    /* Coins décoratifs */
+    .p13-coin {
+      position: absolute;
+      width: 15mm;
+      height: 15mm;
+    }
+    .p13-coin::before,
+    .p13-coin::after {
+      content: '';
+      position: absolute;
+      background: var(--or);
+    }
+    .p13-coin-tl { top: 10mm; left: 10mm; }
+    .p13-coin-tl::before { width: 12mm; height: 2px; }
+    .p13-coin-tl::after { width: 2px; height: 12mm; }
+    .p13-coin-tr { top: 10mm; right: 10mm; }
+    .p13-coin-tr::before { width: 12mm; height: 2px; right: 0; }
+    .p13-coin-tr::after { width: 2px; height: 12mm; right: 0; }
+    .p13-coin-bl { bottom: 10mm; left: 10mm; }
+    .p13-coin-bl::before { width: 12mm; height: 2px; bottom: 0; }
+    .p13-coin-bl::after { width: 2px; height: 12mm; bottom: 0; }
+    .p13-coin-br { bottom: 10mm; right: 10mm; }
+    .p13-coin-br::before { width: 12mm; height: 2px; bottom: 0; right: 0; }
+    .p13-coin-br::after { width: 2px; height: 12mm; bottom: 0; right: 0; }
+    
+    .p13-star {
+      font-size: 32pt;
+      color: var(--or);
+      margin-bottom: 6mm;
+    }
+    
+    .p13-titre {
+      font-family: var(--serif);
+      font-size: 32pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--nuit);
+    }
+    
+    .p13-sous {
+      font-family: var(--mono);
+      font-size: 9pt;
+      letter-spacing: 0.15em;
+      color: var(--or);
+      margin-top: 2mm;
+    }
+    
+    .p13-ligne {
+      width: 80mm;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 8mm 0;
+    }
+    
+    .p13-certifie {
+      font-family: var(--serif);
+      font-size: 11pt;
+      color: var(--gris);
+    }
+    
+    .p13-nom {
+      font-family: var(--serif);
+      font-size: 38pt;
+      font-weight: 700;
+      color: var(--or);
+      margin: 5mm 0;
+    }
+    
+    .p13-date {
+      font-size: 11pt;
+      color: var(--ardoise);
+    }
+    
+    .p13-texte {
+      font-family: var(--serif);
+      font-size: 10pt;
+      font-style: italic;
+      color: var(--gris);
+      text-align: center;
+      max-width: 140mm;
+      line-height: 1.6;
+      margin: 8mm 0;
+    }
+    
+    .p13-sceau {
+      width: 28mm;
+      height: 28mm;
+      border: 2px solid var(--or);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 6mm 0;
+    }
+    
+    .p13-sceau-label {
+      font-family: var(--mono);
+      font-size: 7pt;
+      color: var(--or);
+    }
+    
+    .p13-sceau-num {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--or);
+    }
+    
+    .p13-signatures {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 140mm;
+      margin-top: 8mm;
+    }
+    
+    .p13-sig {
+      text-align: center;
+    }
+    
+    .p13-sig-ligne {
+      width: 50mm;
+      height: 1px;
+      background: var(--nuit);
+      margin-bottom: 2mm;
+    }
+    
+    .p13-sig-txt {
+      font-size: 8pt;
+      color: var(--gris);
+    }
+    
+    .p13-footer {
+      font-family: var(--mono);
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--or);
+      margin-top: 8mm;
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   14-quizz.html
+   ═══════════════════════════════════════════════════════════ */
+    .p14 {
+      background: var(--ivoire);
+      padding: 6mm 8mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .p14-header {
+      background: var(--or);
+      color: var(--blanc);
+      padding: 4mm 6mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3mm;
+    }
+    
+    .p14-titre {
+      font-family: var(--serif);
+      font-size: 20pt;
+      font-weight: 700;
+    }
+    
+    .p14-badge {
+      background: var(--or);
+      color: var(--nuit);
+      padding: 2mm 4mm;
+      font-family: var(--mono);
+      font-size: 8pt;
+    }
+    
+    .p14-intro {
+      background: var(--perle);
+      padding: 3mm 5mm;
+      margin-bottom: 3mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9pt;
+    }
+    
+    .p14-prenom {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+    
+    .p14-prenom-ligne {
+      width: 35mm;
+      border-bottom: 1px solid var(--nuit);
+    }
+    
+    .p14-questions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm;
+      flex: 1;
+    }
+    
+    .p14-q {
+      background: var(--blanc);
+      padding: 3mm;
+      border-left: 3px solid var(--or);
+    }
+    
+    .p14-q-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 2mm;
+      margin-bottom: 2mm;
+    }
+    
+    .p14-q-num {
+      font-family: var(--serif);
+      font-size: 14pt;
+      font-weight: 700;
+      color: var(--or);
+      line-height: 1;
+    }
+    
+    .p14-q-txt {
+      font-size: 8pt;
+      color: var(--nuit);
+      flex: 1;
+    }
+    
+    .p14-ligne {
+      border-bottom: 1px dotted var(--gris);
+      height: 5mm;
+    }
+    
+    .p14-options {
+      display: flex;
+      gap: 3mm;
+      margin-top: 1mm;
+    }
+    
+    .p14-option {
+      display: flex;
+      align-items: center;
+      gap: 1mm;
+      font-size: 7pt;
+    }
+    
+    .p14-cercle {
+      width: 3.5mm;
+      height: 3.5mm;
+      border: 1px solid var(--nuit);
+      border-radius: 50%;
+    }
+    
+    .p14-scale {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1mm;
+      font-size: 6pt;
+    }
+    
+    .p14-scale-items {
+      display: flex;
+      gap: 1mm;
+    }
+    
+    .p14-scale-item {
+      width: 4mm;
+      height: 4mm;
+      border: 1px solid var(--nuit);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6pt;
+    }
+    
+    .p14-footer {
+      background: var(--or);
+      color: var(--blanc);
+      padding: 3mm 5mm;
+      margin-top: 3mm;
+      text-align: center;
+      font-size: 9pt;
+    }
+
+/* ═══════════════════════════════════════════════════════════
+   15-message-futur.html
+   ═══════════════════════════════════════════════════════════ */
+    .p15 {
+      background: var(--nuit);
+      padding: 10mm;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Header voyage temporel */
+    .p15-header {
+      text-align: center;
+      padding: 6mm;
+      margin-bottom: 5mm;
+    }
+    
+    .p15-ornament {
+      color: var(--or);
+      font-size: 12pt;
+      letter-spacing: 0.5em;
+    }
+    
+    .p15-titre {
+      font-family: var(--serif);
+      font-size: 22pt;
+      font-weight: 700;
+      color: var(--blanc);
+      margin: 4mm 0;
+    }
+    
+    .p15-voyage {
+      font-family: var(--mono);
+      font-size: 10pt;
+      color: var(--or);
+    }
+    
+    /* Zone lettre */
+    .p15-lettre {
+      background: var(--ivoire);
+      flex: 1;
+      padding: 12mm 15mm;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border: 2px solid var(--or);
+    }
+    
+    /* Coins */
+    .p15-coin {
+      position: absolute;
+      width: 12mm;
+      height: 12mm;
+      border: 2px solid var(--or);
+    }
+    
+    .p15-coin-tl { top: 4mm; left: 4mm; border-right: none; border-bottom: none; }
+    .p15-coin-tr { top: 4mm; right: 4mm; border-left: none; border-bottom: none; }
+    .p15-coin-bl { bottom: 4mm; left: 4mm; border-right: none; border-top: none; }
+    .p15-coin-br { bottom: 4mm; right: 4mm; border-left: none; border-top: none; }
+    
+    .p15-dest {
+      font-family: var(--serif);
+      font-size: 13pt;
+      font-style: italic;
+      color: var(--ardoise);
+      margin-bottom: 6mm;
+      text-align: center;
+    }
+    
+    .p15-sep {
+      width: 40mm;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 0 auto 6mm;
+    }
+    
+    .p15-lignes {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5mm 0;
+    }
+    
+    .p15-ligne {
+      border-bottom: 1px solid var(--perle);
+    }
+    
+    .p15-signature {
+      text-align: right;
+      padding-top: 6mm;
+      margin-top: auto;
+    }
+    
+    .p15-sig-label {
+      font-size: 8pt;
+      color: var(--taupe);
+    }
+    
+    .p15-sig-ligne {
+      width: 50mm;
+      border-bottom: 1px solid var(--nuit);
+      margin-left: auto;
+      margin-top: 4mm;
+    }
+    
+    /* Zone bottom */
+    .p15-bottom {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 5mm;
+      margin-top: 5mm;
+    }
+    
+    .p15-suggestions {
+      background: var(--ivoire);
+      padding: 5mm;
+      border: 1px solid var(--or);
+    }
+    
+    .p15-sug-titre {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--or);
+      margin-bottom: 3mm;
+    }
+    
+    .p15-sug-list {
+      font-size: 9pt;
+      color: var(--blanc);
+      line-height: 1.8;
+    }
+    
+    .p15-sug-list { color: var(--ardoise); }
+    
+    /* Sceau élégant */
+    .p15-sceau {
+      width: 50mm;
+      height: 50mm;
+      background: linear-gradient(135deg, var(--or) 0%, var(--bronze) 100%);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .p15-sceau::before {
+      content: '';
+      position: absolute;
+      inset: 3mm;
+      border: 2px solid var(--blanc);
+      border-radius: 50%;
+    }
+    
+    .p15-sceau-label {
+      font-family: var(--mono);
+      font-size: 7pt;
+      color: var(--blanc);
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    
+    .p15-sceau-annee {
+      font-family: var(--serif);
+      font-size: 20pt;
+      font-weight: 700;
+      color: var(--blanc);
+    }
+    
+    .p15-sceau-fleche {
+      font-size: 12pt;
+      color: var(--blanc);
+      opacity: 0.8;
+    }
+    
+    .p15-sceau-annee2 {
+      font-family: var(--serif);
+      font-size: 16pt;
+      font-weight: 600;
+      color: var(--blanc);
+    }
+    
+    .p15-num {
+      text-align: right;
+      font-family: var(--mono);
+      font-size: 9pt;
+      color: var(--perle);
+      margin-top: 3mm;
+    }

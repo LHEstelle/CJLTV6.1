@@ -1,0 +1,1163 @@
+
+<div class="page p1">
+  
+  <div class="p1-bandeau">
+    <span>Édition Spéciale</span>
+    <span>N° Unique</span>
+    <span>{{ville}}</span>
+  </div>
+  
+  <div class="p1-masthead">
+    <h1 class="p1-titre">Ce Jour-Là</h1>
+    <p class="p1-date-main">{{DATE_COMPLETE_FR}}</p>
+  </div>
+  
+  <div class="p1-content">
+    
+    <!-- COLONNE GAUCHE -->
+    <div class="p1-left">
+      <h2 class="p1-headline">{{titre_evenement}}</h2>
+      <p class="p1-chapeau">{{recit_evenement}}</p>
+      <div class="p1-image">
+        <img src="{{image_ia_evenement}}" alt="">
+      </div>
+      <p class="p1-caption">{{caption_image_evenement}}</p>
+      
+      <!-- Ambiance du jour - fond crème -->
+      <div class="p1-ambiance">
+        <p class="p1-ambiance-titre">☀️ Ambiance du jour</p>
+        <div class="p1-ambiance-grid">
+          <div class="p1-ambiance-item">
+            <div class="p1-ambiance-icon">🌤️</div>
+            <p class="p1-ambiance-value">{{temperature}}</p>
+            <p class="p1-ambiance-label">{{meteo}}</p>
+          </div>
+          <div class="p1-ambiance-item">
+            <div class="p1-ambiance-icon">{{lune_emoji}}</div>
+            <p class="p1-ambiance-value">{{phase_lune}}</p>
+            <p class="p1-ambiance-label">Lune</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- COLONNE DROITE -->
+    <div class="p1-right">
+      
+      <div class="p1-bloc">
+        <p class="p1-bloc-titre">📜 Ce jour dans l'histoire</p>
+        <p class="p1-histoire-item"><strong>{{annee_evnmt}}</strong> — {{evenement_court}}</p>
+        <p class="p1-histoire-item">⭐ Naissance : {{celebrite_nee}}</p>
+        <p class="p1-histoire-item">🕊 Disparition : {{celebrite_decedee}}</p>
+      </div>
+      
+      <div class="p1-bloc">
+        <p class="p1-bloc-titre">🎬 À l'affiche</p>
+        <p class="p1-film-titre">{{film_sorti}}</p>
+        <p class="p1-film-desc">{{film_description}}</p>
+      </div>
+      
+      <div class="p1-horoscope">
+        <p class="p1-bloc-titre">✨ Horoscope de naissance</p>
+        <p class="p1-horoscope-signe">{{signe_zodiaque}}</p>
+        <p class="p1-horoscope-txt">{{horoscope_naissance}}</p>
+      </div>
+      
+      <div class="p1-nasa">
+        <div class="p1-nasa-img">
+          <img src="{{nasa_url}}" alt="">
+        </div>
+        <div class="p1-nasa-content">
+          <p class="p1-nasa-titre">🔭 Vue du cosmos</p>
+          <p class="p1-nasa-caption">{{nasa_caption}}</p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="p1-footer">
+    <span class="p1-footer-txt">Ce jour-là,</span>
+    <span class="p1-footer-num">{{nb_naissances}}</span>
+    <span class="p1-footer-txt">bébés sont nés — tu étais l'un d'eux.</span>
+  </div>
+  
+</div>
+
+
+<div class="page p2">
+  
+  <div class="p2-card">
+    
+    <div class="p2-corner p2-corner-tl"></div>
+    <div class="p2-corner p2-corner-tr"></div>
+    <div class="p2-corner p2-corner-bl"></div>
+    <div class="p2-corner p2-corner-br"></div>
+    
+    <div class="p2-header">
+      <p class="p2-stars">★ ★ ★ ★ ★</p>
+      <p class="p2-rank">Héros Légendaire</p>
+      <h1 class="p2-name">{{PRENOM}}</h1>
+      <p class="p2-birth">Né(e) le {{DATE_COMPLETE_FR}}</p>
+    </div>
+    
+    <div class="p2-body">
+      
+      <!-- Colonne gauche -->
+      <div class="p2-left">
+        <div class="p2-avatar-frame">
+          <span class="p2-initiale">{{INITIALE}}</span>
+        </div>
+        <div class="p2-level">✦ Niveau Légendaire ✦</div>
+        
+        <div class="p2-stats">
+          <div class="p2-stat-box">
+            <p class="p2-stat-label">Force</p>
+            <div class="p2-stat-bar"></div>
+          </div>
+          <div class="p2-stat-box">
+            <p class="p2-stat-label">Sagesse</p>
+            <div class="p2-stat-bar"></div>
+          </div>
+          <div class="p2-stat-box">
+            <p class="p2-stat-label">Charisme</p>
+            <div class="p2-stat-bar"></div>
+          </div>
+          <div class="p2-stat-box">
+            <p class="p2-stat-label">Chance</p>
+            <div class="p2-stat-bar"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Colonne droite -->
+      <div class="p2-right">
+        
+        <p class="p2-traits-title">⚔️ Attributs de caractère</p>
+        
+        <div class="p2-trait">
+          <div class="p2-trait-icon">💎</div>
+          <div class="p2-trait-content">
+            <p class="p2-trait-label">Force intérieure</p>
+            <p class="p2-trait-value">{{TRAIT_1}}</p>
+          </div>
+        </div>
+        
+        <div class="p2-trait">
+          <div class="p2-trait-icon">🔥</div>
+          <div class="p2-trait-content">
+            <p class="p2-trait-label">Talent naturel</p>
+            <p class="p2-trait-value">{{TRAIT_2}}</p>
+          </div>
+        </div>
+        
+        <div class="p2-trait">
+          <div class="p2-trait-icon">⚡</div>
+          <div class="p2-trait-content">
+            <p class="p2-trait-label">Aura unique</p>
+            <p class="p2-trait-value">{{TRAIT_3}}</p>
+          </div>
+        </div>
+        
+        <div class="p2-trait">
+          <div class="p2-trait-icon">🎭</div>
+          <div class="p2-trait-content">
+            <p class="p2-trait-label">Archétype</p>
+            <p class="p2-trait-value">{{ROLE_FICTION}}</p>
+          </div>
+        </div>
+        
+        <div class="p2-power">
+          <p class="p2-power-label">✨ Super-pouvoir secret</p>
+          <p class="p2-power-name">{{SUPERPOWER}}</p>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="p2-footer">
+      <p class="p2-ornament">— ✦ —</p>
+      <p class="p2-motto">« {{DEVISE}} »</p>
+    </div>
+    
+    <span class="p2-num">02</span>
+    
+  </div>
+  
+</div>
+
+
+<div class="page p3">
+  
+  <div class="p3-cadre">
+    
+    <span class="p3-coin p3-coin-tl">❧</span>
+    <span class="p3-coin p3-coin-tr">☙</span>
+    <span class="p3-coin p3-coin-bl">☙</span>
+    <span class="p3-coin p3-coin-br">❧</span>
+    
+    <div class="p3-header">
+      <p class="p3-ornament">✦ ✦ ✦</p>
+      <p class="p3-surtitle">— Chroniques —</p>
+      <h1 class="p3-titre">{{EVENEMENT_TITRE}}</h1>
+      <p class="p3-date">{{DATE_COMPLETE_FR}}</p>
+      <div class="p3-sep"></div>
+    </div>
+    
+    <div class="p3-body">
+      <p class="p3-texte">
+        <span class="p3-lettrine">{{PREMIERE_LETTRE}}</span>{{TEXTE_NARRATIF_COMPLET}}
+      </p>
+    </div>
+    
+    <div class="p3-footer">
+      <span class="p3-footer-left">Ce Jour-Là</span>
+      <span class="p3-footer-center">✦</span>
+      <span class="p3-footer-right">03</span>
+    </div>
+    
+  </div>
+  
+</div>
+
+
+<div class="page p4">
+  
+  <div class="p4-header">
+    <span class="p4-annee">{{annee}}</span>
+    <div class="p4-title-zone">
+      <h1 class="p4-title">Capsule Temporelle</h1>
+      <p class="p4-subtitle">L'air du temps</p>
+    </div>
+  </div>
+  
+  <div class="p4-grid">
+    
+    <!-- Grande image esprit époque -->
+    <div class="p4-card p4-grande-image">
+      <div class="p4-image">
+        <img src="{{image_esprit_epoque}}" alt="">
+      </div>
+      <p class="p4-image-caption">L'esprit de l'époque</p>
+    </div>
+    
+    <!-- Culture -->
+    <div class="p4-card p4-culture">
+      <p class="p4-card-titre">🎬 Culture</p>
+      <p class="p4-culture-item">🎬 <span>{{film}}</span></p>
+      <p class="p4-culture-item">📺 <span>{{serie_tv}}</span></p>
+      <p class="p4-culture-item">📖 <span>{{livre}}</span></p>
+      <p class="p4-culture-item">📚 <span>{{bd}}</span></p>
+    </div>
+    
+    <!-- Chanson CENTRÉE -->
+    <div class="p4-card p4-chanson">
+      <p class="p4-card-titre">🎵 Hit #1</p>
+      <div class="p4-chanson-content">
+        <p class="p4-chanson-titre">{{chanson_titre}}</p>
+        <p class="p4-chanson-artiste">{{chanson_artiste}}</p>
+      </div>
+    </div>
+    
+    <!-- Image 2 -->
+    <div class="p4-card p4-image2">
+      <div class="p4-image" style="height: 40mm;">
+        <img src="{{image_objet_epoque}}" alt="">
+      </div>
+      <p class="p4-image-caption">{{caption_1}}</p>
+    </div>
+    
+    <!-- Événements -->
+    <div class="p4-card p4-events">
+      <p class="p4-card-titre">📰 Événements</p>
+      <p class="p4-event-item">{{evenement_1}}</p>
+      <p class="p4-event-item">{{evenement_2}}</p>
+      <p class="p4-event-item">🏛️ {{president_fr}}</p>
+    </div>
+    
+    <!-- Enfance avec emojis -->
+    <div class="p4-card p4-enfance">
+      <p class="p4-card-titre">🍭 Enfance</p>
+      <p class="p4-enfance-item"><span class="p4-enfance-icon">🍬</span> {{gouter_1}}</p>
+      <p class="p4-enfance-item"><span class="p4-enfance-icon">🍫</span> {{gouter_2}}</p>
+      <p class="p4-enfance-item"><span class="p4-enfance-icon">🎮</span> {{jouet_1}}</p>
+      <p class="p4-enfance-item"><span class="p4-enfance-icon">🧸</span> {{jouet_2}}</p>
+    </div>
+    
+    <!-- Image 3 -->
+    <div class="p4-card p4-image3">
+      <div class="p4-image" style="height: 40mm;">
+        <img src="{{image_jouet_epoque}}" alt="">
+      </div>
+      <p class="p4-image-caption">{{caption_3}}</p>
+    </div>
+    
+    <!-- Chiffres -->
+    <div class="p4-card p4-chiffres">
+      <p class="p4-card-titre">📊 Chiffres</p>
+      <p class="p4-chiffre-item"><span class="p4-chiffre-icon">👶</span> {{naissances}} naissances</p>
+      <p class="p4-chiffre-item"><span class="p4-chiffre-icon">🌍</span> {{population}} Mds hab.</p>
+      <p class="p4-chiffre-item"><span class="p4-chiffre-icon">💿</span> {{albums_vendus}}</p>
+      <p class="p4-chiffre-item"><span class="p4-chiffre-icon">💰</span> SMIC {{smic}}€</p>
+    </div>
+    
+    <!-- Bottom : Célébrité + Prix -->
+    <div class="p4-bottom">
+      <div class="p4-celebrite">
+        <p class="p4-celebrite-label">⭐ Née aussi</p>
+        <p class="p4-celebrite-nom">{{celebrite_nee}}</p>
+      </div>
+      <div class="p4-prix">
+        <div class="p4-prix-item">
+          <div class="p4-prix-icon">🥖</div>
+          <p class="p4-prix-value">{{prix_baguette}}</p>
+          <p class="p4-prix-label">Baguette</p>
+        </div>
+        <div class="p4-prix-item">
+          <div class="p4-prix-icon">⛽</div>
+          <p class="p4-prix-value">{{prix_essence}}</p>
+          <p class="p4-prix-label">Essence/L</p>
+        </div>
+        <div class="p4-prix-item">
+          <div class="p4-prix-icon">📮</div>
+          <p class="p4-prix-value">{{prix_timbre}}</p>
+          <p class="p4-prix-label">Timbre</p>
+        </div>
+        <div class="p4-prix-item">
+          <div class="p4-prix-icon">🎬</div>
+          <p class="p4-prix-value">{{prix_cinema}}</p>
+          <p class="p4-prix-label">Cinéma</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <span class="p4-num">04</span>
+  
+</div>
+
+
+<div class="page p5">
+  
+  <div class="p5-header">
+    <h1 class="p5-titre">Souvenirs d'Enfance</h1>
+    <span class="p5-age">Quand tu avais {{age}} ans</span>
+  </div>
+  
+  <div class="p5-journee">
+    
+    <div class="p5-moment">
+      <div class="p5-moment-header">
+        <div class="p5-moment-icon">🌅</div>
+        <span class="p5-moment-label">Le Matin</span>
+      </div>
+      <p class="p5-moment-txt">{{matin}}</p>
+    </div>
+    
+    <div class="p5-moment">
+      <div class="p5-moment-header">
+        <div class="p5-moment-icon">☀️</div>
+        <span class="p5-moment-label">L'Après-midi</span>
+      </div>
+      <p class="p5-moment-txt">{{apresmidi}}</p>
+    </div>
+    
+    <div class="p5-moment">
+      <div class="p5-moment-header">
+        <div class="p5-moment-icon">🌙</div>
+        <span class="p5-moment-label">Le Soir</span>
+      </div>
+      <p class="p5-moment-txt">{{soir}}</p>
+    </div>
+    
+  </div>
+  
+  <div class="p5-categories">
+    <div class="p5-cat">
+      <p class="p5-cat-titre">📺 Écran</p>
+      <p class="p5-cat-list">{{ecran_1}}<br>{{ecran_2}}<br>{{ecran_3}}</p>
+    </div>
+    <div class="p5-cat">
+      <p class="p5-cat-titre">🎵 Musique</p>
+      <p class="p5-cat-list">{{musique_1}}<br>{{musique_2}}<br>{{musique_3}}</p>
+    </div>
+    <div class="p5-cat">
+      <p class="p5-cat-titre">🍭 Goûter</p>
+      <p class="p5-cat-list">{{gouter_1}}<br>{{gouter_2}}<br>{{gouter_3}}</p>
+    </div>
+    <div class="p5-cat">
+      <p class="p5-cat-titre">📚 Lecture</p>
+      <p class="p5-cat-list">{{lecture_1}}<br>{{lecture_2}}<br>{{lecture_3}}</p>
+    </div>
+    <div class="p5-cat">
+      <p class="p5-cat-titre">🎮 Jeux</p>
+      <p class="p5-cat-list">{{jeu_1}}<br>{{jeu_2}}<br>{{jeu_3}}</p>
+    </div>
+    <div class="p5-cat">
+      <p class="p5-cat-titre">🏆 Objets</p>
+      <p class="p5-cat-list">{{objet_1}}<br>{{objet_2}}<br>{{objet_3}}</p>
+    </div>
+  </div>
+  
+  <div class="p5-expressions">
+    <span class="p5-exp-label">💬 On disait</span>
+    <div class="p5-tags">
+      <span class="p5-tag">{{expression_1}}</span>
+      <span class="p5-tag">{{expression_2}}</span>
+      <span class="p5-tag">{{expression_3}}</span>
+      <span class="p5-tag">{{expression_4}}</span>
+    </div>
+  </div>
+  
+  <p class="p5-num">05</p>
+  
+</div>
+
+
+<div class="page p6">
+  
+  <div class="p6-header">
+    <p class="p6-ornament">— ✦ —</p>
+    <h1 class="p6-titre">Ta Vie en Dates</h1>
+    <p class="p6-subtitle">Les moments qui ont marqué ton époque</p>
+  </div>
+  
+  <div class="p6-timeline">
+    <div class="p6-line"></div>
+    
+    <div class="p6-events">
+      
+      <!-- Event 1 - GAUCHE -->
+      <div class="p6-event">
+        <div class="p6-event-card">
+          <p class="p6-event-annee">{{ANNEE_1}}</p>
+          <p class="p6-event-titre">{{EVENT_1_TITRE}}</p>
+          <p class="p6-event-cat">{{EVENT_1_CAT}}</p>
+        </div>
+        <div class="p6-event-dot">🌟</div>
+      </div>
+      
+      <!-- Event 2 - DROITE -->
+      <div class="p6-event">
+        <div class="p6-event-card">
+          <p class="p6-event-annee">{{ANNEE_2}}</p>
+          <p class="p6-event-titre">{{EVENT_2_TITRE}}</p>
+          <p class="p6-event-cat">{{EVENT_2_CAT}}</p>
+        </div>
+        <div class="p6-event-dot">📰</div>
+      </div>
+      
+      <!-- Event 3 - GAUCHE -->
+      <div class="p6-event">
+        <div class="p6-event-card">
+          <p class="p6-event-annee">{{ANNEE_3}}</p>
+          <p class="p6-event-titre">{{EVENT_3_TITRE}}</p>
+          <p class="p6-event-cat">{{EVENT_3_CAT}}</p>
+        </div>
+        <div class="p6-event-dot">🎓</div>
+      </div>
+      
+      <!-- Event 4 - DROITE -->
+      <div class="p6-event">
+        <div class="p6-event-card">
+          <p class="p6-event-annee">{{ANNEE_4}}</p>
+          <p class="p6-event-titre">{{EVENT_4_TITRE}}</p>
+          <p class="p6-event-cat">{{EVENT_4_CAT}}</p>
+        </div>
+        <div class="p6-event-dot">🎵</div>
+      </div>
+      
+      <!-- Event 5 - GAUCHE -->
+      <div class="p6-event">
+        <div class="p6-event-card">
+          <p class="p6-event-annee">{{ANNEE_5}}</p>
+          <p class="p6-event-titre">{{EVENT_5_TITRE}}</p>
+          <p class="p6-event-cat">{{EVENT_5_CAT}}</p>
+        </div>
+        <div class="p6-event-dot">💡</div>
+      </div>
+      
+      <!-- Event 6 - DROITE -->
+      <div class="p6-event">
+        <div class="p6-event-card">
+          <p class="p6-event-annee">{{ANNEE_6}}</p>
+          <p class="p6-event-titre">{{EVENT_6_TITRE}}</p>
+          <p class="p6-event-cat">{{EVENT_6_CAT}}</p>
+        </div>
+        <div class="p6-event-dot">🌍</div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <!-- ENCART SÉPARATEUR -->
+  <div class="p6-separator">
+    <span class="p6-separator-text">L'époque en bref</span>
+  </div>
+  
+  <div class="p6-bottom">
+    
+    <div class="p6-section p6-section-culture">
+      <p class="p6-section-titre">🎬 Culture</p>
+      <div class="p6-section-grid">
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Film</p>
+          <p class="p6-section-item-value">{{FILM_CULTE}}</p>
+        </div>
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Série</p>
+          <p class="p6-section-item-value">{{SERIE_TV}}</p>
+        </div>
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Livre</p>
+          <p class="p6-section-item-value">{{LIVRE}}</p>
+        </div>
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Album</p>
+          <p class="p6-section-item-value">{{ALBUM}}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p6-section p6-section-sport">
+      <p class="p6-section-titre">⚽ Sport</p>
+      <div class="p6-section-grid">
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Champion</p>
+          <p class="p6-section-item-value">{{CHAMPION_SPORT}}</p>
+        </div>
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Exploit</p>
+          <p class="p6-section-item-value">{{EXPLOIT_SPORT}}</p>
+        </div>
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Équipe</p>
+          <p class="p6-section-item-value">{{EQUIPE}}</p>
+        </div>
+        <div class="p6-section-item">
+          <p class="p6-section-item-label">Record</p>
+          <p class="p6-section-item-value">{{RECORD_SPORT}}</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <p class="p6-num">06</p>
+  
+</div>
+
+
+<div class="page p7">
+  
+  <!-- Hero image PLUS PETITE -->
+  <div class="p7-hero">
+    <img class="p7-hero-img" src="{{IMAGE_FICTION}}" alt="">
+    <div class="p7-hero-overlay"></div>
+    <div class="p7-titre-zone">
+      <span class="p7-label">Fiction Historique</span>
+      <h1 class="p7-titre">{{TITRE_FICTION}}</h1>
+    </div>
+  </div>
+  
+  <!-- Contenu PLUS GRAND -->
+  <div class="p7-content">
+    
+    <p class="p7-accroche">{{ACCROCHE_FICTION}}</p>
+    
+    <div class="p7-body">
+      <p class="p7-texte">{{TEXTE_FICTION}}</p>
+    </div>
+    
+    <div class="p7-footer">
+      <span class="p7-genre">{{GENRE_FICTION}}</span>
+      <span class="p7-caption">{{CAPTION_FICTION}}</span>
+      <span class="p7-num">07</span>
+    </div>
+    
+  </div>
+  
+</div>
+
+
+<div class="page p8">
+  
+  <div class="p8-cadre">
+    
+    <span class="p8-coin p8-coin-tl">❧</span>
+    <span class="p8-coin p8-coin-tr">☙</span>
+    <span class="p8-coin p8-coin-bl">☙</span>
+    <span class="p8-coin p8-coin-br">❧</span>
+    
+    <div class="p8-content">
+      
+      <p class="p8-ornament">✦ ✦ ✦</p>
+      
+      <h1 class="p8-titre">Miroir Émotionnel</h1>
+      
+      <div class="p8-sep"></div>
+      
+      <p class="p8-texte">{{TEXTE_MIROIR}}</p>
+      
+      <div class="p8-sep2"></div>
+      
+      <p class="p8-signature">— Portrait Intérieur —</p>
+      
+      <p class="p8-ornament2">✦ ✦ ✦</p>
+      
+    </div>
+    
+    <span class="p8-num">08</span>
+    
+  </div>
+  
+</div>
+
+
+<div class="page p9">
+  
+  <div class="p9-header">
+    <div class="p9-annee">{{ANNEE_NAISSANCE}}</div>
+    <p class="p9-titre">Une Journée Ordinaire</p>
+  </div>
+  
+  <div class="p9-moments">
+    
+    <div class="p9-moment p9-matin">
+      <div class="p9-heure">
+        <span class="p9-heure-icon">🌅</span>
+        <span class="p9-heure-label">Matin</span>
+      </div>
+      <div class="p9-contenu">
+        <p class="p9-texte">{{JOURNEE_MATIN}}</p>
+        <p class="p9-sensory">{{JOURNEE_MATIN_SENSORY}}</p>
+      </div>
+    </div>
+    
+    <div class="p9-moment p9-midi">
+      <div class="p9-heure">
+        <span class="p9-heure-icon">☀️</span>
+        <span class="p9-heure-label">Midi</span>
+      </div>
+      <div class="p9-contenu">
+        <p class="p9-texte">{{JOURNEE_MIDI}}</p>
+        <p class="p9-sensory">{{JOURNEE_MIDI_SENSORY}}</p>
+      </div>
+    </div>
+    
+    <div class="p9-moment p9-aprem">
+      <div class="p9-heure">
+        <span class="p9-heure-icon">🌤️</span>
+        <span class="p9-heure-label">Après-midi</span>
+      </div>
+      <div class="p9-contenu">
+        <p class="p9-texte">{{JOURNEE_APRES_MIDI}}</p>
+        <p class="p9-sensory">{{JOURNEE_APRES_MIDI_SENSORY}}</p>
+      </div>
+    </div>
+    
+    <div class="p9-moment p9-soir">
+      <div class="p9-heure">
+        <span class="p9-heure-icon">🌙</span>
+        <span class="p9-heure-label">Soir</span>
+      </div>
+      <div class="p9-contenu">
+        <p class="p9-texte">{{JOURNEE_SOIR}}</p>
+        <p class="p9-sensory">{{JOURNEE_SOIR_SENSORY}}</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="p9-footer">
+    Voilà à quoi ressemblait une journée dans le monde où tu es arrivé(e).
+    <div class="p9-num">09</div>
+  </div>
+  
+</div>
+
+
+<div class="page p10">
+  
+  <div class="p10-header">
+    <p class="p10-ornament">✦ ✦ ✦</p>
+    <h1 class="p10-titre">Ta Vie en Chiffres</h1>
+    <div class="p10-sep"></div>
+  </div>
+  
+  <div class="p10-body">
+    
+    <!-- Temps vécu -->
+    <div class="p10-temps">
+      <div class="p10-temps-item">
+        <p class="p10-temps-value">{{jours_vecu}}</p>
+        <p class="p10-temps-label">Jours vécus</p>
+      </div>
+      <div class="p10-temps-item">
+        <p class="p10-temps-value">{{heures_existence}}</p>
+        <p class="p10-temps-label">Heures d'existence</p>
+      </div>
+      <div class="p10-temps-item">
+        <p class="p10-temps-value">{{saisons_traversees}}</p>
+        <p class="p10-temps-label">Saisons</p>
+      </div>
+    </div>
+    
+    <!-- Stats personnelles -->
+    <div class="p10-perso">
+      <div class="p10-stat">
+        <div class="p10-stat-icon">💓</div>
+        <p class="p10-stat-value">{{battements_coeur}}</p>
+        <p class="p10-stat-label">Battements</p>
+      </div>
+      <div class="p10-stat">
+        <div class="p10-stat-icon">🚶</div>
+        <p class="p10-stat-value">{{nombre_pas}}</p>
+        <p class="p10-stat-label">Pas marchés</p>
+      </div>
+      <div class="p10-stat">
+        <div class="p10-stat-icon">🌙</div>
+        <p class="p10-stat-value">{{heures_sommeil}}</p>
+        <p class="p10-stat-label">Heures sommeil</p>
+      </div>
+      <div class="p10-stat">
+        <div class="p10-stat-icon">📚</div>
+        <p class="p10-stat-value">{{heures_apprentissage}}</p>
+        <p class="p10-stat-label">Apprentissage</p>
+      </div>
+      <div class="p10-stat">
+        <div class="p10-stat-icon">🍽️</div>
+        <p class="p10-stat-value">{{repas}}</p>
+        <p class="p10-stat-label">Repas</p>
+      </div>
+      <div class="p10-stat">
+        <div class="p10-stat-icon">💨</div>
+        <p class="p10-stat-value">{{respirations}}</p>
+        <p class="p10-stat-label">Respirations</p>
+      </div>
+    </div>
+    
+    <!-- Prix d'époque -->
+    <div class="p10-prix">
+      <p class="p10-prix-titre">💰 Prix en {{ANNEE_NAISSANCE}}</p>
+      <div class="p10-prix-grid">
+        <div class="p10-prix-item">
+          <div class="p10-prix-icon">🥖</div>
+          <p class="p10-prix-value">{{prix_pain}}</p>
+          <p class="p10-prix-label">Baguette</p>
+        </div>
+        <div class="p10-prix-item">
+          <div class="p10-prix-icon">⛽</div>
+          <p class="p10-prix-value">{{prix_essence}}</p>
+          <p class="p10-prix-label">Essence/L</p>
+        </div>
+        <div class="p10-prix-item">
+          <div class="p10-prix-icon">📮</div>
+          <p class="p10-prix-value">{{prix_timbre}}</p>
+          <p class="p10-prix-label">Timbre</p>
+        </div>
+        <div class="p10-prix-item">
+          <div class="p10-prix-icon">🎬</div>
+          <p class="p10-prix-value">{{prix_cinema}}</p>
+          <p class="p10-prix-label">Cinéma</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Le monde - REMPLIT l'espace -->
+    <div class="p10-monde">
+      <p class="p10-monde-titre">🌍 Le monde depuis ta naissance</p>
+      <div class="p10-monde-grid">
+        <div class="p10-monde-item">
+          <p class="p10-monde-value">{{croissance_pop}}</p>
+          <p class="p10-monde-label">Population</p>
+        </div>
+        <div class="p10-monde-item">
+          <p class="p10-monde-value">{{esperance_vie}}</p>
+          <p class="p10-monde-label">Espérance vie</p>
+        </div>
+        <div class="p10-monde-item">
+          <p class="p10-monde-value">{{smartphones}}</p>
+          <p class="p10-monde-label">Smartphones</p>
+        </div>
+        <div class="p10-monde-item">
+          <p class="p10-monde-value">{{utilisateurs_internet}}</p>
+          <p class="p10-monde-label">Internautes</p>
+        </div>
+        <div class="p10-monde-item">
+          <p class="p10-monde-value">{{inventions}}</p>
+          <p class="p10-monde-label">Inventions</p>
+        </div>
+        <div class="p10-monde-item">
+          <p class="p10-monde-value">{{jeux_olympiques}}</p>
+          <p class="p10-monde-label">J.O. vécus</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <p class="p10-num">10</p>
+  
+</div>
+
+
+<div class="page p11">
+  
+  <div class="p11-lettre">
+    
+    <div class="p11-coin p11-coin-tl"></div>
+    <div class="p11-coin p11-coin-tr"></div>
+    <div class="p11-coin p11-coin-bl"></div>
+    <div class="p11-coin p11-coin-br"></div>
+    
+    <div class="p11-header">
+      <p class="p11-ornament">✦ ✦ ✦</p>
+      <h1 class="p11-titre">Message Personnel</h1>
+      <p class="p11-date">{{DATE_MESSAGE}}</p>
+    </div>
+    
+    <div class="p11-sep"></div>
+    
+    <p class="p11-destinataire">Cher(e) {{PRENOM}},</p>
+    
+    <div class="p11-corps">
+      {{MESSAGE_PERSONNEL}}
+    </div>
+    
+    <div class="p11-signature">
+      <p class="p11-sig-text">Avec toute mon affection,</p>
+      <p class="p11-sig-prenom">{{AUTEUR_MESSAGE}}</p>
+    </div>
+    
+    <div class="p11-footer">
+      <p class="p11-ornament2">— ✦ —</p>
+    </div>
+    
+    <span class="p11-num">11</span>
+    
+  </div>
+  
+</div>
+
+
+<div class="page p12">
+  
+  <div class="p12-content">
+    
+    <p class="p12-ornament">✦ ✦ ✦</p>
+    
+    <h1 class="p12-titre">Ce qui fait de toi<br>quelqu'un d'unique</h1>
+    
+    <div class="p12-sep"></div>
+    
+    <p class="p12-paragraphe1">{{paragraphe_1}}</p>
+    
+    <!-- Qualités SUBTILES -->
+    <p class="p12-qualites">
+      <span>{{qualite_1}}</span> · <span>{{qualite_2}}</span> · <span>{{qualite_3}}</span>
+    </p>
+    
+    <p class="p12-paragraphe2">{{paragraphe_2}}</p>
+    
+    <div class="p12-final">
+      <p class="p12-final-txt">{{message_final}}</p>
+    </div>
+    
+    <p class="p12-ornament2">✦ ✦ ✦</p>
+    
+  </div>
+  
+  <span class="p12-num">12</span>
+  
+</div>
+
+
+<div class="page p13">
+  
+  <div class="p13-diplome">
+    
+    <div class="p13-coin p13-coin-tl"></div>
+    <div class="p13-coin p13-coin-tr"></div>
+    <div class="p13-coin p13-coin-bl"></div>
+    <div class="p13-coin p13-coin-br"></div>
+    
+    <span class="p13-star">✦</span>
+    
+    <h1 class="p13-titre">Certificat</h1>
+    <p class="p13-sous">d'Authenticité & d'Unicité</p>
+    
+    <div class="p13-ligne"></div>
+    
+    <p class="p13-certifie">Il est certifié par les présentes que</p>
+    <p class="p13-nom">{{PRENOM}}</p>
+    <p class="p13-date">Né(e) le {{DATE_COMPLETE_FR}}</p>
+    
+    <p class="p13-texte">
+      Est une personne unique et irremplaçable, dont l'arrivée dans le monde 
+      a changé le cours de l'Histoire. Ce voyage à travers le temps en témoigne.
+    </p>
+    
+    <div class="p13-sceau">
+      <span class="p13-sceau-label">N°</span>
+      <span class="p13-sceau-num">{{NUMERO_UNIQUE}}</span>
+    </div>
+    
+    <div class="p13-signatures">
+      <div class="p13-sig">
+        <div class="p13-sig-ligne"></div>
+        <p class="p13-sig-txt">Ce Jour-Là</p>
+      </div>
+      <div class="p13-sig">
+        <div class="p13-sig-ligne"></div>
+        <p class="p13-sig-txt">{{DATE_CREATION_LIVRE}}</p>
+      </div>
+    </div>
+    
+    <p class="p13-footer">Authentique · Unique · Irremplaçable</p>
+    
+  </div>
+  
+</div>
+
+
+<div class="page p14">
+  
+  <div class="p14-header">
+    <h1 class="p14-titre">Le Grand Quizz</h1>
+    <span class="p14-badge">14 Questions</span>
+  </div>
+  
+  <div class="p14-intro">
+    <span>Me connais-tu vraiment ? Réponds selon ce que tu sais de moi.</span>
+    <div class="p14-prenom">
+      <span>Ton prénom :</span>
+      <div class="p14-prenom-ligne"></div>
+    </div>
+  </div>
+  
+  <div class="p14-questions">
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">1</span>
+        <span class="p14-q-txt">Si tu devais me décrire en un mot...</span>
+      </div>
+      <div class="p14-ligne"></div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">2</span>
+        <span class="p14-q-txt">Je préfère...</span>
+      </div>
+      <div class="p14-options">
+        <div class="p14-option"><div class="p14-cercle"></div> Donner</div>
+        <div class="p14-option"><div class="p14-cercle"></div> Recevoir</div>
+      </div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">3</span>
+        <span class="p14-q-txt">Ma plus grande peur...</span>
+      </div>
+      <div class="p14-ligne"></div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">4</span>
+        <span class="p14-q-txt">Mon niveau d'organisation</span>
+      </div>
+      <div class="p14-scale">
+        <span>Chaos</span>
+        <div class="p14-scale-items">
+          <div class="p14-scale-item">1</div>
+          <div class="p14-scale-item">2</div>
+          <div class="p14-scale-item">3</div>
+          <div class="p14-scale-item">4</div>
+          <div class="p14-scale-item">5</div>
+        </div>
+        <span>Organisé</span>
+      </div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">5</span>
+        <span class="p14-q-txt">Ce qui me fait rire...</span>
+      </div>
+      <div class="p14-ligne"></div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">6</span>
+        <span class="p14-q-txt">Face à un conflit, je suis...</span>
+      </div>
+      <div class="p14-options">
+        <div class="p14-option"><div class="p14-cercle"></div> Direct</div>
+        <div class="p14-option"><div class="p14-cercle"></div> Diplomate</div>
+        <div class="p14-option"><div class="p14-cercle"></div> Fuyant</div>
+      </div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">7</span>
+        <span class="p14-q-txt">Dans 10 ans, tu me vois...</span>
+      </div>
+      <div class="p14-ligne"></div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">8</span>
+        <span class="p14-q-txt">Je suis plutôt...</span>
+      </div>
+      <div class="p14-options">
+        <div class="p14-option"><div class="p14-cercle"></div> Du matin</div>
+        <div class="p14-option"><div class="p14-cercle"></div> Du soir</div>
+      </div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">9</span>
+        <span class="p14-q-txt">Ce que je ne supporte pas...</span>
+      </div>
+      <div class="p14-ligne"></div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">10</span>
+        <span class="p14-q-txt">Mon âme est plutôt...</span>
+      </div>
+      <div class="p14-options">
+        <div class="p14-option"><div class="p14-cercle"></div> Artiste</div>
+        <div class="p14-option"><div class="p14-cercle"></div> Rêveur</div>
+        <div class="p14-option"><div class="p14-cercle"></div> Pragmatique</div>
+      </div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">11</span>
+        <span class="p14-q-txt">Ce que tu admires chez moi...</span>
+      </div>
+      <div class="p14-ligne"></div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">12</span>
+        <span class="p14-q-txt">Niveau de patience</span>
+      </div>
+      <div class="p14-scale">
+        <span>Impatient</span>
+        <div class="p14-scale-items">
+          <div class="p14-scale-item">1</div>
+          <div class="p14-scale-item">2</div>
+          <div class="p14-scale-item">3</div>
+          <div class="p14-scale-item">4</div>
+          <div class="p14-scale-item">5</div>
+        </div>
+        <span>Patient</span>
+      </div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">13</span>
+        <span class="p14-q-txt">En moment difficile...</span>
+      </div>
+      <div class="p14-options">
+        <div class="p14-option"><div class="p14-cercle"></div> Seul(e)</div>
+        <div class="p14-option"><div class="p14-cercle"></div> Entouré(e)</div>
+      </div>
+    </div>
+    
+    <div class="p14-q">
+      <div class="p14-q-header">
+        <span class="p14-q-num">14</span>
+        <span class="p14-q-txt">Un conseil pour moi...</span>
+      </div>
+      <div class="p14-ligne"></div>
+    </div>
+    
+  </div>
+  
+  <div class="p14-footer">
+    Compare tes réponses ! <strong>Score : _____ / 14</strong>
+  </div>
+  
+</div>
+
+
+<div class="page p15">
+  
+  <div class="p15-header">
+    <p class="p15-ornament">✦ ✦ ✦</p>
+    <h1 class="p15-titre">Message pour toi dans 10 ans</h1>
+    <p class="p15-voyage">De {{PRENOM}} ({{ANNEE_ACTUELLE}}) → {{PRENOM}} ({{ANNEE_FUTURE}})</p>
+  </div>
+  
+  <div class="p15-lettre">
+    
+    <div class="p15-coin p15-coin-tl"></div>
+    <div class="p15-coin p15-coin-tr"></div>
+    <div class="p15-coin p15-coin-bl"></div>
+    <div class="p15-coin p15-coin-br"></div>
+    
+    <p class="p15-dest">Cher(e) moi du futur...</p>
+    
+    <div class="p15-sep"></div>
+    
+    <div class="p15-lignes">
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+      <div class="p15-ligne"></div>
+    </div>
+    
+    <div class="p15-signature">
+      <p class="p15-sig-label">Ta signature</p>
+      <div class="p15-sig-ligne"></div>
+    </div>
+    
+  </div>
+  
+  <div class="p15-bottom">
+    <div class="p15-suggestions">
+      <p class="p15-sug-titre">💡 Idées d'écriture</p>
+      <p class="p15-sug-list">
+        → Quels sont tes rêves actuels ?<br>
+        → Qu'espères-tu avoir accompli ?<br>
+        → Quel conseil te donnerais-tu ?<br>
+        → Une peur que tu veux dépasser ?
+      </p>
+    </div>
+    <div class="p15-sceau">
+      <span class="p15-sceau-label">Capsule</span>
+      <span class="p15-sceau-annee">{{ANNEE_ACTUELLE}}</span>
+      <span class="p15-sceau-fleche">↓</span>
+      <span class="p15-sceau-annee2">{{ANNEE_FUTURE}}</span>
+    </div>
+  </div>
+  
+  <p class="p15-num">15</p>
+  
+</div>
+

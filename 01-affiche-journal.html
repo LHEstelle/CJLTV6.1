@@ -1,0 +1,87 @@
+
+<div class="page p1">
+  
+  <div class="p1-bandeau">
+    <span>Édition Spéciale</span>
+    <span>N° Unique</span>
+    <span>{{ville}}</span>
+  </div>
+  
+  <div class="p1-masthead">
+    <h1 class="p1-titre">Ce Jour-Là</h1>
+    <p class="p1-date-main">{{DATE_COMPLETE_FR}}</p>
+  </div>
+  
+  <div class="p1-content">
+    
+    <!-- COLONNE GAUCHE -->
+    <div class="p1-left">
+      <h2 class="p1-headline">{{titre_evenement}}</h2>
+      <p class="p1-chapeau">{{recit_evenement}}</p>
+      <div class="p1-image">
+        <img src="{{image_ia_evenement}}" alt="">
+      </div>
+      <p class="p1-caption">{{caption_image_evenement}}</p>
+      
+      <!-- Ambiance du jour - fond crème -->
+      <div class="p1-ambiance">
+        <p class="p1-ambiance-titre">☀️ Ambiance du jour</p>
+        <div class="p1-ambiance-grid">
+          <div class="p1-ambiance-item">
+            <div class="p1-ambiance-icon">🌤️</div>
+            <p class="p1-ambiance-value">{{temperature}}</p>
+            <p class="p1-ambiance-label">{{meteo}}</p>
+          </div>
+          <div class="p1-ambiance-item">
+            <div class="p1-ambiance-icon">{{lune_emoji}}</div>
+            <p class="p1-ambiance-value">{{phase_lune}}</p>
+            <p class="p1-ambiance-label">Lune</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- COLONNE DROITE -->
+    <div class="p1-right">
+      
+      <div class="p1-bloc">
+        <p class="p1-bloc-titre">📜 Ce jour dans l'histoire</p>
+        <p class="p1-histoire-item"><strong>{{annee_evnmt}}</strong> — {{evenement_court}}</p>
+        <p class="p1-histoire-item">⭐ Naissance : {{celebrite_nee}}</p>
+        <p class="p1-histoire-item">🕊 Disparition : {{celebrite_decedee}}</p>
+      </div>
+      
+      <div class="p1-bloc">
+        <p class="p1-bloc-titre">🎬 À l'affiche</p>
+        <p class="p1-film-titre">{{film_sorti}}</p>
+        <p class="p1-film-desc">{{film_description}}</p>
+      </div>
+      
+      <div class="p1-horoscope">
+        <p class="p1-bloc-titre">✨ Horoscope de naissance</p>
+        <p class="p1-horoscope-signe">{{signe_zodiaque}}</p>
+        <p class="p1-horoscope-txt">{{horoscope_naissance}}</p>
+      </div>
+      
+      <div class="p1-nasa">
+        <div class="p1-nasa-img">
+          <img src="{{nasa_url}}" alt="">
+        </div>
+        <div class="p1-nasa-content">
+          <p class="p1-nasa-titre">🔭 Vue du cosmos</p>
+          <p class="p1-nasa-caption">{{nasa_caption}}</p>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="p1-footer">
+    <span class="p1-footer-txt">Ce jour-là,</span>
+    <span class="p1-footer-num">{{nb_naissances}}</span>
+    <span class="p1-footer-txt">bébés sont nés — tu étais l'un d'eux.</span>
+  </div>
+  
+</div>
+
