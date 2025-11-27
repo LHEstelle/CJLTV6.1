@@ -1,4 +1,3 @@
-
 <div class="page p1">
   
   <div class="p1-bandeau">
@@ -14,7 +13,6 @@
   
   <div class="p1-content">
     
-    <!-- COLONNE GAUCHE -->
     <div class="p1-left">
       <h2 class="p1-headline">{{titre_evenement}}</h2>
       <p class="p1-chapeau">{{recit_evenement}}</p>
@@ -23,14 +21,13 @@
       </div>
       <p class="p1-caption">{{caption_image_evenement}}</p>
       
-      <!-- Ambiance du jour - fond crème -->
       <div class="p1-ambiance">
         <p class="p1-ambiance-titre">☀️ Ambiance du jour</p>
         <div class="p1-ambiance-grid">
           <div class="p1-ambiance-item">
-            <div class="p1-ambiance-icon">🌤️</div>
+            <div class="p1-ambiance-icon">{{meteo_emoji}}</div>
             <p class="p1-ambiance-value">{{temperature}}</p>
-            <p class="p1-ambiance-label">{{meteo}}</p>
+            <p class="p1-ambiance-label">à {{ville}}</p>
           </div>
           <div class="p1-ambiance-item">
             <div class="p1-ambiance-icon">{{lune_emoji}}</div>
@@ -41,12 +38,11 @@
       </div>
     </div>
     
-    <!-- COLONNE DROITE -->
     <div class="p1-right">
       
       <div class="p1-bloc">
         <p class="p1-bloc-titre">📜 Ce jour dans l'histoire</p>
-        <p class="p1-histoire-item"><strong>{{annee_evnmt}}</strong> — {{evenement_court}}</p>
+        <p class="p1-histoire-item"><strong>Evènement : {{evenement_court}}</p>
         <p class="p1-histoire-item">⭐ Naissance : {{celebrite_nee}}</p>
         <p class="p1-histoire-item">🕊 Disparition : {{celebrite_decedee}}</p>
       </div>
@@ -64,13 +60,11 @@
       </div>
       
       <div class="p1-nasa">
+        <p class="p1-nasa-titre">🔭 Vue du cosmos</p>
         <div class="p1-nasa-img">
           <img src="{{nasa_url}}" alt="">
         </div>
-        <div class="p1-nasa-content">
-          <p class="p1-nasa-titre">🔭 Vue du cosmos</p>
-          <p class="p1-nasa-caption">{{nasa_caption}}</p>
-        </div>
+        <p class="p1-nasa-caption">{{nasa_caption}}</p>
       </div>
       
     </div>
@@ -84,4 +78,3 @@
   </div>
   
 </div>
-
