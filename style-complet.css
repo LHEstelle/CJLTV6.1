@@ -205,7 +205,7 @@ body {
 .p1-right {
   display: flex;
   flex-direction: column;
-  gap: 3mm;
+  gap: 5mm;
 }
 
 .p1-bloc {
