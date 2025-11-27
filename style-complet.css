@@ -139,7 +139,7 @@ body {
 }
 
 .p1-image {
-  height: 50mm;          /* hauteur fixe - ajuste cette valeur */
+  height: 90mm;          /* hauteur fixe - ajuste cette valeur */
   min-height: auto;
   background: var(--perle);
   overflow: hidden;
