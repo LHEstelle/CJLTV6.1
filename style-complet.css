@@ -205,21 +205,21 @@ body {
 .p1-right {
   display: flex;
   flex-direction: column;
-  gap: 5mm;
+  gap: 2mm;
 }
 
 .p1-right .p1-bloc:nth-child(2) {
-  margin-top: 5mm;
+  margin-top: 2mm;
 }
 
 /* Plus d'espace avant Horoscope */
 .p1-horoscope {
-  margin-top: 5mm;
+  margin-top: 2mm;
 }
 
 /* Plus d'espace avant Vue du cosmos */
 .p1-nasa {
-  margin-top: 5mm;
+  margin-top: 2mm;
 }
 
 .p1-bloc {
