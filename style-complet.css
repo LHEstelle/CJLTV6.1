@@ -208,6 +208,20 @@ body {
   gap: 5mm;
 }
 
+.p1-right .p1-bloc:nth-child(2) {
+  margin-top: 5mm;
+}
+
+/* Plus d'espace avant Horoscope */
+.p1-horoscope {
+  margin-top: 5mm;
+}
+
+/* Plus d'espace avant Vue du cosmos */
+.p1-nasa {
+  margin-top: 5mm;
+}
+
 .p1-bloc {
   padding: 3mm;
   background: var(--creme);
