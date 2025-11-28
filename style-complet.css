@@ -1355,7 +1355,34 @@ body {
   font-size: 16pt;
   color: var(--or);
   display: block;
-  m
+  margin-bottom: 1mm;
+}
+
+.p4-prix-value {
+  font-family: var(--serif);
+  font-size: 12pt;
+  font-weight: 700;
+  color: var(--nuit);
+}
+
+.p4-prix-label {
+  font-family: var(--mono);
+  font-size: 7pt;
+  color: var(--taupe);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1mm;
+}
+
+/* NUMÉRO PAGE */
+.p4-num {
+  position: absolute;
+  bottom: 3mm;
+  right: 5mm;
+  font-family: var(--mono);
+  font-size: 11pt;
+  color: var(--ivoire);
+}
 
 /* ═══════════════════════════════════════════════════════════
    05-nostalgie.html
