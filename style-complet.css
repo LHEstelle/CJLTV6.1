@@ -1238,6 +1238,20 @@ body {
 /* ═══════════════════════════════════════════════════════════
    05-nostalgie.html
    ═══════════════════════════════════════════════════════════ */
+
+.p5-moment-icon {
+  font-size: 22pt;
+}
+
+.p5-cat-icon {
+  font-size: 14pt;
+}
+
+.p5-exp-icon {
+  font-size: 14pt;
+}
+
+
 .p5 {
   background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%);
   padding: 5mm;
@@ -2080,6 +2094,20 @@ body {
 /* ═══════════════════════════════════════════════════════════
    10-stats.html
    ═══════════════════════════════════════════════════════════ */
+
+.p10-stat-icon,
+.p10-prix-icon,
+.p10-monde-icon {
+  font-size: 22pt;
+  display: block;
+  margin-bottom: 2mm;
+}
+
+.p10-titre-icon {
+  font-size: 12pt;
+}
+
+
 .p10 {
   background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%);
   padding: 6mm;
