@@ -1,4 +1,3 @@
-
 <div class="page p13">
   
   <div class="p13-diplome">
@@ -15,20 +14,40 @@
     
     <div class="p13-ligne"></div>
     
-    <p class="p13-certifie">Il est certifié par les présentes que</p>
-    <p class="p13-nom">{{PRENOM}}</p>
-    <p class="p13-date">Né(e) le {{DATE_COMPLETE_FR}}</p>
+    <!-- SECTION 1 : La personne -->
+    <div class="p13-section">
+      <p class="p13-certifie">Il est certifié par les présentes que</p>
+      <p class="p13-nom">{{PRENOM}}</p>
+      <p class="p13-date">Né(e) le {{DATE_COMPLETE_FR}}</p>
+      <p class="p13-texte">
+        Est une personne unique et irremplaçable, dont l'arrivée dans le monde 
+        a changé le cours de l'Histoire.
+      </p>
+    </div>
     
-    <p class="p13-texte">
-      Est une personne unique et irremplaçable, dont l'arrivée dans le monde 
-      a changé le cours de l'Histoire. Ce voyage à travers le temps en témoigne.
-    </p>
+    <!-- Séparateur -->
+    <div class="p13-sep">
+      <div class="p13-sep-line"></div>
+      <span class="p13-sep-star">✦</span>
+      <div class="p13-sep-line"></div>
+    </div>
     
+    <!-- SECTION 2 : Le livre -->
+    <div class="p13-livre">
+      <p class="p13-livre-label">Exemplaire unique</p>
+      <p class="p13-livre-txt">
+        Ce livre a été créé spécialement pour {{PRENOM}}.<br>
+        Il n'en existe aucun autre au monde.
+      </p>
+    </div>
+    
+    <!-- Sceau -->
     <div class="p13-sceau">
       <span class="p13-sceau-label">N°</span>
       <span class="p13-sceau-num">{{NUMERO_UNIQUE}}</span>
     </div>
     
+    <!-- Signatures -->
     <div class="p13-signatures">
       <div class="p13-sig">
         <div class="p13-sig-ligne"></div>
@@ -45,4 +64,3 @@
   </div>
   
 </div>
-
