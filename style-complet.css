@@ -2669,178 +2669,241 @@ body {
   color: var(--taupe);
 }
 
-/* ═══════════════════════════════════════════════════════════
-   13-certificat.html
-   ═══════════════════════════════════════════════════════════ */
-.p13 {
-  background: var(--perle);
-  padding: 10mm;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    /* ═══════════════════════════════════════════════════════════
+       CERTIFICAT HYBRIDE
+       ═══════════════════════════════════════════════════════════ */
+    
+    .p13 {
+      background: linear-gradient(135deg, var(--bronze) 0%, #7A5F3F 100%);
+      padding: 10mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.p13-diplome {
-  width: 100%;
-  height: 100%;
-  background: var(--ivoire);
-  border: 3px solid var(--or);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15mm;
-}
+    .p13-diplome {
+      width: 100%;
+      height: 100%;
+      background: var(--ivoire);
+      border: 3px solid var(--or);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15mm 20mm;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
 
-.p13-diplome::before {
-  content: '';
-  position: absolute;
-  inset: 6mm;
-  border: 1px solid var(--or);
-}
+    .p13-diplome::before {
+      content: '';
+      position: absolute;
+      inset: 6mm;
+      border: 1px solid var(--or);
+    }
 
-.p13-coin {
-  position: absolute;
-  width: 15mm;
-  height: 15mm;
-}
-.p13-coin::before,
-.p13-coin::after {
-  content: '';
-  position: absolute;
-  background: var(--or);
-}
-.p13-coin-tl { top: 10mm; left: 10mm; }
-.p13-coin-tl::before { width: 12mm; height: 2px; }
-.p13-coin-tl::after { width: 2px; height: 12mm; }
-.p13-coin-tr { top: 10mm; right: 10mm; }
-.p13-coin-tr::before { width: 12mm; height: 2px; right: 0; }
-.p13-coin-tr::after { width: 2px; height: 12mm; right: 0; }
-.p13-coin-bl { bottom: 10mm; left: 10mm; }
-.p13-coin-bl::before { width: 12mm; height: 2px; bottom: 0; }
-.p13-coin-bl::after { width: 2px; height: 12mm; bottom: 0; }
-.p13-coin-br { bottom: 10mm; right: 10mm; }
-.p13-coin-br::before { width: 12mm; height: 2px; bottom: 0; right: 0; }
-.p13-coin-br::after { width: 2px; height: 12mm; bottom: 0; right: 0; }
+    /* Coins décoratifs */
+    .p13-coin {
+      position: absolute;
+      width: 15mm;
+      height: 15mm;
+    }
 
-.p13-star {
-  font-size: 34pt;
-  color: var(--or);
-  margin-bottom: 6mm;
-}
+    .p13-coin::before,
+    .p13-coin::after {
+      content: '';
+      position: absolute;
+      background: var(--or);
+    }
 
-.p13-titre {
-  font-family: var(--serif);
-  font-size: 34pt;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--nuit);
-}
+    .p13-coin-tl { top: 10mm; left: 10mm; }
+    .p13-coin-tl::before { width: 12mm; height: 2px; }
+    .p13-coin-tl::after { width: 2px; height: 12mm; }
 
-.p13-sous {
-  font-family: var(--mono);
-  font-size: 11pt;
-  letter-spacing: 0.15em;
-  color: var(--or);
-  margin-top: 2mm;
-}
+    .p13-coin-tr { top: 10mm; right: 10mm; }
+    .p13-coin-tr::before { width: 12mm; height: 2px; right: 0; }
+    .p13-coin-tr::after { width: 2px; height: 12mm; right: 0; }
 
-.p13-ligne {
-  width: 80mm;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--or), transparent);
-  margin: 8mm 0;
-}
+    .p13-coin-bl { bottom: 10mm; left: 10mm; }
+    .p13-coin-bl::before { width: 12mm; height: 2px; bottom: 0; }
+    .p13-coin-bl::after { width: 2px; height: 12mm; bottom: 0; }
 
-.p13-certifie {
-  font-family: var(--serif);
-  font-size: 13pt;
-  color: var(--gris);
-}
+    .p13-coin-br { bottom: 10mm; right: 10mm; }
+    .p13-coin-br::before { width: 12mm; height: 2px; bottom: 0; right: 0; }
+    .p13-coin-br::after { width: 2px; height: 12mm; bottom: 0; right: 0; }
 
-.p13-nom {
-  font-family: var(--serif);
-  font-size: 40pt;
-  font-weight: 700;
-  color: var(--or);
-  margin: 5mm 0;
-}
+    .p13-star {
+      font-size: 28pt;
+      color: var(--or);
+      margin-bottom: 4mm;
+    }
 
-.p13-date {
-  font-size: 13pt;
-  color: var(--ardoise);
-}
+    .p13-titre {
+      font-family: var(--serif);
+      font-size: 32pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--nuit);
+    }
 
-.p13-texte {
-  font-family: var(--serif);
-  font-size: 12pt;
-  font-style: italic;
-  color: var(--gris);
-  text-align: center;
-  max-width: 140mm;
-  line-height: 1.6;
-  margin: 8mm 0;
-}
+    .p13-sous {
+      font-family: var(--mono);
+      font-size: 10pt;
+      letter-spacing: 0.2em;
+      color: var(--or);
+      margin-top: 2mm;
+    }
 
-.p13-sceau {
-  width: 28mm;
-  height: 28mm;
-  border: 2px solid var(--or);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 6mm 0;
-}
+    .p13-ligne {
+      width: 80mm;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 6mm 0;
+    }
 
-.p13-sceau-label {
-  font-family: var(--mono);
-  font-size: 9pt;
-  color: var(--or);
-}
+    /* SECTION 1 : La personne */
+    .p13-section {
+      text-align: center;
+      margin: 4mm 0;
+    }
 
-.p13-sceau-num {
-  font-family: var(--serif);
-  font-size: 13pt;
-  font-weight: 700;
-  color: var(--or);
-}
+    .p13-certifie {
+      font-family: var(--serif);
+      font-size: 12pt;
+      color: var(--gris);
+    }
 
-.p13-signatures {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 140mm;
-  margin-top: 8mm;
-}
+    .p13-nom {
+      font-family: var(--serif);
+      font-size: 38pt;
+      font-weight: 700;
+      color: var(--or);
+      margin: 3mm 0;
+    }
 
-.p13-sig {
-  text-align: center;
-}
+    .p13-date {
+      font-size: 12pt;
+      color: var(--ardoise);
+      font-weight: 500;
+    }
 
-.p13-sig-ligne {
-  width: 50mm;
-  height: 1px;
-  background: var(--nuit);
-  margin-bottom: 2mm;
-}
+    .p13-texte {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-style: italic;
+      color: var(--gris);
+      text-align: center;
+      max-width: 140mm;
+      line-height: 1.7;
+      margin: 5mm 0;
+    }
 
-.p13-sig-txt {
-  font-size: 10pt;
-  color: var(--gris);
-}
+    /* Séparateur */
+    .p13-sep {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      margin: 5mm 0;
+    }
 
-.p13-footer {
-  font-family: var(--mono);
-  font-size: 9pt;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--or);
-  margin-top: 8mm;
-}
+    .p13-sep-line {
+      width: 30mm;
+      height: 1px;
+      background: var(--or);
+      opacity: 0.5;
+    }
+
+    .p13-sep-star {
+      color: var(--or);
+      font-size: 10pt;
+    }
+
+    /* SECTION 2 : Le livre */
+    .p13-livre {
+      background: rgba(191,162,101,0.08);
+      padding: 5mm 8mm;
+      border-radius: 2mm;
+      text-align: center;
+      margin: 4mm 0;
+    }
+
+    .p13-livre-label {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--or);
+      margin-bottom: 2mm;
+    }
+
+    .p13-livre-txt {
+      font-family: var(--serif);
+      font-size: 11pt;
+      color: var(--ardoise);
+      line-height: 1.6;
+    }
+
+    /* Sceau avec numéro */
+    .p13-sceau {
+      width: 26mm;
+      height: 26mm;
+      border: 2px solid var(--or);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 5mm 0;
+    }
+
+    .p13-sceau-label {
+      font-family: var(--mono);
+      font-size: 8pt;
+      color: var(--or);
+    }
+
+    .p13-sceau-num {
+      font-family: var(--serif);
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--or);
+    }
+
+    /* Signatures */
+    .p13-signatures {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 140mm;
+      margin-top: 6mm;
+    }
+
+    .p13-sig {
+      text-align: center;
+    }
+
+    .p13-sig-ligne {
+      width: 50mm;
+      height: 1px;
+      background: var(--nuit);
+      margin-bottom: 2mm;
+    }
+
+    .p13-sig-txt {
+      font-size: 9pt;
+      color: var(--gris);
+    }
+
+    /* Footer */
+    .p13-footer {
+      font-family: var(--mono);
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--or);
+      margin-top: 6mm;
+    }
 
 /* ═══════════════════════════════════════════════════════════
    14-quizz.html
