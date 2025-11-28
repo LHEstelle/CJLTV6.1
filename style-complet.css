@@ -4,6 +4,7 @@
    ════════════════════════════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
 :root {
   /* Palette luxe moderne */
@@ -59,6 +60,25 @@ body {
   .page { margin: 0; box-shadow: none; page-break-after: always; }
 }
 
+/* Tailles d'icônes */
+.fa-icon {
+  font-size: 12pt;
+  color: var(--or);
+  margin-right: 2mm;
+}
+
+.fa-icon-sm {
+  font-size: 10pt;
+  color: var(--or);
+  margin-right: 2mm;
+}
+
+.fa-icon-lg {
+  font-size: 18pt;
+  color: var(--or);
+  display: block;
+  margin-bottom: 2mm;
+}
 
 /* ═══════════════════════════════════════════════════════════
    00-couverture.html — Page 1 Immersion
@@ -710,7 +730,7 @@ body {
   font-size: 10pt;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #BFA265 !important;
+  color: var(--or);
   padding-bottom: 2mm;
   border-bottom: 1px solid rgba(191,162,101,0.3);
 }
@@ -731,10 +751,21 @@ body {
 
 .p2-trait-icon {
   font-size: 22pt;
+  color: var(--or) !important;
   flex-shrink: 0;
   width: 10mm;
   text-align: center;
-  color: #BFA265 !important;
+}
+
+.p2-trait-icon i {
+  font-size: 18pt;
+  color: #BFA265;
+}
+
+.p2-traits-title i,
+.p2-power-label i {
+  color: #BFA265;
+  margin-right: 2mm;
 }
 
 .p2-trait-content {
@@ -771,7 +802,7 @@ body {
   font-size: 9pt;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: #BFA265 !important;
+  color: var(--or);
   margin-bottom: 2mm;
 }
 
@@ -954,6 +985,20 @@ body {
    04-capsule-temporelle.html
    ═══════════════════════════════════════════════════════════ */
 
+.p4-titre-icon {
+  font-size: 12pt;
+}
+
+.p4-item-icon {
+  font-size: 11pt;
+}
+
+.p4-prix-icon {
+  font-size: 20pt;
+  display: block;
+  margin-bottom: 2mm;
+}
+
 .p4 {
   background: var(--bronze);
   padding: 5mm;
@@ -1021,23 +1066,9 @@ body {
   border-bottom: 1px solid var(--perle);
 }
 
-.p4-titre-icon {
-  font-size: 10pt;
+.p4-card-titre i {
   color: var(--or);
   margin-right: 1mm;
-}
-
-.p4-item-icon {
-  font-size: 9pt;
-  color: var(--or);
-  margin-right: 1mm;
-}
-
-.p4-prix-icon {
-  font-size: 18pt;
-  color: var(--or);
-  display: block;
-  margin-bottom: 2mm;
 }
 
 .p4-grande-image {
@@ -1074,8 +1105,6 @@ body {
   font-size: 10pt;
   margin-bottom: 2mm;
   line-height: 1.3;
-  display: flex;
-  align-items: flex-start;
 }
 
 .p4-culture-item span {
@@ -1098,10 +1127,6 @@ body {
   color: var(--or); 
   border-bottom-color: rgba(191,162,101,0.3);
   width: 100%;
-}
-
-.p4-chanson .p4-titre-icon {
-  color: var(--or);
 }
 
 .p4-chanson-content {
@@ -1156,6 +1181,8 @@ body {
   gap: 2mm;
 }
 
+.p4-enfance-icon { font-size: 12pt; }
+
 .p4-image3 {
   grid-column: 2;
   grid-row: 3;
@@ -1172,6 +1199,18 @@ body {
   display: flex;
   align-items: center;
   gap: 2mm;
+}
+
+.p4-chiffre-icon {
+  width: 5mm;
+  height: 5mm;
+  background: var(--or);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8pt;
+  color: var(--blanc);
 }
 
 .p4-bottom {
@@ -1202,15 +1241,55 @@ body {
   opacity: 0.7;
 }
 
-.p4-celebrite .p4-item-icon {
-  color: var(--nuit);
-}
-
 .p4-celebrite-nom {
   font-family: var(--serif);
   font-size: 14pt;
   font-weight: 600;
-  color:
+  color: var(--nuit);
+  margin-top: 1mm;
+}
+
+.p4-prix {
+  background: var(--ivoire);
+  padding: 4mm;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p4-prix-item {
+  text-align: center;
+}
+
+.p4-prix-icon {
+  font-size: 18pt;
+  margin-bottom: 2mm;
+}
+
+.p4-prix-value {
+  font-family: var(--serif);
+  font-size: 13pt;
+  font-weight: 700;
+  color: var(--nuit);
+}
+
+.p4-prix-label {
+  font-family: var(--mono);
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--nuit);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.p4-num {
+  position: absolute;
+  bottom: 3mm;
+  right: 5mm;
+  font-family: var(--mono);
+  font-size: 11pt;
+  color: var(--ivoire);
+}
 
 /* ═══════════════════════════════════════════════════════════
    05-nostalgie.html
@@ -1219,13 +1298,29 @@ body {
    05-souvenirs-enfance.html
    ═══════════════════════════════════════════════════════════ */
 
+.p5-moment-icon {
+  font-size: 22pt;
+   color: #BFA265;
+}
+
+.p5-cat-titre i,
+.p5-exp-label i {
+  color: var(--or);
+  margin-right: 1mm;
+}
+
+.p5-cat-icon {
+  font-size: 14pt;
+}
+.p5-exp-icon {
+  font-size: 14pt;
+}
 .p5 {
   background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%);
   padding: 5mm;
   display: flex;
   flex-direction: column;
 }
-
 .p5-header {
   display: flex;
   justify-content: space-between;
@@ -1235,7 +1330,6 @@ body {
   border-bottom: 3px solid var(--nuit);
   position: relative;
 }
-
 .p5-header::after {
   content: '✦';
   position: absolute;
@@ -1247,23 +1341,21 @@ body {
   color: var(--or);
   font-size: 11pt;
 }
-
 .p5-titre {
   font-family: var(--serif);
   font-size: 26pt;
   font-weight: 700;
   color: var(--nuit);
 }
-
 .p5-age {
   font-family: var(--serif);
   font-size: 14pt;
+  color: var(--or);
   font-style: italic;
   background: var(--nuit);
   padding: 2mm 5mm;
   color: var(--or);
 }
-
 .p5-journee {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1271,7 +1363,6 @@ body {
   margin-bottom: 4mm;
   flex: 1;
 }
-
 .p5-moment {
   background: var(--blanc);
   padding: 4mm;
@@ -1282,7 +1373,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .p5-moment::before {
   content: '';
   position: absolute;
@@ -1291,11 +1381,9 @@ body {
   right: 0;
   height: 3mm;
 }
-
 .p5-moment:nth-child(1)::before { background: linear-gradient(90deg, var(--or), var(--corail)); }
 .p5-moment:nth-child(2)::before { background: linear-gradient(90deg, var(--corail), var(--rose)); }
 .p5-moment:nth-child(3)::before { background: linear-gradient(90deg, var(--rose), var(--nuit)); }
-
 .p5-moment-header {
   display: flex;
   align-items: center;
@@ -1305,7 +1393,6 @@ body {
   padding-bottom: 2mm;
   border-bottom: 1px solid var(--perle);
 }
-
 .p5-moment-icon {
   width: 12mm;
   height: 12mm;
@@ -1315,30 +1402,25 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 16pt;
-  color: #BFA265;
 }
-
 .p5-moment-label {
   font-family: var(--serif);
   font-size: 15pt;
   font-weight: 600;
   color: var(--nuit);
 }
-
 .p5-moment-txt {
   flex: 1;
   font-size: 11pt;
   line-height: 1.7;
   color: var(--ardoise);
 }
-
 .p5-categories {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 2mm;
   margin-bottom: 4mm;
 }
-
 .p5-cat {
   background: var(--blanc);
   padding: 3mm;
@@ -1346,7 +1428,6 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   position: relative;
 }
-
 .p5-cat::before {
   content: '';
   position: absolute;
@@ -1356,14 +1437,12 @@ body {
   height: 100%;
   border-radius: 2mm 0 0 2mm;
 }
-
 .p5-cat:nth-child(1)::before { background: var(--or); }
 .p5-cat:nth-child(2)::before { background: var(--corail); }
 .p5-cat:nth-child(3)::before { background: var(--rose); }
 .p5-cat:nth-child(4)::before { background: var(--bronze); }
 .p5-cat:nth-child(5)::before { background: var(--nuit); }
 .p5-cat:nth-child(6)::before { background: var(--or); }
-
 .p5-cat-titre {
   font-family: var(--mono);
   font-size: 8pt;
@@ -1372,19 +1451,11 @@ body {
   color: var(--or);
   margin-bottom: 1.5mm;
 }
-
-.p5-cat-icon {
-  font-size: 10pt;
-  color: var(--or);
-  margin-right: 1mm;
-}
-
 .p5-cat-list {
   font-size: 9pt;
   line-height: 1.5;
   color: var(--ardoise);
 }
-
 .p5-expressions {
   background: var(--nuit);
   padding: 5mm 6mm;
@@ -1394,7 +1465,6 @@ body {
   gap: 4mm;
   flex-wrap: wrap;
 }
-
 .p5-exp-label {
   font-family: var(--mono);
   font-size: 10pt;
@@ -1403,20 +1473,12 @@ body {
   letter-spacing: 0.1em;
   flex-shrink: 0;
 }
-
-.p5-exp-icon {
-  font-size: 12pt;
-  color: var(--or);
-  margin-right: 2mm;
-}
-
 .p5-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 3mm;
   flex: 1;
 }
-
 .p5-tag {
   background: var(--blanc);
   padding: 2.5mm 5mm;
@@ -1425,7 +1487,6 @@ body {
   color: var(--nuit);
   font-weight: 500;
 }
-
 .p5-num {
   text-align: right;
   font-family: var(--mono);
@@ -1433,7 +1494,6 @@ body {
   color: var(--taupe);
   margin-top: 2mm;
 }
-
 
 /* ═══════════════════════════════════════════════════════════
    06-timeline.html
@@ -2082,30 +2142,24 @@ body {
   display: block;
   margin-bottom: 2mm;
 }
-
 .p10-titre-icon {
   font-size: 12pt;
 }
-
-
 .p10 {
   background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%);
   padding: 6mm;
   display: flex;
   flex-direction: column;
 }
-
 .p10-header {
   text-align: center;
   margin-bottom: 4mm;
 }
-
 .p10-ornament {
   color: var(--or);
   font-size: 12pt;
   letter-spacing: 0.5em;
 }
-
 .p10-titre {
   font-family: var(--serif);
   font-size: 28pt;
@@ -2113,21 +2167,18 @@ body {
   color: var(--nuit);
   margin: 2mm 0;
 }
-
 .p10-sep {
   width: 50mm;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--or), transparent);
   margin: 0 auto;
 }
-
 .p10-body {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 4mm;
 }
-
 .p10-temps {
   display: flex;
   justify-content: center;
@@ -2136,20 +2187,17 @@ body {
   background: var(--nuit);
   border-radius: 2mm;
 }
-
 .p10-temps-item {
   text-align: center;
   padding: 3mm 6mm;
   flex: 1;
 }
-
 .p10-temps-value {
   font-family: var(--serif);
   font-size: 20pt;
   font-weight: 700;
   color: var(--or);
 }
-
 .p10-temps-label {
   font-family: var(--mono);
   font-size: 8pt;
@@ -2158,13 +2206,11 @@ body {
   letter-spacing: 0.1em;
   margin-top: 1mm;
 }
-
 .p10-perso {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3mm;
 }
-
 .p10-stat {
   background: var(--blanc);
   padding: 4mm;
@@ -2175,17 +2221,28 @@ body {
   overflow: hidden;
   border-bottom: 3px solid;
 }
-
 .p10-stat:nth-child(1) { border-bottom-color: var(--or); }
 .p10-stat:nth-child(2) { border-bottom-color: var(--corail); }
 .p10-stat:nth-child(3) { border-bottom-color: var(--rose); }
 .p10-stat:nth-child(4) { border-bottom-color: var(--bronze); }
 .p10-stat:nth-child(5) { border-bottom-color: var(--nuit); }
 .p10-stat:nth-child(6) { border-bottom-color: var(--or); }
-
 .p10-stat-icon {
   font-size: 24pt;
   margin-bottom: 2mm;
+}
+
+.p10-stat-icon i,
+.p10-prix-icon i,
+.p10-monde-icon i {
+  font-size: 22pt;
+  color: #BFA265;
+}
+
+.p10-prix-titre i,
+.p10-monde-titre i {
+  color: var(--or);
+  margin-right: 2mm;
 }
 
 .p10-stat-value {
@@ -2194,7 +2251,6 @@ body {
   font-weight: 700;
   color: var(--nuit);
 }
-
 .p10-stat-label {
   font-family: var(--mono);
   font-size: 8pt;
@@ -2202,7 +2258,6 @@ body {
   text-transform: uppercase;
   margin-top: 1mm;
 }
-
 .p10-prix {
   background: var(--blanc);
   padding: 4mm;
@@ -2210,7 +2265,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   border-left: 4px solid var(--or);
 }
-
 .p10-prix-titre {
   font-family: var(--mono);
   font-size: 10pt;
@@ -2220,36 +2274,30 @@ body {
   text-align: center;
   margin-bottom: 3mm;
 }
-
 .p10-prix-grid {
   display: flex;
   justify-content: space-around;
 }
-
 .p10-prix-item {
   text-align: center;
   padding: 2mm 4mm;
 }
-
 .p10-prix-icon {
   font-size: 22pt;
   margin-bottom: 2mm;
 }
-
 .p10-prix-value {
   font-family: var(--serif);
   font-size: 15pt;
   font-weight: 700;
   color: var(--nuit);
 }
-
 .p10-prix-label {
   font-family: var(--mono);
   font-size: 8pt;
   color: var(--taupe);
   text-transform: uppercase;
 }
-
 .p10-monde {
   flex: 1;
   background: var(--nuit);
@@ -2258,7 +2306,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .p10-monde-titre {
   font-family: var(--mono);
   font-size: 10pt;
@@ -2268,7 +2315,6 @@ body {
   text-align: center;
   margin-bottom: 4mm;
 }
-
 .p10-monde-grid {
   flex: 1;
   display: grid;
@@ -2276,7 +2322,6 @@ body {
   grid-template-rows: 1fr 1fr;
   gap: 3mm;
 }
-
 .p10-monde-item {
   text-align: center;
   padding: 4mm;
@@ -2286,14 +2331,12 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
 .p10-monde-value {
   font-family: var(--serif);
   font-size: 14pt;
   font-weight: 700;
   color: var(--or);
 }
-
 .p10-monde-label {
   font-family: var(--mono);
   font-size: 8pt;
@@ -2301,7 +2344,6 @@ body {
   text-transform: uppercase;
   margin-top: 2mm;
 }
-
 .p10-num {
   text-align: right;
   font-family: var(--mono);
