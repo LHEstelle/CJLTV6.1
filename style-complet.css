@@ -950,19 +950,9 @@ body {
    04-moodboard.html
    ═══════════════════════════════════════════════════════════ */
 
-.p4-titre-icon {
-  font-size: 12pt;
-}
-
-.p4-item-icon {
-  font-size: 11pt;
-}
-
-.p4-prix-icon {
-  font-size: 20pt;
-  display: block;
-  margin-bottom: 2mm;
-}
+/* ═══════════════════════════════════════════════════════════
+   04-capsule-temporelle.html
+   ═══════════════════════════════════════════════════════════ */
 
 .p4 {
   background: var(--bronze);
@@ -1031,6 +1021,25 @@ body {
   border-bottom: 1px solid var(--perle);
 }
 
+.p4-titre-icon {
+  font-size: 10pt;
+  color: var(--or);
+  margin-right: 1mm;
+}
+
+.p4-item-icon {
+  font-size: 9pt;
+  color: var(--or);
+  margin-right: 1mm;
+}
+
+.p4-prix-icon {
+  font-size: 18pt;
+  color: var(--or);
+  display: block;
+  margin-bottom: 2mm;
+}
+
 .p4-grande-image {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -1065,6 +1074,8 @@ body {
   font-size: 10pt;
   margin-bottom: 2mm;
   line-height: 1.3;
+  display: flex;
+  align-items: flex-start;
 }
 
 .p4-culture-item span {
@@ -1087,6 +1098,10 @@ body {
   color: var(--or); 
   border-bottom-color: rgba(191,162,101,0.3);
   width: 100%;
+}
+
+.p4-chanson .p4-titre-icon {
+  color: var(--or);
 }
 
 .p4-chanson-content {
@@ -1141,8 +1156,6 @@ body {
   gap: 2mm;
 }
 
-.p4-enfance-icon { font-size: 12pt; }
-
 .p4-image3 {
   grid-column: 2;
   grid-row: 3;
@@ -1159,18 +1172,6 @@ body {
   display: flex;
   align-items: center;
   gap: 2mm;
-}
-
-.p4-chiffre-icon {
-  width: 5mm;
-  height: 5mm;
-  background: var(--or);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8pt;
-  color: var(--blanc);
 }
 
 .p4-bottom {
@@ -1201,55 +1202,15 @@ body {
   opacity: 0.7;
 }
 
+.p4-celebrite .p4-item-icon {
+  color: var(--nuit);
+}
+
 .p4-celebrite-nom {
   font-family: var(--serif);
   font-size: 14pt;
   font-weight: 600;
-  color: var(--nuit);
-  margin-top: 1mm;
-}
-
-.p4-prix {
-  background: var(--ivoire);
-  padding: 4mm;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.p4-prix-item {
-  text-align: center;
-}
-
-.p4-prix-icon {
-  font-size: 18pt;
-  margin-bottom: 2mm;
-}
-
-.p4-prix-value {
-  font-family: var(--serif);
-  font-size: 13pt;
-  font-weight: 700;
-  color: var(--nuit);
-}
-
-.p4-prix-label {
-  font-family: var(--mono);
-  font-size: 10pt;
-  font-weight: 600;
-  color: var(--nuit);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.p4-num {
-  position: absolute;
-  bottom: 3mm;
-  right: 5mm;
-  font-family: var(--mono);
-  font-size: 11pt;
-  color: var(--ivoire);
-}
+  color:
 
 /* ═══════════════════════════════════════════════════════════
    05-nostalgie.html
