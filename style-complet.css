@@ -60,12 +60,6 @@ body {
 }
 
 
-
-
-/* ═══════════════════════════════════════════════════════════
-   00-couverture.html
-   ═══════════════════════════════════════════════════════════ */
-
 /* ═══════════════════════════════════════════════════════════
    00-couverture.html — Page 1 Immersion
    ═══════════════════════════════════════════════════════════ */
@@ -235,7 +229,7 @@ body {
 
 
 /* ═══════════════════════════════════════════════════════════
-   01-affiche-journal.html
+   01-affiche-journal.html — VERSION OPTIMISÉE
    ═══════════════════════════════════════════════════════════ */
 
 .p1 {
@@ -248,24 +242,25 @@ body {
 
 .p1-bandeau {
   background: var(--nuit);
-  padding: 2mm 5mm;
+  padding: 2.5mm 6mm;
   display: flex;
   justify-content: space-between;
   font-family: var(--mono);
-  font-size: 9pt;
+  font-size: 8pt;
   color: var(--perle);
+  letter-spacing: 0.05em;
 }
 
 .p1-masthead {
   text-align: center;
-  padding: 5mm 8mm 4mm;
+  padding: 6mm 8mm 5mm;
   border-bottom: 3px double var(--nuit);
   background: linear-gradient(180deg, var(--ivoire) 0%, var(--blanc) 100%);
 }
 
 .p1-titre {
   font-family: var(--serif);
-  font-size: 44pt;
+  font-size: 48pt;
   font-weight: 900;
   color: var(--nuit);
   letter-spacing: -0.02em;
@@ -277,45 +272,48 @@ body {
   font-size: 14pt;
   font-weight: 600;
   color: var(--or);
-  margin-top: 2mm;
-  letter-spacing: 0.1em;
+  margin-top: 3mm;
+  letter-spacing: 0.12em;
 }
 
+/* CONTENU PRINCIPAL - 2 colonnes équilibrées */
 .p1-content {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 4mm;
-  gap: 4mm;
+  grid-template-columns: 1.1fr 0.9fr;
+  padding: 5mm;
+  gap: 5mm;
   min-height: 0;
   overflow: hidden;
 }
 
+/* COLONNE GAUCHE */
 .p1-left {
   display: flex;
   flex-direction: column;
-  gap: 3mm;
+  gap: 4mm;
 }
 
 .p1-headline {
   font-family: var(--serif);
-  font-size: 18pt;
+  font-size: 17pt;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--nuit);
   border-left: 4px solid var(--or);
-  padding-left: 3mm;
+  padding-left: 4mm;
 }
 
 .p1-chapeau {
-  font-size: 10pt;
-  line-height: 1.5;
+  font-size: 9pt;
+  line-height: 1.6;
   color: var(--ardoise);
+  text-align: justify;
 }
 
 .p1-image {
-  height: 90mm;
-  min-height: auto;
+  flex: 1;
+  min-height: 70mm;
   background: var(--perle);
   overflow: hidden;
   border: 1px solid var(--perle);
@@ -328,135 +326,134 @@ body {
 }
 
 .p1-caption {
-  font-size: 8pt;
+  font-size: 7pt;
   font-style: italic;
   color: var(--taupe);
+  text-align: center;
 }
 
+/* Ambiance du jour - plus compact */
 .p1-ambiance {
   background: var(--creme);
-  padding: 3mm;
+  padding: 4mm;
   border: 1px solid var(--or);
   border-radius: 2mm;
 }
 
 .p1-ambiance-titre {
   font-family: var(--mono);
-  font-size: 9pt;
+  font-size: 8pt;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--or);
-  margin-bottom: 2mm;
+  margin-bottom: 3mm;
   text-align: center;
 }
 
 .p1-ambiance-grid {
   display: flex;
-  gap: 3mm;
+  gap: 4mm;
 }
 
 .p1-ambiance-item {
   flex: 1;
   text-align: center;
-  padding: 2mm;
+  padding: 3mm;
   background: var(--blanc);
   border-radius: 2mm;
+  border: 1px solid var(--perle);
 }
 
-.p1-ambiance-icon { font-size: 18pt; }
+.p1-ambiance-icon { font-size: 20pt; }
 
 .p1-ambiance-value {
   font-family: var(--serif);
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: 700;
   color: var(--nuit);
+  margin-top: 1mm;
 }
 
 .p1-ambiance-label {
-  font-size: 8pt;
+  font-size: 7pt;
   color: var(--taupe);
+  margin-top: 1mm;
 }
 
+/* COLONNE DROITE */
 .p1-right {
   display: flex;
   flex-direction: column;
-  gap: 2mm;
-}
-
-.p1-right .p1-bloc:nth-child(2) {
-  margin-top: 2mm;
-}
-
-.p1-horoscope {
-  margin-top: 2mm;
-}
-
-.p1-nasa {
-  margin-top: 2mm;
+  gap: 4mm;
 }
 
 .p1-bloc {
-  padding: 3mm;
+  padding: 4mm;
   background: var(--creme);
   border-left: 3px solid var(--or);
 }
 
 .p1-bloc-titre {
   font-family: var(--mono);
-  font-size: 9pt;
+  font-size: 8pt;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--or);
   margin-bottom: 2mm;
+  padding-bottom: 2mm;
+  border-bottom: 1px solid var(--perle);
 }
 
 .p1-histoire-item {
-  font-size: 9pt;
-  margin-bottom: 1.5mm;
-  line-height: 1.3;
+  font-size: 8pt;
+  margin-bottom: 2mm;
+  line-height: 1.4;
 }
 
+.p1-histoire-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Film */
 .p1-film-titre {
   font-family: var(--serif);
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: 600;
   color: var(--nuit);
 }
 
 .p1-film-desc {
-  font-size: 9pt;
+  font-size: 8pt;
   color: var(--ardoise);
   line-height: 1.5;
-  margin-top: 1mm;
+  margin-top: 2mm;
 }
 
+/* Horoscope - hauteur contrôlée */
 .p1-horoscope {
   background: var(--ivoire);
-  padding: 3mm;
+  padding: 4mm;
   border: 1px solid var(--or);
   border-radius: 2mm;
+  max-height: 55mm;
+  overflow: hidden;
 }
 
 .p1-horoscope .p1-bloc-titre {
-  color: var(--or);
-}
-
-.p1-horoscope-signe {
-  font-family: var(--serif);
-  font-size: 14pt;
-  font-weight: 700;
-  color: var(--nuit);
-  margin-bottom: 1mm;
+  border-left: none;
+  padding-left: 0;
+  border-bottom: 1px solid var(--or);
 }
 
 .p1-horoscope-txt {
-  font-size: 9pt;
+  font-size: 8pt;
   line-height: 1.5;
   color: var(--ardoise);
   font-style: italic;
 }
 
+/* NASA - prend l'espace restant */
 .p1-nasa {
   flex: 1;
   background: var(--nuit);
@@ -465,19 +462,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3mm;
+  min-height: 0;
 }
 
 .p1-nasa-titre {
   color: var(--or);
   font-family: var(--mono);
-  font-size: 10pt;
+  font-size: 8pt;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .p1-nasa-img {
   flex: 1;
-  min-height: 45mm;
+  min-height: 35mm;
   overflow: hidden;
   border-radius: 2mm;
   background: var(--ardoise);
@@ -491,28 +489,31 @@ body {
 
 .p1-nasa-caption {
   color: var(--perle);
-  font-size: 9pt;
-  line-height: 1.6;
+  font-size: 7pt;
+  line-height: 1.5;
+  max-height: 20mm;
+  overflow: hidden;
 }
 
+/* FOOTER */
 .p1-footer {
   background: var(--nuit);
   color: var(--blanc);
-  padding: 4mm 5mm;
+  padding: 4mm 6mm;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2mm;
+  gap: 3mm;
 }
 
 .p1-footer-txt {
-  font-size: 11pt;
+  font-size: 10pt;
   font-family: var(--serif);
 }
 
 .p1-footer-num {
   font-family: var(--serif);
-  font-size: 18pt;
+  font-size: 16pt;
   font-weight: 700;
   color: var(--or);
 }
