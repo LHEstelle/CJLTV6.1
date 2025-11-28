@@ -10,7 +10,6 @@
   
   <div class="p4-grid">
     
-    <!-- Grande image esprit époque -->
     <div class="p4-card p4-grande-image">
       <div class="p4-image">
         <img src="{{image_esprit_epoque}}" alt="">
@@ -18,25 +17,22 @@
       <p class="p4-image-caption">L'esprit de l'époque</p>
     </div>
     
-    <!-- Culture -->
     <div class="p4-card p4-culture">
-      <p class="p4-card-titre"><span class="p4-titre-icon">★</span> Culture</p>
-      <p class="p4-culture-item"><span class="p4-item-icon">▸</span> <span>{{film}}</span></p>
-      <p class="p4-culture-item"><span class="p4-item-icon">▸</span> <span>{{serie_tv}}</span></p>
-      <p class="p4-culture-item"><span class="p4-item-icon">▸</span> <span>{{livre}}</span></p>
-      <p class="p4-culture-item"><span class="p4-item-icon">▸</span> <span>{{bd}}</span></p>
+      <p class="p4-card-titre"><i class="fa-solid fa-film fa-icon"></i> Culture</p>
+      <p class="p4-culture-item"><i class="fa-solid fa-clapperboard fa-icon-sm"></i> {{film}}</p>
+      <p class="p4-culture-item"><i class="fa-solid fa-tv fa-icon-sm"></i> {{serie_tv}}</p>
+      <p class="p4-culture-item"><i class="fa-solid fa-book fa-icon-sm"></i> {{livre}}</p>
+      <p class="p4-culture-item"><i class="fa-solid fa-book-open fa-icon-sm"></i> {{bd}}</p>
     </div>
     
-    <!-- Chanson CENTRÉE -->
     <div class="p4-card p4-chanson">
-      <p class="p4-card-titre"><span class="p4-titre-icon">♪</span> Hit #1</p>
+      <p class="p4-card-titre"><i class="fa-solid fa-music fa-icon"></i> Hit #1</p>
       <div class="p4-chanson-content">
         <p class="p4-chanson-titre">{{chanson_titre}}</p>
         <p class="p4-chanson-artiste">{{chanson_artiste}}</p>
       </div>
     </div>
     
-    <!-- Image 2 -->
     <div class="p4-card p4-image2">
       <div class="p4-image" style="height: 40mm;">
         <img src="{{image_objet_epoque}}" alt="">
@@ -44,24 +40,21 @@
       <p class="p4-image-caption">{{caption_1}}</p>
     </div>
     
-    <!-- Événements -->
     <div class="p4-card p4-events">
-      <p class="p4-card-titre"><span class="p4-titre-icon">✦</span> Événements</p>
+      <p class="p4-card-titre"><i class="fa-solid fa-newspaper fa-icon"></i> Événements</p>
       <p class="p4-event-item">{{evenement_1}}</p>
       <p class="p4-event-item">{{evenement_2}}</p>
-      <p class="p4-event-item"><span class="p4-item-icon">◆</span> {{president_fr}}</p>
+      <p class="p4-event-item"><i class="fa-solid fa-landmark fa-icon-sm"></i> {{president_fr}}</p>
     </div>
     
-    <!-- Enfance -->
     <div class="p4-card p4-enfance">
-      <p class="p4-card-titre"><span class="p4-titre-icon">❖</span> Enfance</p>
-      <p class="p4-enfance-item"><span class="p4-item-icon">▸</span> {{gouter_1}}</p>
-      <p class="p4-enfance-item"><span class="p4-item-icon">▸</span> {{gouter_2}}</p>
-      <p class="p4-enfance-item"><span class="p4-item-icon">▸</span> {{jouet_1}}</p>
-      <p class="p4-enfance-item"><span class="p4-item-icon">▸</span> {{jouet_2}}</p>
+      <p class="p4-card-titre"><i class="fa-solid fa-candy-cane fa-icon"></i> Enfance</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> {{gouter_1}}</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> {{gouter_2}}</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-gamepad fa-icon-sm"></i> {{jouet_1}}</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-puzzle-piece fa-icon-sm"></i> {{jouet_2}}</p>
     </div>
     
-    <!-- Image 3 -->
     <div class="p4-card p4-image3">
       <div class="p4-image" style="height: 40mm;">
         <img src="{{image_jouet_epoque}}" alt="">
@@ -69,39 +62,37 @@
       <p class="p4-image-caption">{{caption_3}}</p>
     </div>
     
-    <!-- Chiffres -->
     <div class="p4-card p4-chiffres">
-      <p class="p4-card-titre"><span class="p4-titre-icon">●</span> Chiffres</p>
-      <p class="p4-chiffre-item"><span class="p4-item-icon">▸</span> {{naissances}} naissances</p>
-      <p class="p4-chiffre-item"><span class="p4-item-icon">▸</span> {{population}} Mds hab.</p>
-      <p class="p4-chiffre-item"><span class="p4-item-icon">▸</span> {{albums_vendus}}</p>
-      <p class="p4-chiffre-item"><span class="p4-item-icon">▸</span> SMIC {{smic}}€</p>
+      <p class="p4-card-titre"><i class="fa-solid fa-chart-simple fa-icon"></i> Chiffres</p>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-baby fa-icon-sm"></i> {{naissances}} naissances</p>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-earth-americas fa-icon-sm"></i> {{population}} Mds hab.</p>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-compact-disc fa-icon-sm"></i> {{albums_vendus}}</p>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-coins fa-icon-sm"></i> SMIC {{smic}}€</p>
     </div>
     
-    <!-- Bottom : Célébrité + Prix -->
     <div class="p4-bottom">
       <div class="p4-celebrite">
-        <p class="p4-celebrite-label"><span class="p4-item-icon">★</span> Née aussi</p>
+        <p class="p4-celebrite-label"><i class="fa-solid fa-star fa-icon-sm"></i> Née aussi</p>
         <p class="p4-celebrite-nom">{{celebrite_nee}}</p>
       </div>
       <div class="p4-prix">
         <div class="p4-prix-item">
-          <span class="p4-prix-icon">◇</span>
+          <i class="fa-solid fa-bread-slice fa-icon-lg"></i>
           <p class="p4-prix-value">{{prix_baguette}}</p>
           <p class="p4-prix-label">Baguette</p>
         </div>
         <div class="p4-prix-item">
-          <span class="p4-prix-icon">◇</span>
+          <i class="fa-solid fa-gas-pump fa-icon-lg"></i>
           <p class="p4-prix-value">{{prix_essence}}</p>
           <p class="p4-prix-label">Essence/L</p>
         </div>
         <div class="p4-prix-item">
-          <span class="p4-prix-icon">◇</span>
+          <i class="fa-solid fa-envelope fa-icon-lg"></i>
           <p class="p4-prix-value">{{prix_timbre}}</p>
           <p class="p4-prix-label">Timbre</p>
         </div>
         <div class="p4-prix-item">
-          <span class="p4-prix-icon">◇</span>
+          <i class="fa-solid fa-ticket fa-icon-lg"></i>
           <p class="p4-prix-value">{{prix_cinema}}</p>
           <p class="p4-prix-label">Cinéma</p>
         </div>
