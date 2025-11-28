@@ -10,7 +10,7 @@
   
   <div class="p4-grid">
     
-    <!-- COLONNE GAUCHE -->
+    <!-- GRANDE IMAGE -->
     <div class="p4-card p4-grande-image">
       <div class="p4-image">
         <img src="{{image_esprit_epoque}}" alt="">
@@ -18,15 +18,7 @@
       <p class="p4-image-caption">L'esprit de l'époque</p>
     </div>
     
-    <div class="p4-card p4-enfance">
-      <p class="p4-card-titre"><i class="fa-solid fa-candy-cane"></i> Dans les cours de récré</p>
-      <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> {{gouter_1}}</p>
-      <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> {{gouter_2}}</p>
-      <p class="p4-enfance-item"><i class="fa-solid fa-gamepad fa-icon-sm"></i> {{jouet_1}}</p>
-      <p class="p4-enfance-item"><i class="fa-solid fa-puzzle-piece fa-icon-sm"></i> {{jouet_2}}</p>
-    </div>
-    
-    <!-- COLONNE CENTRE -->
+    <!-- ON REGARDAIT -->
     <div class="p4-card p4-culture">
       <p class="p4-card-titre"><i class="fa-solid fa-film"></i> On regardait</p>
       <p class="p4-culture-item"><i class="fa-solid fa-clapperboard fa-icon-sm"></i> {{film}}</p>
@@ -35,6 +27,7 @@
       <p class="p4-culture-item"><i class="fa-solid fa-book-open fa-icon-sm"></i> {{bd}}</p>
     </div>
     
+    <!-- ON ÉCOUTAIT -->
     <div class="p4-card p4-chanson">
       <p class="p4-card-titre"><i class="fa-solid fa-music"></i> On écoutait</p>
       <div class="p4-chanson-content">
@@ -43,6 +36,15 @@
       </div>
     </div>
     
+    <!-- IMAGE OBJET -->
+    <div class="p4-card p4-image2">
+      <div class="p4-image" style="height: 40mm;">
+        <img src="{{image_objet_epoque}}" alt="">
+      </div>
+      <p class="p4-image-caption">{{caption_1}}</p>
+    </div>
+    
+    <!-- DANS L'ACTU -->
     <div class="p4-card p4-events">
       <p class="p4-card-titre"><i class="fa-solid fa-newspaper"></i> Dans l'actu</p>
       <p class="p4-event-item">{{evenement_1}}</p>
@@ -50,59 +52,65 @@
       <p class="p4-event-item"><i class="fa-solid fa-landmark fa-icon-sm"></i> {{president_fr}}</p>
     </div>
     
-    <!-- COLONNE DROITE -->
+    <!-- DANS LES COURS DE RÉCRÉ -->
+    <div class="p4-card p4-enfance">
+      <p class="p4-card-titre"><i class="fa-solid fa-candy-cane"></i> Dans les cours de récré</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> {{gouter_1}}</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> {{gouter_2}}</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-gamepad fa-icon-sm"></i> {{jouet_1}}</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-puzzle-piece fa-icon-sm"></i> {{jouet_2}}</p>
+    </div>
+    
+    <!-- IMAGE JOUET -->
+    <div class="p4-card p4-image3">
+      <div class="p4-image" style="height: 40mm;">
+        <img src="{{image_jouet_epoque}}" alt="">
+      </div>
+      <p class="p4-image-caption">{{caption_3}}</p>
+    </div>
+    
+    <!-- LE MONDE EN {{annee}} -->
     <div class="p4-card p4-chiffres">
       <p class="p4-card-titre"><i class="fa-solid fa-earth-americas"></i> Le monde en {{annee}}</p>
-      <div class="p4-chiffre-item">
-        <span class="p4-chiffre-value">{{population}}</span>
-        <span class="p4-chiffre-label">milliards d'humains</span>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-baby fa-icon-sm"></i> {{naissances}} naissances</p>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-users fa-icon-sm"></i> {{population}} Mds hab.</p>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-arrow-trend-up fa-icon-sm"></i> {{albums_vendus}} d'inflation</p>
+      <p class="p4-chiffre-item"><i class="fa-solid fa-coins fa-icon-sm"></i> SMIC {{smic}}€</p>
+    </div>
+    
+    <!-- BARRE DU BAS -->
+    <div class="p4-bottom">
+      <div class="p4-celebrite">
+        <p class="p4-celebrite-label"><i class="fa-solid fa-star"></i> Né(e) aussi ce jour</p>
+        <p class="p4-celebrite-nom">{{celebrite_nee}}</p>
       </div>
-      <div class="p4-chiffre-item">
-        <span class="p4-chiffre-value">{{naissances}}</span>
-        <span class="p4-chiffre-label">bébés ce jour-là</span>
-      </div>
-      <div class="p4-chiffre-item">
-        <span class="p4-chiffre-value">{{albums_vendus}}</span>
-        <span class="p4-chiffre-label">d'inflation</span>
-      </div>
-      <div class="p4-chiffre-item">
-        <span class="p4-chiffre-value">{{smic}}€</span>
-        <span class="p4-chiffre-label">SMIC horaire</span>
+      <div class="p4-prix">
+        <p class="p4-prix-titre"><i class="fa-solid fa-coins"></i> Ça coûtait</p>
+        <div class="p4-prix-grid">
+          <div class="p4-prix-item">
+            <i class="fa-solid fa-bread-slice"></i>
+            <p class="p4-prix-value">{{prix_baguette}}</p>
+            <p class="p4-prix-label">Baguette</p>
+          </div>
+          <div class="p4-prix-item">
+            <i class="fa-solid fa-gas-pump"></i>
+            <p class="p4-prix-value">{{prix_essence}}</p>
+            <p class="p4-prix-label">Essence/L</p>
+          </div>
+          <div class="p4-prix-item">
+            <i class="fa-solid fa-envelope"></i>
+            <p class="p4-prix-value">{{prix_timbre}}</p>
+            <p class="p4-prix-label">Timbre</p>
+          </div>
+          <div class="p4-prix-item">
+            <i class="fa-solid fa-ticket"></i>
+            <p class="p4-prix-value">{{prix_cinema}}</p>
+            <p class="p4-prix-label">Cinéma</p>
+          </div>
+        </div>
       </div>
     </div>
     
-    <div class="p4-card p4-celebrite">
-      <p class="p4-card-titre"><i class="fa-solid fa-star"></i> Né(e) aussi ce jour</p>
-      <p class="p4-celebrite-nom">{{celebrite_nee}}</p>
-    </div>
-    
-  </div>
-  
-  <!-- BARRE PRIX EN BAS -->
-  <div class="p4-prix-bar">
-    <p class="p4-prix-titre"><i class="fa-solid fa-coins"></i> Ça coûtait</p>
-    <div class="p4-prix-grid">
-      <div class="p4-prix-item">
-        <i class="fa-solid fa-bread-slice"></i>
-        <p class="p4-prix-value">{{prix_baguette}}</p>
-        <p class="p4-prix-label">Baguette</p>
-      </div>
-      <div class="p4-prix-item">
-        <i class="fa-solid fa-gas-pump"></i>
-        <p class="p4-prix-value">{{prix_essence}}</p>
-        <p class="p4-prix-label">Essence/L</p>
-      </div>
-      <div class="p4-prix-item">
-        <i class="fa-solid fa-envelope"></i>
-        <p class="p4-prix-value">{{prix_timbre}}</p>
-        <p class="p4-prix-label">Timbre</p>
-      </div>
-      <div class="p4-prix-item">
-        <i class="fa-solid fa-ticket"></i>
-        <p class="p4-prix-value">{{prix_cinema}}</p>
-        <p class="p4-prix-label">Cinéma</p>
-      </div>
-    </div>
   </div>
   
   <span class="p4-num">04</span>
