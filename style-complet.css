@@ -1215,19 +1215,9 @@ body {
 /* ═══════════════════════════════════════════════════════════
    05-nostalgie.html
    ═══════════════════════════════════════════════════════════ */
-
-.p5-moment-icon {
-  font-size: 22pt;
-}
-
-.p5-cat-icon {
-  font-size: 14pt;
-}
-
-.p5-exp-icon {
-  font-size: 14pt;
-}
-
+/* ═══════════════════════════════════════════════════════════
+   05-souvenirs-enfance.html
+   ═══════════════════════════════════════════════════════════ */
 
 .p5 {
   background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%);
@@ -1268,7 +1258,6 @@ body {
 .p5-age {
   font-family: var(--serif);
   font-size: 14pt;
-  color: var(--or);
   font-style: italic;
   background: var(--nuit);
   padding: 2mm 5mm;
@@ -1326,6 +1315,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 16pt;
+  color: #BFA265;
 }
 
 .p5-moment-label {
@@ -1383,6 +1373,12 @@ body {
   margin-bottom: 1.5mm;
 }
 
+.p5-cat-icon {
+  font-size: 10pt;
+  color: var(--or);
+  margin-right: 1mm;
+}
+
 .p5-cat-list {
   font-size: 9pt;
   line-height: 1.5;
@@ -1408,6 +1404,12 @@ body {
   flex-shrink: 0;
 }
 
+.p5-exp-icon {
+  font-size: 12pt;
+  color: var(--or);
+  margin-right: 2mm;
+}
+
 .p5-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1431,6 +1433,7 @@ body {
   color: var(--taupe);
   margin-top: 2mm;
 }
+
 
 /* ═══════════════════════════════════════════════════════════
    06-timeline.html
