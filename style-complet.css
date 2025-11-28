@@ -494,9 +494,9 @@ body {
 }
 
 .p1-nasa-img {
-  height: 35mm;      /* FIXE au lieu de flex */
-  min-height: 30mm;
-  max-height: 40mm;
+  height: 50mm;      /* FIXE au lieu de flex */
+  min-height: 45mm;
+  max-height: 55mm;
   overflow: hidden;
   border-radius: 2mm;
   background: var(--ardoise);
@@ -513,7 +513,7 @@ body {
   color: var(--perle);
   font-size: 7pt;
   line-height: 1.5;
-  max-height: 16mm;
+ flex: 1;        
   overflow: hidden;
 }
 
