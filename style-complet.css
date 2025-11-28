@@ -710,7 +710,7 @@ body {
   font-size: 10pt;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--or);
+  color: #BFA265 !important;
   padding-bottom: 2mm;
   border-bottom: 1px solid rgba(191,162,101,0.3);
 }
@@ -734,6 +734,7 @@ body {
   flex-shrink: 0;
   width: 10mm;
   text-align: center;
+  color: #BFA265 !important;
 }
 
 .p2-trait-content {
@@ -770,7 +771,7 @@ body {
   font-size: 9pt;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--or);
+  color: #BFA265 !important;
   margin-bottom: 2mm;
 }
 
