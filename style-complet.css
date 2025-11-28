@@ -948,6 +948,21 @@ body {
 /* ═══════════════════════════════════════════════════════════
    04-moodboard.html
    ═══════════════════════════════════════════════════════════ */
+
+.p4-titre-icon {
+  font-size: 12pt;
+}
+
+.p4-item-icon {
+  font-size: 11pt;
+}
+
+.p4-prix-icon {
+  font-size: 20pt;
+  display: block;
+  margin-bottom: 2mm;
+}
+
 .p4 {
   background: var(--bronze);
   padding: 5mm;
