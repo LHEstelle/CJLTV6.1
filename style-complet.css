@@ -393,7 +393,12 @@ body {
   color: var(--nuit);
   margin-top: 1mm;
 }
-
+.p1-ambiance-desc {
+  font-size: 8pt;
+  color: var(--ardoise);
+  font-style: italic;
+  margin-top: 1mm;
+}
 .p1-ambiance-label {
   font-size: 7pt;
   color: var(--taupe);
