@@ -253,7 +253,7 @@ body {
 
 .p1-masthead {
   text-align: center;
-  padding: 6mm 8mm 5mm;
+  padding: 4mm 8mm 3mm;
   border-bottom: 3px double var(--nuit);
   background: linear-gradient(180deg, var(--ivoire) 0%, var(--blanc) 100%);
 }
@@ -281,8 +281,8 @@ body {
   flex: 1;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  padding: 5mm;
-  gap: 5mm;
+  padding: 4mm;
+  gap: 3mm;
   min-height: 0;
   overflow: hidden;
 }
@@ -335,7 +335,7 @@ body {
 /* Ambiance du jour - plus compact */
 .p1-ambiance {
   background: var(--creme);
-  padding: 4mm;
+  padding: 3mm;
   border: 1px solid var(--or);
   border-radius: 2mm;
 }
@@ -352,7 +352,7 @@ body {
 
 .p1-ambiance-grid {
   display: flex;
-  gap: 4mm;
+  gap: 4=3mm;
 }
 
 .p1-ambiance-item {
@@ -364,7 +364,7 @@ body {
   border: 1px solid var(--perle);
 }
 
-.p1-ambiance-icon { font-size: 20pt; }
+.p1-ambiance-icon { font-size: 16pt; }
 
 .p1-ambiance-value {
   font-family: var(--serif);
@@ -384,7 +384,7 @@ body {
 .p1-right {
   display: flex;
   flex-direction: column;
-  gap: 4mm;
+  gap: 2mm;
 }
 
 .p1-bloc {
@@ -433,10 +433,10 @@ body {
 /* Horoscope - hauteur contrôlée */
 .p1-horoscope {
   background: var(--ivoire);
-  padding: 4mm;
+  padding: 3mm;
   border: 1px solid var(--or);
   border-radius: 2mm;
-  max-height: 55mm;
+  max-height: 40mm;
   overflow: hidden;
 }
 
@@ -457,11 +457,11 @@ body {
 .p1-nasa {
   flex: 1;
   background: var(--nuit);
-  padding: 4mm;
+  padding: 3mm;
   border-radius: 2mm;
   display: flex;
   flex-direction: column;
-  gap: 3mm;
+  gap: 2mm;
   min-height: 0;
 }
 
@@ -491,7 +491,7 @@ body {
   color: var(--perle);
   font-size: 7pt;
   line-height: 1.5;
-  max-height: 20mm;
+  max-height: 16mm;
   overflow: hidden;
 }
 
@@ -499,7 +499,7 @@ body {
 .p1-footer {
   background: var(--nuit);
   color: var(--blanc);
-  padding: 4mm 6mm;
+  padding: 3mm 5mm;
   display: flex;
   justify-content: center;
   align-items: center;
