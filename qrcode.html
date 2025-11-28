@@ -1,0 +1,38 @@
+<div class="page p0">
+  
+  <div class="p0-cadre"></div>
+  
+  <div class="p0-coin p0-coin-tl"></div>
+  <div class="p0-coin p0-coin-tr"></div>
+  <div class="p0-coin p0-coin-bl"></div>
+  <div class="p0-coin p0-coin-br"></div>
+  
+  <p class="p0-ornament-top">✦ ✦ ✦</p>
+  
+  <div class="p0-content">
+    
+    <p class="p0-surtitle">Le livre de ta naissance</p>
+    
+    <h1 class="p0-titre">Ce Jour-Là</h1>
+    
+    <p class="p0-date">{{DATE_COMPLETE_FR}}</p>
+    
+    <div class="p0-ligne"></div>
+    
+    <p class="p0-prenom">{{PRENOM}}</p>
+    
+    <p class="p0-subtitle">Ton voyage à travers le temps commence ici</p>
+    
+    <div class="p0-qr-zone">
+      <p class="p0-qr-label">🎵 Ta playlist de naissance</p>
+      <div class="p0-qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{URL_PLAYLIST}}" alt="QR Code">
+      </div>
+      <p class="p0-qr-text">Scanne pour écouter les hits de {{ANNEE_NAISSANCE}}</p>
+    </div>
+    
+  </div>
+  
+  <p class="p0-ornament-bottom">✦ ✦ ✦</p>
+  
+</div>
