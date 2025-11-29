@@ -1,0 +1,28 @@
+<div class="page p-ouverture">
+  
+  <div class="po-cadre"></div>
+  
+  <div class="po-coin po-coin-tl"></div>
+  <div class="po-coin po-coin-tr"></div>
+  <div class="po-coin po-coin-bl"></div>
+  <div class="po-coin po-coin-br"></div>
+  
+  <div class="po-content">
+    
+    <p class="po-ornament">✦ ✦ ✦</p>
+    
+    <p class="po-intro">Ce livre a été créé pour</p>
+    
+    <p class="po-prenom">{{PRENOM}}</p>
+    
+    <p class="po-suite">par quelqu'un qui t'aime,<br>le {{DATE_CREATION_LIVRE}}</p>
+    
+    <div class="po-ligne"></div>
+    
+    <p class="po-accroche">Tu t'apprêtes à revivre<br>le jour où tout a commencé.</p>
+    
+    <p class="po-ornament2">✦ ✦ ✦</p>
+    
+  </div>
+  
+</div>
