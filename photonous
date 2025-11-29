@@ -1,0 +1,23 @@
+<div class="page p-photo">
+  
+  <div class="pp-header">
+    <p class="pp-ornament">✦ ✦ ✦</p>
+    <h1 class="pp-titre">Les gens qui comptent</h1>
+    <div class="pp-sep"></div>
+  </div>
+  
+  <div class="pp-zone">
+    <i class="fa-solid fa-people-group pp-icone"></i>
+    <p class="pp-instruction">
+      Peut-être que quelqu'un a déjà choisi ces photos.<br>
+      Peut-être que c'est à toi de décider qui mérite d'être ici,<br>
+      à tes côtés, dans ce livre.
+    </p>
+  </div>
+  
+  <div class="pp-footer">
+    <p class="pp-transition">Ces visages. Ces moments. Voilà ce qui compte vraiment...</p>
+    <p class="pp-num">21</p>
+  </div>
+  
+</div>
