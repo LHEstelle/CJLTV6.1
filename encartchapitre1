@@ -1,0 +1,25 @@
+<div class="page p-encart">
+  
+  <div class="pe-cadre"></div>
+  
+  <span class="pe-coin pe-coin-tl">❧</span>
+  <span class="pe-coin pe-coin-tr">☙</span>
+  <span class="pe-coin pe-coin-bl">☙</span>
+  <span class="pe-coin pe-coin-br">❧</span>
+  
+  <div class="pe-content">
+    
+    <p class="pe-ornament">✦ ✦ ✦</p>
+    
+    <p class="pe-numero">I</p>
+    <h1 class="pe-titre">Le jour où tu es né·e</h1>
+    
+    <div class="pe-ligne"></div>
+    
+    <p class="pe-phrase">Ce matin-là, le monde tournait déjà.<br>Mais il ne savait pas encore qu'il t'attendait.</p>
+    
+    <p class="pe-ornament2">✦ ✦ ✦</p>
+    
+  </div>
+  
+</div>
