@@ -1,0 +1,23 @@
+<div class="page p-photo">
+  
+  <div class="pp-header">
+    <p class="pp-ornament">✦ ✦ ✦</p>
+    <h1 class="pp-titre">Te voilà</h1>
+    <div class="pp-sep"></div>
+  </div>
+  
+  <div class="pp-zone">
+    <i class="fa-solid fa-baby pp-icone"></i>
+    <p class="pp-instruction">
+      Si cette page est vide, c'est une invitation.<br>
+      Retrouve une photo de tes débuts et colle-la ici.<br>
+      Ce livre t'appartient.
+    </p>
+  </div>
+  
+  <div class="pp-footer">
+    <p class="pp-transition">Si petit·e, et déjà tellement toi...</p>
+    <p class="pp-num">06</p>
+  </div>
+  
+</div>
