@@ -1,0 +1,83 @@
+<div class="page p-livreor">
+  
+  <div class="pl-header">
+    <p class="pl-ornament">✦ ✦ ✦</p>
+    <h1 class="pl-titre">Ceux qui t'aiment, en quelques mots</h1>
+    <p class="pl-subtitle">Peut-être que ces espaces sont déjà remplis. Peut-être qu'ils t'attendent.<br>Dans les deux cas, ce livre est vivant : fais-le circuler, lors d'un anniversaire,<br>d'une fête, d'un moment important. Laisse ceux qui croisent ta vie y déposer leur trace.</p>
+    <div class="pl-sep"></div>
+  </div>
+  
+  <div class="pl-grid">
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+    <div class="pl-card">
+      <div class="pl-zone-texte"></div>
+      <div class="pl-signature">
+        <span class="pl-signature-label">Signé :</span>
+        <div class="pl-signature-ligne"></div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="pl-footer">
+    <p class="pl-ornament2">✦ ✦ ✦</p>
+    <p class="pl-num">22</p>
+  </div>
+  
+</div>
