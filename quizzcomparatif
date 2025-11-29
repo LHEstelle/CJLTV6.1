@@ -1,0 +1,85 @@
+<div class="page p-quiz">
+  
+  <div class="pq-header">
+    <p class="pq-ornament">✦ ✦ ✦</p>
+    <h1 class="pq-titre">Est-ce qu'ils te connaissent ?</h1>
+    <p class="pq-subtitle">Remplis ta colonne. Fais remplir la leur. Compare. Discute. Ris. Pleure peut-être.</p>
+  </div>
+  
+  <div class="pq-table">
+    
+    <div class="pq-row-header">
+      <span>Question</span>
+      <span>Toi</span>
+      <span>Eux</span>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-star"></i> Ton plus grand rêve ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-ghost"></i> Ta peur secrète ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-utensils"></i> Le plat que tu mangerais tous les jours ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-baby-carriage"></i> Ton souvenir d'enfance préféré ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-fire"></i> Ce qui te met en colère ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-face-smile-beam"></i> Ce qui te fait pleurer de joie ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-wand-magic-sparkles"></i> Ton talent caché ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-music"></i> La chanson qui te définit ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-heart"></i> Ce que tu aimes chez toi ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+    <div class="pq-row">
+      <span class="pq-question"><i class="fa-solid fa-compass"></i> Où tu te vois dans 10 ans ?</span>
+      <div class="pq-reponse"></div>
+      <div class="pq-reponse"></div>
+    </div>
+    
+  </div>
+  
+  <div class="pq-footer">
+    <p class="pq-footer-txt">Les réponses sont différentes ? Normal.<br>On ne se voit jamais tout à fait comme les autres nous voient.</p>
+  </div>
+  
+  <p class="pq-num">19</p>
+  
+</div>
