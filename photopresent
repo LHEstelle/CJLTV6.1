@@ -1,0 +1,23 @@
+<div class="page p-photo">
+  
+  <div class="pp-header">
+    <p class="pp-ornament">✦ ✦ ✦</p>
+    <h1 class="pp-titre">Regarde-toi aujourd'hui</h1>
+    <div class="pp-sep"></div>
+  </div>
+  
+  <div class="pp-zone">
+    <i class="fa-solid fa-user pp-icone"></i>
+    <p class="pp-instruction">
+      Si cet espace est vide, choisis toi-même.<br>
+      Une photo où tu te trouves beau / belle.<br>
+      Celle-là.
+    </p>
+  </div>
+  
+  <div class="pp-footer">
+    <p class="pp-transition">Tout ce chemin parcouru. Et tu ne l'as pas fait seul·e...</p>
+    <p class="pp-num">17</p>
+  </div>
+  
+</div>
