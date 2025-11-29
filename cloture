@@ -1,0 +1,30 @@
+<div class="page p-cloture">
+  
+  <div class="pc-cadre"></div>
+  
+  <div class="pc-coin pc-coin-tl"></div>
+  <div class="pc-coin pc-coin-tr"></div>
+  <div class="pc-coin pc-coin-bl"></div>
+  <div class="pc-coin pc-coin-br"></div>
+  
+  <div class="pc-content">
+    
+    <p class="pc-ornament">✦ ✦ ✦</p>
+    
+    <p class="pc-phrase1">
+      Il y a des milliards de jours<br>
+      dans l'histoire de l'univers.<br>
+      Celui-là t'appartient.
+    </p>
+    
+    <div class="pc-ligne"></div>
+    
+    <p class="pc-phrase2">Ce jour-là, tout a commencé.</p>
+    
+    <p class="pc-phrase3">Aujourd'hui, tout continue.</p>
+    
+    <p class="pc-ornament2">✦ ✦ ✦</p>
+    
+  </div>
+  
+</div>
