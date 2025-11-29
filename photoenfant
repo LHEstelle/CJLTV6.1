@@ -1,0 +1,23 @@
+<div class="page p-photo">
+  
+  <div class="pp-header">
+    <p class="pp-ornament">✦ ✦ ✦</p>
+    <h1 class="pp-titre">Tu as grandi</h1>
+    <div class="pp-sep"></div>
+  </div>
+  
+  <div class="pp-zone">
+    <i class="fa-solid fa-child pp-icone"></i>
+    <p class="pp-instruction">
+      Une photo d'enfance t'attend peut-être ici.<br>
+      Sinon, va fouiller dans les albums.<br>
+      Ce livre mérite ce souvenir.
+    </p>
+  </div>
+  
+  <div class="pp-footer">
+    <p class="pp-transition">Ce visage-là, tu le reconnais ?</p>
+    <p class="pp-num">11</p>
+  </div>
+  
+</div>
