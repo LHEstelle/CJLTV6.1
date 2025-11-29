@@ -1,0 +1,25 @@
+<div class="page p-encart">
+  
+  <div class="pe-cadre"></div>
+  
+  <span class="pe-coin pe-coin-tl">❧</span>
+  <span class="pe-coin pe-coin-tr">☙</span>
+  <span class="pe-coin pe-coin-bl">☙</span>
+  <span class="pe-coin pe-coin-br">❧</span>
+  
+  <div class="pe-content">
+    
+    <p class="pe-ornament">✦ ✦ ✦</p>
+    
+    <p class="pe-numero">II</p>
+    <h1 class="pe-titre">Toi</h1>
+    
+    <div class="pe-ligne"></div>
+    
+    <p class="pe-phrase">Au milieu de tout ça, quelqu'un a fait son entrée.<br>Quelqu'un d'unique.</p>
+    
+    <p class="pe-ornament2">✦ ✦ ✦</p>
+    
+  </div>
+  
+</div>
