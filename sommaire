@@ -1,0 +1,41 @@
+<div class="page p-sommaire">
+  
+  <div class="ps-header">
+    <p class="ps-ornament">✦ ✦ ✦</p>
+    <h1 class="ps-titre">Ce Jour-Là</h1>
+    <div class="ps-sep"></div>
+  </div>
+  
+  <div class="ps-body">
+    
+    <div class="ps-chapitre">
+      <p class="ps-chapitre-num">I.</p>
+      <p class="ps-chapitre-titre">Le jour où tu es né·e</p>
+      <p class="ps-chapitre-desc">Le monde ce matin-là</p>
+    </div>
+    
+    <div class="ps-chapitre">
+      <p class="ps-chapitre-num">II.</p>
+      <p class="ps-chapitre-titre">Toi</p>
+      <p class="ps-chapitre-desc">Le personnage principal de cette histoire</p>
+    </div>
+    
+    <div class="ps-chapitre">
+      <p class="ps-chapitre-num">III.</p>
+      <p class="ps-chapitre-titre">Le temps qui passe</p>
+      <p class="ps-chapitre-desc">L'époque, le chemin, les chiffres</p>
+    </div>
+    
+    <div class="ps-chapitre">
+      <p class="ps-chapitre-num">IV.</p>
+      <p class="ps-chapitre-titre">L'amour</p>
+      <p class="ps-chapitre-desc">Ceux qui t'aiment et ton futur</p>
+    </div>
+    
+  </div>
+  
+  <div class="ps-footer">
+    <p class="ps-ornament2">✦ ✦ ✦</p>
+  </div>
+  
+</div>
