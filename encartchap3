@@ -1,0 +1,25 @@
+<div class="page p-encart">
+  
+  <div class="pe-cadre"></div>
+  
+  <span class="pe-coin pe-coin-tl">❧</span>
+  <span class="pe-coin pe-coin-tr">☙</span>
+  <span class="pe-coin pe-coin-bl">☙</span>
+  <span class="pe-coin pe-coin-br">❧</span>
+  
+  <div class="pe-content">
+    
+    <p class="pe-ornament">✦ ✦ ✦</p>
+    
+    <p class="pe-numero">III</p>
+    <h1 class="pe-titre">Le temps qui passe</h1>
+    
+    <div class="pe-ligne"></div>
+    
+    <p class="pe-phrase">Tu n'es pas né·e de nulle part,<br>et tu n'es pas resté·e immobile.<br>Voici le chemin.</p>
+    
+    <p class="pe-ornament2">✦ ✦ ✦</p>
+    
+  </div>
+  
+</div>
