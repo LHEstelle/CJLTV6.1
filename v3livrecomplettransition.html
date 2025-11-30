@@ -4240,8 +4240,7 @@ body {
     }
 
 /* ═══════════════════════════════════════════════════════════
-   TRANSITION UNIQUE - BANDEAU BLEU NUIT EN BAS
-   Même style pour TOUTES les pages
+   TRANSITIONS - TAILLE AUGMENTÉE
    ═══════════════════════════════════════════════════════════ */
 
 .trans {
@@ -4257,7 +4256,7 @@ body {
 
 .trans p {
   font-family: var(--serif);
-  font-size: 10pt;
+  font-size: 12pt;
   font-style: italic;
   color: var(--ivoire);
   margin: 0;
@@ -4269,7 +4268,7 @@ body {
   font-style: normal;
 }
 
-/* Ajustements padding pour éviter chevauchement */
+/* Padding pour éviter chevauchement */
 .p0 { padding-bottom: 18mm !important; }
 .p1 { padding-bottom: 18mm !important; }
 .p2 { padding-bottom: 18mm !important; }
@@ -4278,22 +4277,14 @@ body {
 .p6 { padding-bottom: 18mm !important; }
 .p7 { padding-bottom: 18mm !important; }
 .p8 { padding-bottom: 18mm !important; }
-.p10 { padding-bottom: 22mm !important; }
-.p10-monde { max-height: 85mm !important; overflow: hidden; }
+.p10 { padding-bottom: 18mm !important; }
 .p11 { padding-bottom: 18mm !important; }
 .p12 { padding-bottom: 18mm !important; }
 .p13 { padding-bottom: 18mm !important; }
 .p-quiz { padding-bottom: 18mm !important; }
 .p-instant { padding-bottom: 18mm !important; }
 .p-livreor { padding-bottom: 18mm !important; }
-  /* Réduction Stats pour transition */
-.p10-monde-grid { gap: 2mm !important; }
-.p10-monde-item { padding: 3mm !important; }
-.p10-monde-icon { font-size: 18pt !important; }
-.p10-monde-value { font-size: 11pt !important; }
-.p10-monde-label { font-size: 7pt !important; }
-.p10 { padding: 4mm !important; padding-bottom: 20mm !important; }
-</style>
+  </style>
 </head>
 <body>
 <div class="page p-ouverture">
@@ -4689,15 +4680,13 @@ body {
   <!-- Contenu PLUS GRAND -->
   <div class="p7-content">
     
-    <p class="p7-accroche">Et si tu avais pu <em>changer l'histoire de ton propre jour de naissance</em> ? L'événement qui faisait les titres ce matin-là va se rejouer. Mais cette fois, tu es dans la scène.</p>
+    <p class="p7-accroche">Et si tu avais pu changer l'histoire de ton propre jour de naissance ? L'événement qui faisait les titres ce matin-là va se rejouer. Mais cette fois, tu es dans la scène.</p>
     
     <div class="p7-body">
       <p class="p7-texte">{{FICTION_TEXTE}}</p>
     </div>
     
     <div class="p7-footer">
-      <span class="p7-genre">{{GENRE_FICTION}}</span>
-      <span class="p7-caption">{{CAPTION_FICTION}}</span>
       <span class="p7-num">07</span>
     </div>
     
