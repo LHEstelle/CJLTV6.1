@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ce Jour-Là - {{PRENOM}}</title>
+  <title>Ce Jour-Là - Marie</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -1254,7 +1254,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   LE MONDE EN {{annee}}
+   LE MONDE EN 1991
    ═══════════════════════════════════════════════════════════ */
 
 .p4-chiffres {
@@ -4240,7 +4240,7 @@ body {
     }
 
 /* ═══════════════════════════════════════════════════════════
-   TRANSITIONS - TAILLE AUGMENTÉE
+   TRANSITIONS AVEC NUMÉRO DE PAGE
    ═══════════════════════════════════════════════════════════ */
 
 .trans {
@@ -4249,7 +4249,7 @@ body {
   left: 0;
   right: 0;
   background: var(--nuit);
-  padding: 4mm 10mm;
+  padding: 4mm 10mm 2mm;
   text-align: center;
   border-top: 2px solid var(--or);
 }
@@ -4268,22 +4268,38 @@ body {
   font-style: normal;
 }
 
-/* Padding pour éviter chevauchement */
-.p0 { padding-bottom: 18mm !important; }
-.p1 { padding-bottom: 18mm !important; }
-.p2 { padding-bottom: 18mm !important; }
-.p4 { padding-bottom: 18mm !important; }
-.p5 { padding-bottom: 18mm !important; }
-.p6 { padding-bottom: 18mm !important; }
-.p7 { padding-bottom: 18mm !important; }
-.p8 { padding-bottom: 18mm !important; }
-.p10 { padding-bottom: 18mm !important; }
-.p11 { padding-bottom: 18mm !important; }
-.p12 { padding-bottom: 18mm !important; }
-.p13 { padding-bottom: 18mm !important; }
-.p-quiz { padding-bottom: 18mm !important; }
-.p-instant { padding-bottom: 18mm !important; }
-.p-livreor { padding-bottom: 18mm !important; }
+.trans .page-num {
+  display: block;
+  font-family: var(--sans);
+  font-size: 8pt;
+  font-style: normal;
+  color: var(--or);
+  margin-top: 2mm;
+  opacity: 0.7;
+}
+
+/* Padding pour éviter chevauchement - AUGMENTÉ pour pages chargées */
+.p0 { padding-bottom: 20mm !important; }
+.p1 { padding-bottom: 20mm !important; }
+.p2 { padding-bottom: 22mm !important; }
+.p4 { padding-bottom: 20mm !important; }
+.p5 { padding-bottom: 26mm !important; }
+.p6 { padding-bottom: 20mm !important; }
+.p7 { padding-bottom: 20mm !important; }
+.p8 { padding-bottom: 20mm !important; }
+.p10 { padding-bottom: 26mm !important; }
+.p11 { padding-bottom: 20mm !important; }
+.p12 { padding-bottom: 20mm !important; }
+.p13 { padding-bottom: 20mm !important; }
+.p-quiz { padding-bottom: 20mm !important; }
+.p-instant { padding-bottom: 20mm !important; }
+.p-livreor { padding-bottom: 20mm !important; }
+
+/* Cacher les anciens numéros de page */
+.p0-num, .p1-num, .p2-num, .p4-num, .p5-num, .p6-num, .p7-num, .p8-num,
+.p10-num, .p11-num, .p12-num, .p13-num, .pi-num {
+  display: none !important;
+}
   </style>
 </head>
 <body>
@@ -4302,7 +4318,7 @@ body {
     
     <p class="po-intro">Ce livre a été créé pour</p>
     
-    <p class="po-prenom">{{PRENOM}}</p>
+    <p class="po-prenom">Marie</p>
     
     <p class="po-suite">par quelqu'un qui t'aime,<br>le {{DATE_CREATION_LIVRE}}</p>
     
@@ -4401,11 +4417,11 @@ body {
     
     <h1 class="p0-titre">Ce Jour-Là</h1>
     
-    <p class="p0-date">{{DATE_COMPLETE_FR}}</p>
+    <p class="p0-date">Vendredi 15 mars 1991</p>
     
     <div class="p0-ligne"></div>
     
-    <p class="p0-prenom">{{PRENOM}}</p>
+    <p class="p0-prenom">Marie</p>
     
     <div class="p0-qr-zone">
       <p class="p0-qr-intro">Avant de tourner la page, ouvre ce portail...</p>
@@ -4422,6 +4438,7 @@ body {
 
   <div class="trans">
     <p>Tu entends ? C'est le son de ce jour-là. <strong>Maintenant, regarde-le.</strong></p>
+    <span class="page-num">04</span>
   </div>
 </div>
 
@@ -4430,12 +4447,12 @@ body {
   <div class="p1-bandeau">
     <span>Édition Spéciale</span>
     <span>N° Unique</span>
-    <span>{{ville}}</span>
+    <span>Paris</span>
   </div>
   
   <div class="p1-masthead">
     <h1 class="p1-titre">Ce Jour-Là</h1>
-    <p class="p1-date-main">{{DATE_COMPLETE_FR}}</p>
+    <p class="p1-date-main">Vendredi 15 mars 1991</p>
   </div>
   
   <div class="p1-content">
@@ -4453,9 +4470,9 @@ body {
         <div class="p1-ambiance-grid">
           <div class="p1-ambiance-item">
             <div class="p1-ambiance-icon">{{meteo_emoji}}</div>
-            <p class="p1-ambiance-value">{{temperature}}</p>
+            <p class="p1-ambiance-value">8°C</p>
              <p class="p1-ambiance-desc">{{meteo}}</p>
-            <p class="p1-ambiance-label">à {{ville}}</p>
+            <p class="p1-ambiance-label">à Paris</p>
           </div>
           <div class="p1-ambiance-item">
             <div class="p1-ambiance-icon">{{lune_emoji}}</div>
@@ -4508,6 +4525,7 @@ body {
 
   <div class="trans">
     <p>C'était ça, le décor. <strong>Le rideau était prêt à se lever...</strong></p>
+    <span class="page-num">05</span>
   </div>
 </div>
 
@@ -4573,8 +4591,8 @@ body {
     <div class="p2-header">
       <p class="p2-stars">★ ★ ★ ★ ★</p>
       <p class="p2-rank">Héros Légendaire</p>
-      <h1 class="p2-name">{{PRENOM}}</h1>
-      <p class="p2-birth">Né(e) le {{DATE_COMPLETE_FR}}</p>
+      <h1 class="p2-name">Marie</h1>
+      <p class="p2-birth">Né(e) le Vendredi 15 mars 1991</p>
     </div>
     
     <div class="p2-body">
@@ -4613,7 +4631,7 @@ body {
           <span class="p2-trait-icon"><i class="fa-solid fa-gem"></i></span>
           <div class="p2-trait-content">
             <p class="p2-trait-label">Force intérieure</p>
-            <p class="p2-trait-value">{{TRAIT_1}}</p>
+            <p class="p2-trait-value">Empathie profonde</p>
           </div>
         </div>
         
@@ -4621,7 +4639,7 @@ body {
           <span class="p2-trait-icon"><i class="fa-solid fa-fire"></i></span>
           <div class="p2-trait-content">
             <p class="p2-trait-label">Talent naturel</p>
-            <p class="p2-trait-value">{{TRAIT_2}}</p>
+            <p class="p2-trait-value">Créativité débordante</p>
           </div>
         </div>
         
@@ -4629,7 +4647,7 @@ body {
           <span class="p2-trait-icon"><i class="fa-solid fa-bolt"></i></span>
           <div class="p2-trait-content">
             <p class="p2-trait-label">Aura unique</p>
-            <p class="p2-trait-value">{{TRAIT_3}}</p>
+            <p class="p2-trait-value">Intuition aiguisée</p>
           </div>
         </div>
         
@@ -4637,13 +4655,13 @@ body {
           <span class="p2-trait-icon"><i class="fa-solid fa-masks-theater"></i></span>
           <div class="p2-trait-content">
             <p class="p2-trait-label">Archétype</p>
-            <p class="p2-trait-value">{{ROLE_FICTION}}</p>
+            <p class="p2-trait-value">La Médiatrice</p>
           </div>
         </div>
         
         <div class="p2-power">
           <p class="p2-power-label"><i class="fa-solid fa-sparkles"></i> Super-pouvoir secret</p>
-          <p class="p2-power-name">{{SUPERPOWER}}</p>
+          <p class="p2-power-name">Transformer les conflits en harmonie</p>
         </div>
         
       </div>
@@ -4652,7 +4670,7 @@ body {
     
     <div class="p2-footer">
       <p class="p2-ornament">— ✦ —</p>
-      <p class="p2-motto">« {{DEVISE}} »</p>
+      <p class="p2-motto">« La douceur est une force »</p>
     </div>
     
     <span class="p2-num">02</span>
@@ -4662,6 +4680,7 @@ body {
 
   <div class="trans">
     <p>Tes forces sont identifiées. Ton aura est révélée.<br><strong>Maintenant, ta première mission :</strong> revivre le jour de ta naissance et affronter l'événement du moment.</p>
+    <span class="page-num">08</span>
   </div>
 </div>
 
@@ -4669,11 +4688,11 @@ body {
   
   <!-- Hero image PLUS PETITE -->
   <div class="p7-hero">
-    <img class="p7-hero-img" src="{{IMAGE_FICTION}}" alt="">
+    <img class="p7-hero-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="">
     <div class="p7-hero-overlay"></div>
     <div class="p7-titre-zone">
       <span class="p7-label">Fiction Historique</span>
-      <h1 class="p7-titre">{{TITRE_FICTION}}</h1>
+      <h1 class="p7-titre">La Dernière Négociation</h1>
     </div>
   </div>
   
@@ -4683,11 +4702,14 @@ body {
     <p class="p7-accroche">Et si tu avais pu changer l'histoire de ton propre jour de naissance ? L'événement qui faisait les titres ce matin-là va se rejouer. Mais cette fois, tu es dans la scène.</p>
     
     <div class="p7-body">
-      <p class="p7-texte">{{FICTION_TEXTE}}</p>
+      <p class="p7-texte">Le téléphone sonne dans le bureau du Quai d'Orsay. Marie décroche, le cœur battant. À l'autre bout du fil, le secrétaire général de l'ONU attend sa réponse. Les négociations de paix sont dans l'impasse depuis trois jours.
+
+Elle ferme les yeux, laisse son intuition la guider. « Proposez une trêve humanitaire de 48 heures », dit-elle calmement. « Laissez-leur le temps de voir leurs familles. »
+
+Un silence. Puis : « C'est exactement ce qu'il nous fallait. » Ce soir-là, pour la première fois depuis des semaines, les armes se taisent.</p>
     </div>
     
     <div class="p7-footer">
-      <span class="p7-num">07</span>
     </div>
     
   </div>
@@ -4695,6 +4717,7 @@ body {
 
   <div class="trans">
     <p>Tu peux rouvrir les yeux. Ce n'était qu'un rêve. <strong>Ou peut-être pas...</strong></p>
+    <span class="page-num">09</span>
   </div>
 </div>
 
@@ -4715,7 +4738,7 @@ body {
       
       <div class="p8-sep"></div>
       
-      <p class="p8-texte">{{MIROIR_TEXT}}</p>
+      <p class="p8-texte">Cette version de toi qui transforme chaque conversation en pont entre les êtres, Marie. Cette capacité à sentir ce que les autres n'osent pas dire. Dans cette fiction, tu as fait ce que tu fais chaque jour : écouter au-delà des mots, proposer ce qui semble évident mais que personne n'avait vu. Cette diplomate, c'est toi.</p>
       
       <div class="p8-sep2"></div>
       
@@ -4732,6 +4755,7 @@ body {
 
   <div class="trans">
     <p>Cette histoire, <strong>c'était déjà toi.</strong> Maintenant, regarde le monde qui t'a vu grandir...</p>
+    <span class="page-num">10</span>
   </div>
 </div>
 
@@ -4842,8 +4866,8 @@ body {
     <!-- DANS LES COURS DE RÉCRÉ -->
     <div class="p4-card p4-enfance">
       <p class="p4-card-titre"><i class="fa-solid fa-candy-cane"></i> Dans les cours de récré</p>
-      <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> {{gouter_1}}</p>
-      <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> {{gouter_2}}</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> Kinder Bueno</p>
+      <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> Pitch Brioche</p>
       <p class="p4-enfance-item"><i class="fa-solid fa-gamepad fa-icon-sm"></i> {{jouet_1}}</p>
       <p class="p4-enfance-item"><i class="fa-solid fa-puzzle-piece fa-icon-sm"></i> {{jouet_2}}</p>
     </div>
@@ -4856,9 +4880,9 @@ body {
       <p class="p4-image-caption">{{caption_3}}</p>
     </div>
     
-    <!-- LE MONDE EN {{annee}} -->
+    <!-- LE MONDE EN 1991 -->
     <div class="p4-card p4-chiffres">
-      <p class="p4-card-titre"><i class="fa-solid fa-earth-americas"></i> Le monde en {{annee}}</p>
+      <p class="p4-card-titre"><i class="fa-solid fa-earth-americas"></i> Le monde en 1991</p>
       <p class="p4-chiffre-item"><i class="fa-solid fa-baby fa-icon-sm"></i> {{naissances}} naissances</p>
       <p class="p4-chiffre-item"><i class="fa-solid fa-users fa-icon-sm"></i> {{population}} Mds hab.</p>
       <p class="p4-chiffre-item"><i class="fa-solid fa-arrow-trend-up fa-icon-sm"></i> {{albums_vendus}} d'inflation</p>
@@ -4869,7 +4893,7 @@ body {
     <div class="p4-bottom">
       <div class="p4-celebrite">
         <p class="p4-celebrite-label"><i class="fa-solid fa-star"></i> Né(e) aussi cette année</p>
-        <p class="p4-celebrite-nom">{{celebrite_nee}}</p>
+        <p class="p4-celebrite-nom">{{celebrite_nee_moodboard}}</p>
       </div>
       <div class="p4-prix">
         <p class="p4-prix-titre"><i class="fa-solid fa-coins"></i> Ça coûtait</p>
@@ -4881,17 +4905,17 @@ body {
           </div>
           <div class="p4-prix-item">
             <i class="fa-solid fa-gas-pump"></i>
-            <p class="p4-prix-value">{{prix_essence}}</p>
+            <p class="p4-prix-value">1,85€</p>
             <p class="p4-prix-label">Essence/L</p>
           </div>
           <div class="p4-prix-item">
             <i class="fa-solid fa-envelope"></i>
-            <p class="p4-prix-value">{{prix_timbre}}</p>
+            <p class="p4-prix-value">1,16€</p>
             <p class="p4-prix-label">Timbre</p>
           </div>
           <div class="p4-prix-item">
             <i class="fa-solid fa-ticket"></i>
-            <p class="p4-prix-value">{{prix_cinema}}</p>
+            <p class="p4-prix-value">12,50€</p>
             <p class="p4-prix-label">Cinéma</p>
           </div>
         </div>
@@ -4905,6 +4929,7 @@ body {
 
   <div class="trans">
     <p>Tout ça flottait dans l'air quand tu as ouvert les yeux. <strong>Et puis tu as grandi...</strong></p>
+    <span class="page-num">13</span>
   </div>
 </div>
 
@@ -4922,7 +4947,7 @@ body {
         <span class="p5-moment-icon"><i class="fa-solid fa-sun"></i></span>
         <span class="p5-moment-label">Le Matin</span>
       </div>
-      <p class="p5-moment-txt">{{matin}}</p>
+      <p class="p5-moment-txt">Je me réveille dans ma chambre froide de novembre. Mes pieds nus cherchent mes chaussons Cars sous le lit pendant que dehors la pluie tambourine contre les vitres. L'odeur du chocolat au lait Nesquik monte de la cuisine.</p>
     </div>
     
     <div class="p5-moment">
@@ -4930,7 +4955,7 @@ body {
         <span class="p5-moment-icon"><i class="fa-solid fa-cloud-sun"></i></span>
         <span class="p5-moment-label">L'Après-midi</span>
       </div>
-      <p class="p5-moment-txt">{{apresmidi}}</p>
+      <p class="p5-moment-txt">De retour de l'école, je jette mon cartable Eastpak dans l'entrée. Mes baskets Nike laissent des traces humides sur le carrelage. Dans le salon, j'allume la télé sur France 3 pour regarder Les Minikeums.</p>
     </div>
     
     <div class="p5-moment">
@@ -4938,7 +4963,7 @@ body {
         <span class="p5-moment-icon"><i class="fa-solid fa-moon"></i></span>
         <span class="p5-moment-label">Le Soir</span>
       </div>
-      <p class="p5-moment-txt">{{soir}}</p>
+      <p class="p5-moment-txt">Après le dîner, je traîne encore un peu au salon. À la télé, Jean-Luc Reichmann présente Les 12 Coups de Midi. Les adultes regardent en parlant de leurs journées. Je joue avec mes cartes Pokémon.</p>
     </div>
     
   </div>
@@ -4946,37 +4971,37 @@ body {
   <div class="p5-categories">
     <div class="p5-cat">
       <p class="p5-cat-titre"><i class="fa-solid fa-tv fa-icon"></i> Écran</p>
-      <p class="p5-cat-list">{{ecran_1}}<br>{{ecran_2}}<br>{{ecran_3}}</p>
+      <p class="p5-cat-list">Les Mystérieuses Cités d'Or<br>Violetta sur Disney Channel<br>Pokémon XY sur Gulli</p>
     </div>
     <div class="p5-cat">
       <p class="p5-cat-titre"><i class="fa-solid fa-music fa-icon"></i> Musique</p>
-      <p class="p5-cat-list">{{musique_1}}<br>{{musique_2}}<br>{{musique_3}}</p>
+      <p class="p5-cat-list">Get Lucky - Daft Punk<br>Papaoutai - Stromae<br>Roar - Katy Perry</p>
     </div>
     <div class="p5-cat">
       <p class="p5-cat-titre"><i class="fa-solid fa-cookie fa-icon"></i> Goûter</p>
-      <p class="p5-cat-list">{{gouter_1}}<br>{{gouter_2}}<br>{{gouter_3}}</p>
+      <p class="p5-cat-list">Kinder Bueno<br>Pitch Brioche<br>BN goût chocolat</p>
     </div>
     <div class="p5-cat">
       <p class="p5-cat-titre"><i class="fa-solid fa-book fa-icon"></i> Lecture</p>
-      <p class="p5-cat-list">{{lecture_1}}<br>{{lecture_2}}<br>{{lecture_3}}</p>
+      <p class="p5-cat-list">Le Petit Spirou<br>Titeuf (collection)<br>Le Journal de Mickey</p>
     </div>
     <div class="p5-cat">
       <p class="p5-cat-titre"><i class="fa-solid fa-gamepad fa-icon"></i> Jeux</p>
-      <p class="p5-cat-list">{{jeu_1}}<br>{{jeu_2}}<br>{{jeu_3}}</p>
+      <p class="p5-cat-list">Nintendo 3DS<br>Skylanders Giants<br>Lego City</p>
     </div>
     <div class="p5-cat">
       <p class="p5-cat-titre"><i class="fa-solid fa-trophy fa-icon"></i> Objets</p>
-      <p class="p5-cat-list">{{objet_1}}<br>{{objet_2}}<br>{{objet_3}}</p>
+      <p class="p5-cat-list">Tablette Samsung<br>Galaxy Tab 3<br>Trottinette Oxelo</p>
     </div>
   </div>
   
   <div class="p5-expressions">
     <span class="p5-exp-label"><i class="fa-solid fa-comment fa-icon"></i> On disait</span>
     <div class="p5-tags">
-      <span class="p5-tag">{{expression_1}}</span>
-      <span class="p5-tag">{{expression_2}}</span>
-      <span class="p5-tag">{{expression_3}}</span>
-      <span class="p5-tag">{{expression_4}}</span>
+      <span class="p5-tag">Trop swag</span>
+      <span class="p5-tag">Yolo</span>
+      <span class="p5-tag">Ça déchire</span>
+      <span class="p5-tag">C'est stylé</span>
     </div>
   </div>
   
@@ -4985,6 +5010,7 @@ body {
 
   <div class="trans">
     <p>Ce goûter, cette chanson, ce cartable. Tu te souviens ? <strong>Le temps a continué sa course...</strong></p>
+    <span class="page-num">14</span>
   </div>
 </div>
 
@@ -5004,51 +5030,51 @@ body {
       <!-- Event 1 - GAUCHE -->
       <div class="p6-event">
         <div class="p6-event-card">
-          <p class="p6-event-annee">{{event_1_year}}</p>
-          <p class="p6-event-titre">{{event_1_name}}</p>
+          <p class="p6-event-annee">2007</p>
+          <p class="p6-event-titre">iPhone</p>
           <p class="p6-event-cat">{{event_1_desc}}</p>
         </div>
-        <div class="p6-event-dot">{{event_1_emoji}}</div>
+        <div class="p6-event-dot">📱</div>
       </div>
       
       <!-- Event 2 - DROITE -->
       <div class="p6-event">
         <div class="p6-event-card">
-          <p class="p6-event-annee">{{event_2_year}}</p>
-          <p class="p6-event-titre">{{event_2_name}}</p>
+          <p class="p6-event-annee">2012</p>
+          <p class="p6-event-titre">Rover Curiosity</p>
           <p class="p6-event-cat">{{event_2_desc}}</p>
         </div>
-        <div class="p6-event-dot">{{event_2_emoji}}</div>
+        <div class="p6-event-dot">🚀</div>
       </div>
       
       <!-- Event 3 - GAUCHE -->
       <div class="p6-event">
         <div class="p6-event-card">
-          <p class="p6-event-annee">{{event_3_year}}</p>
-          <p class="p6-event-titre">{{event_3_name}}</p>
+          <p class="p6-event-annee">2015</p>
+          <p class="p6-event-titre">CRISPR</p>
           <p class="p6-event-cat">{{event_3_desc}}</p>
         </div>
-        <div class="p6-event-dot">{{event_3_emoji}}</div>
+        <div class="p6-event-dot">🧬</div>
       </div>
       
       <!-- Event 4 - DROITE -->
       <div class="p6-event">
         <div class="p6-event-card">
-          <p class="p6-event-annee">{{event_4_year}}</p>
-          <p class="p6-event-titre">{{event_4_name}}</p>
+          <p class="p6-event-annee">2019</p>
+          <p class="p6-event-titre">Première image d'un trou noir</p>
           <p class="p6-event-cat">{{event_4_desc}}</p>
         </div>
-        <div class="p6-event-dot">{{event_4_emoji}}</div>
+        <div class="p6-event-dot">🌌</div>
       </div>
       
       <!-- Event 5 - GAUCHE -->
       <div class="p6-event">
         <div class="p6-event-card">
-          <p class="p6-event-annee">{{event_5_year}}</p>
-          <p class="p6-event-titre">{{event_5_name}}</p>
+          <p class="p6-event-annee">2020</p>
+          <p class="p6-event-titre">Vaccins à ARNm</p>
           <p class="p6-event-cat">{{event_5_desc}}</p>
         </div>
-        <div class="p6-event-dot">{{event_5_emoji}}</div>
+        <div class="p6-event-dot">💉</div>
       </div>
       
     </div>
@@ -5113,6 +5139,7 @@ body {
 
   <div class="trans">
     <p>Le monde a changé. Toi aussi. <strong>Mais certaines choses se comptent...</strong></p>
+    <span class="page-num">15</span>
   </div>
 </div>
 
@@ -5128,15 +5155,15 @@ body {
     
     <div class="p10-temps">
       <div class="p10-temps-item">
-        <p class="p10-temps-value">{{jours_vecu}}</p>
+        <p class="p10-temps-value">12 045</p>
         <p class="p10-temps-label">Jours vécus</p>
       </div>
       <div class="p10-temps-item">
-        <p class="p10-temps-value">{{heures_existence}}</p>
+        <p class="p10-temps-value">289 080</p>
         <p class="p10-temps-label">Heures d'existence</p>
       </div>
       <div class="p10-temps-item">
-        <p class="p10-temps-value">{{saisons_traversees}}</p>
+        <p class="p10-temps-value">132</p>
         <p class="p10-temps-label">Saisons</p>
       </div>
     </div>
@@ -5144,32 +5171,32 @@ body {
     <div class="p10-perso">
       <div class="p10-stat">
         <span class="p10-stat-icon"><i class="fa-solid fa-heart-pulse"></i></span>
-        <p class="p10-stat-value">{{battements_coeur}}</p>
+        <p class="p10-stat-value">1,2 Mds</p>
         <p class="p10-stat-label">Battements</p>
       </div>
       <div class="p10-stat">
         <span class="p10-stat-icon"><i class="fa-solid fa-person-walking"></i></span>
-        <p class="p10-stat-value">{{PAS_MARCHES}}</p>
+        <p class="p10-stat-value">98,5</p>
         <p class="p10-stat-label">Fois Paris-Marseille à pieds</p>
       </div>
       <div class="p10-stat">
         <span class="p10-stat-icon"><i class="fa-solid fa-moon"></i></span>
-        <p class="p10-stat-value">{{HEURES_SOMMEIL}}</p>
+        <p class="p10-stat-value">96 360 h</p>
         <p class="p10-stat-label">Heures sommeil</p>
       </div>
       <div class="p10-stat">
         <span class="p10-stat-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-        <p class="p10-stat-value">{{HEURES_APPRENTISSAGE}}</p>
+        <p class="p10-stat-value">18 000 h</p>
         <p class="p10-stat-label">Apprentissage</p>
       </div>
       <div class="p10-stat">
         <span class="p10-stat-icon"><i class="fa-solid fa-utensils"></i></span>
-        <p class="p10-stat-value">{{REPAS_PRIS}}</p>
+        <p class="p10-stat-value">36 135</p>
         <p class="p10-stat-label">Repas</p>
       </div>
       <div class="p10-stat">
         <span class="p10-stat-icon"><i class="fa-solid fa-wind"></i></span>
-        <p class="p10-stat-value">{{RESPIRATIONS}}</p>
+        <p class="p10-stat-value">290 M</p>
         <p class="p10-stat-label">Respirations</p>
       </div>
     </div>
@@ -5179,22 +5206,22 @@ body {
       <div class="p10-prix-grid">
         <div class="p10-prix-item">
           <span class="p10-prix-icon"><i class="fa-solid fa-bread-slice"></i></span>
-          <p class="p10-prix-value">{{AUGMENTATION_PAIN}}</p>
+          <p class="p10-prix-value">+65%</p>
           <p class="p10-prix-label">Baguette</p>
         </div>
         <div class="p10-prix-item">
           <span class="p10-prix-icon"><i class="fa-solid fa-gas-pump"></i></span>
-          <p class="p10-prix-value">{{prix_essence}}</p>
+          <p class="p10-prix-value">1,85€</p>
           <p class="p10-prix-label">Essence/L</p>
         </div>
         <div class="p10-prix-item">
           <span class="p10-prix-icon"><i class="fa-solid fa-envelope"></i></span>
-          <p class="p10-prix-value">{{prix_timbre}}</p>
+          <p class="p10-prix-value">1,16€</p>
           <p class="p10-prix-label">Timbre</p>
         </div>
         <div class="p10-prix-item">
           <span class="p10-prix-icon"><i class="fa-solid fa-ticket"></i></span>
-          <p class="p10-prix-value">{{prix_cinema}}</p>
+          <p class="p10-prix-value">12,50€</p>
           <p class="p10-prix-label">Cinéma</p>
         </div>
       </div>
@@ -5205,32 +5232,32 @@ body {
       <div class="p10-monde-grid">
         <div class="p10-monde-item">
           <span class="p10-monde-icon"><i class="fa-solid fa-users"></i></span>
-          <p class="p10-monde-value">{{POPULATION_AUGMENTATION}}</p>
+          <p class="p10-monde-value">+2,1 Mds</p>
           <p class="p10-monde-label">Population</p>
         </div>
         <div class="p10-monde-item">
           <span class="p10-monde-icon"><i class="fa-solid fa-heart"></i></span>
-          <p class="p10-monde-value">{{ESPERANCE_VIE}}</p>
+          <p class="p10-monde-value">72 → 79 ans</p>
           <p class="p10-monde-label">Espérance vie</p>
         </div>
         <div class="p10-monde-item">
           <span class="p10-monde-icon"><i class="fa-solid fa-mobile-screen"></i></span>
-          <p class="p10-monde-value">{{SMARTPHONES}}</p>
+          <p class="p10-monde-value">+8,2 Mds</p>
           <p class="p10-monde-label">Smartphones vendu</p>
         </div>
         <div class="p10-monde-item">
           <span class="p10-monde-icon"><i class="fa-solid fa-globe"></i></span>
-          <p class="p10-monde-value">{{UTILISATEURS_INTERNET}}</p>
+          <p class="p10-monde-value">+4,8 Mds</p>
           <p class="p10-monde-label">Internautes</p>
         </div>
         <div class="p10-monde-item">
           <span class="p10-monde-icon"><i class="fa-solid fa-lightbulb"></i></span>
-          <p class="p10-monde-value">{{INVENTIONS}}</p>
+          <p class="p10-monde-value">340</p>
           <p class="p10-monde-label">Inventions</p>
         </div>
         <div class="p10-monde-item">
           <span class="p10-monde-icon"><i class="fa-solid fa-medal"></i></span>
-          <p class="p10-monde-value">{{JEUX_OLYMPIQUES}}</p>
+          <p class="p10-monde-value">8</p>
           <p class="p10-monde-label">J.O. vécus</p>
         </div>
       </div>
@@ -5243,6 +5270,7 @@ body {
 
   <div class="trans">
     <p>Des milliards de battements de cœur. Des milliers de jours. <strong>Mais les chiffres ne disent pas tout...</strong></p>
+    <span class="page-num">16</span>
   </div>
 </div>
 
@@ -5383,6 +5411,7 @@ body {
 
   <div class="trans">
     <p>Maintenant, un vrai souvenir. Pas un test. <strong>Quelque chose de vécu...</strong></p>
+    <span class="page-num">19</span>
   </div>
 </div>
 
@@ -5399,8 +5428,8 @@ body {
     
     <div class="pi-scene">
       <span class="pi-quote-open">❝</span>
-      <p class="pi-anecdote">{{ANECDOTE}}</p>
-      <p class="pi-punchline">{{PUNCHLINE}}</p>
+      <p class="pi-anecdote">C'était l'été de tes 7 ans. Tu avais construit un château de sable immense sur la plage de Deauville. Quand la marée est montée, tu as pleuré. Puis tu as ri. Et tu as recommencé.</p>
+      <p class="pi-punchline">Ce jour-là, tu as appris que tout recommence.</p>
       <span class="pi-quote-close">❞</span>
     </div>
     
@@ -5410,18 +5439,18 @@ body {
       </div>
       <div class="pi-context-content">
         <p class="pi-context-label">La scène</p>
-        <p class="pi-context-txt">{{CONTEXTE}}</p>
+        <p class="pi-context-txt">Vacances en Normandie, août 1998</p>
       </div>
     </div>
     
     <div class="pi-tags">
       <div class="pi-tag pi-tag-type">
         <i class="fa-solid fa-{{ICONE_TYPE}}"></i>
-        <span>{{TYPE_MOMENT}}</span>
+        <span>Premier souvenir</span>
       </div>
       <div class="pi-tag pi-tag-temoin">
         <i class="fa-solid fa-heart"></i>
-        <span>Raconté par {{TEMOIN}}</span>
+        <span>Raconté par Maman</span>
       </div>
     </div>
     
@@ -5429,7 +5458,7 @@ body {
   
   <div class="pi-footer"> 
     <p class="pi-ornament-footer">— ✦ —</p>
-    <p class="pi-citation">« {{PHRASE_CONCLUSION}} »</p>
+    <p class="pi-citation">« Les châteaux de sable disparaissent, mais pas les souvenirs. »</p>
   </div>
   
   <p class="pi-num">{{NUM_PAGE}}</p>
@@ -5437,6 +5466,7 @@ body {
 
   <div class="trans">
     <p>Ce moment-là, quelqu'un l'a gardé précieusement. <strong>Et ce n'est pas fini...</strong></p>
+    <span class="page-num">20</span>
   </div>
 </div>
 
@@ -5549,6 +5579,7 @@ body {
 
   <div class="trans">
     <p>Tous ces mots. Toutes ces personnes. <strong>Et maintenant, ce qu'on pense de toi...</strong></p>
+    <span class="page-num">22</span>
   </div>
 </div>
 
@@ -5584,6 +5615,7 @@ body {
 
   <div class="trans">
     <p>Voilà ce que tu apportes. <strong>Et maintenant, la personne qui t'a offert ce livre a quelque chose à te dire...</strong></p>
+    <span class="page-num">23</span>
   </div>
 </div>
 
@@ -5604,7 +5636,7 @@ body {
     
     <div class="p11-sep"></div>
     
-    <p class="p11-destinataire">Cher(e) {{PRENOM}},</p>
+    <p class="p11-destinataire">Cher(e) Marie,</p>
     
     <div class="p11-corps">
       {{MESSAGE_PERSONNALISE}}
@@ -5626,6 +5658,7 @@ body {
 
   <div class="trans">
     <p>Ces mots sont pour toi. <strong>Ce qui suit aussi...</strong></p>
+    <span class="page-num">24</span>
   </div>
 </div>
 
@@ -5648,8 +5681,8 @@ body {
     <!-- SECTION 1 : La personne -->
     <div class="p13-section">
       <p class="p13-certifie">Il est certifié par les présentes que</p>
-      <p class="p13-nom">{{PRENOM}}</p>
-      <p class="p13-date">Né(e) le {{DATE_COMPLETE_FR}}</p>
+      <p class="p13-nom">Marie</p>
+      <p class="p13-date">Né(e) le Vendredi 15 mars 1991</p>
       <p class="p13-texte">
         Est une personne unique et irremplaçable, dont l'arrivée dans le monde 
         a changé le cours de l'Histoire.
@@ -5667,7 +5700,7 @@ body {
     <div class="p13-livre">
       <p class="p13-livre-label">Exemplaire unique</p>
       <p class="p13-livre-txt">
-        Ce livre a été créé spécialement pour {{PRENOM}}.<br>
+        Ce livre a été créé spécialement pour Marie.<br>
         Il n'en existe aucun autre au monde.
       </p>
     </div>
@@ -5697,6 +5730,7 @@ body {
 
   <div class="trans">
     <p>Ce livre est unique. Toi aussi. <strong>Mais l'histoire n'est pas finie...</strong></p>
+    <span class="page-num">25</span>
   </div>
 </div>
 
@@ -5705,7 +5739,7 @@ body {
   <div class="p15-header">
     <p class="p15-ornament">✦ ✦ ✦</p>
     <h1 class="p15-titre">Message pour toi dans 10 ans</h1>
-    <p class="p15-voyage">De {{PRENOM}} ({{ANNEE_ACTUELLE}}) → {{PRENOM}} ({{ANNEE_FUTURE}})</p>
+    <p class="p15-voyage">De Marie ({{ANNEE_ACTUELLE}}) → Marie ({{ANNEE_FUTURE}})</p>
   </div>
   
   <div class="p15-lettre">
