@@ -24,20 +24,17 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .page { width: var(--page-w); height: var(--page-h); margin: 10mm auto; background: var(--ivoire); position: relative; overflow: hidden; box-shadow: 0 4px 30px rgba(0,0,0,0.2); }
 .page-content { height: calc(100% - 16mm); overflow: hidden; }
 .page-notrans .page-content { height: 100%; }
-.trans { position: absolute; bottom: 0; left: 0; right: 0; height: 16mm; background: linear-gradient(180deg, #1B2838 0%, #0D1B2A 100%); padding: 4mm 12mm 3mm; text-align: center; display: flex; flex-direction: column; justify-content: center; z-index: 100; box-shadow: 0 -4px 15px rgba(0,0,0,0.25); }
+.trans { position: absolute; bottom: 0; left: 0; right: 0; height: 18mm; background: linear-gradient(180deg, #1B2838 0%, #0D1B2A 100%); padding: 3mm 12mm; text-align: center; display: flex; flex-direction: column; justify-content: space-between; align-items: center; z-index: 100; box-shadow: 0 -4px 15px rgba(0,0,0,0.25); }
 .trans::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--or) 30%, var(--or) 70%, transparent 100%); }
 .trans::after { content: '✦'; position: absolute; top: -3mm; left: 50%; transform: translateX(-50%); color: var(--or); font-size: 8pt; background: #1B2838; padding: 0 3mm; }
-.trans p { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--perle); margin: 0; line-height: 1.4; margin-top: 1mm; }
+.trans p { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--perle); margin: 0; line-height: 1.3; }
 .trans strong { color: var(--or); font-style: normal; font-weight: 600; text-shadow: 0 0 8px rgba(191,162,101,0.5); }
-.trans .page-num { font-family: var(--mono); font-size: 8pt; color: var(--or); margin-top: 1.5mm; opacity: 0.6; letter-spacing: 0.15em; }
+.trans .page-num { font-family: var(--mono); font-size: 7pt; color: var(--or); opacity: 0.7; letter-spacing: 0.15em; }
 
 @media print { body { background: white; } .page { margin: 0; box-shadow: none; page-break-after: always; } }
 
 .fa-icon { font-size: 14pt; color: var(--or); margin-right: 2mm; }
 .fa-icon-sm { font-size: 10pt; color: var(--or); margin-right: 2mm; }
-
-/* Cacher anciens numéros */
-[class$="-num"] { display: none !important; }
 
 /* ═══════════════════════════════════════════════════════════
    PAGES SPÉCIALES (OUVERTURE, SOMMAIRE, ENCART, PHOTO, CLOTURE)
@@ -123,29 +120,25 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P0 - COUVERTURE
    ═══════════════════════════════════════════════════════════ */
-.p0 .page-content { background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 40%, #0D1B2A 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
-.p0 .page-content::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(191,162,101,0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(191,162,101,0.03) 0%, transparent 50%); }
-.p0-cadre { position: absolute; inset: 6mm; border: 2px solid var(--or); }
-.p0-cadre::before { content: ''; position: absolute; inset: 3mm; border: 1px solid rgba(191,162,101,0.4); }
-.p0-coin { position: absolute; width: 18mm; height: 18mm; border: 3px solid var(--or); }
-.p0-coin-tl { top: 10mm; left: 10mm; border-right: none; border-bottom: none; }
-.p0-coin-tr { top: 10mm; right: 10mm; border-left: none; border-bottom: none; }
-.p0-coin-bl { bottom: 10mm; left: 10mm; border-right: none; border-top: none; }
-.p0-coin-br { bottom: 10mm; right: 10mm; border-left: none; border-top: none; }
-.p0-ornament-top, .p0-ornament-bottom { position: absolute; left: 50%; transform: translateX(-50%); color: var(--or); font-size: 14pt; letter-spacing: 0.8em; }
-.p0-ornament-top { top: 16mm; }
-.p0-ornament-bottom { bottom: 16mm; }
-.p0-content { text-align: center; z-index: 1; padding: 15mm; }
-.p0-surtitle { font-family: var(--mono); font-size: 10pt; text-transform: uppercase; letter-spacing: 0.4em; color: var(--or); margin-bottom: 5mm; }
-.p0-titre { font-family: var(--serif); font-size: 52pt; font-weight: 900; color: var(--blanc); line-height: 1; text-shadow: 0 4px 20px rgba(0,0,0,0.5); margin-bottom: 3mm; }
-.p0-date { font-family: var(--serif); font-size: 17pt; font-weight: 600; color: var(--or); letter-spacing: 0.15em; margin-bottom: 6mm; }
-.p0-ligne { width: 70mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 6mm auto; }
-.p0-prenom { font-family: var(--serif); font-size: 30pt; font-weight: 700; font-style: italic; color: var(--blanc); margin: 5mm 0; }
-.p0-qr-zone { margin-top: 12mm; padding: 6mm; background: rgba(255,255,255,0.03); border: 1px solid rgba(191,162,101,0.3); border-radius: 3mm; }
-.p0-qr-intro { font-family: var(--serif); font-size: 13pt; font-style: italic; color: var(--or); margin-bottom: 5mm; }
-.p0-qr-box { width: 35mm; height: 35mm; margin: 0 auto 5mm; background: var(--blanc); padding: 2mm; border-radius: 2mm; }
+.p0 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 50%, var(--creme) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.p0 .page-content::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 50% 30%, rgba(191,162,101,0.08) 0%, transparent 50%); }
+.p0-cadre { position: absolute; inset: 8mm; border: 1px solid var(--or); }
+.p0-cadre::before { content: ''; position: absolute; inset: 4mm; border: 1px solid rgba(191,162,101,0.3); }
+.p0-coin { display: none; }
+.p0-ornament-top, .p0-ornament-bottom { position: absolute; left: 50%; transform: translateX(-50%); color: var(--or); font-size: 12pt; letter-spacing: 0.6em; }
+.p0-ornament-top { top: 14mm; }
+.p0-ornament-bottom { bottom: 14mm; }
+.p0-content { text-align: center; z-index: 1; padding: 12mm; }
+.p0-surtitle { font-family: var(--mono); font-size: 9pt; text-transform: uppercase; letter-spacing: 0.3em; color: var(--taupe); margin-bottom: 4mm; }
+.p0-titre { font-family: var(--serif); font-size: 48pt; font-weight: 900; color: var(--nuit); line-height: 1; margin-bottom: 3mm; }
+.p0-date { font-family: var(--serif); font-size: 16pt; font-weight: 600; color: var(--or); letter-spacing: 0.12em; margin-bottom: 5mm; }
+.p0-ligne { width: 60mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 5mm auto; }
+.p0-prenom { font-family: var(--serif); font-size: 28pt; font-weight: 700; font-style: italic; color: var(--nuit); margin: 4mm 0; }
+.p0-qr-zone { margin-top: 10mm; padding: 5mm; background: var(--blanc); border: 1px solid var(--or); border-radius: 2mm; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.p0-qr-intro { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--taupe); margin-bottom: 4mm; }
+.p0-qr-box { width: 32mm; height: 32mm; margin: 0 auto 4mm; background: var(--blanc); padding: 2mm; }
 .p0-qr-box img { width: 100%; height: 100%; object-fit: contain; }
-.p0-qr-text { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--perle); opacity: 0.8; }
+.p0-qr-text { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--taupe); }
 
 /* ═══════════════════════════════════════════════════════════
    P1 - JOURNAL
@@ -672,10 +665,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <p class="po-ornament2">✦ ✦ ✦</p>
     </div>
   </div>
-  <div class="trans">
-    <p>Ce livre a été créé pour toi. <strong>Tourne la page, tout commence ici.</strong></p>
-    <span class="page-num">01</span>
-  </div>
 </div>
 
 <!-- PAGE 02 - SOMMAIRE -->
@@ -711,10 +700,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     <div class="ps-footer">
       <p class="ps-ornament2">✦ ✦ ✦</p>
     </div>
-  </div>
-  <div class="trans">
-    <p>Prêt·e à plonger ? <strong>Chapitre I...</strong></p>
-    <span class="page-num">02</span>
   </div>
 </div>
 
@@ -854,7 +839,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <p class="pp-instruction">Si cette page est vide, c'est une invitation.<br>Retrouve une photo de tes débuts et colle-la ici.<br>Ce livre t'appartient.</p>
     </div>
     <div class="pp-footer">
-      <p class="pp-transition">Si petit·e, et déjà tellement toi...</p>
     </div>
   </div>
   <div class="trans">
@@ -940,7 +924,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
   </div>
   <div class="trans">
-    <p>Tes forces sont identifiées. Ton aura est révélée.<br><strong>Maintenant, ta première mission :</strong> revivre le jour de ta naissance.</p>
+    <p>Le héros est prêt. Le décor : le jour exact de ta naissance. <strong>Ta mission : entrer dans l'événement et en modifier le destin.</strong></p>
     <span class="page-num">08</span>
   </div>
 </div>
@@ -1008,7 +992,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <p class="pp-instruction">Une photo d'enfance t'attend peut-être ici.<br>Sinon, va fouiller dans les albums.<br>Ce livre mérite ce souvenir.</p>
     </div>
     <div class="pp-footer">
-      <p class="pp-transition">Ce visage-là, tu le reconnais ?</p>
     </div>
   </div>
   <div class="trans">
@@ -1279,7 +1262,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <p class="pp-instruction">Si cet espace est vide, choisis toi-même.<br>Une photo où tu te trouves beau / belle.<br>Celle-là.</p>
     </div>
     <div class="pp-footer">
-      <p class="pp-transition">Tout ce chemin parcouru.</p>
     </div>
   </div>
   <div class="trans">
@@ -1395,7 +1377,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <p class="pp-instruction">Peut-être que quelqu'un a déjà choisi ces photos.<br>Peut-être que c'est à toi de décider qui mérite d'être ici,<br>à tes côtés, dans ce livre.</p>
     </div>
     <div class="pp-footer">
-      <p class="pp-transition">Ces visages-là, ils t'ont vu grandir.</p>
     </div>
   </div>
   <div class="trans">
