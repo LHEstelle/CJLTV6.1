@@ -25,7 +25,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .page-content { height: calc(100% - 16mm); overflow: hidden; }
 .page-notrans .page-content { height: 100%; }
 .trans { position: absolute; bottom: 0; left: 0; right: 0; height: 16mm; background: linear-gradient(180deg, #1B2838 0%, #0D1B2A 100%); padding: 4mm 12mm 3mm; text-align: center; display: flex; flex-direction: column; justify-content: center; z-index: 100; box-shadow: 0 -4px 15px rgba(0,0,0,0.25); }
-.trans::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3mm; background: linear-gradient(180deg, #D4B896 0%, #BFA265 50%, #A68B4B 100%); box-shadow: 0 2px 8px rgba(191,162,101,0.4); }
+.trans::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--or) 30%, var(--or) 70%, transparent 100%); }
+.trans::after { content: '✦'; position: absolute; top: -3mm; left: 50%; transform: translateX(-50%); color: var(--or); font-size: 8pt; background: #1B2838; padding: 0 3mm; }
 .trans p { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--perle); margin: 0; line-height: 1.4; margin-top: 1mm; }
 .trans strong { color: var(--or); font-style: normal; font-weight: 600; text-shadow: 0 0 8px rgba(191,162,101,0.5); }
 .trans .page-num { font-family: var(--mono); font-size: 8pt; color: var(--or); margin-top: 1.5mm; opacity: 0.6; letter-spacing: 0.15em; }
@@ -158,8 +159,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p1-left { display: flex; flex-direction: column; gap: 3mm; min-height: 0; }
 .p1-headline { font-family: var(--serif); font-size: 16pt; font-weight: 700; line-height: 1.25; color: var(--nuit); border-left: 4px solid var(--or); padding-left: 3mm; flex-shrink: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .p1-chapeau { font-size: 9pt; line-height: 1.5; color: var(--ardoise); text-align: justify; flex-shrink: 0; }
-.p1-image { flex: 1; min-height: 35mm; background: var(--perle); overflow: hidden; border: 1px solid var(--perle); }
-.p1-image img { width: 100%; height: 100%; object-fit: contain; }
+.p1-image { flex: 1; min-height: 40mm; background: var(--perle); overflow: hidden; border: 1px solid var(--perle); border-radius: 2mm; }
+.p1-image img { width: 100%; height: 100%; object-fit: cover; }
 .p1-ambiance { background: var(--creme); padding: 2mm; border: 1px solid var(--or); border-radius: 2mm; flex-shrink: 0; }
 .p1-ambiance-titre { font-family: var(--mono); font-size: 8pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--or); margin-bottom: 2mm; text-align: center; }
 .p1-ambiance-grid { display: flex; gap: 2mm; }
@@ -174,14 +175,14 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p1-histoire-item { font-size: 8pt; margin-bottom: 1mm; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .p1-film-titre { font-family: var(--serif); font-size: 10pt; font-weight: 600; color: var(--nuit); }
 .p1-film-desc { font-size: 8pt; color: var(--ardoise); line-height: 1.4; margin-top: 1mm; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.p1-horoscope { background: var(--ivoire); padding: 2mm; border: 1px solid var(--or); border-radius: 2mm; flex: 1; min-height: 0; overflow: hidden; }
+.p1-horoscope { background: var(--ivoire); padding: 2mm; border: 1px solid var(--or); border-radius: 2mm; flex-shrink: 0; overflow: hidden; }
 .p1-horoscope .p1-bloc-titre { border-left: none; padding-left: 0; border-bottom: 1px solid var(--or); }
-.p1-horoscope-txt { font-size: 8pt; line-height: 1.4; color: var(--ardoise); font-style: italic; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.p1-horoscope-txt { font-size: 9pt; line-height: 1.4; color: var(--ardoise); font-style: italic; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
 .p1-nasa { flex: 1; min-height: 25mm; background: var(--nuit); padding: 2mm; border-radius: 2mm; display: flex; flex-direction: column; gap: 2mm; overflow: hidden; }
 .p1-nasa-titre { color: var(--or); font-family: var(--mono); font-size: 8pt; text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0; }
 .p1-nasa-img { flex: 1; min-height: 0; overflow: hidden; border-radius: 2mm; background: var(--ardoise); }
 .p1-nasa-img img { width: 100%; height: 100%; object-fit: cover; }
-.p1-nasa-caption { color: var(--perle); font-size: 7pt; line-height: 1.4; flex-shrink: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.p1-nasa-caption { color: var(--perle); font-size: 8pt; line-height: 1.4; flex-shrink: 0; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
 .p1-footer { background: var(--nuit); color: var(--blanc); padding: 2mm 4mm; display: flex; justify-content: center; align-items: center; gap: 2mm; flex-shrink: 0; }
 .p1-footer-txt { font-size: 9pt; font-family: var(--serif); }
 .p1-footer-num { font-family: var(--serif); font-size: 14pt; font-weight: 700; color: var(--or); }
@@ -423,33 +424,44 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p10-temps-item { text-align: center; padding: 2mm 5mm; flex: 1; }
 .p10-temps-value { font-family: var(--serif); font-size: 18pt; font-weight: 700; color: var(--or); }
 .p10-temps-label { font-family: var(--mono); font-size: 7pt; color: var(--perle); text-transform: uppercase; letter-spacing: 0.1em; }
-.p10-perso { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; flex-shrink: 0; }
-.p10-stat { background: var(--blanc); padding: 3mm; text-align: center; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.04); position: relative; overflow: hidden; border-bottom: 2px solid; }
+.p10-perso { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; flex: 1; }
+.p10-stat { background: var(--blanc); padding: 3mm; text-align: center; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden; border-bottom: 3px solid; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .p10-stat:nth-child(1) { border-bottom-color: var(--or); }
 .p10-stat:nth-child(2) { border-bottom-color: var(--corail); }
 .p10-stat:nth-child(3) { border-bottom-color: var(--rose); }
 .p10-stat:nth-child(4) { border-bottom-color: var(--bronze); }
 .p10-stat:nth-child(5) { border-bottom-color: var(--nuit); }
 .p10-stat:nth-child(6) { border-bottom-color: var(--or); }
+.p10-stat:nth-child(1) .p10-stat-icon i { color: var(--or); }
+.p10-stat:nth-child(2) .p10-stat-icon i { color: var(--corail); }
+.p10-stat:nth-child(3) .p10-stat-icon i { color: var(--rose); }
+.p10-stat:nth-child(4) .p10-stat-icon i { color: var(--bronze); }
+.p10-stat:nth-child(5) .p10-stat-icon i { color: var(--nuit); }
+.p10-stat:nth-child(6) .p10-stat-icon i { color: var(--or); }
 .p10-stat-icon { font-size: 20pt; margin-bottom: 1mm; }
-.p10-stat-icon i, .p10-prix-icon i, .p10-monde-icon i { font-size: 20pt; color: #BFA265; }
+.p10-prix-icon i { font-size: 18pt; color: var(--or); }
+.p10-monde-icon i { font-size: 20pt; color: var(--or); }
 .p10-prix-titre i, .p10-monde-titre i { color: var(--or); margin-right: 1mm; }
-.p10-stat-value { font-family: var(--serif); font-size: 13pt; font-weight: 700; color: var(--nuit); }
-.p10-stat-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; }
-.p10-prix { background: var(--blanc); padding: 3mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border-left: 3px solid var(--or); flex-shrink: 0; }
-.p10-prix-titre { font-family: var(--mono); font-size: 9pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); text-align: center; margin-bottom: 2mm; }
-.p10-prix-grid { display: flex; justify-content: space-around; }
-.p10-prix-item { text-align: center; padding: 1mm 3mm; }
-.p10-prix-icon { font-size: 18pt; margin-bottom: 1mm; display: block; }
-.p10-prix-value { font-family: var(--serif); font-size: 13pt; font-weight: 700; color: var(--nuit); }
-.p10-prix-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; }
+.p10-stat-value { font-family: var(--serif); font-size: 13pt; font-weight: 700; color: var(--nuit); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p10-stat-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p10-prix { background: var(--blanc); padding: 3mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--or); flex-shrink: 0; }
+.p10-prix-titre { font-family: var(--mono); font-size: 8pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); text-align: center; margin-bottom: 1mm; }
+.p10-prix-grid { display: flex; justify-content: space-between; }
+.p10-prix-item { text-align: center; padding: 1mm 2mm; flex: 1; min-width: 0; }
+.p10-prix-icon { font-size: 16pt; margin-bottom: 1mm; display: block; }
+.p10-prix-item:nth-child(1) .p10-prix-icon i { color: var(--or); }
+.p10-prix-item:nth-child(2) .p10-prix-icon i { color: var(--corail); }
+.p10-prix-item:nth-child(3) .p10-prix-icon i { color: var(--rose); }
+.p10-prix-item:nth-child(4) .p10-prix-icon i { color: var(--bronze); }
+.p10-prix-value { font-family: var(--serif); font-size: 12pt; font-weight: 700; color: var(--nuit); white-space: nowrap; }
+.p10-prix-label { font-family: var(--mono); font-size: 6pt; color: var(--taupe); text-transform: uppercase; white-space: nowrap; }
 .p10-monde { flex: 1; background: var(--nuit); padding: 4mm; border-radius: 2mm; display: flex; flex-direction: column; min-height: 0; }
 .p10-monde-titre { font-family: var(--mono); font-size: 9pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--or); text-align: center; margin-bottom: 3mm; flex-shrink: 0; }
 .p10-monde-grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 2mm; }
-.p10-monde-item { text-align: center; padding: 3mm; background: rgba(255,255,255,0.05); border-radius: 2mm; display: flex; flex-direction: column; justify-content: center; }
-.p10-monde-icon { font-size: 18pt; margin-bottom: 1mm; display: block; }
-.p10-monde-value { font-family: var(--serif); font-size: 12pt; font-weight: 700; color: var(--or); }
-.p10-monde-label { font-family: var(--mono); font-size: 7pt; color: var(--perle); text-transform: uppercase; }
+.p10-monde-item { text-align: center; padding: 3mm; background: rgba(255,255,255,0.05); border-radius: 2mm; display: flex; flex-direction: column; justify-content: center; min-width: 0; overflow: hidden; }
+.p10-monde-icon { font-size: 20pt; margin-bottom: 1mm; display: block; }
+.p10-monde-value { font-family: var(--serif); font-size: 13pt; font-weight: 700; color: var(--or); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p10-monde-label { font-family: var(--mono); font-size: 7pt; color: var(--perle); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* ═══════════════════════════════════════════════════════════
    P11 - MESSAGE PERSONNEL
@@ -1317,7 +1329,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-compass"></i> Où tu te vois dans 10 ans ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-film"></i> Ton film préféré ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-plane"></i> Ta destination de rêve ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
-      <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-quote-left"></i> Ta phrase fétiche ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-gift"></i> Le cadeau qui t'a le plus touché ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-mask"></i> Ton défaut assumé ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-lightbulb"></i> La personne qui t'inspire ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
@@ -1425,12 +1436,12 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   <div class="page-content">
     <div class="p12-content">
       <p class="p12-ornament">✦ ✦ ✦</p>
-      <h1 class="p12-titre">{{PRENOM}}, tu n'es pas un accident de l'histoire.</h1>
+      <h1 class="p12-titre">Ce qui fait de toi quelqu'un d'unique</h1>
       <div class="p12-sep"></div>
-      <p class="p12-paragraphe1">{{CONCLUSION_P1}}</p>
+      <p class="p12-paragraphe1">{{paragraphe_1}}</p>
       <p class="p12-qualites"><span>{{QUALITE_1}}</span> • <span>{{QUALITE_2}}</span> • <span>{{QUALITE_3}}</span></p>
-      <p class="p12-paragraphe2">{{CONCLUSION_P2}}</p>
-      <div class="p12-final"><p class="p12-final-txt">{{CONCLUSION_FINAL}}</p></div>
+      <p class="p12-paragraphe2">{{paragraphe_2}}</p>
+      <div class="p12-final"><p class="p12-final-txt">{{message_final}}</p></div>
       <p class="p12-ornament2">✦ ✦ ✦</p>
     </div>
   </div>
@@ -1455,10 +1466,10 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <div class="p11-sep"></div>
       </div>
       <p class="p11-destinataire">À toi, {{PRENOM}},</p>
-      <div class="p11-corps">{{MESSAGE_PERSONNEL}}</div>
+      <div class="p11-corps">{{MESSAGE_PERSONNALISE}}</div>
       <div class="p11-signature">
         <p class="p11-sig-text">Avec tout mon amour,</p>
-        <p class="p11-sig-prenom">{{NOM_OFFRANT}}</p>
+        <p class="p11-sig-prenom">{{PRENOM_EXPEDITEUR}}</p>
       </div>
       <div class="p11-footer">
         <p class="p11-ornament2">✦ ✦ ✦</p>
@@ -1492,7 +1503,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="p13-sep"><div class="p13-sep-line"></div><span class="p13-sep-star">✦</span><div class="p13-sep-line"></div></div>
       <div class="p13-livre">
         <p class="p13-livre-label">Ce livre témoigne</p>
-        <p class="p13-livre-txt">de l'amour de {{NOM_OFFRANT}}<br>pour {{PRENOM}}</p>
+        <p class="p13-livre-txt">de l'amour de {{PRENOM_EXPEDITEUR}}<br>pour {{PRENOM}}</p>
       </div>
       <div class="p13-sceau"><p class="p13-sceau-label">Sceau</p><p class="p13-sceau-num">N° {{NUMERO_LIVRE}}</p></div>
       <div class="p13-signatures">
