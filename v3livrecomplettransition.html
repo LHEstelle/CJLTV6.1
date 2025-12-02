@@ -350,9 +350,9 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-subtitle { font-family: var(--mono); font-size: 9pt; color: var(--taupe); text-transform: uppercase; letter-spacing: 0.15em; }
 .p6-timeline { flex: 1; position: relative; display: flex; flex-direction: column; justify-content: flex-start; padding: 0 4mm; min-height: 0; }
 .p6-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--or) 0%, var(--corail) 20%, var(--rose) 40%, var(--bronze) 60%, var(--nuit) 80%, var(--or) 100%); transform: translateX(-50%); border-radius: 2px; }
-.p6-events { display: flex; flex-direction: column; gap: 0; position: relative; margin-top: 2mm; flex: 1; min-height: 0; }
+.p6-events { display: flex; flex-direction: column; gap: 0; position: relative; margin-top: 1mm; min-height: 0; }
 .p6-event { display: grid; grid-template-columns: 1fr 12mm 1fr; align-items: center; gap: 1.5mm; }
-.p6-event-card { background: var(--blanc); padding: 2mm; border-radius: 2mm; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+.p6-event-card { background: transparent; padding: 1mm; border-radius: 2mm; }
 .p6-event:nth-child(odd) .p6-event-card { grid-column: 1; text-align: right; border-right: 3px solid; }
 .p6-event:nth-child(even) .p6-event-card { grid-column: 3; text-align: left; border-left: 3px solid; }
 .p6-event:nth-child(1) .p6-event-card { border-color: var(--or); }
@@ -1376,7 +1376,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-plane"></i> Ta destination de rêve ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-gift"></i> Le cadeau qui t'a le plus touché ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
       <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-mask"></i> Ton défaut assumé ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
-      <div class="pq-row"><span class="pq-question"><i class="fa-solid fa-lightbulb"></i> La personne qui t'inspire ?</span><div class="pq-reponse"></div><div class="pq-reponse"></div></div>
     </div>
     <div class="pq-footer">
       <p class="pq-footer-txt">Des réponses différentes ? C'est l'occasion d'une conversation... ou d'un fou rire.</p>
