@@ -352,7 +352,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--or) 0%, var(--corail) 20%, var(--rose) 40%, var(--bronze) 60%, var(--nuit) 80%, var(--or) 100%); transform: translateX(-50%); border-radius: 2px; }
 .p6-events { display: flex; flex-direction: column; gap: 0; position: relative; margin-top: 1mm; min-height: 0; }
 .p6-event { display: grid; grid-template-columns: 1fr 12mm 1fr; align-items: center; gap: 1.5mm; }
-.p6-event-card { background: transparent; padding: 1mm; border-radius: 2mm; }
+.p6-event-card { background: var(--blanc); padding: 2mm; border-radius: 2mm; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
 .p6-event:nth-child(odd) .p6-event-card { grid-column: 1; text-align: right; border-right: 3px solid; }
 .p6-event:nth-child(even) .p6-event-card { grid-column: 3; text-align: left; border-left: 3px solid; }
 .p6-event:nth-child(1) .p6-event-card { border-color: var(--or); }
@@ -381,7 +381,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-section-titre { font-family: var(--mono); font-size: 10pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 2mm; flex-shrink: 0; }
 .p6-section-sport .p6-section-titre { color: var(--corail); }
 .p6-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm; flex: 1; align-content: center; }
-.p6-section-item { padding: 1.5mm; background: var(--creme); border-radius: 1mm; }
+.p6-section-item { padding: 1.5mm; background: var(--creme); border-radius: 1mm; min-height: 18mm; display: flex; flex-direction: column; justify-content: center; }
 .p6-section-item-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; }
 .p6-section-item-value { font-size: 10pt; font-weight: 500; color: var(--nuit); }
 
@@ -400,7 +400,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p7-content::after { content: '☙'; position: absolute; top: 3mm; right: 5mm; color: var(--or); font-size: 14pt; }
 .p7-accroche { padding-bottom: 4mm; font-family: var(--serif); font-size: 12pt; font-style: italic; color: var(--ardoise); text-align: center; padding-top: 2mm; margin-bottom: 3mm; border-bottom: 1px solid var(--or); position: relative; flex-shrink: 0; }
 .p7-accroche::after { content: '✦'; position: absolute; bottom: -5pt; left: 50%; transform: translateX(-50%); background: var(--ivoire); padding: 0 2mm; color: var(--or); font-size: 10pt; }
-.p7-body { flex: 1; column-count: 2; column-gap: 6mm; min-height: 0; overflow: hidden; }
+.p7-body { column-count: 2; column-gap: 6mm; min-height: 0; }
 .p7-texte { font-size: 11pt; line-height: 1.8; text-align: justify; color: var(--nuit); }
 .p7-texte::first-letter { font-family: var(--serif); font-size: 46pt; font-weight: 700; float: left; line-height: 0.8; margin-right: 2mm; margin-top: 2mm; color: var(--or); }
 .p7-footer { display: flex; justify-content: center; align-items: center; padding-top: 4mm; margin-top: auto; flex-shrink: 0; }
@@ -562,9 +562,9 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p13-livre { background: rgba(191,162,101,0.08); padding: 4mm 6mm; border-radius: 2mm; text-align: center; margin: 3mm 0; }
 .p13-livre-label { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--or); margin-bottom: 1mm; }
 .p13-livre-txt { font-family: var(--serif); font-size: 10pt; color: var(--ardoise); line-height: 1.5; }
-.p13-sceau { width: 22mm; height: 22mm; border: 2px solid var(--or); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 4mm 0; }
+.p13-sceau { width: 28mm; height: 28mm; border: 2px solid var(--or); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 4mm 0; text-align: center; padding: 2mm; }
 .p13-sceau-label { font-family: var(--mono); font-size: 7pt; color: var(--or); }
-.p13-sceau-num { font-family: var(--serif); font-size: 10pt; font-weight: 700; color: var(--or); }
+.p13-sceau-num { font-family: var(--serif); font-size: 7pt; font-weight: 700; color: var(--or); word-break: break-all; text-align: center; max-width: 100%; }
 .p13-signatures { display: flex; justify-content: space-between; width: 100%; max-width: 130mm; margin-top: 5mm; }
 .p13-sig { text-align: center; }
 .p13-sig-ligne { width: 45mm; height: 1px; background: var(--nuit); margin-bottom: 1mm; }
