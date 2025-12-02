@@ -44,7 +44,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
    PAGES SPÉCIALES (OUVERTURE, SOMMAIRE, ENCART, PHOTO, CLOTURE)
    ═══════════════════════════════════════════════════════════ */
 
-.p-ouverture .page-content { background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 40%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+.p-ouverture .page-content { background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 40%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; padding: 13mm; }
 .p-ouverture .page-content::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 20%, rgba(191,162,101,0.03) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(191,162,101,0.03) 0%, transparent 50%); }
 .po-cadre { position: absolute; inset: 8mm; border: 2px solid var(--or); }
 .po-cadre::before { content: ''; position: absolute; inset: 3mm; border: 1px solid rgba(191,162,101,0.4); }
@@ -63,7 +63,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .po-ligne { width: 80mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 10mm auto; }
 .po-accroche { font-family: var(--serif); font-size: 15pt; font-style: italic; color: var(--blanc); margin-top: 12mm; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
 
-.p-sommaire .page-content { background: var(--ivoire); padding: 12mm; display: flex; flex-direction: column; }
+.p-sommaire .page-content { background: var(--ivoire); padding: 13mm; display: flex; flex-direction: column; }
 .ps-header { text-align: center; margin-bottom: 10mm; }
 .ps-ornament, .ps-ornament2 { color: var(--or); font-size: 14pt; letter-spacing: 0.5em; }
 .ps-titre { font-family: var(--serif); font-size: 34pt; font-weight: 700; color: var(--nuit); margin: 4mm 0; letter-spacing: 0.1em; }
@@ -75,7 +75,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .ps-chapitre-desc { font-size: 11pt; font-style: italic; color: var(--ardoise); }
 .ps-footer { text-align: center; margin-top: 8mm; }
 
-.p-encart .page-content { background: linear-gradient(135deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+.p-encart .page-content { background: linear-gradient(135deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; padding: 13mm; }
 .pe-cadre { position: absolute; inset: 10mm; border: 2px solid var(--or); }
 .pe-cadre::before { content: ''; position: absolute; inset: 4mm; border: 1px solid rgba(191,162,101,0.3); }
 .pe-coin { position: absolute; width: 20mm; height: 20mm; color: var(--or); font-size: 18pt; }
@@ -92,7 +92,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .pe-ligne { width: 80mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 8mm auto; }
 .pe-phrase { font-family: var(--serif); font-size: 14pt; font-style: italic; color: var(--perle); line-height: 1.9; max-width: 140mm; }
 
-.p-photo .page-content { background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), var(--ivoire); display: flex; flex-direction: column; padding: 10mm; }
+.p-photo .page-content { background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), var(--ivoire); display: flex; flex-direction: column; padding: 13mm; }
 .pp-header { text-align: center; margin-bottom: 6mm; }
 .pp-ornament { color: var(--or); font-size: 14pt; letter-spacing: 0.5em; }
 .pp-titre { font-family: var(--serif); font-size: 30pt; font-weight: 600; font-style: italic; color: var(--nuit); margin: 4mm 0; }
@@ -104,7 +104,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .pp-footer { text-align: center; margin-top: 6mm; }
 .pp-transition { font-family: var(--serif); font-size: 13pt; font-style: italic; color: var(--taupe); padding: 4mm 12mm; border-top: 1px solid var(--perle); }
 
-.p-cloture .page-content { background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; }
+.p-cloture .page-content { background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; padding: 13mm; }
 .pc-cadre { position: absolute; inset: 12mm; border: 2px solid var(--or); }
 .pc-cadre::before { content: ''; position: absolute; inset: 4mm; border: 1px solid rgba(191,162,101,0.3); }
 .pc-coin { position: absolute; width: 20mm; height: 20mm; border: 3px solid var(--or); }
@@ -124,7 +124,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P0 - COUVERTURE
    ═══════════════════════════════════════════════════════════ */
-.p0 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 50%, var(--creme) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.p0 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 50%, var(--creme) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; padding: 13mm; }
 .p0 .page-content::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 50% 30%, rgba(191,162,101,0.06) 0%, transparent 50%); }
 .p0-cadre { display: none; }
 .p0-coin { display: none; }
@@ -148,7 +148,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
    ═══════════════════════════════════════════════════════════ */
 .p1 .page-content { 
   background: url('https://www.transparenttextures.com/patterns/concrete-wall.png'), #FFFFFF;
-  display: flex; flex-direction: column; overflow: hidden; 
+  display: flex; flex-direction: column; overflow: hidden; padding: 13mm;
 }
 .p1-bandeau { background: var(--nuit); padding: 2mm 5mm; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 8pt; color: var(--perle); flex-shrink: 0; }
 .p1-masthead { text-align: center; padding: 3mm 6mm 2mm; border-bottom: 3px double var(--nuit); background: url('https://www.transparenttextures.com/patterns/concrete-wall.png'), #FFFFFF; flex-shrink: 0; }
@@ -189,7 +189,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P2 - CARTE IDENTITÉ
    ═══════════════════════════════════════════════════════════ */
-.p2 .page-content { background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png'), linear-gradient(180deg, #1B2838 0%, #243447 50%, #1B2838 100%); padding: 4mm; display: flex; flex-direction: column; }
+.p2 .page-content { background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png'), linear-gradient(180deg, #1B2838 0%, #243447 50%, #1B2838 100%); padding: 13mm; display: flex; flex-direction: column; }
 .p2-card { flex: 1; border: 2px solid var(--or); display: flex; flex-direction: column; position: relative; background: linear-gradient(135deg, rgba(191,162,101,0.03) 0%, transparent 50%, rgba(191,162,101,0.03) 100%); overflow: hidden; }
 .p2-corner { position: absolute; width: 10mm; height: 10mm; border: 2px solid var(--or); }
 .p2-corner-tl { top: 2mm; left: 2mm; border-right: none; border-bottom: none; }
@@ -245,7 +245,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
    ═══════════════════════════════════════════════════════════ */
 .p4 .page-content { 
   background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), var(--bronze);
-  padding: 4mm; display: flex; flex-direction: column; 
+  padding: 13mm; display: flex; flex-direction: column; 
 }
 .p4-header { background: linear-gradient(135deg, var(--nuit) 0%, #2a3a4a 100%); padding: 4mm 6mm; display: flex; justify-content: space-between; align-items: center; margin-bottom: 2mm; flex-shrink: 0; }
 .p4-annee { font-family: var(--serif); font-size: 40pt; font-weight: 900; color: var(--or); line-height: 1; }
@@ -264,7 +264,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p4-image2 { grid-column: 2; grid-row: 2; }
 .p4-image3 { grid-column: 2; grid-row: 3; }
 .p4-culture { grid-column: 2; grid-row: 1; }
-.p4-culture-item { font-size: 10pt; margin-bottom: 1mm; line-height: 1.3; display: flex; align-items: flex-start; gap: 1mm; }
+.p4-culture-item { font-size: 10pt; margin-bottom: 2.5mm; line-height: 1.3; display: flex; align-items: flex-start; gap: 1mm; }
 .p4-culture-item i { color: var(--or); font-size: 9pt; margin-top: 1mm; }
 .p4-chanson { grid-column: 3; grid-row: 1; background: var(--nuit); color: var(--blanc); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .p4-chanson .p4-card-titre { color: var(--or); border-bottom-color: rgba(191,162,101,0.3); width: 100%; justify-content: center; }
@@ -272,14 +272,14 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p4-chanson-titre { font-family: var(--serif); font-size: 11pt; font-weight: 600; color: var(--or); }
 .p4-chanson-artiste { font-size: 9pt; color: var(--perle); font-style: italic; margin-top: 1mm; }
 .p4-events { grid-column: 3; grid-row: 2; }
-.p4-event-item { font-size: 10pt; margin-bottom: 1mm; padding-left: 2mm; border-left: 2px solid var(--or); line-height: 1.3; }
+.p4-event-item { font-size: 10pt; margin-bottom: 2.5mm; padding-left: 2mm; border-left: 2px solid var(--or); line-height: 1.3; }
 .p4-event-item i { color: var(--or); margin-right: 1mm; }
 .p4-event-date { color: var(--or); font-weight: 600; }
 .p4-enfance { grid-column: 1; grid-row: 3; }
-.p4-enfance-item { font-size: 10pt; margin-bottom: 1mm; display: flex; align-items: center; gap: 1mm; }
+.p4-enfance-item { font-size: 10pt; margin-bottom: 2.5mm; display: flex; align-items: center; gap: 1mm; }
 .p4-enfance-item i { color: var(--or); font-size: 10pt; }
 .p4-chiffres { grid-column: 3; grid-row: 3; }
-.p4-chiffre-item { font-size: 10pt; margin-bottom: 1mm; display: flex; align-items: center; gap: 1mm; }
+.p4-chiffre-item { font-size: 10pt; margin-bottom: 2.5mm; display: flex; align-items: center; gap: 1mm; }
 .p4-chiffre-item i { color: var(--or); font-size: 10pt; }
 .p4-bottom { grid-column: 1 / 4; grid-row: 4; display: grid; grid-template-columns: 1fr 3fr; gap: 2mm; background: transparent; padding: 0; }
 .p4-celebrite { background: var(--or); padding: 3mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
@@ -298,7 +298,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P5 - SOUVENIRS ENFANCE
    ═══════════════════════════════════════════════════════════ */
-.p5 .page-content { background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), linear-gradient(135deg, #FDF8F0 0%, #F5F0E6 100%); padding: 4mm; display: flex; flex-direction: column; }
+.p5 .page-content { background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), linear-gradient(135deg, #FDF8F0 0%, #F5F0E6 100%); padding: 13mm; display: flex; flex-direction: column; }
 .p5-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3mm; padding-bottom: 2mm; border-bottom: 3px solid var(--nuit); position: relative; flex-shrink: 0; }
 .p5-header::after { content: '✦'; position: absolute; bottom: -6pt; left: 50%; transform: translateX(-50%); background: var(--creme); padding: 0 2mm; color: var(--or); font-size: 10pt; }
 .p5-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); }
@@ -343,14 +343,14 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P6 - TIMELINE
    ═══════════════════════════════════════════════════════════ */
-.p6 .page-content { background: linear-gradient(180deg, var(--ivoire) 0%, var(--creme) 100%); padding: 4mm; display: flex; flex-direction: column; }
+.p6 .page-content { background: linear-gradient(180deg, var(--ivoire) 0%, var(--creme) 100%); padding: 13mm; display: flex; flex-direction: column; }
 .p6-header { text-align: center; margin-bottom: 2mm; flex-shrink: 0; }
 .p6-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.3em; }
 .p6-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); margin: 1mm 0; }
 .p6-subtitle { font-family: var(--mono); font-size: 9pt; color: var(--taupe); text-transform: uppercase; letter-spacing: 0.15em; }
 .p6-timeline { flex: 1; position: relative; display: flex; flex-direction: column; justify-content: flex-start; padding: 0 4mm; min-height: 0; }
 .p6-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--or) 0%, var(--corail) 20%, var(--rose) 40%, var(--bronze) 60%, var(--nuit) 80%, var(--or) 100%); transform: translateX(-50%); border-radius: 2px; }
-.p6-events { display: flex; flex-direction: column; gap: 1.5mm; position: relative; margin-top: 4mm; flex: 1; min-height: 0; }
+.p6-events { display: flex; flex-direction: column; gap: 1mm; position: relative; margin-top: 4mm; flex: 1; min-height: 0; }
 .p6-event { display: grid; grid-template-columns: 1fr 12mm 1fr; align-items: center; gap: 1.5mm; }
 .p6-event-card { background: var(--blanc); padding: 2.5mm; border-radius: 2mm; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
 .p6-event:nth-child(odd) .p6-event-card { grid-column: 1; text-align: right; border-right: 3px solid; }
@@ -371,7 +371,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-event-annee { font-family: var(--serif); font-size: 14pt; font-weight: 700; color: var(--or); }
 .p6-event-titre { font-family: var(--serif); font-size: 12pt; font-weight: 600; color: var(--nuit); }
 .p6-event-cat { font-family: var(--mono); font-size: 8pt; color: var(--taupe); text-transform: uppercase; line-height: 1.3; }
-.p6-separator { margin: 5mm 0 2mm 0; padding: 2mm; background: var(--nuit); text-align: center; position: relative; flex-shrink: 0; }
+.p6-separator { margin: 6mm 0 2mm 0; padding: 2mm; background: var(--nuit); text-align: center; position: relative; flex-shrink: 0; }
 .p6-separator-text { font-family: var(--mono); font-size: 10pt; text-transform: uppercase; letter-spacing: 0.2em; color: var(--or); }
 .p6-separator::before, .p6-separator::after { content: '✦'; color: var(--or); margin: 0 2mm; font-size: 10pt; }
 .p6-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; flex-shrink: 0; }
@@ -388,7 +388,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P7 - FICTION
    ═══════════════════════════════════════════════════════════ */
-.p7 .page-content { background: var(--nuit); display: flex; flex-direction: column; }
+.p7 .page-content { background: var(--nuit); display: flex; flex-direction: column; padding: 13mm; }
 .p7-hero { height: 55mm; position: relative; overflow: hidden; flex-shrink: 0; }
 .p7-hero-img { background: var(--nuit); width: 100%; height: 100%; object-fit: contain; }
 .p7-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(27,40,56,0) 0%, rgba(27,40,56,0.5) 50%, rgba(27,40,56,1) 100%); }
@@ -412,7 +412,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P8 - MIROIR
    ═══════════════════════════════════════════════════════════ */
-.p8 .page-content { background: var(--nuit); padding: 12mm; display: flex; align-items: center; justify-content: center; }
+.p8 .page-content { background: var(--nuit); padding: 13mm; display: flex; align-items: center; justify-content: center; }
 .p8-cadre { width: 100%; height: 100%; background: var(--ivoire); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15mm; }
 .p8-cadre::before { content: ''; position: absolute; inset: 4mm; border: 2px solid var(--or); }
 .p8-cadre::after { content: ''; position: absolute; inset: 7mm; border: 1px solid var(--bronze); }
@@ -435,7 +435,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P10 - STATS
    ═══════════════════════════════════════════════════════════ */
-.p10 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%); padding: 5mm; display: flex; flex-direction: column; }
+.p10 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%); padding: 13mm; display: flex; flex-direction: column; }
 .p10-header { text-align: center; margin-bottom: 2mm; flex-shrink: 0; }
 .p10-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
 .p10-titre { font-family: var(--serif); font-size: 26pt; font-weight: 700; color: var(--nuit); margin: 1mm 0; }
@@ -488,7 +488,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P11 - MESSAGE PERSONNEL
    ═══════════════════════════════════════════════════════════ */
-.p11 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--perle) 100%); padding: 8mm; display: flex; align-items: center; justify-content: center; position: relative; }
+.p11 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--perle) 100%); padding: 13mm; display: flex; align-items: center; justify-content: center; position: relative; }
 .p11 .page-content::before { content: '✦'; position: absolute; top: 12mm; left: 12mm; font-size: 58pt; color: rgba(191,162,101,0.05); }
 .p11 .page-content::after { content: '✦'; position: absolute; bottom: 12mm; right: 12mm; font-size: 58pt; color: rgba(191,162,101,0.05); }
 .p11-lettre { width: 100%; max-width: 160mm; background: var(--blanc); padding: 10mm 12mm; position: relative; box-shadow: 0 5px 30px rgba(0,0,0,0.08); border-radius: 2mm; display: flex; flex-direction: column; }
@@ -513,7 +513,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P12 - CONCLUSION
    ═══════════════════════════════════════════════════════════ */
-.p12 .page-content { background: var(--ivoire); padding: 10mm; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.p12 .page-content { background: var(--ivoire); padding: 13mm; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .p12-content { max-width: 155mm; text-align: center; }
 .p12-ornament, .p12-ornament2 { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
 .p12-ornament { margin-bottom: 5mm; }
@@ -530,7 +530,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P13 - CERTIFICAT
    ═══════════════════════════════════════════════════════════ */
-.p13 .page-content { background: linear-gradient(135deg, var(--nuit) 0%, #0D1B2A 100%); padding: 8mm; display: flex; align-items: center; justify-content: center; }
+.p13 .page-content { background: linear-gradient(135deg, var(--nuit) 0%, #0D1B2A 100%); padding: 13mm; display: flex; align-items: center; justify-content: center; }
 .p13-diplome { width: 100%; height: 100%; background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), var(--ivoire); border: 3px solid var(--or); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12mm 15mm; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
 .p13-diplome::before { content: ''; position: absolute; inset: 5mm; border: 1px solid var(--or); }
 .p13-coin { position: absolute; width: 12mm; height: 12mm; }
@@ -574,7 +574,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P15 - LETTRE AU FUTUR
    ═══════════════════════════════════════════════════════════ */
-.p15 .page-content { background: var(--nuit); padding: 8mm; display: flex; flex-direction: column; }
+.p15 .page-content { background: var(--nuit); padding: 13mm; display: flex; flex-direction: column; }
 .p15-header { text-align: center; padding: 5mm; margin-bottom: 4mm; flex-shrink: 0; }
 .p15-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
 .p15-titre { font-family: var(--serif); font-size: 22pt; font-weight: 700; color: var(--blanc); margin: 3mm 0; }
@@ -606,7 +606,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P-QUIZ
    ═══════════════════════════════════════════════════════════ */
-.p-quiz .page-content { background: var(--ivoire); padding: 6mm; display: flex; flex-direction: column; }
+.p-quiz .page-content { background: var(--ivoire); padding: 13mm; display: flex; flex-direction: column; }
 .pq-header { text-align: center; margin-bottom: 4mm; padding-bottom: 3mm; border-bottom: 2px solid var(--or); flex-shrink: 0; }
 .pq-ornament { color: var(--or); font-size: 10pt; letter-spacing: 0.4em; }
 .pq-titre { font-family: var(--serif); font-size: 20pt; font-weight: 600; color: var(--nuit); margin: 2mm 0; }
@@ -625,7 +625,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P-INSTANT
    ═══════════════════════════════════════════════════════════ */
-.p-instant .page-content { background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); padding: 6mm; display: flex; flex-direction: column; }
+.p-instant .page-content { background: linear-gradient(180deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); padding: 13mm; display: flex; flex-direction: column; }
 .pi-header { text-align: center; margin-bottom: 6mm; flex-shrink: 0; }
 .pi-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
 .pi-titre { font-family: var(--serif); font-size: 34pt; font-weight: 700; color: var(--blanc); margin: 3mm 0; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
@@ -658,7 +658,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P-LIVREOR
    ═══════════════════════════════════════════════════════════ */
-.p-livreor .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%); padding: 8mm; display: flex; flex-direction: column; }
+.p-livreor .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%); padding: 13mm; display: flex; flex-direction: column; }
 .pl-header { text-align: center; margin-bottom: 4mm; flex-shrink: 0; }
 .pl-ornament, .pl-ornament2 { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
 .pl-titre { font-family: var(--serif); font-size: 22pt; font-weight: 600; color: var(--nuit); margin: 3mm 0; }
