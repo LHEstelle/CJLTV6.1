@@ -348,7 +348,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-header { text-align: center; margin-bottom: 2mm; flex-shrink: 0; }
 .p6-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.3em; }
 .p6-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); margin: 1mm 0; }
-.p6-subtitle { font-family: var(--mono); font-size: 9pt; color: var(--taupe); text-transform: uppercase; letter-spacing: 0.15em; }
+.p6-subtitle { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--taupe); text-align: center; max-width: 85%; margin: 0 auto; line-height: 1.5; }
 .p6-timeline { flex: 1; position: relative; display: flex; flex-direction: column; justify-content: flex-start; padding: 0 4mm; min-height: 0; }
 .p6-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--or) 0%, var(--corail) 20%, var(--rose) 40%, var(--bronze) 60%, var(--nuit) 80%, var(--or) 100%); transform: translateX(-50%); border-radius: 2px; }
 .p6-events { display: flex; flex-direction: column; gap: 0; position: relative; margin-top: 1mm; min-height: 0; }
@@ -439,7 +439,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p10 .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%); padding: 13mm; display: flex; flex-direction: column; }
 .p10-header { text-align: center; margin-bottom: 2mm; flex-shrink: 0; }
 .p10-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
-.p10-titre { font-family: var(--serif); font-size: 26pt; font-weight: 700; color: var(--nuit); margin: 1mm 0; }
+.p10-titre { font-family: var(--serif); font-size: 22pt; font-weight: 700; color: var(--nuit); margin: 1mm 0; }
 .p10-sep { width: 45mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 0 auto; }
 .p10-intro { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--ardoise); margin-top: 2mm; line-height: 1.5; }
 .p10-body { flex: 1; display: flex; flex-direction: column; gap: 3mm; min-height: 0; }
@@ -467,6 +467,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p10-prix-titre i, .p10-monde-titre i { color: var(--or); margin-right: 1mm; }
 .p10-stat-value { font-family: var(--serif); font-size: 14pt; font-weight: 700; color: var(--nuit); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .p10-stat-label { font-family: var(--mono); font-size: 8pt; color: var(--taupe); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p10-stat-emotion { font-family: var(--serif); font-size: 7pt; font-style: italic; color: var(--or); margin-top: 1mm; opacity: 0.9; }
 .p10-prix { background: var(--blanc); padding: 3mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--or); flex-shrink: 0; }
 .p10-prix-titre { font-family: var(--mono); font-size: 9pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); text-align: center; margin-bottom: 1mm; }
 .p10-prix-grid { display: flex; justify-content: space-between; }
@@ -485,6 +486,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p10-monde-icon { font-size: 20pt; margin-bottom: 1mm; display: block; }
 .p10-monde-value { font-family: var(--serif); font-size: 14pt; font-weight: 700; color: var(--or); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .p10-monde-label { font-family: var(--mono); font-size: 8pt; color: var(--perle); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.p10-note { font-family: var(--serif); font-size: 7pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 3mm; opacity: 0.8; }
 
 /* ═══════════════════════════════════════════════════════════
    P11 - MESSAGE PERSONNEL
@@ -873,7 +875,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     <div class="p1-footer">
       <span class="p1-footer-txt">Ce jour-là,</span>
       <span class="p1-footer-num">environ {{nb_naissances}}</span>
-      <span class="p1-footer-txt">bébés sont nés — tu étais l'un d'eux.</span>
+      <span class="p1-footer-txt">bébés sont nés dans le monde — tu étais l'un d'eux.</span>
     </div>
   </div>
   <div class="trans">
@@ -1103,7 +1105,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <p class="p4-image-caption">L'esprit de l'époque</p>
       </div>
       <div class="p4-card p4-culture">
-        <p class="p4-card-titre"><i class="fa-solid fa-film"></i> On regardait</p>
+        <p class="p4-card-titre"><i class="fa-solid fa-heart"></i> On adorait</p>
         <div class="p4-card-content">
           <p class="p4-culture-item"><i class="fa-solid fa-clapperboard fa-icon-sm"></i> {{film}}</p>
           <p class="p4-culture-item"><i class="fa-solid fa-tv fa-icon-sm"></i> {{serie_tv}}</p>
@@ -1182,7 +1184,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <h1 class="p5-titre">Souvenirs d'Enfance</h1>
       <span class="p5-age">Quand tu avais {{age}} ans</span>
     </div>
-    <p class="p5-intro">Ferme les yeux. Voici à quoi aurait pu ressembler une journée ordinaire de tes {{age}} ans...<br>Un voyage dans les sensations, les objets et les rituels de ton époque.</p>
+    <p class="p5-intro">Laissez votre esprit voyager. Voici à quoi aurait pu ressembler une journée ordinaire de tes {{age}} ans...<br>Un voyage dans les sensations, les objets et les rituels de ton époque.</p>
     <div class="p5-journee">
       <div class="p5-moment">
         <div class="p5-moment-header">
@@ -1247,7 +1249,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     <div class="p6-header">
       <p class="p6-ornament">— ✦ —</p>
       <h1 class="p6-titre">Ta Vie en Dates</h1>
-      <p class="p6-subtitle">Les moments qui ont marqué ton époque</p>
+      <p class="p6-subtitle">Depuis ta naissance, le monde n'a pas arrêté de bouger. Voici tout ce à quoi tu as assisté — sans toujours réaliser que tu vivais l'Histoire.</p>
     </div>
     <div class="p6-timeline">
       <div class="p6-line"></div>
@@ -1293,9 +1295,9 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   <div class="page-content">
     <div class="p10-header">
       <p class="p10-ornament">✦ ✦ ✦</p>
-      <h1 class="p10-titre">Ta Vie en Chiffres</h1>
+      <h1 class="p10-titre">Les chiffres cachés de ton histoire</h1>
       <div class="p10-sep"></div>
-      <p class="p10-intro">Derrière chaque chiffre, il y a toi. Tes battements, tes pas, tes heures.<br>Voici ta vie, traduite en nombres.</p>
+      <p class="p10-intro">Si quelqu'un te dit que tu n'as rien accompli, montre-lui cette page.<br>Ces chiffres prouvent le contraire : tu as déjà vécu des millions de petites victoires.</p>
     </div>
     <div class="p10-body">
       <div class="p10-temps">
@@ -1304,20 +1306,20 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <div class="p10-temps-item"><p class="p10-temps-value">{{saisons_traversees}}</p><p class="p10-temps-label">Saisons</p></div>
       </div>
       <div class="p10-perso">
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-heart-pulse"></i></span><p class="p10-stat-value">{{battements_coeur}}</p><p class="p10-stat-label">Battements</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-person-walking"></i></span><p class="p10-stat-value">{{PAS_MARCHES}}</p><p class="p10-stat-label">Fois Paris-Marseille</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-moon"></i></span><p class="p10-stat-value">{{HEURES_SOMMEIL}}</p><p class="p10-stat-label">Heures sommeil</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-graduation-cap"></i></span><p class="p10-stat-value">{{HEURES_APPRENTISSAGE}}</p><p class="p10-stat-label">Apprentissage</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-utensils"></i></span><p class="p10-stat-value">{{REPAS_PRIS}}</p><p class="p10-stat-label">Repas</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-wind"></i></span><p class="p10-stat-value">{{RESPIRATIONS}}</p><p class="p10-stat-label">Respirations</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-heart-pulse"></i></span><p class="p10-stat-value">{{battements_coeur}}</p><p class="p10-stat-label">Battements</p><p class="p10-stat-emotion">Ton cœur n'a jamais cessé</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-person-walking"></i></span><p class="p10-stat-value">{{PAS_MARCHES}}</p><p class="p10-stat-label">Fois Paris-Marseille</p><p class="p10-stat-emotion">Et tu marches encore</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-moon"></i></span><p class="p10-stat-value">{{HEURES_SOMMEIL}}</p><p class="p10-stat-label">Heures de sommeil</p><p class="p10-stat-emotion">Autant de rêves possibles</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-graduation-cap"></i></span><p class="p10-stat-value">{{HEURES_APPRENTISSAGE}}</p><p class="p10-stat-label">Heures d'apprentissage</p><p class="p10-stat-emotion">Et ce n'est pas fini</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-utensils"></i></span><p class="p10-stat-value">{{REPAS_PRIS}}</p><p class="p10-stat-label">Repas partagés</p><p class="p10-stat-emotion">Autant de moments ensemble</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-wind"></i></span><p class="p10-stat-value">{{RESPIRATIONS}}</p><p class="p10-stat-label">Respirations</p><p class="p10-stat-emotion">Tu n'as jamais arrêté de vivre</p></div>
       </div>
       <div class="p10-prix">
         <p class="p10-prix-titre"><i class="fa-solid fa-coins"></i> Évolution des prix</p>
         <div class="p10-prix-grid">
           <div class="p10-prix-item"><span class="p10-prix-icon"><i class="fa-solid fa-bread-slice"></i></span><p class="p10-prix-value">{{AUGMENTATION_PAIN}}</p><p class="p10-prix-label">Baguette</p></div>
-          <div class="p10-prix-item"><span class="p10-prix-icon"><i class="fa-solid fa-gas-pump"></i></span><p class="p10-prix-value">{{prix_essence}}</p><p class="p10-prix-label">Essence/L</p></div>
-          <div class="p10-prix-item"><span class="p10-prix-icon"><i class="fa-solid fa-envelope"></i></span><p class="p10-prix-value">{{prix_timbre}}</p><p class="p10-prix-label">Timbre</p></div>
-          <div class="p10-prix-item"><span class="p10-prix-icon"><i class="fa-solid fa-ticket"></i></span><p class="p10-prix-value">{{prix_cinema}}</p><p class="p10-prix-label">Cinéma</p></div>
+          <div class="p10-prix-item"><span class="p10-prix-icon"><i class="fa-solid fa-gas-pump"></i></span><p class="p10-prix-value">{{augmentation_essence}}</p><p class="p10-prix-label">Essence/L</p></div>
+          <div class="p10-prix-item"><span class="p10-prix-icon"><i class="fa-solid fa-envelope"></i></span><p class="p10-prix-value">{{augmentation_timbre}}</p><p class="p10-prix-label">Timbre</p></div>
+          <div class="p10-prix-item"><span class="p10-prix-icon"><i class="fa-solid fa-ticket"></i></span><p class="p10-prix-value">{{augmentation_cinema}}</p><p class="p10-prix-label">Cinéma</p></div>
         </div>
       </div>
       <div class="p10-monde">
@@ -1331,6 +1333,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <div class="p10-monde-item"><span class="p10-monde-icon"><i class="fa-solid fa-medal"></i></span><p class="p10-monde-value">{{JEUX_OLYMPIQUES}}</p><p class="p10-monde-label">J.O. vécus</p></div>
         </div>
       </div>
+      <p class="p10-note">* Estimations basées sur des moyennes. Tes vrais chiffres sont probablement encore plus impressionnants.</p>
     </div>
   </div>
   <div class="trans">
