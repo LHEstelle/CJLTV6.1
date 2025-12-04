@@ -256,7 +256,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p4-card { background: var(--ivoire); padding: 2mm; position: relative; display: flex; flex-direction: column; overflow: hidden; }
 .p4-card-titre { font-family: var(--mono); font-size: 8pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 1mm; padding-bottom: 1mm; border-bottom: 1px solid var(--perle); display: flex; align-items: center; gap: 1mm; flex-shrink: 0; }
 .p4-card-titre i { color: var(--or); font-size: 10pt; }
-.p4-card-content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; width: 100%; }
+.p4-card-content { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; width: 100%; position: relative; }
+.p4-card-content::after { content: '· · ·'; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 8pt; color: var(--or); opacity: 0.4; letter-spacing: 2mm; }
 .p4-image { flex: 1; min-height: 0; background: var(--perle); overflow: hidden; border-radius: 1mm; }
 .p4-image img { width: 100%; height: 100%; object-fit: cover; }
 .p4-image-caption { font-size: 8pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 1mm; flex-shrink: 0; }
@@ -314,7 +315,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5-moment-icon { width: 10mm; height: 10mm; background: var(--nuit); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14pt; }
 .p5-moment-icon i { color: #BFA265; }
 .p5-moment-label { font-family: var(--serif); font-size: 13pt; font-weight: 600; color: var(--nuit); }
-.p5-moment-txt-wrapper { flex: 1; display: flex; align-items: center; }
+.p5-moment-txt-wrapper { flex: 1; display: flex; align-items: flex-start; position: relative; }
+.p5-moment-txt-wrapper::after { content: '—'; position: absolute; bottom: 1mm; right: 0; font-size: 10pt; color: var(--or); opacity: 0.3; }
 .p5-moment-txt { font-size: 10pt; line-height: 1.6; color: var(--ardoise); text-align: justify; }
 .p5-categories { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5mm; margin-bottom: 3mm; flex-shrink: 0; }
 .p5-cat { background: var(--blanc); padding: 2mm; border-radius: 2mm; box-shadow: 0 1px 4px rgba(0,0,0,0.04); position: relative; }
@@ -1146,7 +1148,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <p class="p4-image-caption">{{caption_3}}</p>
       </div>
       <div class="p4-card p4-chiffres">
-        <p class="p4-card-titre"><i class="fa-solid fa-earth-americas"></i> Le monde {{annee}}</p>
+        <p class="p4-card-titre"><i class="fa-solid fa-flag"></i> France en {{annee}}</p>
         <div class="p4-card-content">
           <p class="p4-chiffre-item"><i class="fa-solid fa-baby fa-icon-sm"></i> {{naissances_moodboard}} naissances</p>
           <p class="p4-chiffre-item"><i class="fa-solid fa-users fa-icon-sm"></i> {{population_moodboard}} Mds hab.</p>
