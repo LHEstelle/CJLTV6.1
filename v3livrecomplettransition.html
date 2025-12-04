@@ -92,7 +92,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .pe-ligne { width: 80mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 8mm auto; }
 .pe-phrase { font-family: var(--serif); font-size: 16pt; font-style: italic; color: var(--perle); line-height: 1.9; max-width: 140mm; }
 
-.p-photo .page-content { background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), var(--ivoire); display: flex; flex-direction: column; padding: 13mm; }
+.p-photo .page-content { background: var(--ivoire); display: flex; flex-direction: column; padding: 13mm; }
 .pp-header { text-align: center; margin-bottom: 6mm; }
 .pp-ornament { color: var(--or); font-size: 14pt; letter-spacing: 0.5em; }
 .pp-titre { font-family: var(--serif); font-size: 30pt; font-weight: 600; font-style: italic; color: var(--nuit); margin: 4mm 0; }
@@ -298,7 +298,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P5 - SOUVENIRS ENFANCE
    ═══════════════════════════════════════════════════════════ */
-.p5 .page-content { background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), linear-gradient(135deg, #FDF8F0 0%, #F5F0E6 100%); padding: 13mm; display: flex; flex-direction: column; }
+.p5 .page-content { background: linear-gradient(135deg, #FDF8F0 0%, #F5F0E6 100%); padding: 13mm; display: flex; flex-direction: column; }
 .p5-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3mm; padding-bottom: 2mm; border-bottom: 3px solid var(--nuit); position: relative; flex-shrink: 0; }
 .p5-header::after { content: '✦'; position: absolute; bottom: -6pt; left: 50%; transform: translateX(-50%); background: var(--creme); padding: 0 2mm; color: var(--or); font-size: 10pt; }
 .p5-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); }
@@ -441,14 +441,14 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p10-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
 .p10-titre { font-family: var(--serif); font-size: 22pt; font-weight: 700; color: var(--nuit); margin: 1mm 0; }
 .p10-sep { width: 45mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 0 auto; }
-.p10-intro { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--ardoise); margin-top: 2mm; line-height: 1.5; }
-.p10-body { flex: 1; display: flex; flex-direction: column; gap: 3mm; min-height: 0; }
-.p10-temps { display: flex; justify-content: center; gap: 3mm; padding: 3mm; background: var(--nuit); border-radius: 2mm; flex-shrink: 0; }
+.p10-intro { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--ardoise); margin-top: 1mm; line-height: 1.4; }
+.p10-body { flex: 1; display: flex; flex-direction: column; gap: 2mm; min-height: 0; }
+.p10-temps { display: flex; justify-content: center; gap: 3mm; padding: 2mm; background: var(--nuit); border-radius: 2mm; flex-shrink: 0; }
 .p10-temps-item { text-align: center; padding: 2mm 5mm; flex: 1; }
 .p10-temps-value { font-family: var(--serif); font-size: 19pt; font-weight: 700; color: var(--or); }
 .p10-temps-label { font-family: var(--mono); font-size: 8pt; color: var(--perle); text-transform: uppercase; letter-spacing: 0.1em; }
 .p10-perso { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; flex: 1; }
-.p10-stat { background: var(--blanc); padding: 3mm; text-align: center; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden; border-bottom: 3px solid; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.p10-stat { background: var(--blanc); padding: 2mm; text-align: center; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.06); position: relative; overflow: hidden; border-bottom: 3px solid; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .p10-stat:nth-child(1) { border-bottom-color: var(--or); }
 .p10-stat:nth-child(2) { border-bottom-color: var(--corail); }
 .p10-stat:nth-child(3) { border-bottom-color: var(--rose); }
@@ -467,8 +467,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p10-prix-titre i, .p10-monde-titre i { color: var(--or); margin-right: 1mm; }
 .p10-stat-value { font-family: var(--serif); font-size: 14pt; font-weight: 700; color: var(--nuit); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .p10-stat-label { font-family: var(--mono); font-size: 8pt; color: var(--taupe); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.p10-stat-emotion { font-family: var(--serif); font-size: 7pt; font-style: italic; color: var(--or); margin-top: 1mm; opacity: 0.9; }
-.p10-prix { background: var(--blanc); padding: 3mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--or); flex-shrink: 0; }
+.p10-stat-emotion { font-family: var(--serif); font-size: 6pt; font-style: italic; color: var(--or); margin-top: 0.5mm; opacity: 0.85; }
+.p10-prix { background: var(--blanc); padding: 2mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid var(--or); flex-shrink: 0; }
 .p10-prix-titre { font-family: var(--mono); font-size: 9pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); text-align: center; margin-bottom: 1mm; }
 .p10-prix-grid { display: flex; justify-content: space-between; }
 .p10-prix-item { text-align: center; padding: 1mm 2mm; flex: 1; min-width: 0; }
@@ -479,14 +479,14 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p10-prix-item:nth-child(4) .p10-prix-icon i { color: var(--bronze); }
 .p10-prix-value { font-family: var(--serif); font-size: 13pt; font-weight: 700; color: var(--nuit); white-space: nowrap; }
 .p10-prix-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; white-space: nowrap; }
-.p10-monde { flex: 1; background: var(--nuit); padding: 4mm; border-radius: 2mm; display: flex; flex-direction: column; min-height: 0; }
+.p10-monde { flex: 1; background: var(--nuit); padding: 3mm; border-radius: 2mm; display: flex; flex-direction: column; min-height: 0; }
 .p10-monde-titre { font-family: var(--mono); font-size: 10pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--or); text-align: center; margin-bottom: 3mm; flex-shrink: 0; }
 .p10-monde-grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap: 2mm; }
 .p10-monde-item { text-align: center; padding: 3mm; background: rgba(255,255,255,0.05); border-radius: 2mm; display: flex; flex-direction: column; justify-content: center; min-width: 0; overflow: hidden; }
 .p10-monde-icon { font-size: 20pt; margin-bottom: 1mm; display: block; }
 .p10-monde-value { font-family: var(--serif); font-size: 14pt; font-weight: 700; color: var(--or); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .p10-monde-label { font-family: var(--mono); font-size: 8pt; color: var(--perle); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.p10-note { font-family: var(--serif); font-size: 7pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 3mm; opacity: 0.8; }
+.p10-note { font-family: var(--serif); font-size: 6pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 1mm; opacity: 0.7; }
 
 /* ═══════════════════════════════════════════════════════════
    P11 - MESSAGE PERSONNEL
@@ -608,7 +608,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p15-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
 .p15-titre { font-family: var(--serif); font-size: 22pt; font-weight: 700; color: var(--blanc); margin: 3mm 0; }
 .p15-voyage { font-family: var(--mono); font-size: 12pt; color: var(--or); }
-.p15-lettre { background: url('https://www.transparenttextures.com/patterns/natural-paper.png'), var(--ivoire); flex: 1; padding: 10mm 12mm; display: flex; flex-direction: column; position: relative; border: 2px solid var(--or); min-height: 0; }
+.p15-lettre { background: var(--ivoire); flex: 1; padding: 10mm 12mm; display: flex; flex-direction: column; position: relative; border: 2px solid var(--or); min-height: 0; }
 .p15-coin { position: absolute; width: 10mm; height: 10mm; border: 2px solid var(--or); }
 .p15-coin-tl { top: 3mm; left: 3mm; border-right: none; border-bottom: none; }
 .p15-coin-tr { top: 3mm; right: 3mm; border-left: none; border-bottom: none; }
@@ -1108,8 +1108,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <p class="p4-card-titre"><i class="fa-solid fa-heart"></i> On adorait</p>
         <div class="p4-card-content">
           <p class="p4-culture-item"><i class="fa-solid fa-clapperboard fa-icon-sm"></i> {{film}}</p>
-          <p class="p4-culture-item"><i class="fa-solid fa-tv fa-icon-sm"></i> {{serie_tv}}</p>
-          <p class="p4-culture-item"><i class="fa-solid fa-book fa-icon-sm"></i> {{livre}}</p>
+          <p class="p4-culture-item"><i class="fa-solid fa-tv fa-icon-sm"></i> {{serie_tv_moodboard}}</p>
+          <p class="p4-culture-item"><i class="fa-solid fa-book fa-icon-sm"></i> {{livre_moodboard}}</p>
           <p class="p4-culture-item"><i class="fa-solid fa-book-open fa-icon-sm"></i> {{bd}}</p>
         </div>
       </div>
@@ -1135,10 +1135,10 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="p4-card p4-enfance">
         <p class="p4-card-titre"><i class="fa-solid fa-candy-cane"></i> Dans les cours de récré</p>
         <div class="p4-card-content">
-          <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> {{gouter_1}}</p>
-          <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> {{gouter_2}}</p>
-          <p class="p4-enfance-item"><i class="fa-solid fa-gamepad fa-icon-sm"></i> {{jouet_1}}</p>
-          <p class="p4-enfance-item"><i class="fa-solid fa-puzzle-piece fa-icon-sm"></i> {{jouet_2}}</p>
+          <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> {{gouter_1_moodboard}}</p>
+          <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> {{gouter_2_moodboard}}</p>
+          <p class="p4-enfance-item">{{emoji_jeu_1}} {{jouet_1_moodboard}}</p>
+          <p class="p4-enfance-item">{{emoji_jeu_2}} {{jouet_2_moodboard}}</p>
         </div>
       </div>
       <div class="p4-card p4-image3">
@@ -1148,8 +1148,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="p4-card p4-chiffres">
         <p class="p4-card-titre"><i class="fa-solid fa-earth-americas"></i> Le monde {{annee}}</p>
         <div class="p4-card-content">
-          <p class="p4-chiffre-item"><i class="fa-solid fa-baby fa-icon-sm"></i> {{naissances}} naissances</p>
-          <p class="p4-chiffre-item"><i class="fa-solid fa-users fa-icon-sm"></i> {{population}} Mds hab.</p>
+          <p class="p4-chiffre-item"><i class="fa-solid fa-baby fa-icon-sm"></i> {{naissances_moodboard}} naissances</p>
+          <p class="p4-chiffre-item"><i class="fa-solid fa-users fa-icon-sm"></i> {{population_moodboard}} Mds hab.</p>
           <p class="p4-chiffre-item"><i class="fa-solid fa-arrow-trend-up fa-icon-sm"></i> {{albums_vendus}} d'inflation</p>
           <p class="p4-chiffre-item"><i class="fa-solid fa-coins fa-icon-sm"></i> SMIC {{smic}}€</p>
         </div>
@@ -1307,7 +1307,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       </div>
       <div class="p10-perso">
         <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-heart-pulse"></i></span><p class="p10-stat-value">{{battements_coeur}}</p><p class="p10-stat-label">Battements</p><p class="p10-stat-emotion">Ton cœur n'a jamais cessé</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-person-walking"></i></span><p class="p10-stat-value">{{PAS_MARCHES}}</p><p class="p10-stat-label">Fois Paris-Marseille</p><p class="p10-stat-emotion">Et tu marches encore</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-eye"></i></span><p class="p10-stat-value">{{CLIGNEMENTS_YEUX}}</p><p class="p10-stat-label">Clignements d'yeux</p><p class="p10-stat-emotion">Chaque clignement, un instant de vie</p></div>
         <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-moon"></i></span><p class="p10-stat-value">{{HEURES_SOMMEIL}}</p><p class="p10-stat-label">Heures de sommeil</p><p class="p10-stat-emotion">Autant de rêves possibles</p></div>
         <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-graduation-cap"></i></span><p class="p10-stat-value">{{HEURES_APPRENTISSAGE}}</p><p class="p10-stat-label">Heures d'apprentissage</p><p class="p10-stat-emotion">Et ce n'est pas fini</p></div>
         <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-utensils"></i></span><p class="p10-stat-value">{{REPAS_PRIS}}</p><p class="p10-stat-label">Repas partagés</p><p class="p10-stat-emotion">Autant de moments ensemble</p></div>
