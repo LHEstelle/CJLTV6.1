@@ -301,56 +301,50 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P5 - SOUVENIRS ENFANCE
    ═══════════════════════════════════════════════════════════ */
-.p5 .page-content { 
-  background: #f5f0e1;
-  background-image: 
-    linear-gradient(#d4a0a0 1px, transparent 1px),
-    linear-gradient(90deg, transparent 17mm, #d4a0a0 17mm, #d4a0a0 18mm, transparent 18mm),
-    linear-gradient(#a8c8d8 1px, transparent 1px);
-  background-size: 100% 7mm, 100% 100%, 100% 7mm;
-  background-position: 0 10mm;
-  padding: 10mm 13mm 10mm 22mm;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.p5-spiral { position: absolute; left: 4mm; top: 10mm; bottom: 10mm; display: flex; flex-direction: column; gap: 6mm; }
-.p5-ring { width: 5mm; height: 5mm; border: 1.5px solid #666; border-radius: 50%; background: linear-gradient(135deg, #888, #aaa); }
-.p5-sticker { position: absolute; font-size: 12pt; opacity: 0.9; }
-.p5-sticker-1 { top: 12mm; right: 15mm; transform: rotate(12deg); }
-.p5-sticker-2 { top: 75mm; left: 25mm; transform: rotate(-8deg); }
-.p5-header { text-align: center; margin-bottom: 3mm; flex-shrink: 0; }
-.p5-age { display: inline-block; background: linear-gradient(145deg, #fff9e6, #f0e6c0); border: 1.5px dashed #c9a227; padding: 1.5mm 5mm; font-family: 'Caveat', cursive; font-size: 10pt; color: #1a3a5c; transform: rotate(-1deg); }
-.p5-titre { font-family: 'Caveat', cursive; font-size: 26pt; font-weight: 700; color: #1a3a5c; margin: 2mm 0 1mm; }
-.p5-intro { font-family: 'Indie Flower', cursive; font-size: 9pt; color: #5a5a5a; flex-shrink: 0; }
-.p5-journee { display: flex; gap: 3mm; margin-bottom: 4mm; flex: 2; min-height: 0; }
-.p5-moment { flex: 1; background: rgba(255,255,255,0.4); padding: 2.5mm; border-radius: 2mm; position: relative; display: flex; flex-direction: column; }
-.p5-moment::before { content: ''; position: absolute; top: -2mm; left: 50%; transform: translateX(-50%); width: 12mm; height: 4mm; background: rgba(255, 230, 150, 0.7); }
-.p5-moment-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 1.5mm; flex-shrink: 0; }
-.p5-moment-icon { font-size: 12pt; }
-.p5-moment-label { font-family: 'Caveat', cursive; font-size: 12pt; font-weight: 700; color: #1a3a5c; }
-.p5-moment-txt-wrapper { flex: 1; display: flex; align-items: flex-start; }
-.p5-moment-txt { font-family: 'Patrick Hand', cursive; font-size: 8.5pt; color: #4a6a8c; line-height: 1.45; text-align: justify; }
-.p5-moment-txt .hl { background: rgba(255, 230, 100, 0.4); padding: 0 1mm; }
-.p5-categories { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2.5mm; margin-bottom: 4mm; flex: 1; min-height: 0; }
-.p5-cat { background: #fff; padding: 2mm; border-radius: 1.5mm; box-shadow: 1px 1px 3px rgba(0,0,0,0.1); text-align: center; position: relative; display: flex; flex-direction: column; }
-.p5-cat::before { content: ''; position: absolute; top: -1.5mm; left: 50%; transform: translateX(-50%); width: 10mm; height: 3mm; background: rgba(255, 230, 150, 0.6); }
-.p5-cat-icon { font-size: 12pt; margin-bottom: 1mm; }
-.p5-cat-titre { font-family: 'Caveat', cursive; font-size: 7.5pt; font-weight: 600; color: #1a3a5c; text-transform: uppercase; margin-bottom: 1mm; }
-.p5-cat-list { font-family: 'Indie Flower', cursive; font-size: 7pt; color: #5a5a5a; line-height: 1.35; flex: 1; }
-.p5-cat-list .fav { color: #1a3a5c; font-weight: 600; }
-.p5-cat-list .fav::before { content: '★ '; color: #c9a227; }
-.p5-expressions { display: flex; align-items: center; gap: 2.5mm; flex-wrap: wrap; margin-bottom: 4mm; flex-shrink: 0; }
-.p5-exp-label { font-family: 'Caveat', cursive; font-size: 10pt; color: #1a3a5c; }
-.p5-tag { background: #fff; border: 1.5px solid #1a3a5c; border-radius: 10mm; padding: 1mm 3mm; font-family: 'Patrick Hand', cursive; font-size: 7.5pt; color: #1a3a5c; }
-.p5-ettoi { background: linear-gradient(145deg, #fff9f0, #f5ebe0); border: 2px dashed #c9a227; border-radius: 4mm; padding: 4mm 5mm; margin-bottom: 3mm; position: relative; flex-shrink: 0; }
-.p5-ettoi::before { content: '✏️ Et toi...'; position: absolute; top: -3.5mm; left: 5mm; font-family: 'Caveat', cursive; font-size: 12pt; font-weight: 700; color: #5a4a1a; background: #f5f0e1; padding: 0 3mm; }
-.p5-ettoi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 6mm; margin-top: 2mm; }
-.p5-ettoi-item { display: flex; align-items: baseline; gap: 2mm; }
-.p5-ettoi-label { font-family: 'Patrick Hand', cursive; font-size: 8pt; color: #1a3a5c; white-space: nowrap; }
-.p5-ettoi-ligne { flex: 1; border-bottom: 1px dashed #4a6a8c; min-width: 15mm; }
-.p5-footer { text-align: center; font-family: 'Indie Flower', cursive; font-size: 8pt; color: #4a6a8c; border-top: 1px solid #d4a0a0; padding-top: 2mm; flex-shrink: 0; }
-.p5-doodle { position: absolute; bottom: 8mm; right: 10mm; font-size: 18pt; opacity: 0.12; transform: rotate(8deg); }
+.p5 .page-content { background: linear-gradient(135deg, #FDF8F0 0%, #F5F0E6 100%); padding: 13mm; display: flex; flex-direction: column; }
+.p5-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3mm; padding-bottom: 2mm; border-bottom: 3px solid var(--nuit); position: relative; flex-shrink: 0; }
+.p5-header::after { content: '✦'; position: absolute; bottom: -6pt; left: 50%; transform: translateX(-50%); background: var(--creme); padding: 0 2mm; color: var(--or); font-size: 10pt; }
+.p5-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); }
+.p5-age { font-family: var(--serif); font-size: 12pt; font-style: italic; background: var(--nuit); padding: 1.5mm 4mm; color: var(--or); }
+.p5-intro { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--ardoise); text-align: center; margin-bottom: 3mm; line-height: 1.5; flex-shrink: 0; }
+.p5-journee { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; margin-bottom: 3mm; flex: 1; min-height: 0; }
+.p5-moment { background: var(--blanc); padding: 3mm; display: flex; flex-direction: column; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
+.p5-moment::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2mm; }
+.p5-moment:nth-child(1)::before { background: linear-gradient(90deg, var(--or), var(--corail)); }
+.p5-moment:nth-child(2)::before { background: linear-gradient(90deg, var(--corail), var(--rose)); }
+.p5-moment:nth-child(3)::before { background: linear-gradient(90deg, var(--rose), var(--nuit)); }
+.p5-moment-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 2mm; margin-top: 1mm; padding-bottom: 1mm; border-bottom: 1px solid var(--perle); flex-shrink: 0; }
+.p5-moment-icon { width: 10mm; height: 10mm; background: var(--nuit); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14pt; }
+.p5-moment-icon i { color: #BFA265; }
+.p5-moment-label { font-family: var(--serif); font-size: 13pt; font-weight: 600; color: var(--nuit); }
+.p5-moment-txt-wrapper { flex: 1; display: flex; align-items: flex-start; position: relative; }
+.p5-moment-txt-wrapper::after { content: '—'; position: absolute; bottom: 1mm; right: 0; font-size: 10pt; color: var(--or); opacity: 0.3; }
+.p5-moment-txt { font-size: 10pt; line-height: 1.6; color: var(--ardoise); text-align: justify; }
+.p5-categories { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5mm; margin-bottom: 3mm; flex-shrink: 0; }
+.p5-cat { background: var(--blanc); padding: 2mm; border-radius: 2mm; box-shadow: 0 1px 4px rgba(0,0,0,0.04); position: relative; }
+.p5-cat::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 100%; border-radius: 2mm 0 0 2mm; }
+.p5-cat:nth-child(1)::before { background: var(--or); }
+.p5-cat:nth-child(2)::before { background: var(--corail); }
+.p5-cat:nth-child(3)::before { background: var(--rose); }
+.p5-cat:nth-child(4)::before { background: var(--bronze); }
+.p5-cat:nth-child(5)::before { background: var(--nuit); }
+.p5-cat:nth-child(6)::before { background: var(--or); }
+.p5-cat-titre { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.05em; color: var(--or); margin-bottom: 1mm; }
+.p5-cat-titre i { color: var(--or); margin-right: 1mm; }
+.p5-cat-list { font-size: 8pt; line-height: 1.4; color: var(--ardoise); }
+.p5-ettoi { background: var(--blanc); padding: 3mm 4mm; border-radius: 2mm; margin-bottom: 3mm; border: 2px dashed var(--or); flex-shrink: 0; }
+.p5-ettoi-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 3mm; padding-bottom: 2mm; border-bottom: 1px solid var(--perle); }
+.p5-ettoi-icon { font-size: 12pt; color: var(--or); }
+.p5-ettoi-titre { font-family: var(--cursive); font-size: 14pt; font-weight: 600; color: var(--or); font-style: italic; }
+.p5-ettoi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 4mm; }
+.p5-ettoi-item { display: flex; align-items: baseline; gap: 1mm; }
+.p5-ettoi-label { font-size: 8pt; color: var(--ardoise); white-space: nowrap; }
+.p5-ettoi-ligne { flex: 1; border-bottom: 1px dotted var(--taupe); min-width: 15mm; }
+.p5-expressions { background: var(--nuit); padding: 4mm 5mm; border-radius: 2mm; display: flex; align-items: center; gap: 3mm; flex-wrap: wrap; flex-shrink: 0; }
+.p5-exp-label { font-family: var(--mono); font-size: 9pt; color: var(--or); text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0; }
+.p5-exp-label i { color: var(--or); margin-right: 1mm; }
+.p5-tags { display: flex; flex-wrap: wrap; gap: 2mm; flex: 1; }
+.p5-tag { background: var(--blanc); padding: 2mm 4mm; border-radius: 8mm; font-size: 9pt; color: var(--nuit); font-weight: 500; }
 
 /* ═══════════════════════════════════════════════════════════
    P6 - TIMELINE
@@ -1246,99 +1240,52 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 <!-- PAGE 14 - SOUVENIRS ENFANCE -->
 <div class="page p5">
   <div class="page-content">
-    <!-- Spirale -->
-    <div class="p5-spiral">
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
-    </div>
-    <!-- Stickers -->
-    <span class="p5-sticker p5-sticker-1">🌟</span>
-    <!-- Header -->
     <div class="p5-header">
-      <div class="p5-age">✨ Quand tu avais {{age}} ans ✨</div>
       <h1 class="p5-titre">Souvenirs d'Enfance</h1>
-      <p class="p5-intro">Une journée ordinaire de tes {{age}} ans... tu te souviens ?</p>
+      <span class="p5-age">Quand tu avais {{age}} ans</span>
     </div>
-    <!-- 3 colonnes journée -->
+    <p class="p5-intro">Laissez votre esprit voyager. Voici à quoi aurait pu ressembler une journée ordinaire de tes {{age}} ans...<br>Un voyage dans les sensations, les objets et les rituels de ton époque.</p>
     <div class="p5-journee">
       <div class="p5-moment">
         <div class="p5-moment-header">
-          <span class="p5-moment-icon">☀️</span>
+          <span class="p5-moment-icon"><i class="fa-solid fa-sun"></i></span>
           <span class="p5-moment-label">Le Matin</span>
         </div>
         <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{matin}}</p></div>
       </div>
       <div class="p5-moment">
         <div class="p5-moment-header">
-          <span class="p5-moment-icon">🌤️</span>
+          <span class="p5-moment-icon"><i class="fa-solid fa-cloud-sun"></i></span>
           <span class="p5-moment-label">L'Après-midi</span>
         </div>
         <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{apresmidi}}</p></div>
       </div>
       <div class="p5-moment">
         <div class="p5-moment-header">
-          <span class="p5-moment-icon">🌙</span>
+          <span class="p5-moment-icon"><i class="fa-solid fa-moon"></i></span>
           <span class="p5-moment-label">Le Soir</span>
         </div>
         <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{soir}}</p></div>
       </div>
     </div>
-    <!-- Grille 6 catégories -->
     <div class="p5-categories">
-      <div class="p5-cat">
-        <div class="p5-cat-icon">📺</div>
-        <div class="p5-cat-titre">À l'écran</div>
-        <div class="p5-cat-list"><span class="fav">{{ecran_1}}</span><br>{{ecran_2}}<br>{{ecran_3}}</div>
-      </div>
-      <div class="p5-cat">
-        <div class="p5-cat-icon">🎵</div>
-        <div class="p5-cat-titre">Musique</div>
-        <div class="p5-cat-list"><span class="fav">{{musique_1}}</span><br>{{musique_2}}<br>{{musique_3}}</div>
-      </div>
-      <div class="p5-cat">
-        <div class="p5-cat-icon">🍫</div>
-        <div class="p5-cat-titre">Goûter</div>
-        <div class="p5-cat-list"><span class="fav">{{gouter_1}}</span><br>{{gouter_2}}<br>{{gouter_3}}</div>
-      </div>
-      <div class="p5-cat">
-        <div class="p5-cat-icon">📖</div>
-        <div class="p5-cat-titre">Lecture</div>
-        <div class="p5-cat-list"><span class="fav">{{lecture_1}}</span><br>{{lecture_2}}<br>{{lecture_3}}</div>
-      </div>
-      <div class="p5-cat">
-        <div class="p5-cat-icon">🎮</div>
-        <div class="p5-cat-titre">Jeux</div>
-        <div class="p5-cat-list"><span class="fav">{{jeu_1}}</span><br>{{jeu_2}}<br>{{jeu_3}}</div>
-      </div>
-      <div class="p5-cat">
-        <div class="p5-cat-icon">🎒</div>
-        <div class="p5-cat-titre">Objets</div>
-        <div class="p5-cat-list"><span class="fav">{{objet_1}}</span><br>{{objet_2}}<br>{{objet_3}}</div>
-      </div>
+      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-tv"></i> Écran</p><p class="p5-cat-list">{{ecran_1}}<br>{{ecran_2}}<br>{{ecran_3}}</p></div>
+      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-music"></i> Musique</p><p class="p5-cat-list">{{musique_1}}<br>{{musique_2}}<br>{{musique_3}}</p></div>
+      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-cookie"></i> Goûter</p><p class="p5-cat-list">{{gouter_1}}<br>{{gouter_2}}<br>{{gouter_3}}</p></div>
+      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-book"></i> Lecture</p><p class="p5-cat-list">{{lecture_1}}<br>{{lecture_2}}<br>{{lecture_3}}</p></div>
+      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-gamepad"></i> Jeux</p><p class="p5-cat-list">{{jeu_1}}<br>{{jeu_2}}<br>{{jeu_3}}</p></div>
+      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-trophy"></i> Objets</p><p class="p5-cat-list">{{objet_1}}<br>{{objet_2}}<br>{{objet_3}}</p></div>
     </div>
-    <!-- Expressions -->
-    <div class="p5-expressions">
-      <span class="p5-exp-label">💬 On disait :</span>
-      <span class="p5-tag">{{expression_1}}</span>
-      <span class="p5-tag">{{expression_2}}</span>
-      <span class="p5-tag">{{expression_3}}</span>
-      <span class="p5-tag">{{expression_4}}</span>
-    </div>
-    <!-- Et toi -->
     <div class="p5-ettoi">
+      <div class="p5-ettoi-header">
+        <span class="p5-ettoi-icon">✏️</span>
+        <span class="p5-ettoi-titre">Et toi...</span>
+      </div>
       <div class="p5-ettoi-grid">
         <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton meilleur copain/copine :</span><span class="p5-ettoi-ligne"></span></div>
         <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton amoureux/se secret(e) :</span><span class="p5-ettoi-ligne"></span></div>
         <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton doudou s'appelait :</span><span class="p5-ettoi-ligne"></span></div>
-        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Le plat que tu adorais ou détestais :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Le plat que tu adorais/détestais :</span><span class="p5-ettoi-ligne"></span></div>
         <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ta cachette secrète :</span><span class="p5-ettoi-ligne"></span></div>
         <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ta bêtise mémorable :</span><span class="p5-ettoi-ligne"></span></div>
         <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton rêve de métier :</span><span class="p5-ettoi-ligne"></span></div>
@@ -1347,8 +1294,15 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton surnom :</span><span class="p5-ettoi-ligne"></span></div>
       </div>
     </div>
-    <!-- Doodle -->
-    <div class="p5-doodle">🏠</div>
+    <div class="p5-expressions">
+      <span class="p5-exp-label"><i class="fa-solid fa-comment"></i> On disait</span>
+      <div class="p5-tags">
+        <span class="p5-tag">{{expression_1}}</span>
+        <span class="p5-tag">{{expression_2}}</span>
+        <span class="p5-tag">{{expression_3}}</span>
+        <span class="p5-tag">{{expression_4}}</span>
+      </div>
+    </div>
   </div>
   <div class="trans">
     <p>Ce goûter, cette chanson, ce cartable. Tu te souviens ? <strong>Le temps a continué sa course...</strong></p>
