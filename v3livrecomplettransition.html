@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ce Jour-Là - {{PRENOM}}</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600&family=Space+Mono:wght@400;700&family=Caveat:wght@400;600;700&family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
 :root {
@@ -301,49 +301,56 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P5 - SOUVENIRS ENFANCE
    ═══════════════════════════════════════════════════════════ */
-.p5 .page-content { background: linear-gradient(135deg, #FDF8F0 0%, #F5F0E6 100%); padding: 13mm; display: flex; flex-direction: column; }
-.p5-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3mm; padding-bottom: 2mm; border-bottom: 3px solid var(--nuit); position: relative; flex-shrink: 0; }
-.p5-header::after { content: '✦'; position: absolute; bottom: -6pt; left: 50%; transform: translateX(-50%); background: var(--creme); padding: 0 2mm; color: var(--or); font-size: 10pt; }
-.p5-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); }
-.p5-age { font-family: var(--serif); font-size: 12pt; font-style: italic; background: var(--nuit); padding: 1.5mm 4mm; color: var(--or); }
-.p5-intro { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--ardoise); text-align: center; margin-bottom: 3mm; line-height: 1.5; flex-shrink: 0; }
-.p5-journee { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; margin-bottom: 3mm; flex: 1; min-height: 0; }
-.p5-moment { background: var(--blanc); padding: 3mm; display: flex; flex-direction: column; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
-.p5-moment::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2mm; }
-.p5-moment:nth-child(1)::before { background: linear-gradient(90deg, var(--or), var(--corail)); }
-.p5-moment:nth-child(2)::before { background: linear-gradient(90deg, var(--corail), var(--rose)); }
-.p5-moment:nth-child(3)::before { background: linear-gradient(90deg, var(--rose), var(--nuit)); }
-.p5-moment-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 2mm; margin-top: 1mm; padding-bottom: 1mm; border-bottom: 1px solid var(--perle); flex-shrink: 0; }
-.p5-moment-icon { width: 10mm; height: 10mm; background: var(--nuit); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14pt; }
-.p5-moment-icon i { color: #BFA265; }
-.p5-moment-label { font-family: var(--serif); font-size: 13pt; font-weight: 600; color: var(--nuit); }
-.p5-moment-txt-wrapper { flex: 1; display: flex; align-items: flex-start; position: relative; }
-.p5-moment-txt-wrapper::after { content: '—'; position: absolute; bottom: 1mm; right: 0; font-size: 10pt; color: var(--or); opacity: 0.3; }
-.p5-moment-txt { font-size: 10pt; line-height: 1.6; color: var(--ardoise); text-align: justify; }
-.p5-categories { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5mm; margin-bottom: 3mm; flex-shrink: 0; }
-.p5-cat { background: var(--blanc); padding: 2mm; border-radius: 2mm; box-shadow: 0 1px 4px rgba(0,0,0,0.04); position: relative; }
-.p5-cat::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 100%; border-radius: 2mm 0 0 2mm; }
-.p5-cat:nth-child(1)::before { background: var(--or); }
-.p5-cat:nth-child(2)::before { background: var(--corail); }
-.p5-cat:nth-child(3)::before { background: var(--rose); }
-.p5-cat:nth-child(4)::before { background: var(--bronze); }
-.p5-cat:nth-child(5)::before { background: var(--nuit); }
-.p5-cat:nth-child(6)::before { background: var(--or); }
-.p5-cat-titre { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.05em; color: var(--or); margin-bottom: 1mm; }
-.p5-cat-titre i { color: var(--or); margin-right: 1mm; }
-.p5-cat-list { font-size: 8pt; line-height: 1.4; color: var(--ardoise); }
-.p5-tresor { background: var(--blanc); padding: 3mm 4mm; border-radius: 2mm; margin-bottom: 3mm; border: 1px dashed var(--or); flex-shrink: 0; }
-.p5-tresor-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 2mm; }
-.p5-tresor-icon { font-size: 14pt; }
-.p5-tresor-titre { font-family: var(--serif); font-size: 12pt; font-weight: 600; color: var(--nuit); }
-.p5-tresor-question { font-size: 9pt; font-style: italic; color: var(--ardoise); margin-bottom: 2mm; }
-.p5-tresor-lignes { display: flex; flex-direction: column; gap: 3mm; }
-.p5-tresor-ligne { height: 5mm; border-bottom: 1px solid var(--perle); }
-.p5-expressions { background: var(--nuit); padding: 4mm 5mm; border-radius: 2mm; display: flex; align-items: center; gap: 3mm; flex-wrap: wrap; flex-shrink: 0; }
-.p5-exp-label { font-family: var(--mono); font-size: 9pt; color: var(--or); text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0; }
-.p5-exp-label i { color: var(--or); margin-right: 1mm; }
-.p5-tags { display: flex; flex-wrap: wrap; gap: 2mm; flex: 1; }
-.p5-tag { background: var(--blanc); padding: 2mm 4mm; border-radius: 8mm; font-size: 9pt; color: var(--nuit); font-weight: 500; }
+.p5 .page-content { 
+  background: #f5f0e1;
+  background-image: 
+    linear-gradient(#d4a0a0 1px, transparent 1px),
+    linear-gradient(90deg, transparent 17mm, #d4a0a0 17mm, #d4a0a0 18mm, transparent 18mm),
+    linear-gradient(#a8c8d8 1px, transparent 1px);
+  background-size: 100% 7mm, 100% 100%, 100% 7mm;
+  background-position: 0 10mm;
+  padding: 10mm 13mm 10mm 22mm;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.p5-spiral { position: absolute; left: 4mm; top: 10mm; bottom: 10mm; display: flex; flex-direction: column; gap: 6mm; }
+.p5-ring { width: 5mm; height: 5mm; border: 1.5px solid #666; border-radius: 50%; background: linear-gradient(135deg, #888, #aaa); }
+.p5-sticker { position: absolute; font-size: 12pt; opacity: 0.9; }
+.p5-sticker-1 { top: 12mm; right: 15mm; transform: rotate(12deg); }
+.p5-sticker-2 { top: 75mm; left: 25mm; transform: rotate(-8deg); }
+.p5-header { text-align: center; margin-bottom: 3mm; flex-shrink: 0; }
+.p5-age { display: inline-block; background: linear-gradient(145deg, #fff9e6, #f0e6c0); border: 1.5px dashed #c9a227; padding: 1.5mm 5mm; font-family: 'Caveat', cursive; font-size: 10pt; color: #1a3a5c; transform: rotate(-1deg); }
+.p5-titre { font-family: 'Caveat', cursive; font-size: 26pt; font-weight: 700; color: #1a3a5c; margin: 2mm 0 1mm; }
+.p5-intro { font-family: 'Indie Flower', cursive; font-size: 9pt; color: #5a5a5a; flex-shrink: 0; }
+.p5-journee { display: flex; gap: 3mm; margin-bottom: 4mm; flex: 2; min-height: 0; }
+.p5-moment { flex: 1; background: rgba(255,255,255,0.4); padding: 2.5mm; border-radius: 2mm; position: relative; display: flex; flex-direction: column; }
+.p5-moment::before { content: ''; position: absolute; top: -2mm; left: 50%; transform: translateX(-50%); width: 12mm; height: 4mm; background: rgba(255, 230, 150, 0.7); }
+.p5-moment-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 1.5mm; flex-shrink: 0; }
+.p5-moment-icon { font-size: 12pt; }
+.p5-moment-label { font-family: 'Caveat', cursive; font-size: 12pt; font-weight: 700; color: #1a3a5c; }
+.p5-moment-txt-wrapper { flex: 1; display: flex; align-items: flex-start; }
+.p5-moment-txt { font-family: 'Patrick Hand', cursive; font-size: 8.5pt; color: #4a6a8c; line-height: 1.45; text-align: justify; }
+.p5-moment-txt .hl { background: rgba(255, 230, 100, 0.4); padding: 0 1mm; }
+.p5-categories { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2.5mm; margin-bottom: 4mm; flex: 1; min-height: 0; }
+.p5-cat { background: #fff; padding: 2mm; border-radius: 1.5mm; box-shadow: 1px 1px 3px rgba(0,0,0,0.1); text-align: center; position: relative; display: flex; flex-direction: column; }
+.p5-cat::before { content: ''; position: absolute; top: -1.5mm; left: 50%; transform: translateX(-50%); width: 10mm; height: 3mm; background: rgba(255, 230, 150, 0.6); }
+.p5-cat-icon { font-size: 12pt; margin-bottom: 1mm; }
+.p5-cat-titre { font-family: 'Caveat', cursive; font-size: 7.5pt; font-weight: 600; color: #1a3a5c; text-transform: uppercase; margin-bottom: 1mm; }
+.p5-cat-list { font-family: 'Indie Flower', cursive; font-size: 7pt; color: #5a5a5a; line-height: 1.35; flex: 1; }
+.p5-cat-list .fav { color: #1a3a5c; font-weight: 600; }
+.p5-cat-list .fav::before { content: '★ '; color: #c9a227; }
+.p5-expressions { display: flex; align-items: center; gap: 2.5mm; flex-wrap: wrap; margin-bottom: 4mm; flex-shrink: 0; }
+.p5-exp-label { font-family: 'Caveat', cursive; font-size: 10pt; color: #1a3a5c; }
+.p5-tag { background: #fff; border: 1.5px solid #1a3a5c; border-radius: 10mm; padding: 1mm 3mm; font-family: 'Patrick Hand', cursive; font-size: 7.5pt; color: #1a3a5c; }
+.p5-ettoi { background: linear-gradient(145deg, #fff9f0, #f5ebe0); border: 2px dashed #c9a227; border-radius: 4mm; padding: 4mm 5mm; margin-bottom: 3mm; position: relative; flex-shrink: 0; }
+.p5-ettoi::before { content: '✏️ Et toi...'; position: absolute; top: -3.5mm; left: 5mm; font-family: 'Caveat', cursive; font-size: 12pt; font-weight: 700; color: #5a4a1a; background: #f5f0e1; padding: 0 3mm; }
+.p5-ettoi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 6mm; margin-top: 2mm; }
+.p5-ettoi-item { display: flex; align-items: baseline; gap: 2mm; }
+.p5-ettoi-label { font-family: 'Patrick Hand', cursive; font-size: 8pt; color: #1a3a5c; white-space: nowrap; }
+.p5-ettoi-ligne { flex: 1; border-bottom: 1px dashed #4a6a8c; min-width: 15mm; }
+.p5-footer { text-align: center; font-family: 'Indie Flower', cursive; font-size: 8pt; color: #4a6a8c; border-top: 1px solid #d4a0a0; padding-top: 2mm; flex-shrink: 0; }
+.p5-doodle { position: absolute; bottom: 8mm; right: 10mm; font-size: 18pt; opacity: 0.12; transform: rotate(8deg); }
 
 /* ═══════════════════════════════════════════════════════════
    P6 - TIMELINE
@@ -516,6 +523,51 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p11-sig-text { font-family: var(--serif); font-size: 12pt; font-style: italic; color: var(--taupe); }
 .p11-sig-prenom { font-family: var(--serif); font-size: 18pt; font-weight: 600; color: var(--nuit); margin-top: 2mm; }
 .p11-footer { text-align: center; margin-top: 5mm; padding-left: 4mm; flex-shrink: 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   P-MALLE - MALLE AUX SOUVENIRS
+   ═══════════════════════════════════════════════════════════ */
+.p-malle .page-content { background: linear-gradient(180deg, #faf9f6 0%, #f5f3ef 100%); padding: 12mm 15mm 8mm; display: flex; flex-direction: column; position: relative; }
+.p-malle-corner { position: absolute; width: 15mm; height: 15mm; border-color: rgba(201, 162, 39, 0.2); border-style: solid; }
+.p-malle-corner-tl { top: 8mm; left: 8mm; border-width: 1px 0 0 1px; }
+.p-malle-corner-tr { top: 8mm; right: 8mm; border-width: 1px 1px 0 0; }
+.p-malle-header { text-align: center; margin-bottom: 5mm; flex-shrink: 0; }
+.p-malle-stars { color: var(--or); font-size: 8pt; letter-spacing: 12px; margin-bottom: 3mm; }
+.p-malle-title { font-family: var(--serif); font-size: 26pt; font-weight: 500; font-style: italic; color: var(--nuit); margin-bottom: 2mm; }
+.p-malle-gold-line { width: 50px; height: 1.5px; background: var(--or); margin: 0 auto 3mm; }
+.p-malle-subtitle { font-family: var(--mono); font-size: 7pt; font-weight: 400; color: var(--nuit); letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; }
+.p-malle-intro { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--ardoise); text-align: center; margin: 4mm 0 5mm; max-width: 140mm; margin-left: auto; margin-right: auto; line-height: 1.5; }
+.p-malle-section-label { font-family: var(--mono); font-size: 6.5pt; font-weight: 500; color: var(--or); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3mm; }
+.p-malle-memories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin-bottom: 5mm; flex: 1; }
+.p-malle-memory-card { background: #fff; padding: 3.5mm; position: relative; display: flex; flex-direction: column; }
+.p-malle-memory-card::before, .p-malle-memory-card::after { content: ''; position: absolute; width: 8px; height: 8px; border-color: var(--or); border-style: solid; }
+.p-malle-memory-card::before { top: 0; left: 0; border-width: 1px 0 0 1px; }
+.p-malle-memory-card::after { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+.p-malle-memory-label { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--nuit); margin-bottom: 2mm; display: flex; align-items: center; gap: 2mm; }
+.p-malle-memory-icon { font-size: 9pt; opacity: 0.8; }
+.p-malle-memory-lines { display: flex; flex-direction: column; flex: 1; }
+.p-malle-memory-line { border-bottom: 1px dotted #d0ccc4; flex: 1; min-height: 5.5mm; }
+.p-malle-mirror { background: #fff; padding: 4mm 5mm; margin-bottom: 5mm; position: relative; flex: 1; display: flex; flex-direction: column; }
+.p-malle-mirror::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border: 1.5px solid var(--or); pointer-events: none; }
+.p-malle-mirror-header { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--nuit); text-align: center; margin-bottom: 3mm; display: flex; align-items: center; justify-content: center; gap: 3mm; flex-shrink: 0; }
+.p-malle-mirror-header::before, .p-malle-mirror-header::after { content: ''; width: 20px; height: 1px; background: var(--or); }
+.p-malle-mirror-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; flex: 1; }
+.p-malle-mirror-item { display: flex; flex-direction: column; }
+.p-malle-mirror-label { font-family: var(--serif); font-size: 8.5pt; font-style: italic; color: #5a5a5a; margin-bottom: 1mm; }
+.p-malle-mirror-lines { display: flex; flex-direction: column; flex: 1; }
+.p-malle-mirror-line { border-bottom: 1px dotted #d0ccc4; flex: 1; min-height: 5mm; }
+.p-malle-libre { background: #fff; padding: 4mm 5mm; margin-bottom: 5mm; position: relative; flex: 0.6; display: flex; flex-direction: column; }
+.p-malle-libre::before { content: ''; position: absolute; top: 3mm; left: 3mm; right: 3mm; bottom: 3mm; border: 1px solid rgba(201, 162, 39, 0.3); pointer-events: none; }
+.p-malle-libre-header { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--nuit); text-align: center; margin-bottom: 3mm; flex-shrink: 0; }
+.p-malle-libre-lines { display: flex; flex-direction: column; padding: 0 2mm; flex: 1; }
+.p-malle-libre-line { border-bottom: 1px dotted #d0ccc4; flex: 1; min-height: 6mm; }
+.p-malle-transmit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; flex: 0.5; }
+.p-malle-transmit-card { background: #fff; border: 1.5px solid var(--nuit); padding: 3mm 4mm; display: flex; flex-direction: column; }
+.p-malle-transmit-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 2mm; flex-shrink: 0; }
+.p-malle-transmit-icon { font-size: 9pt; opacity: 0.8; }
+.p-malle-transmit-prompt { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--nuit); line-height: 1.3; }
+.p-malle-transmit-lines { display: flex; flex-direction: column; margin-top: 2mm; flex: 1; }
+.p-malle-transmit-line { border-bottom: 1px dotted #d0ccc4; flex: 1; min-height: 5.5mm; }
 
 /* ═══════════════════════════════════════════════════════════
    P12 - CONCLUSION
@@ -701,9 +753,10 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .pl-card { background: var(--blanc); padding: 4mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; position: relative; border-left: 3px solid var(--or); overflow: hidden; }
 .pl-card::before { content: '"'; position: absolute; top: 1mm; right: 3mm; font-family: var(--serif); font-size: 32pt; color: var(--or); opacity: 0.2; line-height: 1; }
 .pl-zone-texte { flex: 1; min-height: 20mm; }
-.pl-signature { display: flex; align-items: center; gap: 1mm; padding-top: 2mm; border-top: 1px solid var(--perle); margin-top: auto; flex-shrink: 0; }
+.pl-prompt { font-family: var(--serif); font-size: 8pt; font-style: italic; color: #b0b0b0; margin-bottom: 2mm; }
+.pl-signature { display: flex; align-items: center; gap: 1mm; padding-top: 3mm; border-top: 1px solid var(--perle); margin-top: auto; flex-shrink: 0; }
 .pl-signature-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; }
-.pl-signature-ligne { flex: 1; border-bottom: 1px solid var(--ardoise); }
+.pl-signature-ligne { flex: 1; border-bottom: 1px solid var(--ardoise); margin-top: 3mm; }
 .pl-footer { text-align: center; margin-top: 3mm; flex-shrink: 0; }
 </style>
 </head>
@@ -1113,7 +1166,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <p class="p4-card-titre"><i class="fa-solid fa-heart"></i> On adorait</p>
         <div class="p4-card-content">
           <p class="p4-culture-item"><i class="fa-solid fa-clapperboard fa-icon-sm"></i> {{film}}</p>
-          <p class="p4-culture-item"><i class="fa-solid fa-tv fa-icon-sm"></i> {{serie_tv_moodboard}}</p>
+          <p class="p4-culture-item"><i class="fa-solid fa-masks-theater fa-icon-sm"></i> {{serie_tv_moodboard}}</p>
           <p class="p4-culture-item"><i class="fa-solid fa-book fa-icon-sm"></i> {{livre_moodboard}}</p>
           <p class="p4-culture-item"><i class="fa-solid fa-book-open fa-icon-sm"></i> {{bd}}</p>
         </div>
@@ -1146,8 +1199,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <div class="p4-card-content">
           <p class="p4-enfance-item"><i class="fa-solid fa-cookie fa-icon-sm"></i> {{gouter_1_moodboard}}</p>
           <p class="p4-enfance-item"><i class="fa-solid fa-cookie-bite fa-icon-sm"></i> {{gouter_2_moodboard}}</p>
-          <p class="p4-enfance-item">{{emoji_jeu_1}} {{jouet_1_moodboard}}</p>
-          <p class="p4-enfance-item">{{emoji_jeu_2}} {{jouet_2_moodboard}}</p>
+          <p class="p4-enfance-item"><i class="fa-solid fa-{{emoji_jeu_1}} fa-icon-sm"></i> {{jouet_1_moodboard}}</p>
+          <p class="p4-enfance-item"><i class="fa-solid fa-{{emoji_jeu_2}} fa-icon-sm"></i> {{jouet_2_moodboard}}</p>
         </div>
       </div>
       <div class="p4-card p4-image3">
@@ -1193,62 +1246,109 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 <!-- PAGE 14 - SOUVENIRS ENFANCE -->
 <div class="page p5">
   <div class="page-content">
-    <div class="p5-header">
-      <h1 class="p5-titre">Souvenirs d'Enfance</h1>
-      <span class="p5-age">Quand tu avais {{age}} ans</span>
+    <!-- Spirale -->
+    <div class="p5-spiral">
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
+      <div class="p5-ring"></div><div class="p5-ring"></div><div class="p5-ring"></div>
     </div>
-    <p class="p5-intro">Laissez votre esprit voyager. Voici à quoi aurait pu ressembler une journée ordinaire de tes {{age}} ans...<br>Un voyage dans les sensations, les objets et les rituels de ton époque.</p>
+    <!-- Stickers -->
+    <span class="p5-sticker p5-sticker-1">🌟</span>
+    <!-- Header -->
+    <div class="p5-header">
+      <div class="p5-age">✨ Quand tu avais {{age}} ans ✨</div>
+      <h1 class="p5-titre">Souvenirs d'Enfance</h1>
+      <p class="p5-intro">Une journée ordinaire de tes {{age}} ans... tu te souviens ?</p>
+    </div>
+    <!-- 3 colonnes journée -->
     <div class="p5-journee">
       <div class="p5-moment">
         <div class="p5-moment-header">
-          <span class="p5-moment-icon"><i class="fa-solid fa-sun"></i></span>
+          <span class="p5-moment-icon">☀️</span>
           <span class="p5-moment-label">Le Matin</span>
         </div>
         <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{matin}}</p></div>
       </div>
       <div class="p5-moment">
         <div class="p5-moment-header">
-          <span class="p5-moment-icon"><i class="fa-solid fa-cloud-sun"></i></span>
+          <span class="p5-moment-icon">🌤️</span>
           <span class="p5-moment-label">L'Après-midi</span>
         </div>
         <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{apresmidi}}</p></div>
       </div>
       <div class="p5-moment">
         <div class="p5-moment-header">
-          <span class="p5-moment-icon"><i class="fa-solid fa-moon"></i></span>
+          <span class="p5-moment-icon">🌙</span>
           <span class="p5-moment-label">Le Soir</span>
         </div>
         <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{soir}}</p></div>
       </div>
     </div>
+    <!-- Grille 6 catégories -->
     <div class="p5-categories">
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-tv"></i> Écran</p><p class="p5-cat-list">{{ecran_1}}<br>{{ecran_2}}<br>{{ecran_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-music"></i> Musique</p><p class="p5-cat-list">{{musique_1}}<br>{{musique_2}}<br>{{musique_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-cookie"></i> Goûter</p><p class="p5-cat-list">{{gouter_1}}<br>{{gouter_2}}<br>{{gouter_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-book"></i> Lecture</p><p class="p5-cat-list">{{lecture_1}}<br>{{lecture_2}}<br>{{lecture_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-gamepad"></i> Jeux</p><p class="p5-cat-list">{{jeu_1}}<br>{{jeu_2}}<br>{{jeu_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-trophy"></i> Objets</p><p class="p5-cat-list">{{objet_1}}<br>{{objet_2}}<br>{{objet_3}}</p></div>
-    </div>
-    <div class="p5-tresor">
-      <div class="p5-tresor-header">
-        <span class="p5-tresor-icon">💎</span>
-        <span class="p5-tresor-titre">Ton trésor d'enfance</span>
+      <div class="p5-cat">
+        <div class="p5-cat-icon">📺</div>
+        <div class="p5-cat-titre">À l'écran</div>
+        <div class="p5-cat-list"><span class="fav">{{ecran_1}}</span><br>{{ecran_2}}<br>{{ecran_3}}</div>
       </div>
-      <p class="p5-tresor-question">Cet objet que tu gardais précieusement, ce doudou, ce jouet irremplaçable...</p>
-      <div class="p5-tresor-lignes">
-        <div class="p5-tresor-ligne"></div>
-        <div class="p5-tresor-ligne"></div>
+      <div class="p5-cat">
+        <div class="p5-cat-icon">🎵</div>
+        <div class="p5-cat-titre">Musique</div>
+        <div class="p5-cat-list"><span class="fav">{{musique_1}}</span><br>{{musique_2}}<br>{{musique_3}}</div>
+      </div>
+      <div class="p5-cat">
+        <div class="p5-cat-icon">🍫</div>
+        <div class="p5-cat-titre">Goûter</div>
+        <div class="p5-cat-list"><span class="fav">{{gouter_1}}</span><br>{{gouter_2}}<br>{{gouter_3}}</div>
+      </div>
+      <div class="p5-cat">
+        <div class="p5-cat-icon">📖</div>
+        <div class="p5-cat-titre">Lecture</div>
+        <div class="p5-cat-list"><span class="fav">{{lecture_1}}</span><br>{{lecture_2}}<br>{{lecture_3}}</div>
+      </div>
+      <div class="p5-cat">
+        <div class="p5-cat-icon">🎮</div>
+        <div class="p5-cat-titre">Jeux</div>
+        <div class="p5-cat-list"><span class="fav">{{jeu_1}}</span><br>{{jeu_2}}<br>{{jeu_3}}</div>
+      </div>
+      <div class="p5-cat">
+        <div class="p5-cat-icon">🎒</div>
+        <div class="p5-cat-titre">Objets</div>
+        <div class="p5-cat-list"><span class="fav">{{objet_1}}</span><br>{{objet_2}}<br>{{objet_3}}</div>
       </div>
     </div>
+    <!-- Expressions -->
     <div class="p5-expressions">
-      <span class="p5-exp-label"><i class="fa-solid fa-comment"></i> On disait</span>
-      <div class="p5-tags">
-        <span class="p5-tag">{{expression_1}}</span>
-        <span class="p5-tag">{{expression_2}}</span>
-        <span class="p5-tag">{{expression_3}}</span>
-        <span class="p5-tag">{{expression_4}}</span>
+      <span class="p5-exp-label">💬 On disait :</span>
+      <span class="p5-tag">{{expression_1}}</span>
+      <span class="p5-tag">{{expression_2}}</span>
+      <span class="p5-tag">{{expression_3}}</span>
+      <span class="p5-tag">{{expression_4}}</span>
+    </div>
+    <!-- Et toi -->
+    <div class="p5-ettoi">
+      <div class="p5-ettoi-grid">
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton meilleur copain/copine :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton amoureux/se secret(e) :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton doudou s'appelait :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Le plat que tu adorais ou détestais :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ta cachette secrète :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ta bêtise mémorable :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton rêve de métier :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ce dont tu étais fier(e) :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton activité (sport, dessin...) :</span><span class="p5-ettoi-ligne"></span></div>
+        <div class="p5-ettoi-item"><span class="p5-ettoi-label">Ton surnom :</span><span class="p5-ettoi-ligne"></span></div>
       </div>
     </div>
+    <!-- Doodle -->
+    <div class="p5-doodle">🏠</div>
   </div>
   <div class="trans">
     <p>Ce goûter, cette chanson, ce cartable. Tu te souviens ? <strong>Le temps a continué sa course...</strong></p>
@@ -1520,14 +1620,14 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="pl-sep"></div>
     </div>
     <div class="pl-grid">
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Un souvenir avec toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Ce que j'aime chez toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Un mot qui te définit...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Ce que je te souhaite...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Ce que tu m'apportes...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Libre...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Ce que j'aimerais te dire...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Libre...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
     </div>
     <div class="pl-footer"><p class="pl-ornament2">✦ ✦ ✦</p></div>
   </div>
@@ -1563,12 +1663,112 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
   </div>
   <div class="trans">
-    <p>Ces mots resteront. <strong>Une dernière chose à officialiser...</strong></p>
+    <p>Ces mots resteront. <strong>Et toi, que veux-tu garder ?</strong></p>
     <span class="page-num">24</span>
   </div>
 </div>
 
-<!-- PAGE 25 - CERTIFICAT -->
+<!-- PAGE 25 - MALLE AUX SOUVENIRS -->
+<div class="page p-malle">
+  <div class="page-content">
+    <!-- Coins décoratifs -->
+    <div class="p-malle-corner p-malle-corner-tl"></div>
+    <div class="p-malle-corner p-malle-corner-tr"></div>
+    
+    <!-- Header -->
+    <header class="p-malle-header">
+      <div class="p-malle-stars">✦   ✦   ✦</div>
+      <h1 class="p-malle-title">Ta Malle aux Souvenirs</h1>
+      <div class="p-malle-gold-line"></div>
+      <p class="p-malle-subtitle">Ce que ce livre a fait remonter</p>
+    </header>
+    
+    <p class="p-malle-intro">Ferme les yeux un instant. Laisse les pages défiler dans ta tête.<br>Qu'est-ce qui est remonté à la surface ?</p>
+    
+    <!-- Section Ce qui m'est revenu -->
+    <div class="p-malle-section-label">💭 Ce qui m'est revenu</div>
+    
+    <div class="p-malle-memories-grid">
+      <div class="p-malle-memory-card">
+        <div class="p-malle-memory-label"><span class="p-malle-memory-icon">👃</span> Des odeurs...</div>
+        <div class="p-malle-memory-lines"><div class="p-malle-memory-line"></div><div class="p-malle-memory-line"></div></div>
+      </div>
+      <div class="p-malle-memory-card">
+        <div class="p-malle-memory-label"><span class="p-malle-memory-icon">👤</span> Des personnes...</div>
+        <div class="p-malle-memory-lines"><div class="p-malle-memory-line"></div><div class="p-malle-memory-line"></div></div>
+      </div>
+      <div class="p-malle-memory-card">
+        <div class="p-malle-memory-label"><span class="p-malle-memory-icon">🏠</span> Des endroits...</div>
+        <div class="p-malle-memory-lines"><div class="p-malle-memory-line"></div><div class="p-malle-memory-line"></div></div>
+      </div>
+      <div class="p-malle-memory-card">
+        <div class="p-malle-memory-label"><span class="p-malle-memory-icon">🎵</span> Des chansons...</div>
+        <div class="p-malle-memory-lines"><div class="p-malle-memory-line"></div><div class="p-malle-memory-line"></div></div>
+      </div>
+      <div class="p-malle-memory-card">
+        <div class="p-malle-memory-label"><span class="p-malle-memory-icon">✨</span> Des moments...</div>
+        <div class="p-malle-memory-lines"><div class="p-malle-memory-line"></div><div class="p-malle-memory-line"></div></div>
+      </div>
+      <div class="p-malle-memory-card">
+        <div class="p-malle-memory-label"><span class="p-malle-memory-icon">🎁</span> Des objets...</div>
+        <div class="p-malle-memory-lines"><div class="p-malle-memory-line"></div><div class="p-malle-memory-line"></div></div>
+      </div>
+    </div>
+    
+    <!-- Section Miroir -->
+    <div class="p-malle-mirror">
+      <div class="p-malle-mirror-header">Ce que j'ai (re)découvert sur moi</div>
+      <div class="p-malle-mirror-grid">
+        <div class="p-malle-mirror-item">
+          <span class="p-malle-mirror-label">Ce que j'aime chez moi :</span>
+          <div class="p-malle-mirror-lines"><div class="p-malle-mirror-line"></div><div class="p-malle-mirror-line"></div></div>
+        </div>
+        <div class="p-malle-mirror-item">
+          <span class="p-malle-mirror-label">Ma plus grande qualité :</span>
+          <div class="p-malle-mirror-lines"><div class="p-malle-mirror-line"></div><div class="p-malle-mirror-line"></div></div>
+        </div>
+        <div class="p-malle-mirror-item">
+          <span class="p-malle-mirror-label">Ce que les autres voient en moi (et que j'oublie parfois) :</span>
+          <div class="p-malle-mirror-lines"><div class="p-malle-mirror-line"></div><div class="p-malle-mirror-line"></div></div>
+        </div>
+        <div class="p-malle-mirror-item">
+          <span class="p-malle-mirror-label">Ce que l'enfant que j'étais penserait de moi aujourd'hui :</span>
+          <div class="p-malle-mirror-lines"><div class="p-malle-mirror-line"></div><div class="p-malle-mirror-line"></div></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Section libre -->
+    <div class="p-malle-libre">
+      <div class="p-malle-libre-header">Ce que ce livre m'a rappelé, ce que je veux garder...</div>
+      <div class="p-malle-libre-lines"><div class="p-malle-libre-line"></div><div class="p-malle-libre-line"></div><div class="p-malle-libre-line"></div></div>
+    </div>
+    
+    <!-- Section transmission -->
+    <div class="p-malle-transmit-grid">
+      <div class="p-malle-transmit-card">
+        <div class="p-malle-transmit-header">
+          <span class="p-malle-transmit-icon">❓</span>
+          <span class="p-malle-transmit-prompt">Une question à poser à mes parents ou grands-parents...</span>
+        </div>
+        <div class="p-malle-transmit-lines"><div class="p-malle-transmit-line"></div><div class="p-malle-transmit-line"></div></div>
+      </div>
+      <div class="p-malle-transmit-card">
+        <div class="p-malle-transmit-header">
+          <span class="p-malle-transmit-icon">🌱</span>
+          <span class="p-malle-transmit-prompt">Ce que je voudrais transmettre de cette époque...</span>
+        </div>
+        <div class="p-malle-transmit-lines"><div class="p-malle-transmit-line"></div><div class="p-malle-transmit-line"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="trans">
+    <p>Ces souvenirs t'appartiennent. <strong>Une dernière chose à officialiser...</strong></p>
+    <span class="page-num">25</span>
+  </div>
+</div>
+
+<!-- PAGE 26 - CERTIFICAT -->
 <div class="page p13">
   <div class="page-content">
     <div class="p13-diplome">
@@ -1605,11 +1805,11 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
   <div class="trans">
     <p>Ce livre est unique. Toi aussi. <strong>Mais l'histoire n'est pas finie...</strong></p>
-    <span class="page-num">25</span>
+    <span class="page-num">26</span>
   </div>
 </div>
 
-<!-- PAGE 26 - MESSAGE AU FUTUR -->
+<!-- PAGE 27 - MESSAGE AU FUTUR -->
 <div class="page p15">
   <div class="page-content">
     <div class="p15-header">
@@ -1650,11 +1850,11 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
   <div class="trans">
     <p>Ces mots voyageront dans le temps. <strong>Le livre se ferme, mais pas ton histoire.</strong></p>
-    <span class="page-num">26</span>
+    <span class="page-num">27</span>
   </div>
 </div>
 
-<!-- PAGE 27 - CLÔTURE -->
+<!-- PAGE 28 - CLÔTURE -->
 <div class="page p-cloture page-notrans">
   <div class="page-content">
     <div class="pc-cadre"></div>
