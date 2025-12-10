@@ -787,6 +787,21 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p-mode-text strong { color: var(--nuit); font-weight: 600; }
 .p-mode-closing { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--nuit); text-align: center; margin-top: 8mm; line-height: 1.6; }
 .p-mode-ornament2 { color: var(--or); font-size: 10pt; letter-spacing: 0.8em; margin-top: 6mm; }
+
+/* ═══════════════════════════════════════════════════════════
+   PAGES ESPACE LIBRE
+   ═══════════════════════════════════════════════════════════ */
+.p-libre .page-content { background: linear-gradient(180deg, var(--ivoire) 0%, var(--creme) 100%); padding: 13mm; display: flex; flex-direction: column; position: relative; }
+.p-libre-corner { position: absolute; width: 15mm; height: 15mm; border-color: var(--or); border-style: solid; opacity: 0.4; }
+.p-libre-corner-tl { top: 10mm; left: 10mm; border-width: 1px 0 0 1px; }
+.p-libre-corner-tr { top: 10mm; right: 10mm; border-width: 1px 1px 0 0; }
+.p-libre-corner-bl { bottom: 10mm; left: 10mm; border-width: 0 0 1px 1px; }
+.p-libre-corner-br { bottom: 10mm; right: 10mm; border-width: 0 1px 1px 0; }
+.p-libre-header { text-align: center; margin-bottom: 5mm; flex-shrink: 0; }
+.p-libre-ornament { color: var(--or); font-size: 10pt; letter-spacing: 0.8em; margin-bottom: 3mm; }
+.p-libre-titre { font-family: var(--serif); font-size: 20pt; font-weight: 600; font-style: italic; color: var(--nuit); margin-bottom: 2mm; }
+.p-libre-subtitle { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--ardoise); }
+.p-libre-zone { flex: 1; border: 1px dashed var(--perle); border-radius: 3mm; margin: 0 5mm; }
 </style>
 </head>
 <body>
@@ -859,11 +874,15 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <p class="p-mode-ornament">✦ ✦ ✦</p>
       <h1 class="p-mode-titre">Avant de tourner la page...</h1>
       <div class="p-mode-ligne"></div>
-      <p class="p-mode-intro">Ce livre n'est pas fait pour rester sagement sur une étagère.<br>Il est fait pour vivre, pour voyager de main en main, pour s'enrichir de ton histoire.</p>
+      <p class="p-mode-intro">Ce livre n'est pas fait pour rester sagement sur une étagère.<br>Il est fait pour vivre, pour s'enrichir, pour voyager de main en main.</p>
       <div class="p-mode-body">
         <div class="p-mode-item">
+          <span class="p-mode-icon">👀</span>
+          <p class="p-mode-text"><strong>Regarde-le.</strong> Certaines pages sont peut-être déjà remplies par la personne qui te l'offre. D'autres t'attendent, vierges. Les deux ont de la valeur.</p>
+        </div>
+        <div class="p-mode-item">
           <span class="p-mode-icon">✏️</span>
-          <p class="p-mode-text"><strong>Écris dedans.</strong> Les espaces vides t'attendent. Remplis-les de tes souvenirs, de tes secrets, de tes rêves. L'encre que tu y laisseras fera partie de l'histoire.</p>
+          <p class="p-mode-text"><strong>Complète-le.</strong> Les espaces vides sont une invitation. Remplis-les de tes souvenirs, de tes secrets, de tes rêves. L'encre que tu y laisseras fera partie de l'histoire.</p>
         </div>
         <div class="p-mode-item">
           <span class="p-mode-icon">📷</span>
@@ -872,10 +891,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <div class="p-mode-item">
           <span class="p-mode-icon">💬</span>
           <p class="p-mode-text"><strong>Fais-le circuler.</strong> Passe-le à ceux qui t'aiment. Qu'ils y ajoutent un mot, un souvenir, une anecdote que tu aurais oubliée.</p>
-        </div>
-        <div class="p-mode-item">
-          <span class="p-mode-icon">💝</span>
-          <p class="p-mode-text"><strong>Garde-le précieusement.</strong> Dans dix ans, dans vingt ans, tu le rouvriras. Et tu te souviendras de qui tu étais ce jour-là.</p>
         </div>
       </div>
       <p class="p-mode-closing">Ce livre est le tien.<br>Il raconte le jour où tout a commencé — et tout ce qui a suivi.</p>
@@ -1966,7 +1981,43 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 28 - CLÔTURE -->
+<!-- PAGE 28 - ESPACE LIBRE (1/2) -->
+<div class="page p-libre page-notrans">
+  <div class="page-content">
+    <div class="p-libre-corner p-libre-corner-tl"></div>
+    <div class="p-libre-corner p-libre-corner-tr"></div>
+    <div class="p-libre-corner p-libre-corner-bl"></div>
+    <div class="p-libre-corner p-libre-corner-br"></div>
+    <div class="p-libre-header">
+      <p class="p-libre-ornament">✦ ✦ ✦</p>
+      <h1 class="p-libre-titre">Espace Libre</h1>
+      <p class="p-libre-subtitle">Cette page t'appartient. Fais-en ce que tu veux.</p>
+    </div>
+    <div class="p-libre-zone"></div>
+  </div>
+</div>
+
+<!-- PAGE 29 - ESPACE LIBRE (2/2) -->
+<div class="page p-libre">
+  <div class="page-content">
+    <div class="p-libre-corner p-libre-corner-tl"></div>
+    <div class="p-libre-corner p-libre-corner-tr"></div>
+    <div class="p-libre-corner p-libre-corner-bl"></div>
+    <div class="p-libre-corner p-libre-corner-br"></div>
+    <div class="p-libre-header">
+      <p class="p-libre-ornament">✦ ✦ ✦</p>
+      <h1 class="p-libre-titre">...et encore</h1>
+      <p class="p-libre-subtitle">Dessine, écris, colle, rêve. Cet espace est à toi.</p>
+    </div>
+    <div class="p-libre-zone"></div>
+  </div>
+  <div class="trans">
+    <p>Ce livre a raconté ton histoire. <strong>Maintenant, c'est à toi de continuer.</strong></p>
+    <span class="page-num">29</span>
+  </div>
+</div>
+
+<!-- PAGE 30 - CLÔTURE -->
 <div class="page p-cloture page-notrans">
   <div class="page-content">
     <div class="pc-cadre"></div>
