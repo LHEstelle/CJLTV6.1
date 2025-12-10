@@ -743,8 +743,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .pl-titre { font-family: var(--serif); font-size: 22pt; font-weight: 600; color: var(--nuit); margin: 3mm 0; }
 .pl-subtitle { font-size: 9pt; font-style: italic; color: var(--ardoise); max-width: 150mm; margin: 0 auto; line-height: 1.5; }
 .pl-sep { width: 45mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 3mm auto; }
-.pl-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr); gap: 3mm; min-height: 0; }
-.pl-card { background: var(--blanc); padding: 4mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; position: relative; border-left: 3px solid var(--or); overflow: hidden; }
+.pl-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 1fr); gap: 4mm; min-height: 0; }
+.pl-card { background: var(--blanc); padding: 5mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; position: relative; border-left: 3px solid var(--or); overflow: hidden; }
 .pl-card::before { content: '"'; position: absolute; top: 1mm; right: 3mm; font-family: var(--serif); font-size: 32pt; color: var(--or); opacity: 0.2; line-height: 1; }
 .pl-zone-texte { flex: 1; min-height: 20mm; }
 .pl-prompt { font-family: var(--serif); font-size: 8pt; font-style: italic; color: #b0b0b0; margin-bottom: 2mm; }
@@ -752,6 +752,41 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .pl-signature-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; }
 .pl-signature-ligne { flex: 1; border-bottom: 1px solid var(--ardoise); margin-top: 3mm; }
 .pl-footer { text-align: center; margin-top: 3mm; flex-shrink: 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   PAGE DE GARDE
+   ═══════════════════════════════════════════════════════════ */
+.p-garde .page-content { background: var(--nuit); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.p-garde-cadre { position: absolute; top: 10mm; left: 10mm; right: 10mm; bottom: 10mm; border: 1px solid var(--or); opacity: 0.3; }
+.p-garde-cadre-inner { position: absolute; top: 15mm; left: 15mm; right: 15mm; bottom: 15mm; border: 1px solid var(--or); opacity: 0.2; }
+.p-garde-content { text-align: center; }
+.p-garde-ornament { color: var(--or); font-size: 14pt; letter-spacing: 1em; margin-bottom: 8mm; opacity: 0.6; }
+.p-garde-titre { font-family: var(--serif); font-size: 42pt; font-weight: 300; font-style: italic; color: var(--or); letter-spacing: 0.1em; margin-bottom: 4mm; }
+.p-garde-ligne { width: 60mm; height: 1px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 0 auto 8mm; }
+.p-garde-subtitle { font-family: var(--mono); font-size: 8pt; color: var(--or); letter-spacing: 0.4em; text-transform: uppercase; opacity: 0.5; }
+.p-garde-ornament2 { color: var(--or); font-size: 14pt; letter-spacing: 1em; margin-top: 8mm; opacity: 0.6; }
+
+/* ═══════════════════════════════════════════════════════════
+   PAGE MODE D'EMPLOI
+   ═══════════════════════════════════════════════════════════ */
+.p-mode .page-content { background: linear-gradient(180deg, var(--ivoire) 0%, var(--creme) 100%); padding: 15mm; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+.p-mode-corner { position: absolute; width: 20mm; height: 20mm; border-color: var(--or); border-style: solid; opacity: 0.3; }
+.p-mode-corner-tl { top: 10mm; left: 10mm; border-width: 1px 0 0 1px; }
+.p-mode-corner-tr { top: 10mm; right: 10mm; border-width: 1px 1px 0 0; }
+.p-mode-corner-bl { bottom: 10mm; left: 10mm; border-width: 0 0 1px 1px; }
+.p-mode-corner-br { bottom: 10mm; right: 10mm; border-width: 0 1px 1px 0; }
+.p-mode-content { max-width: 140mm; text-align: center; }
+.p-mode-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.8em; margin-bottom: 6mm; }
+.p-mode-titre { font-family: var(--serif); font-size: 22pt; font-weight: 600; font-style: italic; color: var(--nuit); margin-bottom: 3mm; }
+.p-mode-ligne { width: 40mm; height: 1.5px; background: var(--or); margin: 0 auto 8mm; }
+.p-mode-intro { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--ardoise); line-height: 1.8; margin-bottom: 8mm; }
+.p-mode-body { text-align: left; }
+.p-mode-item { display: flex; align-items: flex-start; gap: 4mm; margin-bottom: 5mm; }
+.p-mode-icon { font-size: 14pt; color: var(--or); flex-shrink: 0; width: 8mm; text-align: center; }
+.p-mode-text { font-family: var(--serif); font-size: 10pt; color: var(--ardoise); line-height: 1.6; }
+.p-mode-text strong { color: var(--nuit); font-weight: 600; }
+.p-mode-closing { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--nuit); text-align: center; margin-top: 8mm; line-height: 1.6; }
+.p-mode-ornament2 { color: var(--or); font-size: 10pt; letter-spacing: 0.8em; margin-top: 6mm; }
 </style>
 </head>
 <body>
@@ -809,6 +844,42 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="ps-footer">
       <p class="ps-ornament2">✦ ✦ ✦</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 02bis - MODE D'EMPLOI -->
+<div class="page p-mode page-notrans">
+  <div class="page-content">
+    <div class="p-mode-corner p-mode-corner-tl"></div>
+    <div class="p-mode-corner p-mode-corner-tr"></div>
+    <div class="p-mode-corner p-mode-corner-bl"></div>
+    <div class="p-mode-corner p-mode-corner-br"></div>
+    <div class="p-mode-content">
+      <p class="p-mode-ornament">✦ ✦ ✦</p>
+      <h1 class="p-mode-titre">Avant de tourner la page...</h1>
+      <div class="p-mode-ligne"></div>
+      <p class="p-mode-intro">Ce livre n'est pas fait pour rester sagement sur une étagère.<br>Il est fait pour vivre, pour voyager de main en main, pour s'enrichir de ton histoire.</p>
+      <div class="p-mode-body">
+        <div class="p-mode-item">
+          <span class="p-mode-icon">✏️</span>
+          <p class="p-mode-text"><strong>Écris dedans.</strong> Les espaces vides t'attendent. Remplis-les de tes souvenirs, de tes secrets, de tes rêves. L'encre que tu y laisseras fera partie de l'histoire.</p>
+        </div>
+        <div class="p-mode-item">
+          <span class="p-mode-icon">📷</span>
+          <p class="p-mode-text"><strong>Colle des photos.</strong> Glisse-y des images, des tickets, des petits trésors de papier. Ce livre est aussi un album de ta vie.</p>
+        </div>
+        <div class="p-mode-item">
+          <span class="p-mode-icon">💬</span>
+          <p class="p-mode-text"><strong>Fais-le circuler.</strong> Passe-le à ceux qui t'aiment. Qu'ils y ajoutent un mot, un souvenir, une anecdote que tu aurais oubliée.</p>
+        </div>
+        <div class="p-mode-item">
+          <span class="p-mode-icon">💝</span>
+          <p class="p-mode-text"><strong>Garde-le précieusement.</strong> Dans dix ans, dans vingt ans, tu le rouvriras. Et tu te souviendras de qui tu étais ce jour-là.</p>
+        </div>
+      </div>
+      <p class="p-mode-closing">Ce livre est le tien.<br>Il raconte le jour où tout a commencé — et tout ce qui a suivi.</p>
+      <p class="p-mode-ornament2">✦ ✦ ✦</p>
     </div>
   </div>
 </div>
@@ -936,8 +1007,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 06 - PHOTO BÉBÉ -->
-<div class="page p-photo">
+<!-- PAGE 06 - PHOTO BÉBÉ (1/2) -->
+<div class="page p-photo page-notrans">
   <div class="page-content">
     <div class="pp-header">
       <p class="pp-ornament">✦ ✦ ✦</p>
@@ -946,14 +1017,31 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-baby pp-icone"></i>
-      <p class="pp-instruction">Si cette page est vide, c'est une invitation.<br>Retrouve une photo de tes débuts et colle-la ici.<br>Ce livre t'appartient.</p>
+      <p class="pp-instruction">Tes premiers jours. Ton premier visage.<br>Colle ici une photo de bébé.</p>
+    </div>
+    <div class="pp-footer">
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 06bis - PHOTO BÉBÉ (2/2) -->
+<div class="page p-photo">
+  <div class="page-content">
+    <div class="pp-header">
+      <p class="pp-ornament">✦ ✦ ✦</p>
+      <h1 class="pp-titre">...et encore</h1>
+      <div class="pp-sep"></div>
+    </div>
+    <div class="pp-zone">
+      <i class="fa-solid fa-camera pp-icone"></i>
+      <p class="pp-instruction">Un autre cliché ? Un portrait de famille ?<br>Cet espace t'appartient.</p>
     </div>
     <div class="pp-footer">
     </div>
   </div>
   <div class="trans">
     <p>Ce petit visage, c'était déjà toi. <strong>Découvre qui tu es devenu·e...</strong></p>
-    <span class="page-num">06</span>
+    <span class="page-num">07</span>
   </div>
 </div>
 
@@ -1101,8 +1189,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 11 - PHOTO ENFANCE -->
-<div class="page p-photo">
+<!-- PAGE 11 - PHOTO ENFANCE (1/2) -->
+<div class="page p-photo page-notrans">
   <div class="page-content">
     <div class="pp-header">
       <p class="pp-ornament">✦ ✦ ✦</p>
@@ -1111,14 +1199,31 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-child pp-icone"></i>
-      <p class="pp-instruction">Une photo d'enfance t'attend peut-être ici.<br>Sinon, va fouiller dans les albums.<br>Ce livre mérite ce souvenir.</p>
+      <p class="pp-instruction">Une photo d'enfance.<br>Celle où on te reconnaît déjà.</p>
+    </div>
+    <div class="pp-footer">
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 11bis - PHOTO ENFANCE (2/2) -->
+<div class="page p-photo">
+  <div class="page-content">
+    <div class="pp-header">
+      <p class="pp-ornament">✦ ✦ ✦</p>
+      <h1 class="pp-titre">...et encore</h1>
+      <div class="pp-sep"></div>
+    </div>
+    <div class="pp-zone">
+      <i class="fa-solid fa-images pp-icone"></i>
+      <p class="pp-instruction">Une sortie, un anniversaire, une bêtise...<br>Un autre souvenir en image.</p>
     </div>
     <div class="pp-footer">
     </div>
   </div>
   <div class="trans">
     <p>Ce visage a changé. <strong>Le monde aussi...</strong></p>
-    <span class="page-num">11</span>
+    <span class="page-num">12</span>
   </div>
 </div>
 
@@ -1409,8 +1514,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 17 - PHOTO AUJOURD'HUI -->
-<div class="page p-photo">
+<!-- PAGE 17 - PHOTO AUJOURD'HUI (1/2) -->
+<div class="page p-photo page-notrans">
   <div class="page-content">
     <div class="pp-header">
       <p class="pp-ornament">✦ ✦ ✦</p>
@@ -1419,14 +1524,31 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-user pp-icone"></i>
-      <p class="pp-instruction">Si cet espace est vide, choisis toi-même.<br>Une photo où tu te trouves beau / belle.<br>Celle-là.</p>
+      <p class="pp-instruction">Une photo où tu te trouves beau / belle.<br>Celle-là.</p>
+    </div>
+    <div class="pp-footer">
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 17bis - PHOTO AUJOURD'HUI (2/2) -->
+<div class="page p-photo">
+  <div class="page-content">
+    <div class="pp-header">
+      <p class="pp-ornament">✦ ✦ ✦</p>
+      <h1 class="pp-titre">...et encore</h1>
+      <div class="pp-sep"></div>
+    </div>
+    <div class="pp-zone">
+      <i class="fa-solid fa-heart pp-icone"></i>
+      <p class="pp-instruction">Un moment récent. Un sourire volé.<br>Toi, maintenant.</p>
     </div>
     <div class="pp-footer">
     </div>
   </div>
   <div class="trans">
     <p>Tout ce chemin parcouru. <strong>Et tu ne l'as pas fait seul·e...</strong></p>
-    <span class="page-num">17</span>
+    <span class="page-num">18</span>
   </div>
 </div>
 
@@ -1543,8 +1665,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 22 - PHOTO PROCHES -->
-<div class="page p-photo">
+<!-- PAGE 22 - PHOTO PROCHES (1/2) -->
+<div class="page p-photo page-notrans">
   <div class="page-content">
     <div class="pp-header">
       <p class="pp-ornament">✦ ✦ ✦</p>
@@ -1553,24 +1675,41 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-users pp-icone"></i>
-      <p class="pp-instruction">Peut-être que quelqu'un a déjà choisi ces photos.<br>Peut-être que c'est à toi de décider qui mérite d'être ici,<br>à tes côtés, dans ce livre.</p>
+      <p class="pp-instruction">Ceux qui étaient là depuis le début.<br>Famille, amis, complices de toujours.</p>
+    </div>
+    <div class="pp-footer">
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 22bis - PHOTO PROCHES (2/2) -->
+<div class="page p-photo">
+  <div class="page-content">
+    <div class="pp-header">
+      <p class="pp-ornament">✦ ✦ ✦</p>
+      <h1 class="pp-titre">...et encore</h1>
+      <div class="pp-sep"></div>
+    </div>
+    <div class="pp-zone">
+      <i class="fa-solid fa-heart pp-icone"></i>
+      <p class="pp-instruction">Ceux qui sont arrivés en chemin.<br>Les rencontres qui ont tout changé.</p>
     </div>
     <div class="pp-footer">
     </div>
   </div>
   <div class="trans">
     <p>Ces visages. Ces sourires. <strong>Laisse-les te le dire eux-mêmes...</strong></p>
-    <span class="page-num">22</span>
+    <span class="page-num">24</span>
   </div>
 </div>
 
-<!-- PAGE 23 - MOTS DES PROCHES / LIVRE D'OR -->
+<!-- PAGE 23 - MOTS DES PROCHES / LIVRE D'OR (1/2) -->
 <div class="page p-livreor">
   <div class="page-content">
     <div class="pl-header">
       <p class="pl-ornament">✦ ✦ ✦</p>
       <h1 class="pl-titre">Ceux qui t'aiment, en quelques mots</h1>
-      <p class="pl-subtitle">Peut-être que ces espaces sont déjà remplis. Peut-être qu'ils t'attendent.<br>Fais circuler ce livre et laisse ceux qui croisent ta vie y déposer leur trace.</p>
+      <p class="pl-subtitle">Fais circuler ce livre. Laisse ceux qui croisent ta vie y déposer leur trace.</p>
       <div class="pl-sep"></div>
     </div>
     <div class="pl-grid">
@@ -1578,16 +1717,35 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="pl-card"><div class="pl-prompt">Ce que j'aime chez toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Un mot qui te définit...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Ce que je te souhaite...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">Ce que tu m'apportes...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">Libre...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">Ce que j'aimerais te dire...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Ce que tu m'apportes au quotidien...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Un moment où tu m'as fait rire...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+    </div>
+    <div class="pl-footer"><p class="pl-ornament2">✦ ✦ ✦</p></div>
+  </div>
+</div>
+
+<!-- PAGE 23bis - MOTS DES PROCHES / LIVRE D'OR (2/2) -->
+<div class="page p-livreor">
+  <div class="page-content">
+    <div class="pl-header">
+      <p class="pl-ornament">✦ ✦ ✦</p>
+      <h1 class="pl-titre">...la suite</h1>
+      <p class="pl-subtitle">Les mots comptent. Ceux-ci resteront.</p>
+      <div class="pl-sep"></div>
+    </div>
+    <div class="pl-grid">
+      <div class="pl-card"><div class="pl-prompt">Ce que j'aimerais te dire un jour...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Ce qui me rend fier/fière de toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">La première chose qui me vient quand je pense à toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Ce que tu ne sais pas (mais que tu devrais savoir)...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Un conseil que je te donne pour la suite...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Libre...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
     </div>
     <div class="pl-footer"><p class="pl-ornament2">✦ ✦ ✦</p></div>
   </div>
   <div class="trans">
     <p>Tous ces mots. Toutes ces personnes. <strong>Mais quelqu'un a créé ce livre pour toi...</strong></p>
-    <span class="page-num">23</span>
+    <span class="page-num">24</span>
   </div>
 </div>
 
