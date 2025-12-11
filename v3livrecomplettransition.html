@@ -253,38 +253,36 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p4-title-zone { text-align: right; }
 .p4-title { font-family: var(--serif); font-size: 20pt; font-weight: 600; color: var(--blanc); }
 .p4-subtitle { font-family: var(--mono); font-size: 8pt; color: var(--or); margin-top: 1mm; text-transform: uppercase; letter-spacing: 0.1em; }
-.p4-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr 1fr auto; gap: 2mm; min-height: 0; }
-.p4-card { background: var(--ivoire); padding: 1.5mm; position: relative; display: flex; flex-direction: column; overflow: hidden; }
+.p4-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr auto; gap: 2mm; min-height: 0; }
+.p4-card { background: var(--ivoire); padding: 2mm; position: relative; display: flex; flex-direction: column; overflow: hidden; }
 .p4-card-titre { font-family: var(--mono); font-size: 8pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 1mm; padding-bottom: 1mm; border-bottom: 1px solid var(--perle); display: flex; align-items: center; gap: 1mm; flex-shrink: 0; }
 .p4-card-titre i { color: var(--or); font-size: 10pt; }
 .p4-card-content { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; width: 100%; }
 .p4-image { flex: 1; min-height: 0; background: var(--perle); overflow: hidden; border-radius: 1mm; }
 .p4-image img { width: 100%; height: 100%; object-fit: cover; }
 .p4-image-caption { font-size: 8pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 1mm; flex-shrink: 0; }
-.p4-grande-image { grid-column: 1; grid-row: 1 / 4; }
-.p4-image2 { grid-column: 2; grid-row: 2; }
-.p4-image3 { grid-column: 2; grid-row: 3; }
-.p4-image4 { grid-column: 2; grid-row: 4; }
+.p4-grande-image { grid-column: 1; grid-row: 1 / 3; }
+.p4-image2 { grid-column: 1; grid-row: 3; }
+.p4-image3 { grid-column: 3; grid-row: 3; }
 .p4-culture { grid-column: 2; grid-row: 1; }
-.p4-enfance { grid-column: 1; grid-row: 4; }
-.p4-culture-item { font-size: 9pt; margin-bottom: 1.5mm; line-height: 1.3; display: flex; align-items: flex-start; gap: 1mm; }
-.p4-culture-item i { color: var(--or); font-size: 9pt; margin-top: 1mm; }
 .p4-chanson { grid-column: 3; grid-row: 1; background: var(--nuit); color: var(--blanc); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .p4-chanson .p4-card-titre { color: var(--or); border-bottom-color: rgba(191,162,101,0.3); width: 100%; justify-content: center; }
 .p4-chanson-content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .p4-chanson-titre { font-family: var(--serif); font-size: 11pt; font-weight: 600; color: var(--or); }
 .p4-chanson-artiste { font-size: 9pt; color: var(--perle); font-style: italic; margin-top: 1mm; }
-.p4-events { grid-column: 3; grid-row: 2; }
-.p4-image-col3 { grid-column: 3; grid-row: 3; }
-.p4-event-item { font-size: 9pt; margin-bottom: 1.5mm; padding-left: 2mm; border-left: 2px solid var(--or); line-height: 1.3; }
+.p4-events { grid-column: 2; grid-row: 2; }
+.p4-enfance { grid-column: 3; grid-row: 2; }
+.p4-chiffres { grid-column: 2; grid-row: 3; }
+.p4-culture-item { font-size: 9pt; margin-bottom: 2mm; line-height: 1.3; display: flex; align-items: flex-start; gap: 1mm; }
+.p4-culture-item i { color: var(--or); font-size: 9pt; margin-top: 1mm; }
+.p4-event-item { font-size: 9pt; margin-bottom: 2mm; padding-left: 2mm; border-left: 2px solid var(--or); line-height: 1.3; }
 .p4-event-item i { color: var(--or); margin-right: 1mm; }
 .p4-event-date { color: var(--or); font-weight: 600; }
-.p4-enfance-item { font-size: 9pt; margin-bottom: 1.5mm; display: flex; align-items: center; gap: 1mm; }
+.p4-enfance-item { font-size: 9pt; margin-bottom: 2mm; display: flex; align-items: center; gap: 1mm; }
 .p4-enfance-item i { color: var(--or); font-size: 10pt; }
-.p4-chiffres { grid-column: 3; grid-row: 4; }
-.p4-chiffre-item { font-size: 9pt; margin-bottom: 1.5mm; display: flex; align-items: center; gap: 1mm; }
+.p4-chiffre-item { font-size: 9pt; margin-bottom: 2mm; display: flex; align-items: center; gap: 1mm; }
 .p4-chiffre-item i { color: var(--or); font-size: 10pt; }
-.p4-bottom { grid-column: 1 / 4; grid-row: 5; display: grid; grid-template-columns: 1fr 3fr; gap: 2mm; background: transparent; padding: 0; }
+.p4-bottom { grid-column: 1 / 4; grid-row: 4; display: grid; grid-template-columns: 1fr 3fr; gap: 2mm; background: transparent; padding: 0; }
 .p4-celebrite { background: var(--or); padding: 3mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .p4-celebrite-label { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; color: var(--nuit); opacity: 0.8; display: flex; align-items: center; gap: 1mm; }
 .p4-celebrite-label i { color: var(--nuit); }
@@ -302,25 +300,28 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
    P5 - SOUVENIRS ENFANCE
    ═══════════════════════════════════════════════════════════ */
 .p5 .page-content { background: linear-gradient(135deg, #FDF8F0 0%, #F5F0E6 100%); padding: 13mm; display: flex; flex-direction: column; }
-.p5-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3mm; padding-bottom: 2mm; border-bottom: 3px solid var(--nuit); position: relative; flex-shrink: 0; }
-.p5-header::after { content: '✦'; position: absolute; bottom: -6pt; left: 50%; transform: translateX(-50%); background: var(--creme); padding: 0 2mm; color: var(--or); font-size: 10pt; }
-.p5-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); }
-.p5-age { font-family: var(--serif); font-size: 12pt; font-style: italic; background: var(--nuit); padding: 1.5mm 4mm; color: var(--or); }
-.p5-intro { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--ardoise); text-align: center; margin-bottom: 3mm; line-height: 1.5; flex-shrink: 0; }
-.p5-journee { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; margin-bottom: 3mm; flex: 1; min-height: 0; }
-.p5-moment { background: var(--blanc); padding: 3mm; display: flex; flex-direction: column; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden; }
-.p5-moment::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2mm; }
-.p5-moment:nth-child(1)::before { background: linear-gradient(90deg, var(--or), var(--corail)); }
-.p5-moment:nth-child(2)::before { background: linear-gradient(90deg, var(--corail), var(--rose)); }
-.p5-moment:nth-child(3)::before { background: linear-gradient(90deg, var(--rose), var(--nuit)); }
-.p5-moment-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 2mm; margin-top: 1mm; padding-bottom: 1mm; border-bottom: 1px solid var(--perle); flex-shrink: 0; }
-.p5-moment-icon { width: 10mm; height: 10mm; background: var(--nuit); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14pt; }
-.p5-moment-icon i { color: #BFA265; }
-.p5-moment-label { font-family: var(--serif); font-size: 13pt; font-weight: 600; color: var(--nuit); }
-.p5-moment-txt-wrapper { flex: 1; display: flex; align-items: flex-start; position: relative; }
-.p5-moment-txt-wrapper::after { content: '—'; position: absolute; bottom: 1mm; right: 0; font-size: 10pt; color: var(--or); opacity: 0.3; }
-.p5-moment-txt { font-size: 10pt; line-height: 1.6; color: var(--ardoise); text-align: justify; }
-.p5-categories { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5mm; margin-bottom: 3mm; flex-shrink: 0; }
+.p5-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2mm; padding-bottom: 2mm; border-bottom: 3px solid var(--nuit); position: relative; flex-shrink: 0; }
+.p5-header::after { content: '✦'; position: absolute; bottom: -6pt; left: 50%; transform: translateX(-50%); background: #F5F0E6; padding: 0 2mm; color: var(--or); font-size: 10pt; }
+.p5-titre { font-family: var(--serif); font-size: 22pt; font-weight: 700; color: var(--nuit); }
+.p5-age { font-family: var(--serif); font-size: 11pt; font-style: italic; background: var(--nuit); padding: 1.5mm 4mm; color: var(--or); }
+.p5-intro { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--ardoise); text-align: center; margin-bottom: 2mm; line-height: 1.4; flex-shrink: 0; }
+.p5-top { display: grid; grid-template-columns: 1fr 45mm; gap: 3mm; margin-bottom: 2mm; }
+.p5-journee { display: flex; flex-direction: column; gap: 2mm; }
+.p5-moment { background: var(--blanc); padding: 2mm 3mm; border-radius: 2mm; box-shadow: 0 1px 4px rgba(0,0,0,0.05); display: flex; align-items: flex-start; gap: 2mm; position: relative; overflow: hidden; }
+.p5-moment::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 2mm; }
+.p5-moment:nth-child(1)::before { background: linear-gradient(180deg, var(--or), var(--corail)); }
+.p5-moment:nth-child(2)::before { background: linear-gradient(180deg, var(--corail), var(--rose)); }
+.p5-moment:nth-child(3)::before { background: linear-gradient(180deg, var(--rose), var(--nuit)); }
+.p5-moment-icon { width: 7mm; height: 7mm; background: var(--nuit); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10pt; flex-shrink: 0; margin-left: 1mm; }
+.p5-moment-icon i { color: var(--or); }
+.p5-moment-content { flex: 1; }
+.p5-moment-label { font-family: var(--serif); font-size: 9pt; font-weight: 600; color: var(--nuit); margin-bottom: 0.5mm; }
+.p5-moment-txt { font-size: 8pt; line-height: 1.4; color: var(--ardoise); }
+.p5-img { background: var(--blanc); border-radius: 2mm; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+.p5-img img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.p5-img-caption { font-size: 7pt; font-style: italic; color: var(--taupe); text-align: center; padding: 1.5mm; background: var(--blanc); flex-shrink: 0; }
+.p5-middle { display: grid; grid-template-columns: 45mm 1fr; gap: 3mm; margin-bottom: 2mm; }
+.p5-categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5mm; }
 .p5-cat { background: var(--blanc); padding: 2mm; border-radius: 2mm; box-shadow: 0 1px 4px rgba(0,0,0,0.04); position: relative; }
 .p5-cat::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 100%; border-radius: 2mm 0 0 2mm; }
 .p5-cat:nth-child(1)::before { background: var(--or); }
@@ -329,22 +330,22 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5-cat:nth-child(4)::before { background: var(--bronze); }
 .p5-cat:nth-child(5)::before { background: var(--nuit); }
 .p5-cat:nth-child(6)::before { background: var(--or); }
-.p5-cat-titre { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.05em; color: var(--or); margin-bottom: 1mm; }
-.p5-cat-titre i { color: var(--or); margin-right: 1mm; }
-.p5-cat-list { font-size: 8pt; line-height: 1.4; color: var(--ardoise); }
-.p5-ettoi { background: var(--blanc); padding: 3mm 4mm; border-radius: 2mm; margin-bottom: 3mm; border: 2px dashed var(--or); flex-shrink: 0; }
-.p5-ettoi-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 3mm; padding-bottom: 2mm; border-bottom: 1px solid var(--perle); }
-.p5-ettoi-icon { font-size: 12pt; color: var(--or); }
-.p5-ettoi-titre { font-family: var(--cursive); font-size: 14pt; font-weight: 600; color: var(--or); font-style: italic; }
-.p5-ettoi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 4mm; }
+.p5-cat-titre { font-family: var(--mono); font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.05em; color: var(--or); margin-bottom: 1mm; }
+.p5-cat-titre i { color: var(--or); margin-right: 1mm; font-size: 7pt; }
+.p5-cat-list { font-size: 7.5pt; line-height: 1.35; color: var(--ardoise); }
+.p5-ettoi { background: var(--blanc); padding: 2.5mm 3mm; border-radius: 2mm; border: 2px dashed var(--or); flex-shrink: 0; margin-bottom: 2mm; }
+.p5-ettoi-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 2mm; padding-bottom: 1mm; border-bottom: 1px solid var(--perle); }
+.p5-ettoi-icon { font-size: 10pt; color: var(--or); }
+.p5-ettoi-titre { font-family: var(--cursive); font-size: 12pt; font-weight: 600; color: var(--or); font-style: italic; }
+.p5-ettoi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm 3mm; }
 .p5-ettoi-item { display: flex; align-items: baseline; gap: 1mm; }
-.p5-ettoi-label { font-size: 8pt; color: var(--ardoise); white-space: nowrap; }
-.p5-ettoi-ligne { flex: 1; border-bottom: 1px dotted var(--taupe); min-width: 15mm; }
-.p5-expressions { background: var(--nuit); padding: 4mm 5mm; border-radius: 2mm; display: flex; align-items: center; gap: 3mm; flex-wrap: wrap; flex-shrink: 0; }
-.p5-exp-label { font-family: var(--mono); font-size: 9pt; color: var(--or); text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0; }
+.p5-ettoi-label { font-size: 7.5pt; color: var(--ardoise); white-space: nowrap; }
+.p5-ettoi-ligne { flex: 1; border-bottom: 1px dotted var(--taupe); min-width: 10mm; }
+.p5-expressions { background: var(--nuit); padding: 3mm 4mm; border-radius: 2mm; display: flex; align-items: center; gap: 3mm; flex-shrink: 0; }
+.p5-exp-label { font-family: var(--mono); font-size: 8pt; color: var(--or); text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0; }
 .p5-exp-label i { color: var(--or); margin-right: 1mm; }
 .p5-tags { display: flex; flex-wrap: wrap; gap: 2mm; flex: 1; }
-.p5-tag { background: var(--blanc); padding: 2mm 4mm; border-radius: 8mm; font-size: 9pt; color: var(--nuit); font-weight: 500; }
+.p5-tag { background: var(--blanc); padding: 1.5mm 3mm; border-radius: 8mm; font-size: 8pt; color: var(--nuit); font-weight: 500; }
 
 /* ═══════════════════════════════════════════════════════════
    P6 - TIMELINE
@@ -1292,10 +1293,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <p class="p4-chanson-artiste">{{chanson_artiste}}</p>
         </div>
       </div>
-      <div class="p4-card p4-image2">
-        <div class="p4-image"><img src="{{image_objet_epoque}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_1}}</p>
-      </div>
       <div class="p4-card p4-events">
         <p class="p4-card-titre"><i class="fa-solid fa-newspaper"></i> Dans l'actu</p>
         <div class="p4-card-content">
@@ -1303,10 +1300,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <p class="p4-event-item"><span class="p4-event-date">{{annee_evnmt2_actu}}</span> - {{evenement_2}}</p>
           <p class="p4-event-item"><i class="fa-solid fa-landmark fa-icon-sm"></i> <span class="p4-event-date">Président :</span> {{president_fr}}</p>
         </div>
-      </div>
-      <div class="p4-card p4-image-col3">
-        <div class="p4-image"><img src="{{image_mode_epoque}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_5}}</p>
       </div>
       <div class="p4-card p4-enfance">
         <p class="p4-card-titre"><i class="fa-solid fa-candy-cane"></i> Dans les cours de récré</p>
@@ -1317,13 +1310,9 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <p class="p4-enfance-item"><i class="fa-solid fa-{{emoji_jeu_2}} fa-icon-sm"></i> {{jouet_2_moodboard}}</p>
         </div>
       </div>
-      <div class="p4-card p4-image3">
-        <div class="p4-image"><img src="{{image_jouet_epoque}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_3}}</p>
-      </div>
-      <div class="p4-card p4-image4">
-        <div class="p4-image"><img src="{{image_interieur_epoque}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_4}}</p>
+      <div class="p4-card p4-image2">
+        <div class="p4-image"><img src="{{image_objet_epoque}}" alt=""></div>
+        <p class="p4-image-caption">{{caption_1}}</p>
       </div>
       <div class="p4-card p4-chiffres">
         <p class="p4-card-titre"><i class="fa-solid fa-flag"></i> France en {{annee}}</p>
@@ -1333,6 +1322,10 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <p class="p4-chiffre-item"><i class="fa-solid fa-arrow-trend-up fa-icon-sm"></i> {{albums_vendus}} d'inflation</p>
           <p class="p4-chiffre-item"><i class="fa-solid fa-coins fa-icon-sm"></i> SMIC {{smic}}€</p>
         </div>
+      </div>
+      <div class="p4-card p4-image3">
+        <div class="p4-image"><img src="{{image_interieur_epoque}}" alt=""></div>
+        <p class="p4-image-caption">{{caption_4}}</p>
       </div>
       <div class="p4-bottom">
         <div class="p4-celebrite">
@@ -1365,36 +1358,48 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <span class="p5-age">Quand tu avais {{age}} ans</span>
     </div>
     <p class="p5-intro">Laissez votre esprit voyager. Voici à quoi aurait pu ressembler une journée ordinaire de tes {{age}} ans...<br>Un voyage dans les sensations, les objets et les rituels de ton époque.</p>
-    <div class="p5-journee">
-      <div class="p5-moment">
-        <div class="p5-moment-header">
+    <div class="p5-top">
+      <div class="p5-journee">
+        <div class="p5-moment">
           <span class="p5-moment-icon"><i class="fa-solid fa-sun"></i></span>
-          <span class="p5-moment-label">Le Matin</span>
+          <div class="p5-moment-content">
+            <span class="p5-moment-label">Le Matin</span>
+            <p class="p5-moment-txt">{{matin}}</p>
+          </div>
         </div>
-        <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{matin}}</p></div>
-      </div>
-      <div class="p5-moment">
-        <div class="p5-moment-header">
+        <div class="p5-moment">
           <span class="p5-moment-icon"><i class="fa-solid fa-cloud-sun"></i></span>
-          <span class="p5-moment-label">L'Après-midi</span>
+          <div class="p5-moment-content">
+            <span class="p5-moment-label">L'Après-midi</span>
+            <p class="p5-moment-txt">{{apresmidi}}</p>
+          </div>
         </div>
-        <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{apresmidi}}</p></div>
-      </div>
-      <div class="p5-moment">
-        <div class="p5-moment-header">
+        <div class="p5-moment">
           <span class="p5-moment-icon"><i class="fa-solid fa-moon"></i></span>
-          <span class="p5-moment-label">Le Soir</span>
+          <div class="p5-moment-content">
+            <span class="p5-moment-label">Le Soir</span>
+            <p class="p5-moment-txt">{{soir}}</p>
+          </div>
         </div>
-        <div class="p5-moment-txt-wrapper"><p class="p5-moment-txt">{{soir}}</p></div>
+      </div>
+      <div class="p5-img">
+        <img src="{{image_jouet_epoque}}" alt="">
+        <p class="p5-img-caption">{{caption_3}}</p>
       </div>
     </div>
-    <div class="p5-categories">
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-tv"></i> Écran</p><p class="p5-cat-list">{{ecran_1}}<br>{{ecran_2}}<br>{{ecran_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-music"></i> Musique</p><p class="p5-cat-list">{{musique_1}}<br>{{musique_2}}<br>{{musique_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-cookie"></i> Goûter</p><p class="p5-cat-list">{{gouter_1}}<br>{{gouter_2}}<br>{{gouter_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-book"></i> Lecture</p><p class="p5-cat-list">{{lecture_1}}<br>{{lecture_2}}<br>{{lecture_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-gamepad"></i> Jeux</p><p class="p5-cat-list">{{jeu_1}}<br>{{jeu_2}}<br>{{jeu_3}}</p></div>
-      <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-trophy"></i> Objets</p><p class="p5-cat-list">{{objet_1}}<br>{{objet_2}}<br>{{objet_3}}</p></div>
+    <div class="p5-middle">
+      <div class="p5-img">
+        <img src="{{image_mode_epoque}}" alt="">
+        <p class="p5-img-caption">{{caption_5}}</p>
+      </div>
+      <div class="p5-categories">
+        <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-tv"></i> Écran</p><p class="p5-cat-list">{{ecran_1}}<br>{{ecran_2}}<br>{{ecran_3}}</p></div>
+        <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-music"></i> Musique</p><p class="p5-cat-list">{{musique_1}}<br>{{musique_2}}<br>{{musique_3}}</p></div>
+        <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-cookie"></i> Goûter</p><p class="p5-cat-list">{{gouter_1}}<br>{{gouter_2}}<br>{{gouter_3}}</p></div>
+        <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-book"></i> Lecture</p><p class="p5-cat-list">{{lecture_1}}<br>{{lecture_2}}<br>{{lecture_3}}</p></div>
+        <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-gamepad"></i> Jeux</p><p class="p5-cat-list">{{jeu_1}}<br>{{jeu_2}}<br>{{jeu_3}}</p></div>
+        <div class="p5-cat"><p class="p5-cat-titre"><i class="fa-solid fa-trophy"></i> Objets</p><p class="p5-cat-list">{{objet_1}}<br>{{objet_2}}<br>{{objet_3}}</p></div>
+      </div>
     </div>
     <div class="p5-ettoi">
       <div class="p5-ettoi-header">
