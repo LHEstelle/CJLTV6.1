@@ -310,7 +310,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5a-moment:nth-child(even) { direction: rtl; }
 .p5a-moment:nth-child(even) > * { direction: ltr; }
 .p5a-moment-img { position: relative; overflow: hidden; border: 1px solid var(--perle); }
-.p5a-moment-img img { width: 100%; height: 100%; object-fit: cover; filter: sepia(8%) contrast(98%); }
+.p5a-moment-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(8%) contrast(98%); }
 .p5a-moment-img-caption { position: absolute; bottom: 0; left: 0; right: 0; font-family: var(--serif); font-size: 7.5pt; font-style: italic; color: var(--blanc); text-align: center; background: rgba(191,162,101,0.85); padding: 2mm; }
 .p5a-moment:nth-child(2) .p5a-moment-img-caption { background: rgba(217,136,128,0.85); }
 .p5a-moment:nth-child(3) .p5a-moment-img-caption { background: rgba(198,168,155,0.85); }
@@ -332,12 +332,13 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5b-titre { font-family: var(--serif); font-size: 28pt; font-weight: 700; color: var(--nuit); margin-bottom: 2mm; }
 .p5b-sep { width: 40mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 0 auto 3mm; }
 .p5b-intro { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--ardoise); text-align: center; line-height: 1.5; margin-bottom: 4mm; }
-.p5b-categories { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 3mm; background: var(--blanc); border: 1px solid var(--perle); padding: 4mm; margin-bottom: 4mm; }
-.p5b-cat { padding: 2mm; border-left: 1px solid var(--perle); }
-.p5b-cat:nth-child(1), .p5b-cat:nth-child(4) { border-left: none; }
+.p5b-categories { display: flex; flex-direction: column; gap: 3mm; margin-bottom: 4mm; }
+.p5b-cat-row { display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--nuit); padding: 4mm; }
+.p5b-cat { padding: 2mm 3mm; border-left: 1px solid rgba(255,255,255,0.2); }
+.p5b-cat:nth-child(1) { border-left: none; }
 .p5b-cat-titre { font-family: var(--mono); font-size: 8pt; font-weight: 600; color: var(--or); margin-bottom: 2mm; text-transform: uppercase; letter-spacing: 0.1em; display: flex; align-items: center; gap: 1.5mm; }
-.p5b-cat-titre::before { content: '◆'; font-size: 5pt; }
-.p5b-cat-list { font-size: 8pt; line-height: 1.7; color: var(--ardoise); }
+.p5b-cat-titre i { font-size: 9pt; color: var(--or); }
+.p5b-cat-list { font-size: 8pt; line-height: 1.7; color: var(--blanc); }
 .p5b-cat-item { display: block; }
 .p5b-expressions { display: flex; flex-direction: column; align-items: center; margin-bottom: 5mm; }
 .p5b-exp-label { font-family: var(--mono); font-size: 8pt; color: var(--taupe); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 3mm; display: flex; align-items: center; gap: 3mm; }
@@ -346,8 +347,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5b-tag { background: var(--nuit); padding: 2mm 4mm; font-size: 8pt; color: var(--blanc); }
 .p5b-ettoi { background: var(--blanc); border: 1px solid var(--perle); padding: 4mm; flex: 1; display: flex; flex-direction: column; }
 .p5b-ettoi-header { display: flex; align-items: center; justify-content: center; gap: 3mm; margin-bottom: 3mm; }
-.p5b-ettoi-header::before, .p5b-ettoi-header::after { content: ''; width: 25mm; height: 1px; background: var(--nuit); }
-.p5b-ettoi-titre { font-family: var(--serif); font-size: 14pt; font-weight: 600; color: var(--nuit); text-transform: uppercase; letter-spacing: 0.1em; }
+.p5b-ettoi-header::before, .p5b-ettoi-header::after { content: ''; width: 25mm; height: 1px; background: var(--or); }
+.p5b-ettoi-titre { font-family: var(--serif); font-size: 14pt; font-weight: 600; color: var(--or); text-transform: uppercase; letter-spacing: 0.1em; }
 .p5b-ettoi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 6mm; flex: 1; }
 .p5b-ettoi-item { display: flex; flex-direction: column; gap: 1mm; }
 .p5b-ettoi-label { font-size: 8pt; color: var(--ardoise); }
@@ -1411,29 +1412,33 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     
     <!-- CATÉGORIES -->
     <div class="p5b-categories">
-      <div class="p5b-cat">
-        <p class="p5b-cat-titre">Écran</p>
-        <p class="p5b-cat-list"><span class="p5b-cat-item">{{ecran_1}}</span><span class="p5b-cat-item">{{ecran_2}}</span><span class="p5b-cat-item">{{ecran_3}}</span></p>
+      <div class="p5b-cat-row">
+        <div class="p5b-cat">
+          <p class="p5b-cat-titre"><i class="fa-solid fa-tv"></i> Écran</p>
+          <p class="p5b-cat-list"><span class="p5b-cat-item">{{ecran_1}}</span><span class="p5b-cat-item">{{ecran_2}}</span><span class="p5b-cat-item">{{ecran_3}}</span></p>
+        </div>
+        <div class="p5b-cat">
+          <p class="p5b-cat-titre"><i class="fa-solid fa-music"></i> Musique</p>
+          <p class="p5b-cat-list"><span class="p5b-cat-item">{{musique_1}}</span><span class="p5b-cat-item">{{musique_2}}</span><span class="p5b-cat-item">{{musique_3}}</span></p>
+        </div>
+        <div class="p5b-cat">
+          <p class="p5b-cat-titre"><i class="fa-solid fa-cookie"></i> Goûter</p>
+          <p class="p5b-cat-list"><span class="p5b-cat-item">{{gouter_1}}</span><span class="p5b-cat-item">{{gouter_2}}</span><span class="p5b-cat-item">{{gouter_3}}</span></p>
+        </div>
       </div>
-      <div class="p5b-cat">
-        <p class="p5b-cat-titre">Musique</p>
-        <p class="p5b-cat-list"><span class="p5b-cat-item">{{musique_1}}</span><span class="p5b-cat-item">{{musique_2}}</span><span class="p5b-cat-item">{{musique_3}}</span></p>
-      </div>
-      <div class="p5b-cat">
-        <p class="p5b-cat-titre">Goûter</p>
-        <p class="p5b-cat-list"><span class="p5b-cat-item">{{gouter_1}}</span><span class="p5b-cat-item">{{gouter_2}}</span><span class="p5b-cat-item">{{gouter_3}}</span></p>
-      </div>
-      <div class="p5b-cat">
-        <p class="p5b-cat-titre">Lecture</p>
-        <p class="p5b-cat-list"><span class="p5b-cat-item">{{lecture_1}}</span><span class="p5b-cat-item">{{lecture_2}}</span><span class="p5b-cat-item">{{lecture_3}}</span></p>
-      </div>
-      <div class="p5b-cat">
-        <p class="p5b-cat-titre">Jeux</p>
-        <p class="p5b-cat-list"><span class="p5b-cat-item">{{jeu_1}}</span><span class="p5b-cat-item">{{jeu_2}}</span><span class="p5b-cat-item">{{jeu_3}}</span></p>
-      </div>
-      <div class="p5b-cat">
-        <p class="p5b-cat-titre">Objets cultes</p>
-        <p class="p5b-cat-list"><span class="p5b-cat-item">{{objet_1_nostalgie}}</span><span class="p5b-cat-item">{{objet_2_nostalgie}}</span><span class="p5b-cat-item">{{objet_3_nostalgie}}</span></p>
+      <div class="p5b-cat-row">
+        <div class="p5b-cat">
+          <p class="p5b-cat-titre"><i class="fa-solid fa-book"></i> Lecture</p>
+          <p class="p5b-cat-list"><span class="p5b-cat-item">{{lecture_1}}</span><span class="p5b-cat-item">{{lecture_2}}</span><span class="p5b-cat-item">{{lecture_3}}</span></p>
+        </div>
+        <div class="p5b-cat">
+          <p class="p5b-cat-titre"><i class="fa-solid fa-gamepad"></i> Jeux</p>
+          <p class="p5b-cat-list"><span class="p5b-cat-item">{{jeu_1}}</span><span class="p5b-cat-item">{{jeu_2}}</span><span class="p5b-cat-item">{{jeu_3}}</span></p>
+        </div>
+        <div class="p5b-cat">
+          <p class="p5b-cat-titre"><i class="fa-solid fa-trophy"></i> Objets cultes</p>
+          <p class="p5b-cat-list"><span class="p5b-cat-item">{{objet_1_nostalgie}}</span><span class="p5b-cat-item">{{objet_2_nostalgie}}</span><span class="p5b-cat-item">{{objet_3_nostalgie}}</span></p>
+        </div>
       </div>
     </div>
     
