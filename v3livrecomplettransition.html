@@ -381,6 +381,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-event-annee { font-family: var(--serif); font-size: 12pt; font-weight: 700; color: var(--or); }
 .p6-event-titre { font-family: var(--serif); font-size: 10pt; font-weight: 600; color: var(--nuit); }
 .p6-event-cat { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; line-height: 1.2; }
+.p6-event-age { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--corail); font-weight: 600; }
 .p6-separator { margin: 6mm 0 2mm 0; padding: 2mm; background: var(--nuit); text-align: center; position: relative; flex-shrink: 0; }
 .p6-separator-text { font-family: var(--mono); font-size: 10pt; text-transform: uppercase; letter-spacing: 0.2em; color: var(--or); }
 .p6-separator::before, .p6-separator::after { content: '✦'; color: var(--or); margin: 0 2mm; font-size: 10pt; }
@@ -1043,27 +1044,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 06bis - PHOTO BÉBÉ (2/2) -->
-<div class="page p-photo">
-  <div class="page-content">
-    <div class="pp-header">
-      <p class="pp-ornament">✦ ✦ ✦</p>
-      <h1 class="pp-titre">...et encore</h1>
-      <div class="pp-sep"></div>
-    </div>
-    <div class="pp-zone">
-      <i class="fa-solid fa-camera pp-icone"></i>
-      <p class="pp-instruction">Un autre cliché ? Un portrait de famille ?<br>Cet espace t'appartient.</p>
-    </div>
-    <div class="pp-footer">
-    </div>
-  </div>
-  <div class="trans">
-    <p>Ce petit visage, c'était déjà toi. <strong>Découvre qui tu es devenu·e...</strong></p>
-    <span class="page-num">08</span>
-  </div>
-</div>
-
 <!-- PAGE 07 - ENCART CHAPITRE II -->
 <div class="page p-encart page-notrans">
   <div class="page-content">
@@ -1222,27 +1202,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-footer">
     </div>
-  </div>
-</div>
-
-<!-- PAGE 11bis - PHOTO ENFANCE (2/2) -->
-<div class="page p-photo">
-  <div class="page-content">
-    <div class="pp-header">
-      <p class="pp-ornament">✦ ✦ ✦</p>
-      <h1 class="pp-titre">...et encore</h1>
-      <div class="pp-sep"></div>
-    </div>
-    <div class="pp-zone">
-      <i class="fa-solid fa-images pp-icone"></i>
-      <p class="pp-instruction">Une sortie, un anniversaire, une bêtise...<br>Un autre souvenir en image.</p>
-    </div>
-    <div class="pp-footer">
-    </div>
-  </div>
-  <div class="trans">
-    <p>Ce visage a changé. <strong>Le monde aussi...</strong></p>
-    <span class="page-num">14</span>
   </div>
 </div>
 
@@ -1509,12 +1468,12 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     <div class="p6-timeline">
       <div class="p6-line"></div>
       <div class="p6-events">
-        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_1_year}}</p><p class="p6-event-titre">{{event_1_name}}</p><p class="p6-event-cat">{{event_1_desc}}</p></div><div class="p6-event-dot">{{event_1_emoji}}</div></div>
-        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_2_year}}</p><p class="p6-event-titre">{{event_2_name}}</p><p class="p6-event-cat">{{event_2_desc}}</p></div><div class="p6-event-dot">{{event_2_emoji}}</div></div>
-        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_3_year}}</p><p class="p6-event-titre">{{event_3_name}}</p><p class="p6-event-cat">{{event_3_desc}}</p></div><div class="p6-event-dot">{{event_3_emoji}}</div></div>
-        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_4_year}}</p><p class="p6-event-titre">{{event_4_name}}</p><p class="p6-event-cat">{{event_4_desc}}</p></div><div class="p6-event-dot">{{event_4_emoji}}</div></div>
-        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_5_year}}</p><p class="p6-event-titre">{{event_5_name}}</p><p class="p6-event-cat">{{event_5_desc}}</p></div><div class="p6-event-dot">{{event_5_emoji}}</div></div>
-        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_6_year}}</p><p class="p6-event-titre">{{event_6_name}}</p><p class="p6-event-cat">{{event_6_desc}}</p></div><div class="p6-event-dot">{{event_6_emoji}}</div></div>
+        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_1_year}} <span class="p6-event-age">— Tu avais {{age_event_1}} ans</span></p><p class="p6-event-titre">{{event_1_name}}</p><p class="p6-event-cat">{{event_1_desc}}</p></div><div class="p6-event-dot">{{event_1_emoji}}</div></div>
+        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_2_year}} <span class="p6-event-age">— Tu avais {{age_event_2}} ans</span></p><p class="p6-event-titre">{{event_2_name}}</p><p class="p6-event-cat">{{event_2_desc}}</p></div><div class="p6-event-dot">{{event_2_emoji}}</div></div>
+        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_3_year}} <span class="p6-event-age">— Tu avais {{age_event_3}} ans</span></p><p class="p6-event-titre">{{event_3_name}}</p><p class="p6-event-cat">{{event_3_desc}}</p></div><div class="p6-event-dot">{{event_3_emoji}}</div></div>
+        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_4_year}} <span class="p6-event-age">— Tu avais {{age_event_4}} ans</span></p><p class="p6-event-titre">{{event_4_name}}</p><p class="p6-event-cat">{{event_4_desc}}</p></div><div class="p6-event-dot">{{event_4_emoji}}</div></div>
+        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_5_year}} <span class="p6-event-age">— Tu avais {{age_event_5}} ans</span></p><p class="p6-event-titre">{{event_5_name}}</p><p class="p6-event-cat">{{event_5_desc}}</p></div><div class="p6-event-dot">{{event_5_emoji}}</div></div>
+        <div class="p6-event"><div class="p6-event-card"><p class="p6-event-annee">{{event_6_year}} <span class="p6-event-age">— Tu avais {{age_event_6}} ans</span></p><p class="p6-event-titre">{{event_6_name}}</p><p class="p6-event-cat">{{event_6_desc}}</p></div><div class="p6-event-dot">{{event_6_emoji}}</div></div>
       </div>
     </div>
     <div class="p6-separator"><span class="p6-separator-text">L'époque en bref</span></div>
@@ -1550,7 +1509,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   <div class="page-content">
     <div class="p10-header">
       <p class="p10-ornament">✦ ✦ ✦</p>
-      <h1 class="p10-titre">Les chiffres cachés de ton histoire</h1>
+      <h1 class="p10-titre">Ta vie en chiffres</h1>
       <div class="p10-sep"></div>
       <p class="p10-intro">Si quelqu'un te dit que tu n'as rien accompli, montre-lui cette page.<br>Ces chiffres prouvent le contraire : tu as déjà vécu des millions de petites victoires.</p>
     </div>
@@ -1561,12 +1520,12 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <div class="p10-temps-item"><p class="p10-temps-value">{{saisons_traversees}}</p><p class="p10-temps-label">Saisons</p></div>
       </div>
       <div class="p10-perso">
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-heart-pulse"></i></span><p class="p10-stat-value">{{battements_coeur}}</p><p class="p10-stat-label">Battements</p><p class="p10-stat-emotion">Ton cœur n'a jamais cessé</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-eye"></i></span><p class="p10-stat-value">{{CLIGNEMENTS_YEUX}}</p><p class="p10-stat-label">Clignements d'yeux</p><p class="p10-stat-emotion">Chaque clignement, un instant de vie</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-moon"></i></span><p class="p10-stat-value">{{HEURES_SOMMEIL}}</p><p class="p10-stat-label">Heures de sommeil</p><p class="p10-stat-emotion">Autant de rêves possibles</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-graduation-cap"></i></span><p class="p10-stat-value">{{HEURES_APPRENTISSAGE}}</p><p class="p10-stat-label">Heures d'apprentissage</p><p class="p10-stat-emotion">Et ce n'est pas fini</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-utensils"></i></span><p class="p10-stat-value">{{REPAS_PRIS}}</p><p class="p10-stat-label">Repas partagés</p><p class="p10-stat-emotion">Autant de moments ensemble</p></div>
-        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-wind"></i></span><p class="p10-stat-value">{{RESPIRATIONS}}</p><p class="p10-stat-label">Respirations</p><p class="p10-stat-emotion">Tu n'as jamais arrêté de vivre</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-heart-pulse"></i></span><p class="p10-stat-value">{{battements_coeur}}</p><p class="p10-stat-label">Battements</p><p class="p10-stat-emotion">{{emotion_battements}}</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-eye"></i></span><p class="p10-stat-value">{{CLIGNEMENTS_YEUX}}</p><p class="p10-stat-label">Clignements d'yeux</p><p class="p10-stat-emotion">{{emotion_clignements}}</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-moon"></i></span><p class="p10-stat-value">{{HEURES_SOMMEIL}}</p><p class="p10-stat-label">Heures de sommeil</p><p class="p10-stat-emotion">{{emotion_sommeil}}</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-graduation-cap"></i></span><p class="p10-stat-value">{{HEURES_APPRENTISSAGE}}</p><p class="p10-stat-label">Cellules renouvelées</p><p class="p10-stat-emotion">{{emotion_cellules}}</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-utensils"></i></span><p class="p10-stat-value">{{REPAS_PRIS}}</p><p class="p10-stat-label">Repas partagés</p><p class="p10-stat-emotion">{{emotion_repas}}</p></div>
+        <div class="p10-stat"><span class="p10-stat-icon"><i class="fa-solid fa-wind"></i></span><p class="p10-stat-value">{{RESPIRATIONS}}</p><p class="p10-stat-label">Respirations</p><p class="p10-stat-emotion">{{emotion_respirations}}</p></div>
       </div>
       <div class="p10-prix">
         <p class="p10-prix-titre"><i class="fa-solid fa-coins"></i> Évolution des prix</p>
@@ -1611,27 +1570,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-footer">
     </div>
-  </div>
-</div>
-
-<!-- PAGE 17bis - PHOTO AUJOURD'HUI (2/2) -->
-<div class="page p-photo">
-  <div class="page-content">
-    <div class="pp-header">
-      <p class="pp-ornament">✦ ✦ ✦</p>
-      <h1 class="pp-titre">...et encore</h1>
-      <div class="pp-sep"></div>
-    </div>
-    <div class="pp-zone">
-      <i class="fa-solid fa-heart pp-icone"></i>
-      <p class="pp-instruction">Un moment récent. Un sourire volé.<br>Toi, maintenant.</p>
-    </div>
-    <div class="pp-footer">
-    </div>
-  </div>
-  <div class="trans">
-    <p>Tout ce chemin parcouru. <strong>Et tu ne l'as pas fait seul·e...</strong></p>
-    <span class="page-num">21</span>
   </div>
 </div>
 
@@ -1765,27 +1703,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 22bis - PHOTO PROCHES (2/2) -->
-<div class="page p-photo">
-  <div class="page-content">
-    <div class="pp-header">
-      <p class="pp-ornament">✦ ✦ ✦</p>
-      <h1 class="pp-titre">...et encore</h1>
-      <div class="pp-sep"></div>
-    </div>
-    <div class="pp-zone">
-      <i class="fa-solid fa-heart pp-icone"></i>
-      <p class="pp-instruction">Ceux qui sont arrivés en chemin.<br>Les rencontres qui ont tout changé.</p>
-    </div>
-    <div class="pp-footer">
-    </div>
-  </div>
-  <div class="trans">
-    <p>Ces visages. Ces sourires. <strong>Laisse-les te le dire eux-mêmes...</strong></p>
-    <span class="page-num">27</span>
-  </div>
-</div>
-
 <!-- PAGE 23 - MOTS DES PROCHES / LIVRE D'OR (1/2) -->
 <div class="page p-livreor">
   <div class="page-content">
@@ -1798,30 +1715,10 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     <div class="pl-grid">
       <div class="pl-card"><div class="pl-prompt">Un souvenir avec toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Ce que j'aime chez toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">Un mot qui te définit...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Un souvenir avec toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Ce que je te souhaite...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">Ce que tu m'apportes au quotidien...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">Un moment où tu m'as fait rire...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-    </div>
-    <div class="pl-footer"><p class="pl-ornament2">✦ ✦ ✦</p></div>
-  </div>
-</div>
-
-<!-- PAGE 23bis - MOTS DES PROCHES / LIVRE D'OR (2/2) -->
-<div class="page p-livreor">
-  <div class="page-content">
-    <div class="pl-header">
-      <p class="pl-ornament">✦ ✦ ✦</p>
-      <h1 class="pl-titre">...la suite</h1>
-      <p class="pl-subtitle">Les mots comptent. Ceux-ci resteront.</p>
-      <div class="pl-sep"></div>
-    </div>
-    <div class="pl-grid">
-      <div class="pl-card"><div class="pl-prompt">Ce que j'aimerais te dire un jour...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Ce qui me rend fier/fière de toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">La première chose qui me vient quand je pense à toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Ce que tu ne sais pas (mais que tu devrais savoir)...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
-      <div class="pl-card"><div class="pl-prompt">Un conseil que je te donne pour la suite...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Libre...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
     </div>
     <div class="pl-footer"><p class="pl-ornament2">✦ ✦ ✦</p></div>
