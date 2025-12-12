@@ -309,9 +309,9 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5a-moment { display: grid; grid-template-columns: 1fr 1fr; gap: 0; flex: 1; min-height: 0; }
 .p5a-moment:nth-child(even) { direction: rtl; }
 .p5a-moment:nth-child(even) > * { direction: ltr; }
-.p5a-moment-img { position: relative; overflow: hidden; border: 1px solid var(--perle); }
-.p5a-moment-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: sepia(8%) contrast(98%); }
-.p5a-moment-img-caption { position: absolute; bottom: 0; left: 0; right: 0; font-family: var(--serif); font-size: 7.5pt; font-style: italic; color: var(--blanc); text-align: center; background: rgba(191,162,101,0.85); padding: 2mm; }
+.p5a-moment-img { position: relative; overflow: hidden; border: 1px solid var(--perle); display: flex; flex-direction: column; }
+.p5a-moment-img img { width: 100%; flex: 1; object-fit: cover; object-position: center top; filter: sepia(8%) contrast(98%); min-height: 0; }
+.p5a-moment-img-caption { font-family: var(--serif); font-size: 7.5pt; font-style: italic; color: var(--blanc); text-align: center; background: rgba(191,162,101,0.85); padding: 2mm; flex-shrink: 0; }
 .p5a-moment:nth-child(2) .p5a-moment-img-caption { background: rgba(217,136,128,0.85); }
 .p5a-moment:nth-child(3) .p5a-moment-img-caption { background: rgba(198,168,155,0.85); }
 .p5a-moment-content { padding: 4mm; display: flex; flex-direction: column; justify-content: center; }
