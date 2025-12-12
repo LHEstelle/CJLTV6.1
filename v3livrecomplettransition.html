@@ -254,17 +254,10 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p4-title { font-family: var(--serif); font-size: 18pt; font-weight: 600; color: var(--blanc); }
 .p4-subtitle { font-family: var(--mono); font-size: 7pt; color: var(--or); margin-top: 1mm; text-transform: uppercase; letter-spacing: 0.1em; }
 
-.p4-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr auto; gap: 2mm; min-height: 0; }
+.p4-grid { flex: 1; display: flex; flex-direction: column; gap: 2mm; min-height: 0; }
 
-.p4-card { background: var(--ivoire); padding: 2mm; display: flex; flex-direction: column; overflow: hidden; }
-.p4-image { flex: 1; min-height: 0; background: var(--perle); overflow: hidden; border-radius: 1mm; }
-.p4-image img { width: 100%; height: 100%; object-fit: cover; background: #f5f0e6; }
-.p4-image-caption { font-size: 7pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 1mm; flex-shrink: 0; }
-
-.p4-grande-image { grid-column: 1; grid-row: 1 / 3; }
-
-.p4-unified { grid-column: 2; grid-row: 1 / 4; display: flex; flex-direction: column; gap: 2mm; overflow: hidden; }
-.p4-section { background: var(--ivoire); padding: 2mm; display: flex; flex-direction: column; flex: 1; }
+.p4-categories { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; flex-shrink: 0; }
+.p4-section { background: var(--ivoire); padding: 2mm; display: flex; flex-direction: column; }
 .p4-section-titre { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 1mm; display: flex; align-items: center; gap: 2mm; flex-shrink: 0; }
 .p4-section-titre::before { content: '✦'; font-size: 5pt; }
 .p4-section-titre::after { content: ''; flex: 1; height: 1px; background: var(--or); margin-left: 2mm; }
@@ -274,18 +267,22 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p4-item i { color: var(--or); font-size: 7.5pt; margin-top: 0.3mm; flex-shrink: 0; }
 .p4-item-date { color: var(--or); font-weight: 600; font-size: 7.5pt; }
 
-.p4-chanson { grid-column: 3; grid-row: 1; background: var(--nuit); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3mm; }
+.p4-images { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2mm; min-height: 0; }
+
+.p4-card { background: var(--ivoire); padding: 2mm; display: flex; flex-direction: column; overflow: hidden; }
+.p4-image { flex: 1; min-height: 0; background: var(--perle); overflow: hidden; border-radius: 1mm; }
+.p4-image img { width: 100%; height: 100%; object-fit: cover; background: #f5f0e6; }
+.p4-image-caption { font-size: 7pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 1mm; flex-shrink: 0; }
+
+.p4-grande-image { grid-column: 1; grid-row: 1 / 3; }
+
+.p4-chanson { grid-column: 2; grid-row: 1; background: var(--nuit); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3mm; }
 .p4-chanson-label { font-family: var(--mono); font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.05em; color: var(--or); margin-bottom: 2mm; display: flex; align-items: center; gap: 1mm; }
 .p4-chanson-label i { font-size: 8pt; }
 .p4-chanson-titre { font-family: var(--serif); font-size: 11pt; font-weight: 600; color: var(--or); }
 .p4-chanson-artiste { font-size: 8pt; color: var(--perle); font-style: italic; margin-top: 1mm; }
 
-.p4-new-image { grid-column: 3; grid-row: 2; }
-
-.p4-img-row3-left { grid-column: 1; grid-row: 3; }
-.p4-img-row3-right { grid-column: 3; grid-row: 3; }
-
-.p4-footer { grid-column: 1 / 4; grid-row: 4; display: grid; grid-template-columns: 1fr 3fr; gap: 2mm; }
+.p4-footer { display: grid; grid-template-columns: 1fr 3fr; gap: 2mm; flex-shrink: 0; }
 .p4-celebrite { background: var(--or); padding: 2mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .p4-celebrite-label { font-family: var(--mono); font-size: 6pt; text-transform: uppercase; color: var(--nuit); opacity: 0.8; display: flex; align-items: center; gap: 1mm; }
 .p4-celebrite-label i { color: var(--nuit); }
@@ -1297,14 +1294,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     
     <div class="p4-grid">
-      <!-- GRANDE IMAGE GAUCHE -->
-      <div class="p4-card p4-grande-image">
-        <div class="p4-image"><img src="{{image_esprit_epoque}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_2}}</p>
-      </div>
-      
-      <!-- 4 SECTIONS COLONNE MILIEU -->
-      <div class="p4-unified">
+      <!-- 4 CATÉGORIES EN HAUT -->
+      <div class="p4-categories">
         <div class="p4-section">
           <p class="p4-section-titre"><i class="fa-solid fa-heart"></i> On adorait</p>
           <div class="p4-section-content">
@@ -1315,20 +1306,20 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           </div>
         </div>
         <div class="p4-section">
+          <p class="p4-section-titre"><i class="fa-solid fa-newspaper"></i> Dans l'actu</p>
+          <div class="p4-section-content">
+            <p class="p4-item"><span class="p4-item-date">{{annee_evnmt1_actu}}</span> — {{evenement_1}}</p>
+            <p class="p4-item"><span class="p4-item-date">{{annee_evnmt2_actu}}</span> — {{evenement_2}}</p>
+            <p class="p4-item"><i class="fa-solid fa-landmark"></i> Président : {{president_fr}}</p>
+          </div>
+        </div>
+        <div class="p4-section">
           <p class="p4-section-titre"><i class="fa-solid fa-candy-cane"></i> Cours de récré</p>
           <div class="p4-section-content">
             <p class="p4-item"><i class="fa-solid fa-cookie"></i> {{gouter_1_moodboard}}</p>
             <p class="p4-item"><i class="fa-solid fa-cookie-bite"></i> {{gouter_2_moodboard}}</p>
             <p class="p4-item"><i class="fa-solid fa-{{emoji_jeu_1}}"></i> {{jouet_1_moodboard}}</p>
             <p class="p4-item"><i class="fa-solid fa-{{emoji_jeu_2}}"></i> {{jouet_2_moodboard}}</p>
-          </div>
-        </div>
-        <div class="p4-section">
-          <p class="p4-section-titre"><i class="fa-solid fa-newspaper"></i> Dans l'actu</p>
-          <div class="p4-section-content">
-            <p class="p4-item"><span class="p4-item-date">{{annee_evnmt1_actu}}</span> — {{evenement_1}}</p>
-            <p class="p4-item"><span class="p4-item-date">{{annee_evnmt2_actu}}</span> — {{evenement_2}}</p>
-            <p class="p4-item"><i class="fa-solid fa-landmark"></i> Président : {{president_fr}}</p>
           </div>
         </div>
         <div class="p4-section">
@@ -1342,29 +1333,34 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         </div>
       </div>
       
-      <!-- HIT DE L'ANNÉE -->
-      <div class="p4-chanson">
-        <p class="p4-chanson-label"><i class="fa-solid fa-music"></i> Le hit de l'année</p>
-        <p class="p4-chanson-titre">{{chanson_artiste}}</p>
-        <p class="p4-chanson-artiste">{{chanson_titre}}</p>
-      </div>
-      
-      <!-- NOUVELLE IMAGE -->
-      <div class="p4-card p4-new-image">
-        <div class="p4-image"><img src="{{image_5_capsule}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_8}}</p>
-      </div>
-      
-      <!-- IMAGE ROW 3 GAUCHE -->
-      <div class="p4-card p4-img-row3-left">
-        <div class="p4-image"><img src="{{image_objet_epoque}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_1}}</p>
-      </div>
-      
-      <!-- IMAGE ROW 3 DROITE -->
-      <div class="p4-card p4-img-row3-right">
-        <div class="p4-image"><img src="{{image_interieur_epoque}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_4}}</p>
+      <!-- IMAGES -->
+      <div class="p4-images">
+        <!-- GRANDE IMAGE PORTRAIT -->
+        <div class="p4-card p4-grande-image">
+          <div class="p4-image"><img src="{{image_esprit_epoque}}" alt=""></div>
+          <p class="p4-image-caption">{{caption_2}}</p>
+        </div>
+        
+        <!-- HIT DE L'ANNÉE -->
+        <div class="p4-chanson">
+          <p class="p4-chanson-label"><i class="fa-solid fa-music"></i> Le hit de l'année</p>
+          <p class="p4-chanson-titre">{{chanson_artiste}}</p>
+          <p class="p4-chanson-artiste">{{chanson_titre}}</p>
+        </div>
+        
+        <!-- 3 IMAGES CARRÉES -->
+        <div class="p4-card">
+          <div class="p4-image"><img src="{{image_5_capsule}}" alt=""></div>
+          <p class="p4-image-caption">{{caption_8}}</p>
+        </div>
+        <div class="p4-card">
+          <div class="p4-image"><img src="{{image_objet_epoque}}" alt=""></div>
+          <p class="p4-image-caption">{{caption_1}}</p>
+        </div>
+        <div class="p4-card">
+          <div class="p4-image"><img src="{{image_interieur_epoque}}" alt=""></div>
+          <p class="p4-image-caption">{{caption_4}}</p>
+        </div>
       </div>
       
       <!-- FOOTER -->
