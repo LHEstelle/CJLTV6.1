@@ -263,16 +263,16 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 
 .p4-grande-image { grid-column: 1; grid-row: 1 / 3; }
 
-.p4-unified { grid-column: 2; grid-row: 1 / 3; background: var(--ivoire); display: flex; flex-direction: column; gap: 0; overflow: hidden; justify-content: space-between; padding: 3mm; }
-.p4-section { padding: 1.5mm 0; display: flex; flex-direction: column; }
-.p4-section-titre { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 1.5mm; display: flex; align-items: center; gap: 2mm; flex-shrink: 0; }
+.p4-unified { grid-column: 2; grid-row: 1 / 4; display: flex; flex-direction: column; gap: 2mm; overflow: hidden; }
+.p4-section { background: var(--ivoire); padding: 2mm; display: flex; flex-direction: column; flex: 1; }
+.p4-section-titre { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 1mm; display: flex; align-items: center; gap: 2mm; flex-shrink: 0; }
 .p4-section-titre::before { content: '✦'; font-size: 5pt; }
 .p4-section-titre::after { content: ''; flex: 1; height: 1px; background: var(--or); margin-left: 2mm; }
 .p4-section-titre i { font-size: 8pt; }
-.p4-section-content { display: flex; flex-direction: column; gap: 1mm; padding-left: 2mm; }
-.p4-item { font-size: 7.5pt; line-height: 1.4; color: var(--ardoise); display: flex; align-items: flex-start; gap: 1.5mm; }
-.p4-item i { color: var(--or); font-size: 7pt; margin-top: 0.3mm; flex-shrink: 0; }
-.p4-item-date { color: var(--or); font-weight: 600; font-size: 7pt; }
+.p4-section-content { display: flex; flex-direction: column; gap: 0.5mm; flex: 1; }
+.p4-item { font-size: 8pt; line-height: 1.25; color: var(--ardoise); display: flex; align-items: flex-start; gap: 1.5mm; }
+.p4-item i { color: var(--or); font-size: 7.5pt; margin-top: 0.3mm; flex-shrink: 0; }
+.p4-item-date { color: var(--or); font-weight: 600; font-size: 7.5pt; }
 
 .p4-chanson { grid-column: 3; grid-row: 1; background: var(--nuit); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 3mm; }
 .p4-chanson-label { font-family: var(--mono); font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.05em; color: var(--or); margin-bottom: 2mm; display: flex; align-items: center; gap: 1mm; }
@@ -282,9 +282,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 
 .p4-new-image { grid-column: 3; grid-row: 2; }
 
-.p4-bottom { grid-column: 1 / 4; grid-row: 3; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2mm; }
-.p4-bottom-card { background: var(--ivoire); padding: 2mm; display: flex; flex-direction: column; overflow: hidden; }
-.p4-bottom-card .p4-image { flex: 1; min-height: 0; }
+.p4-img-row3-left { grid-column: 1; grid-row: 3; }
+.p4-img-row3-right { grid-column: 3; grid-row: 3; }
 
 .p4-footer { grid-column: 1 / 4; grid-row: 4; display: grid; grid-template-columns: 1fr 3fr; gap: 2mm; }
 .p4-celebrite { background: var(--or); padding: 2mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
@@ -1304,7 +1303,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <p class="p4-image-caption">{{caption_2}}</p>
       </div>
       
-      <!-- BLOC UNIFIÉ 4 SECTIONS -->
+      <!-- 4 SECTIONS COLONNE MILIEU -->
       <div class="p4-unified">
         <div class="p4-section">
           <p class="p4-section-titre"><i class="fa-solid fa-heart"></i> On adorait</p>
@@ -1352,24 +1351,20 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       
       <!-- NOUVELLE IMAGE -->
       <div class="p4-card p4-new-image">
-        <div class="p4-image"><img src="{{image_4_capsule}}" alt=""></div>
-        <p class="p4-image-caption">{{caption_7}}</p>
+        <div class="p4-image"><img src="{{image_5_capsule}}" alt=""></div>
+        <p class="p4-image-caption">{{caption_8}}</p>
       </div>
       
-      <!-- 3 IMAGES EN BAS -->
-      <div class="p4-bottom">
-        <div class="p4-bottom-card">
-          <div class="p4-image"><img src="{{image_objet_epoque}}" alt=""></div>
-          <p class="p4-image-caption">{{caption_1}}</p>
-        </div>
-        <div class="p4-bottom-card">
-          <div class="p4-image"><img src="{{image_interieur_epoque}}" alt=""></div>
-          <p class="p4-image-caption">{{caption_4}}</p>
-        </div>
-        <div class="p4-bottom-card">
-          <div class="p4-image"><img src="{{image_5_capsule}}" alt=""></div>
-          <p class="p4-image-caption">{{caption_8}}</p>
-        </div>
+      <!-- IMAGE ROW 3 GAUCHE -->
+      <div class="p4-card p4-img-row3-left">
+        <div class="p4-image"><img src="{{image_objet_epoque}}" alt=""></div>
+        <p class="p4-image-caption">{{caption_1}}</p>
+      </div>
+      
+      <!-- IMAGE ROW 3 DROITE -->
+      <div class="p4-card p4-img-row3-right">
+        <div class="p4-image"><img src="{{image_interieur_epoque}}" alt=""></div>
+        <p class="p4-image-caption">{{caption_4}}</p>
       </div>
       
       <!-- FOOTER -->
