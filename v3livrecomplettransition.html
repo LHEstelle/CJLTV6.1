@@ -188,6 +188,57 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p1-footer-num { font-family: var(--serif); font-size: 15pt; font-weight: 700; color: var(--or); }
 
 /* ═══════════════════════════════════════════════════════════
+   P-ASTRO - EMPREINTE COSMIQUE
+   ═══════════════════════════════════════════════════════════ */
+.p-astro .page-content { background: var(--nuit); padding: 10mm; display: flex; flex-direction: column; position: relative; overflow: hidden; }
+.p-astro .page-content::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: radial-gradient(1.5px 1.5px at 5% 8%, rgba(255,255,255,0.5) 0%, transparent 100%), radial-gradient(1px 1px at 12% 25%, rgba(255,255,255,0.3) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 20% 12%, rgba(255,255,255,0.4) 0%, transparent 100%), radial-gradient(1px 1px at 28% 45%, rgba(255,255,255,0.2) 0%, transparent 100%), radial-gradient(2px 2px at 35% 5%, rgba(191,162,101,0.3) 0%, transparent 100%), radial-gradient(1px 1px at 42% 30%, rgba(255,255,255,0.3) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 55% 15%, rgba(255,255,255,0.4) 0%, transparent 100%), radial-gradient(1px 1px at 62% 38%, rgba(255,255,255,0.2) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 70% 8%, rgba(255,255,255,0.5) 0%, transparent 100%), radial-gradient(1px 1px at 78% 28%, rgba(255,255,255,0.3) 0%, transparent 100%), radial-gradient(2px 2px at 85% 18%, rgba(191,162,101,0.2) 0%, transparent 100%), radial-gradient(1px 1px at 92% 35%, rgba(255,255,255,0.3) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 8% 55%, rgba(255,255,255,0.4) 0%, transparent 100%), radial-gradient(1px 1px at 18% 70%, rgba(255,255,255,0.2) 0%, transparent 100%), radial-gradient(1px 1px at 25% 85%, rgba(255,255,255,0.3) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 38% 60%, rgba(255,255,255,0.4) 0%, transparent 100%), radial-gradient(2px 2px at 48% 78%, rgba(191,162,101,0.2) 0%, transparent 100%), radial-gradient(1px 1px at 58% 92%, rgba(255,255,255,0.3) 0%, transparent 100%), radial-gradient(1.5px 1.5px at 68% 65%, rgba(255,255,255,0.4) 0%, transparent 100%), radial-gradient(1px 1px at 75% 80%, rgba(255,255,255,0.2) 0%, transparent 100%); pointer-events: none; z-index: 0; }
+.p-astro-cadre { position: absolute; inset: 8mm; border: 2px solid var(--or); z-index: 1; }
+.p-astro-cadre::before { content: ''; position: absolute; inset: 3mm; border: 1px solid rgba(191,162,101,0.4); }
+.p-astro-inner { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; padding: 8mm 6mm 4mm; }
+.p-astro-header { text-align: center; margin-bottom: 2mm; }
+.p-astro-surtitle { font-family: var(--mono); font-size: 9pt; letter-spacing: 0.2em; color: var(--or); text-transform: uppercase; margin-bottom: 2mm; }
+.p-astro-titre { font-family: var(--serif); font-size: 24pt; font-weight: 600; color: var(--or); letter-spacing: 0.1em; }
+.p-astro-sep { width: 50mm; height: 1px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 3mm auto; }
+.p-astro-intro { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--perle); text-align: center; line-height: 1.5; opacity: 0.9; }
+.p-astro-container { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.p-astro-top { text-align: center; margin-bottom: 2mm; }
+.p-astro-middle { display: flex; align-items: center; justify-content: center; width: 100%; }
+.p-astro-side { display: flex; flex-direction: column; justify-content: space-between; height: 80mm; width: 44mm; }
+.p-astro-side.left { text-align: left; padding-right: 2mm; }
+.p-astro-side.right { text-align: right; padding-left: 2mm; }
+.p-astro-circle-zone { position: relative; width: 80mm; height: 80mm; flex-shrink: 0; }
+.p-astro-lines { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; }
+.p-astro-halo { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70mm; height: 70mm; border-radius: 50%; background: radial-gradient(circle, rgba(191,162,101,0.12) 0%, rgba(191,162,101,0.04) 50%, transparent 70%); }
+.p-astro-outer-ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68mm; height: 68mm; border: 1px dashed rgba(191,162,101,0.5); border-radius: 50%; z-index: 2; }
+.p-astro-dot { position: absolute; width: 3mm; height: 3mm; background: var(--or); border-radius: 50%; z-index: 4; box-shadow: 0 0 6px rgba(191,162,101,0.6); }
+.p-astro-dot.top { top: calc(50% - 34mm - 1.5mm); left: calc(50% - 1.5mm); }
+.p-astro-dot.top-right { top: calc(50% - 24mm); right: calc(50% - 34mm - 1.5mm); }
+.p-astro-dot.bottom-right { bottom: calc(50% - 24mm); right: calc(50% - 34mm - 1.5mm); }
+.p-astro-dot.bottom { bottom: calc(50% - 34mm - 1.5mm); left: calc(50% - 1.5mm); }
+.p-astro-dot.bottom-left { bottom: calc(50% - 24mm); left: calc(50% - 34mm - 1.5mm); }
+.p-astro-dot.top-left { top: calc(50% - 24mm); left: calc(50% - 34mm - 1.5mm); }
+.p-astro-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50mm; height: 50mm; border: 2px solid var(--or); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle, #243044 0%, var(--nuit) 100%); z-index: 3; box-shadow: 0 0 20px rgba(191,162,101,0.2), inset 0 0 30px rgba(0,0,0,0.3); }
+.p-astro-symbol { font-size: 28pt; margin-bottom: 1mm; text-shadow: 0 0 10px rgba(191,162,101,0.5); }
+.p-astro-signe { font-family: var(--serif); font-size: 17pt; color: var(--or); letter-spacing: 0.1em; }
+.p-astro-details { display: flex; gap: 4mm; margin-top: 3mm; font-size: 9pt; color: var(--perle); }
+.p-astro-detail { text-align: center; }
+.p-astro-detail-label { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5mm; color: var(--or); opacity: 0.8; }
+.p-astro-item { margin: 2mm 0; }
+.p-astro-item-icon { font-size: 18pt; margin-bottom: 1mm; text-shadow: 0 0 8px rgba(191,162,101,0.4); color: var(--or); }
+.p-astro-item-label { font-family: var(--mono); font-size: 9pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--or); margin-bottom: 0.5mm; }
+.p-astro-item-explain { font-family: var(--serif); font-size: 8pt; color: rgba(232,213,163,0.6); margin-bottom: 1mm; font-style: italic; }
+.p-astro-item-value { font-family: var(--serif); font-size: 14pt; color: var(--blanc); font-weight: 600; }
+.p-astro-item-desc { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--perle); margin-top: 1mm; line-height: 1.3; opacity: 0.9; }
+.p-astro-bottom { text-align: center; margin-top: 2mm; }
+.p-astro-trio { display: flex; justify-content: center; gap: 15mm; padding: 5mm 12mm; border: 1px solid var(--or); margin-top: 4mm; background: linear-gradient(135deg, rgba(36,48,68,0.9) 0%, rgba(26,35,50,0.9) 100%); box-shadow: 0 0 15px rgba(191,162,101,0.15); }
+.p-astro-trio-item { text-align: center; }
+.p-astro-trio-icon { font-size: 20pt; margin-bottom: 2mm; }
+.p-astro-trio-label { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 1mm; }
+.p-astro-trio-value { font-family: var(--serif); font-size: 13pt; color: var(--blanc); font-weight: 600; }
+.p-astro-footer { text-align: center; padding-top: 3mm; }
+.p-astro-footer-txt { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--or); }
+
+/* ═══════════════════════════════════════════════════════════
    P2 - CARTE IDENTITÉ
    ═══════════════════════════════════════════════════════════ */
 .p2 .page-content { background: linear-gradient(180deg, #1B2838 0%, #243447 50%, #1B2838 100%); padding: 13mm; display: flex; flex-direction: column; }
@@ -1026,8 +1077,153 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
   </div>
   <div class="trans">
-    <p>C'était ça, le décor. <strong>Le rideau était prêt à se lever...</strong></p>
+    <p>C'était ça, le monde ce jour-là. <strong>Mais que disaient les astres ?</strong></p>
     <span class="page-num">06</span>
+  </div>
+</div>
+
+<!-- PAGE 06bis - EMPREINTE COSMIQUE -->
+<div class="page p-astro">
+  <div class="page-content">
+    <div class="p-astro-cadre"></div>
+    <div class="p-astro-inner">
+      <div class="p-astro-header">
+        <p class="p-astro-surtitle">Les astres ce jour-là</p>
+        <h1 class="p-astro-titre">Ton Empreinte Cosmique</h1>
+        <div class="p-astro-sep"></div>
+        <p class="p-astro-intro">Ta date de naissance a inscrit en toi une constellation de symboles.<br>Voici ce que le ciel, les traditions anciennes et les nombres révèlent sur toi.</p>
+      </div>
+      
+      <div class="p-astro-container">
+        <!-- Haut : Astrologie Chinoise -->
+        <div class="p-astro-top p-astro-item">
+          <div class="p-astro-item-icon">{{astro_chinois_emoji}}</div>
+          <div class="p-astro-item-label">Astrologie Chinoise</div>
+          <div class="p-astro-item-explain">L'horoscope millénaire venu d'Orient</div>
+          <div class="p-astro-item-value">{{astro_chinois_signe}}</div>
+          <div class="p-astro-item-desc">{{astro_chinois_desc}}</div>
+        </div>
+        
+        <!-- Zone milieu -->
+        <div class="p-astro-middle">
+          <!-- Gauche -->
+          <div class="p-astro-side left">
+            <div class="p-astro-item">
+              <div class="p-astro-item-icon">✨</div>
+              <div class="p-astro-item-label">Nombre du Jour</div>
+              <div class="p-astro-item-explain">La vibration secrète des chiffres</div>
+              <div class="p-astro-item-value">{{nombre_jour}}</div>
+              <div class="p-astro-item-desc">{{nombre_jour_desc}}</div>
+            </div>
+            <div class="p-astro-item">
+              <div class="p-astro-item-icon">🌳</div>
+              <div class="p-astro-item-label">Arbre Celtique</div>
+              <div class="p-astro-item-explain">La sagesse des druides anciens</div>
+              <div class="p-astro-item-value">{{arbre_celtique}}</div>
+              <div class="p-astro-item-desc">{{arbre_celtique_desc}}</div>
+            </div>
+          </div>
+          
+          <!-- Cercle central -->
+          <div class="p-astro-circle-zone">
+            <svg class="p-astro-lines" viewBox="0 0 80 80">
+              <line x1="40" y1="22.5" x2="40" y2="7.5" stroke="url(#astro-grad)" stroke-width="0.4"/>
+              <line x1="52" y1="27" x2="66" y2="17" stroke="url(#astro-grad)" stroke-width="0.4"/>
+              <line x1="52" y1="53" x2="66" y2="63" stroke="url(#astro-grad)" stroke-width="0.4"/>
+              <line x1="40" y1="57.5" x2="40" y2="72.5" stroke="url(#astro-grad)" stroke-width="0.4"/>
+              <line x1="28" y1="53" x2="14" y2="63" stroke="url(#astro-grad)" stroke-width="0.4"/>
+              <line x1="28" y1="27" x2="14" y2="17" stroke="url(#astro-grad)" stroke-width="0.4"/>
+              <defs>
+                <linearGradient id="astro-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style="stop-color:#BFA265;stop-opacity:0.7"/>
+                  <stop offset="100%" style="stop-color:#e8d5a3;stop-opacity:0.3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="p-astro-halo"></div>
+            <div class="p-astro-outer-ring"></div>
+            <div class="p-astro-dot top"></div>
+            <div class="p-astro-dot top-right"></div>
+            <div class="p-astro-dot bottom-right"></div>
+            <div class="p-astro-dot bottom"></div>
+            <div class="p-astro-dot bottom-left"></div>
+            <div class="p-astro-dot top-left"></div>
+            <div class="p-astro-center">
+              <div class="p-astro-symbol">{{signe_symbole}}</div>
+              <div class="p-astro-signe">{{signe_zodiaque}}</div>
+              <div class="p-astro-details">
+                <div class="p-astro-detail">
+                  <span class="p-astro-detail-label">Élément</span>
+                  {{signe_element}}
+                </div>
+                <div class="p-astro-detail">
+                  <span class="p-astro-detail-label">Planète</span>
+                  {{signe_planete}}
+                </div>
+                <div class="p-astro-detail">
+                  <span class="p-astro-detail-label">Couleur</span>
+                  {{signe_couleur}}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Droite -->
+          <div class="p-astro-side right">
+            <div class="p-astro-item">
+              <div class="p-astro-item-icon">{{chemin_vie_numero}}</div>
+              <div class="p-astro-item-label">Chemin de Vie</div>
+              <div class="p-astro-item-explain">Ta mission selon la numérologie</div>
+              <div class="p-astro-item-value">{{chemin_vie_nom}}</div>
+              <div class="p-astro-item-desc">{{chemin_vie_desc}}</div>
+            </div>
+            <div class="p-astro-item">
+              <div class="p-astro-item-icon">{{jour_semaine_emoji}}</div>
+              <div class="p-astro-item-label">Jour de Naissance</div>
+              <div class="p-astro-item-explain">L'énergie du jour qui t'a vu naître</div>
+              <div class="p-astro-item-value">{{jour_semaine}}</div>
+              <div class="p-astro-item-desc">{{jour_semaine_desc}}</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bas : Prénom -->
+        <div class="p-astro-bottom p-astro-item">
+          <div class="p-astro-item-icon">✦</div>
+          <div class="p-astro-item-label">Ton Prénom</div>
+          <div class="p-astro-item-explain">L'héritage caché dans ton nom</div>
+          <div class="p-astro-item-value">{{PRENOM}}</div>
+          <div class="p-astro-item-desc">{{prenom_signification}}</div>
+        </div>
+        
+        <!-- Trio -->
+        <div class="p-astro-trio">
+          <div class="p-astro-trio-item">
+            <div class="p-astro-trio-icon">💎</div>
+            <div class="p-astro-trio-label">Pierre de naissance</div>
+            <div class="p-astro-trio-value">{{pierre_naissance}}</div>
+          </div>
+          <div class="p-astro-trio-item">
+            <div class="p-astro-trio-icon">🌼</div>
+            <div class="p-astro-trio-label">Fleur du mois</div>
+            <div class="p-astro-trio-value">{{fleur_mois}}</div>
+          </div>
+          <div class="p-astro-trio-item">
+            <div class="p-astro-trio-icon">{{saison_emoji}}</div>
+            <div class="p-astro-trio-label">Saison</div>
+            <div class="p-astro-trio-value">{{saison_naissance}}</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="p-astro-footer">
+        <p class="p-astro-footer-txt">Les étoiles t'ont donné une direction. Le reste, c'est toi qui l'écris.</p>
+      </div>
+    </div>
+  </div>
+  <div class="trans">
+    <p>Le ciel avait parlé. <strong>Le rideau était prêt à se lever...</strong></p>
+    <span class="page-num">07</span>
   </div>
 </div>
 
