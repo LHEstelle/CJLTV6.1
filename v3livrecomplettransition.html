@@ -93,6 +93,28 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .pe-ligne { width: 80mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 8mm auto; }
 .pe-phrase { font-family: var(--serif); font-size: 16pt; font-style: italic; color: var(--perle); line-height: 1.9; max-width: 140mm; }
 
+/* Page QR Code Playlist */
+.p-qr .page-content { background: linear-gradient(135deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; padding: 13mm; }
+.p-qr-cadre { position: absolute; inset: 10mm; border: 2px solid var(--or); }
+.p-qr-cadre::before { content: ''; position: absolute; inset: 4mm; border: 1px solid rgba(191,162,101,0.3); }
+.p-qr-content { text-align: center; max-width: 150mm; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+.p-qr-ornament { color: var(--or); font-size: 14pt; letter-spacing: 0.8em; margin-bottom: 6mm; }
+.p-qr-surtitle { font-family: var(--mono); font-size: 10pt; letter-spacing: 0.2em; color: var(--or); text-transform: uppercase; margin-bottom: 3mm; }
+.p-qr-titre { font-family: var(--serif); font-size: 26pt; font-weight: 600; color: var(--blanc); margin-bottom: 2mm; letter-spacing: 0.05em; }
+.p-qr-annee { font-family: var(--serif); font-size: 42pt; font-weight: 700; color: var(--or); margin-bottom: 6mm; }
+.p-qr-sep { width: 60mm; height: 1px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 4mm 0; }
+.p-qr-code { width: 50mm; height: 50mm; background: var(--blanc); padding: 3mm; margin: 6mm 0; border-radius: 2mm; }
+.p-qr-code img { width: 100%; height: 100%; object-fit: contain; }
+.p-qr-instruction { font-family: var(--serif); font-size: 11pt; font-style: italic; color: var(--perle); margin-top: 4mm; line-height: 1.6; }
+.p-qr-icon { font-size: 20pt; color: var(--or); margin-bottom: 4mm; }
+.p-qr-ornament2 { color: var(--or); font-size: 14pt; letter-spacing: 0.8em; margin-top: 8mm; }
+
+/* Page Transition Pleine */
+.trans-page { background: linear-gradient(135deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); }
+.trans-full { height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20mm; }
+.trans-full p { font-family: var(--serif); font-size: 14pt; font-style: italic; color: var(--perle); line-height: 1.8; max-width: 140mm; }
+.trans-full strong { color: var(--or); font-weight: 600; }
+
 .p-photo .page-content { background: var(--ivoire); display: flex; flex-direction: column; padding: 13mm; }
 .pp-header { text-align: center; margin-bottom: 6mm; }
 .pp-ornament { color: var(--or); font-size: 14pt; letter-spacing: 0.5em; }
@@ -1534,7 +1556,31 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 14 - SOUVENIRS D'ENFANCE (JOURNÉE) -->
+<!-- PAGE 14 - QR CODE PLAYLIST -->
+<div class="page p-qr">
+  <div class="page-content">
+    <div class="p-qr-cadre"></div>
+    <div class="p-qr-content">
+      <p class="p-qr-ornament">✦ ✦ ✦</p>
+      <p class="p-qr-surtitle">La bande-son de tes {{age}} ans</p>
+      <h1 class="p-qr-titre">Playlist</h1>
+      <p class="p-qr-annee">{{annee_12_ans}}</p>
+      <div class="p-qr-sep"></div>
+      <div class="p-qr-icon"><i class="fa-solid fa-headphones"></i></div>
+      <div class="p-qr-code">
+        <img src="{{qr_playlist}}" alt="QR Code Playlist">
+      </div>
+      <p class="p-qr-instruction">Scanne ce code pour écouter<br>les tubes de ton enfance</p>
+      <p class="p-qr-ornament2">✦ ✦ ✦</p>
+    </div>
+  </div>
+  <div class="trans">
+    <p>Ces mélodies résonnaient dans l'air. <strong>Et si tu replongeais dans une journée de cette époque ?</strong></p>
+    <span class="page-num">17</span>
+  </div>
+</div>
+
+<!-- PAGE 15 - SOUVENIRS D'ENFANCE (JOURNÉE) -->
 <div class="page p5a">
   <div class="page-content">
     <div class="p5a-header">
