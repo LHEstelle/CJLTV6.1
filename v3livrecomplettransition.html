@@ -823,21 +823,21 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 /* ═══════════════════════════════════════════════════════════
    P-LIVREOR
    ═══════════════════════════════════════════════════════════ */
-.p-livreor .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%); padding: 13mm; display: flex; flex-direction: column; }
-.pl-header { text-align: center; margin-bottom: 4mm; flex-shrink: 0; }
-.pl-ornament, .pl-ornament2 { color: var(--or); font-size: 12pt; letter-spacing: 0.5em; }
-.pl-titre { font-family: var(--serif); font-size: 22pt; font-weight: 600; color: var(--nuit); margin: 3mm 0; }
-.pl-subtitle { font-size: 9pt; font-style: italic; color: var(--ardoise); max-width: 150mm; margin: 0 auto; line-height: 1.5; }
-.pl-sep { width: 45mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 3mm auto; }
-.pl-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 1fr); gap: 4mm; min-height: 0; }
-.pl-card { background: var(--blanc); padding: 5mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; position: relative; border-left: 3px solid var(--or); overflow: hidden; }
-.pl-card::before { content: '"'; position: absolute; top: 1mm; right: 3mm; font-family: var(--serif); font-size: 32pt; color: var(--or); opacity: 0.2; line-height: 1; }
-.pl-zone-texte { flex: 1; min-height: 20mm; }
-.pl-prompt { font-family: var(--serif); font-size: 8pt; font-style: italic; color: #b0b0b0; margin-bottom: 2mm; }
-.pl-signature { display: flex; align-items: center; gap: 1mm; padding-top: 3mm; border-top: 1px solid var(--perle); margin-top: auto; flex-shrink: 0; }
-.pl-signature-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; }
-.pl-signature-ligne { flex: 1; border-bottom: 1px solid var(--ardoise); margin-top: 3mm; }
-.pl-footer { text-align: center; margin-top: 3mm; flex-shrink: 0; }
+.p-livreor .page-content { background: linear-gradient(135deg, var(--creme) 0%, var(--ivoire) 100%); padding: 10mm 13mm; display: flex; flex-direction: column; }
+.pl-header { text-align: center; margin-bottom: 3mm; flex-shrink: 0; }
+.pl-ornament, .pl-ornament2 { color: var(--or); font-size: 10pt; letter-spacing: 0.5em; }
+.pl-titre { font-family: var(--serif); font-size: 20pt; font-weight: 600; color: var(--nuit); margin: 2mm 0; }
+.pl-subtitle { font-size: 8pt; font-style: italic; color: var(--ardoise); max-width: 150mm; margin: 0 auto; line-height: 1.4; }
+.pl-sep { width: 45mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 2mm auto; }
+.pl-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4, 1fr); gap: 3mm; min-height: 0; }
+.pl-card { background: var(--blanc); padding: 3mm 4mm; border-radius: 2mm; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; position: relative; border-left: 3px solid var(--or); overflow: hidden; }
+.pl-card::before { content: '"'; position: absolute; top: 0mm; right: 2mm; font-family: var(--serif); font-size: 24pt; color: var(--or); opacity: 0.2; line-height: 1; }
+.pl-zone-texte { flex: 1; min-height: 12mm; }
+.pl-prompt { font-family: var(--serif); font-size: 7.5pt; font-style: italic; color: #b0b0b0; margin-bottom: 1mm; }
+.pl-signature { display: flex; align-items: center; gap: 1mm; padding-top: 2mm; border-top: 1px solid var(--perle); margin-top: auto; flex-shrink: 0; }
+.pl-signature-label { font-family: var(--mono); font-size: 6pt; color: var(--taupe); text-transform: uppercase; }
+.pl-signature-ligne { flex: 1; border-bottom: 1px solid var(--ardoise); margin-top: 2mm; }
+.pl-footer { text-align: center; margin-top: 2mm; flex-shrink: 0; }
 
 /* ═══════════════════════════════════════════════════════════
    PAGE DE GARDE
@@ -985,26 +985,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
 </div>
 
-<!-- PAGE 03 - ENCART CHAPITRE I -->
-<div class="page p-encart page-notrans">
-  <div class="page-content">
-    <div class="pe-cadre"></div>
-    <span class="pe-coin pe-coin-tl">❧</span>
-    <span class="pe-coin pe-coin-tr">☙</span>
-    <span class="pe-coin pe-coin-bl">☙</span>
-    <span class="pe-coin pe-coin-br">❧</span>
-    <div class="pe-content">
-      <p class="pe-ornament">✦ ✦ ✦</p>
-      <p class="pe-numero">I</p>
-      <h1 class="pe-titre">Le jour où tu es né·e</h1>
-      <div class="pe-ligne"></div>
-      <p class="pe-phrase">Ce matin-là, le monde tournait déjà.<br>Mais il ne savait pas encore qu'il t'attendait.</p>
-      <p class="pe-ornament2">✦ ✦ ✦</p>
-    </div>
-  </div>
-</div>
-
-<!-- PAGE 04 - COUVERTURE CE JOUR-LÀ -->
+<!-- PAGE 03 - COUVERTURE CE JOUR-LÀ -->
 <div class="page p0">
   <div class="page-content">
     <div class="p0-cadre"></div>
@@ -1031,7 +1012,26 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
   </div>
   <div class="trans">
     <p>Tu entends ? C'est le son de ce jour-là. <strong>Maintenant, regarde-le.</strong></p>
-    <span class="page-num">05</span>
+    <span class="page-num">04</span>
+  </div>
+</div>
+
+<!-- PAGE 04 - ENCART CHAPITRE I -->
+<div class="page p-encart page-notrans">
+  <div class="page-content">
+    <div class="pe-cadre"></div>
+    <span class="pe-coin pe-coin-tl">❧</span>
+    <span class="pe-coin pe-coin-tr">☙</span>
+    <span class="pe-coin pe-coin-bl">☙</span>
+    <span class="pe-coin pe-coin-br">❧</span>
+    <div class="pe-content">
+      <p class="pe-ornament">✦ ✦ ✦</p>
+      <p class="pe-numero">I</p>
+      <h1 class="pe-titre">Le jour où tu es né·e</h1>
+      <div class="pe-ligne"></div>
+      <p class="pe-phrase">Ce matin-là, le monde tournait déjà.<br>Mais il ne savait pas encore qu'il t'attendait.</p>
+      <p class="pe-ornament2">✦ ✦ ✦</p>
+    </div>
   </div>
 </div>
 
@@ -1562,7 +1562,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     <div class="p-qr-cadre"></div>
     <div class="p-qr-content">
       <p class="p-qr-ornament">✦ ✦ ✦</p>
-      <p class="p-qr-surtitle">La bande-son de tes {{age}} ans</p>
+      <p class="p-qr-surtitle">Un portail vers tes {{age}} ans</p>
       <h1 class="p-qr-titre">Playlist</h1>
       <p class="p-qr-annee">{{annee_12_ans}}</p>
       <div class="p-qr-sep"></div>
@@ -1570,12 +1570,12 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="p-qr-code">
         <img src="{{qr_playlist}}" alt="QR Code Playlist">
       </div>
-      <p class="p-qr-instruction">Scanne ce code pour écouter<br>les tubes de ton enfance</p>
+      <p class="p-qr-instruction">Scanne ce code et laisse la musique<br>te ramener à cette époque</p>
       <p class="p-qr-ornament2">✦ ✦ ✦</p>
     </div>
   </div>
   <div class="trans">
-    <p>Ces mélodies résonnaient dans l'air. <strong>Et si tu replongeais dans une journée de cette époque ?</strong></p>
+    <p>Ces mélodies flottaient dans l'air de tes {{age}} ans. <strong>Replonge dans une journée de cette époque...</strong></p>
     <span class="page-num">17</span>
   </div>
 </div>
@@ -1655,7 +1655,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <h1 class="p5b-titre">Ton Époque</h1>
       <div class="p5b-sep"></div>
     </div>
-    <p class="p5b-intro">Ce que tu regardais, écoutais, dévorais... Le quotidien de tes {{age}} ans.</p>
+    <p class="p5b-intro">Les grandes tendances qui façonnaient le quotidien de tes {{age}} ans. Tu n'as peut-être pas tout vu, tout écouté — mais c'était dans l'air du temps.</p>
     
     <!-- CATÉGORIES -->
     <div class="p5b-categories">
@@ -1988,6 +1988,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="pl-card"><div class="pl-prompt">Ce qui me rend fier/fière de toi...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Ce que tu ne sais pas (mais que tu devrais savoir)...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
       <div class="pl-card"><div class="pl-prompt">Libre...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
+      <div class="pl-card"><div class="pl-prompt">Libre...</div><div class="pl-zone-texte"></div><div class="pl-signature"><span class="pl-signature-label">Signé :</span><span class="pl-signature-ligne"></span></div></div>
     </div>
     <div class="pl-footer"><p class="pl-ornament2">✦ ✦ ✦</p></div>
   </div>
@@ -2109,7 +2110,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="p-malle-transmit-card">
         <div class="p-malle-transmit-header">
           <span class="p-malle-transmit-icon">❓</span>
-          <span class="p-malle-transmit-prompt">Une question à poser à mes parents ou grands-parents...</span>
+          <span class="p-malle-transmit-prompt">Une question à poser à mes proches...</span>
         </div>
         <div class="p-malle-transmit-lines"><div class="p-malle-transmit-line"></div><div class="p-malle-transmit-line"></div></div>
       </div>
