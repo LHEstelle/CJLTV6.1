@@ -69,11 +69,11 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .ps-ornament, .ps-ornament2 { color: var(--or); font-size: 14pt; letter-spacing: 0.5em; }
 .ps-titre { font-family: var(--serif); font-size: 34pt; font-weight: 700; color: var(--nuit); margin: 4mm 0; letter-spacing: 0.1em; }
 .ps-sep { width: 60mm; height: 2px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 0 auto; }
-.ps-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 15mm; }
-.ps-chapitre { margin-bottom: 10mm; padding: 6mm; border-left: 4px solid var(--or); background: linear-gradient(90deg, rgba(191,162,101,0.05) 0%, transparent 100%); }
-.ps-chapitre-num { font-family: var(--serif); font-size: 14pt; font-weight: 700; color: var(--or); margin-bottom: 2mm; }
-.ps-chapitre-titre { font-family: var(--serif); font-size: 17pt; font-weight: 600; color: var(--nuit); margin-bottom: 2mm; }
-.ps-chapitre-desc { font-size: 11pt; font-style: italic; color: var(--ardoise); }
+.ps-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 20mm; }
+.ps-chapitre { margin-bottom: 8mm; padding: 4mm 0; text-align: center; }
+.ps-chapitre-num { font-family: var(--serif); font-size: 28pt; font-weight: 700; color: var(--or); margin-bottom: 1mm; }
+.ps-chapitre-titre { font-family: var(--serif); font-size: 15pt; font-weight: 600; color: var(--nuit); margin-bottom: 2mm; letter-spacing: 0.05em; }
+.ps-chapitre-desc { font-size: 10pt; font-style: italic; color: var(--ardoise); }
 .ps-footer { text-align: center; margin-top: 8mm; }
 
 .p-encart .page-content { background: linear-gradient(135deg, #0D1B2A 0%, #1B2838 50%, #0D1B2A 100%); display: flex; align-items: center; justify-content: center; position: relative; padding: 13mm; }
@@ -175,7 +175,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 }
 .p1-bandeau { background: var(--nuit); padding: 2mm 5mm; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 8pt; color: var(--perle); flex-shrink: 0; }
 .p1-masthead { text-align: center; padding: 3mm 6mm 2mm; border-bottom: 3px double var(--nuit); background: url('https://www.transparenttextures.com/patterns/concrete-wall.png'), #FFFFFF; flex-shrink: 0; }
-.p1-titre { font-family: var(--serif); font-size: 44pt; font-weight: 900; color: var(--nuit); line-height: 1; }
+.p1-titre { font-family: var(--serif); font-size: 32pt; font-weight: 900; color: var(--nuit); line-height: 1; }
 .p1-date-main { font-family: var(--serif); font-size: 13pt; font-weight: 600; color: var(--or); margin-top: 2mm; letter-spacing: 0.12em; }
 .p1-content { flex: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; padding: 3mm; gap: 2mm; min-height: 0; overflow: hidden; }
 .p1-left { display: flex; flex-direction: column; gap: 3mm; min-height: 0; }
@@ -222,9 +222,9 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p-astro-sep { width: 50mm; height: 1px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 3mm auto; }
 .p-astro-intro { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--perle); text-align: center; line-height: 1.5; }
 .p-astro-container { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.p-astro-top { text-align: center; margin-bottom: 2mm; }
+.p-astro-top { text-align: left; margin-bottom: 2mm; padding-left: 15mm; }
 .p-astro-middle { display: flex; align-items: center; justify-content: center; width: 100%; }
-.p-astro-side { display: flex; flex-direction: column; justify-content: flex-start; gap: 6mm; height: 85mm; width: 48mm; padding-top: 8mm; }
+.p-astro-side { display: flex; flex-direction: column; justify-content: flex-start; gap: 6mm; height: 85mm; width: 48mm; padding-top: 2mm; }
 .p-astro-side.left { text-align: left; padding-right: 0mm; }
 .p-astro-side.right { text-align: right; padding-left: 0mm; }
 .p-astro-circle-zone { position: relative; width: 85mm; height: 85mm; flex-shrink: 0; }
@@ -245,7 +245,11 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p-astro-detail { text-align: center; }
 .p-astro-detail-label { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5mm; color: var(--or); }
 .p-astro-item { margin: 2mm 0; }
-.p-astro-item-icon { font-size: 18pt; margin-bottom: 1mm; color: var(--or); }
+.p-astro-item-header { display: flex; align-items: center; gap: 2mm; margin-bottom: 0.5mm; }
+.p-astro-top .p-astro-item-header { justify-content: flex-start; }
+.p-astro-bottom .p-astro-item-header { justify-content: flex-end; }
+.p-astro-side.right .p-astro-item-header { justify-content: flex-end; }
+.p-astro-item-icon { font-size: 14pt; color: var(--or); }
 .p-astro-item-icon-num { font-size: 18pt; margin-bottom: 1mm; color: var(--blanc); font-family: var(--serif); font-weight: 700; }
 .p-astro-item-label { font-family: var(--mono); font-size: 9pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--or); margin-bottom: 0.5mm; }
 .p-astro-item-explain { font-family: var(--serif); font-size: 8pt; color: var(--or); margin-bottom: 1mm; font-style: italic; }
@@ -253,11 +257,11 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p-astro-item-value-row { font-family: var(--serif); font-size: 13pt; font-weight: 600; color: var(--blanc); display: flex; align-items: baseline; gap: 2mm; justify-content: flex-end; }
 .p-astro-chemin-num { font-size: 16pt; color: var(--blanc); font-weight: 700; }
 .p-astro-item-desc { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--blanc); margin-top: 1mm; line-height: 1.4; }
-.p-astro-top .p-astro-item-desc { max-width: 60%; margin: 1mm auto 0; font-style: italic; }
+.p-astro-top .p-astro-item-desc { max-width: 60%; margin: 1mm 0 0 0; font-style: italic; }
 .p-astro-side .p-astro-item-desc { max-width: 56mm; }
-.p-astro-bottom { text-align: center; margin-top: 2mm; }
+.p-astro-bottom { text-align: right; margin-top: 2mm; padding-right: 15mm; }
 .p-astro-bottom .p-astro-item-icon { margin-bottom: 0mm; font-size: 14pt; }
-.p-astro-bottom .p-astro-item-desc { max-width: 90mm; margin: 1mm auto 0; font-style: italic; }
+.p-astro-bottom .p-astro-item-desc { max-width: 90mm; margin: 1mm 0 0 auto; font-style: italic; }
 .p-astro-trio { display: flex; justify-content: center; gap: 12mm; padding: 2mm 10mm; border: 1px solid var(--or); margin-top: 6mm; background: linear-gradient(135deg, rgba(36,48,68,0.9) 0%, rgba(26,35,50,0.9) 100%); }
 .p-astro-trio-item { display: flex; flex-direction: column; align-items: center; gap: 1mm; min-width: 40mm; }
 .p-astro-trio-icon { font-size: 16pt; color: var(--or); }
@@ -441,7 +445,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-ornament { color: var(--or); font-size: 12pt; letter-spacing: 0.3em; }
 .p6-titre { font-family: var(--serif); font-size: 24pt; font-weight: 700; color: var(--nuit); margin: 1mm 0; }
 .p6-subtitle { font-family: var(--serif); font-size: 10pt; font-style: italic; color: var(--taupe); text-align: center; max-width: 85%; margin: 0 auto; line-height: 1.5; }
-.p6-timeline { flex: 1; position: relative; display: flex; flex-direction: column; justify-content: flex-start; padding: 0 4mm; min-height: 0; }
+.p6-timeline { flex: 1; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 0 4mm; min-height: 0; }
 .p6-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--or) 0%, var(--corail) 20%, var(--rose) 40%, var(--bronze) 60%, var(--nuit) 80%, var(--or) 100%); transform: translateX(-50%); border-radius: 2px; }
 .p6-events { display: flex; flex-direction: column; gap: 0; position: relative; margin-top: 1mm; min-height: 0; }
 .p6-event { display: grid; grid-template-columns: 1fr 12mm 1fr; align-items: center; gap: 1mm; }
@@ -473,6 +477,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p6-section-culture { border-top: 3px solid var(--or); }
 .p6-section-sport { border-top: 3px solid var(--corail); }
 .p6-section-titre { font-family: var(--mono); font-size: 10pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--or); margin-bottom: 2mm; flex-shrink: 0; }
+.p6-section-sub { text-transform: none; font-style: italic; letter-spacing: 0.02em; opacity: 0.8; }
 .p6-section-sport .p6-section-titre { color: var(--corail); }
 .p6-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5mm; flex: 1; align-content: center; }
 .p6-section-item { padding: 1.5mm; background: var(--creme); border-radius: 1mm; min-height: 18mm; display: flex; flex-direction: column; justify-content: center; }
@@ -1046,7 +1051,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <span>{{ville}}</span>
     </div>
     <div class="p1-masthead">
-      <h1 class="p1-titre">Ce Jour-Là</h1>
+      <h1 class="p1-titre">Le {{jour_mois_journal}} à travers le temps</h1>
       <p class="p1-date-main">{{DATE_COMPLETE_FR}}</p>
     </div>
     <div class="p1-content">
@@ -1076,10 +1081,10 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       </div>
       <div class="p1-right">
         <div class="p1-bloc">
-          <p class="p1-bloc-titre">📜 Ce jour-là, autrefois...</p>
-          <p class="p1-histoire-item">📰 <strong>Évènement :</strong> {{evenement_court}}</p>
-          <p class="p1-histoire-item">⭐ <strong>Naissance :</strong> {{celebrite_nee}}</p>
-          <p class="p1-histoire-item">🕊️ <strong>Disparition :</strong> {{celebrite_decedee}}</p>
+          <p class="p1-bloc-titre">📜 Ce jour dans l'Histoire</p>
+          <p class="p1-histoire-item">★ {{jour_mois_journal}} {{evenement_court}}</p>
+          <p class="p1-histoire-item">★ {{jour_mois_journal}} {{celebrite_nee}}</p>
+          <p class="p1-histoire-item">★ {{jour_mois_journal}} {{celebrite_decedee}}</p>
         </div>
         <div class="p1-bloc">
           <p class="p1-bloc-titre">🎬 À l'affiche</p>
@@ -1126,8 +1131,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="p-astro-container">
         <!-- Haut : Astrologie Chinoise -->
         <div class="p-astro-top p-astro-item">
-          <div class="p-astro-item-icon"><i class="fa-solid {{astro_chinois_emoji}}"></i></div>
-          <div class="p-astro-item-label">Astrologie Chinoise</div>
+          <div class="p-astro-item-header"><div class="p-astro-item-icon"><i class="fa-solid {{astro_chinois_emoji}}"></i></div><div class="p-astro-item-label">Astrologie Chinoise</div></div>
           <div class="p-astro-item-explain">L'horoscope millénaire venu d'Orient</div>
           <div class="p-astro-item-value">{{astro_chinois_signe}}</div>
           <div class="p-astro-item-desc">{{astro_chinois_desc}}</div>
@@ -1138,15 +1142,13 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <!-- Gauche -->
           <div class="p-astro-side left">
             <div class="p-astro-item">
-              <div class="p-astro-item-icon"><i class="fa-solid fa-sparkles"></i></div>
-              <div class="p-astro-item-label">Nombre du Jour</div>
+              <div class="p-astro-item-header"><div class="p-astro-item-icon"><i class="fa-solid fa-sparkles"></i></div><div class="p-astro-item-label">Nombre du Jour</div></div>
               <div class="p-astro-item-explain">La vibration secrète des chiffres</div>
               <div class="p-astro-item-value">{{nombre_jour}}</div>
               <div class="p-astro-item-desc">{{nombre_jour_desc}}</div>
             </div>
             <div class="p-astro-item">
-              <div class="p-astro-item-icon"><i class="fa-solid fa-tree"></i></div>
-              <div class="p-astro-item-label">Arbre Celtique</div>
+              <div class="p-astro-item-header"><div class="p-astro-item-icon"><i class="fa-solid fa-tree"></i></div><div class="p-astro-item-label">Arbre Celtique</div></div>
               <div class="p-astro-item-explain">La sagesse des druides anciens</div>
               <div class="p-astro-item-value">{{arbre_celtique}}</div>
               <div class="p-astro-item-desc">{{arbre_celtique_desc}}</div>
@@ -1206,8 +1208,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
               <div class="p-astro-item-desc">{{chemin_vie_desc}}</div>
             </div>
             <div class="p-astro-item">
-              <div class="p-astro-item-icon"><i class="fa-solid {{jour_semaine_emoji}}"></i></div>
-              <div class="p-astro-item-label">Jour de Naissance</div>
+              <div class="p-astro-item-header"><div class="p-astro-item-icon"><i class="fa-solid {{jour_semaine_emoji}}"></i></div><div class="p-astro-item-label">Jour de Naissance</div></div>
               <div class="p-astro-item-explain">L'énergie du jour qui t'a vu naître</div>
               <div class="p-astro-item-value">{{jour_semaine}}</div>
               <div class="p-astro-item-desc">{{jour_semaine_desc}}</div>
@@ -1217,8 +1218,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         
         <!-- Bas : Prénom -->
         <div class="p-astro-bottom p-astro-item">
-          <div class="p-astro-item-icon p-astro-icon-white"><i class="fa-solid fa-star"></i></div>
-          <div class="p-astro-item-label">Ton Prénom</div>
+          <div class="p-astro-item-header"><div class="p-astro-item-icon p-astro-icon-white"><i class="fa-solid fa-star"></i></div><div class="p-astro-item-label">Ton Prénom</div></div>
           <div class="p-astro-item-explain">L'héritage caché dans ton nom</div>
           <div class="p-astro-item-value">{{prenom_cosmique}}</div>
           <div class="p-astro-item-desc">{{prenom_signification}}</div>
@@ -1265,7 +1265,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-baby pp-icone"></i>
-      <p class="pp-instruction">Tes premiers jours. Ton premier visage.<br>Colle ici une photo de bébé.</p>
+      <p class="pp-instruction">Tes premiers jours. Ton premier visage.<br>Cet espace t'attend — glisse ici une ou plusieurs photos, seul·e ou avec celui qui t'offre ce livre.</p>
     </div>
     <div class="pp-footer">
     </div>
@@ -1426,7 +1426,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-child pp-icone"></i>
-      <p class="pp-instruction">Une photo d'enfance.<br>Celle où on te reconnaît déjà.</p>
+      <p class="pp-instruction">Une photo d'enfance. Celle où on te reconnaît déjà.<br>Cet espace t'attend — glisse ici une ou plusieurs photos, seul·e ou avec celui qui t'offre ce livre.</p>
     </div>
     <div class="pp-footer">
     </div>
@@ -1456,7 +1456,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 <div class="page p4">
   <div class="page-content">
     <div class="p4-header">
-      <span class="p4-annee">{{annee_moodboard}}</span>
+      <span class="p4-annee">{{annee}}</span>
       <div class="p4-title-zone">
         <h1 class="p4-title">Capsule Temporelle</h1>
         <p class="p4-subtitle">L'année où tout a commencé</p>
@@ -1637,10 +1637,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         </div>
       </div>
     </div>
-    
-    <div class="p5a-footer">
-      <p class="p5a-footer-txt">C'était ça, grandir à ton époque. Mais tu te souviens de quoi, toi ?</p>
-    </div>
   </div>
   <div class="trans">
     <p>C'était ça, grandir à ton époque. <strong>Mais toi, tu te souviens de quoi ?</strong></p>
@@ -1748,7 +1744,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     <div class="p6-separator"><span class="p6-separator-text">L'époque en bref</span></div>
     <div class="p6-bottom">
       <div class="p6-section p6-section-culture">
-        <p class="p6-section-titre">🎬 Culture</p>
+        <p class="p6-section-titre">🎬 Culture <span class="p6-section-sub">— Ils ont marqué ton temps...</span></p>
         <div class="p6-section-grid">
           <div class="p6-section-item"><p class="p6-section-item-label">{{culture_1_icon}} {{culture_1_name}}</p><p class="p6-section-item-value">{{culture_1_desc}}</p></div>
           <div class="p6-section-item"><p class="p6-section-item-label">{{culture_2_icon}} {{culture_2_name}}</p><p class="p6-section-item-value">{{culture_2_desc}}</p></div>
@@ -1757,7 +1753,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         </div>
       </div>
       <div class="p6-section p6-section-sport">
-        <p class="p6-section-titre">⚽ Sport</p>
+        <p class="p6-section-titre">⚽ Sport <span class="p6-section-sub">— Tu as vibré pour...</span></p>
         <div class="p6-section-grid">
           <div class="p6-section-item"><p class="p6-section-item-label">{{sport_1_emoji}} {{sport_1_name}}</p><p class="p6-section-item-value">{{sport_1_desc}}</p></div>
           <div class="p6-section-item"><p class="p6-section-item-label">{{sport_2_emoji}} {{sport_2_name}}</p><p class="p6-section-item-value">{{sport_2_desc}}</p></div>
@@ -1835,7 +1831,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-user pp-icone"></i>
-      <p class="pp-instruction">Une photo où tu te trouves beau / belle.<br>Celle-là.</p>
+      <p class="pp-instruction">Une photo où tu te trouves beau / belle. Celle-là.<br>Cet espace t'attend — glisse ici une ou plusieurs photos, seul·e ou avec celui qui t'offre ce livre.</p>
     </div>
     <div class="pp-footer">
     </div>
@@ -1965,7 +1961,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     </div>
     <div class="pp-zone">
       <i class="fa-solid fa-users pp-icone"></i>
-      <p class="pp-instruction">Ceux qui étaient là depuis le début.<br>Famille, amis, complices de toujours.</p>
+      <p class="pp-instruction">Ceux qui étaient là depuis le début. Famille, amis, complices de toujours.<br>Cet espace t'attend — glisse ici une ou plusieurs photos, seul·e ou avec celui qui t'offre ce livre.</p>
     </div>
     <div class="pp-footer">
     </div>
