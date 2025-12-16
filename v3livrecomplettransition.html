@@ -429,6 +429,11 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5b-exp-label::before, .p5b-exp-label::after { content: ''; width: 20mm; height: 1px; background: var(--taupe); }
 .p5b-tags { display: flex; flex-wrap: wrap; gap: 2mm; justify-content: center; }
 .p5b-tag { background: var(--nuit); padding: 2mm 4mm; font-size: 8pt; color: var(--blanc); }
+.p5b-disparu { text-align: center; margin-bottom: 4mm; padding: 3mm 6mm; border-left: 2px solid var(--or); border-right: 2px solid var(--or); }
+.p5b-disparu-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 2mm; }
+.p5b-disparu-label::before { content: '« '; }
+.p5b-disparu-label::after { content: ' »'; }
+.p5b-disparu-text { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--ardoise); line-height: 1.5; }
 .p5b-ettoi { background: var(--blanc); border: 1px solid var(--perle); padding: 4mm; flex: 1; display: flex; flex-direction: column; }
 .p5b-ettoi-header { display: flex; align-items: center; justify-content: center; gap: 3mm; margin-bottom: 3mm; }
 .p5b-ettoi-header::before, .p5b-ettoi-header::after { content: ''; width: 25mm; height: 1px; background: var(--or); }
@@ -1211,7 +1216,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <!-- Droite -->
           <div class="p-astro-side right">
             <div class="p-astro-item">
-              <div class="p-astro-item-label">Chemin de Vie</div>
+              <div class="p-astro-item-header"><div class="p-astro-item-icon"><i class="fa-solid fa-route"></i></div><div class="p-astro-item-label">Chemin de Vie</div></div>
               <div class="p-astro-item-explain">Ta mission selon la numérologie</div>
               <div class="p-astro-item-value-row"><span class="p-astro-chemin-num">{{chemin_vie_numero}}</span> <span>{{chemin_vie_nom}}</span></div>
               <div class="p-astro-item-desc">{{chemin_vie_desc}}</div>
@@ -1706,6 +1711,12 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       </div>
     </div>
     
+    <!-- CE QUI A DISPARU -->
+    <div class="p5b-disparu">
+      <span class="p5b-disparu-label">Tu te souviens ?</span>
+      <p class="p5b-disparu-text">{{disparu_texte}}</p>
+    </div>
+    
     <!-- ET TOI -->
     <div class="p5b-ettoi">
       <div class="p5b-ettoi-header">
@@ -1714,12 +1725,12 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
       <div class="p5b-ettoi-grid">
         <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ton meilleur copain/copine</span><span class="p5b-ettoi-ligne"></span></div>
         <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ton amoureux/se secret(e)</span><span class="p5b-ettoi-ligne"></span></div>
-        <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ton doudou s'appelait</span><span class="p5b-ettoi-ligne"></span></div>
+        <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ton émission/film/dessin animé préféré</span><span class="p5b-ettoi-ligne"></span></div>
         <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Le plat que tu adorais/détestais</span><span class="p5b-ettoi-ligne"></span></div>
-        <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ta cachette secrète</span><span class="p5b-ettoi-ligne"></span></div>
+        <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Le jeu auquel tu jouais tout le temps</span><span class="p5b-ettoi-ligne"></span></div>
         <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ta bêtise mémorable</span><span class="p5b-ettoi-ligne"></span></div>
         <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ton rêve de métier</span><span class="p5b-ettoi-ligne"></span></div>
-        <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ce dont tu étais fier(e)</span><span class="p5b-ettoi-ligne"></span></div>
+        <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ta chanson en boucle</span><span class="p5b-ettoi-ligne"></span></div>
         <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ton activité (sport, dessin...)</span><span class="p5b-ettoi-ligne"></span></div>
         <div class="p5b-ettoi-item"><span class="p5b-ettoi-label">Ton surnom</span><span class="p5b-ettoi-ligne"></span></div>
       </div>
