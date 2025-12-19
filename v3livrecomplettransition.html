@@ -349,13 +349,15 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p4-section-content { display: flex; flex-direction: column; gap: 0.5mm; flex: 1; }
 .p4-item { font-size: 8pt; line-height: 1.25; color: var(--ardoise); display: flex; align-items: flex-start; gap: 1.5mm; }
 .p4-item i { color: var(--or); font-size: 7.5pt; margin-top: 0.3mm; flex-shrink: 0; }
-.p4-item-date { color: var(--or); font-weight: 600; font-size: 7.5pt; }
+.p4-item-date { color: var(--or); font-weight: 600; font-size: 7.5pt; display: block; margin-bottom: 0.5mm; }
+.p4-event { margin-bottom: 2mm; }
+.p4-event .p4-item { margin: 0; }
 
 .p4-images { flex: 1; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 2mm; min-height: 0; }
 
 .p4-card { background: var(--ivoire); padding: 2mm; display: flex; flex-direction: column; overflow: hidden; }
 .p4-image { flex: 1; min-height: 0; background: var(--perle); overflow: hidden; border-radius: 1mm; }
-.p4-image img { width: 100%; height: 100%; object-fit: cover; background: #f5f0e6; }
+.p4-image img { width: 100%; height: 100%; object-fit: contain; background: #f5f0e6; }
 .p4-image-caption { font-size: 7pt; font-style: italic; color: var(--taupe); text-align: center; margin-top: 1mm; flex-shrink: 0; }
 
 .p4-grande-image { grid-column: 1; grid-row: 1 / 3; }
@@ -532,7 +534,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p8-sep, .p8-sep2 { width: 50mm; height: 1px; background: linear-gradient(90deg, transparent, var(--or), transparent); margin: 0 auto; }
 .p8-sep { margin-bottom: 8mm; }
 .p8-sep2 { margin: 8mm auto 5mm; }
-.p8-texte { font-family: var(--serif); font-size: 15pt; font-style: italic; line-height: 2.2; color: var(--nuit); }
+.p8-texte { font-family: var(--serif); font-size: 14pt; font-style: italic; line-height: 2.2; color: var(--nuit); }
 .p8-signature { font-family: var(--mono); font-size: 9pt; text-transform: uppercase; letter-spacing: 0.25em; color: var(--taupe); }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1482,7 +1484,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <p class="p4-section-titre"><i class="fa-solid fa-heart"></i> On adorait</p>
           <div class="p4-section-content">
             <p class="p4-item"><i class="fa-solid fa-clapperboard"></i> {{film}}</p>
-            <p class="p4-item">📡 {{serie_tv_moodboard}}</p>
+            <p class="p4-item"><i class="fa-solid fa-tower-broadcast"></i> {{serie_tv_moodboard}}</p>
             <p class="p4-item"><i class="fa-solid fa-book"></i> {{livre_moodboard}}</p>
             <p class="p4-item"><i class="fa-solid fa-book-open"></i> {{bd}}</p>
           </div>
@@ -1490,8 +1492,8 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
         <div class="p4-section">
           <p class="p4-section-titre"><i class="fa-solid fa-newspaper"></i> Dans l'actu</p>
           <div class="p4-section-content">
-            <p class="p4-item"><span class="p4-item-date">{{annee_evnmt1_actu}}</span> — {{evenement_1}}</p>
-            <p class="p4-item"><span class="p4-item-date">{{annee_evnmt2_actu}}</span> — {{evenement_2}}</p>
+            <div class="p4-event"><span class="p4-item-date">{{annee_evnmt1_actu}}</span><p class="p4-item">{{evenement_1}}</p></div>
+            <div class="p4-event"><span class="p4-item-date">{{annee_evnmt2_actu}}</span><p class="p4-item">{{evenement_2}}</p></div>
             <p class="p4-item"><i class="fa-solid fa-landmark"></i> Président : {{president_fr}}</p>
           </div>
         </div>
