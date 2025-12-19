@@ -431,8 +431,6 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
 .p5b-tag { background: var(--nuit); padding: 2mm 4mm; font-size: 8pt; color: var(--blanc); }
 .p5b-disparu { text-align: center; margin-bottom: 4mm; padding: 3mm 6mm; border-left: 2px solid var(--or); border-right: 2px solid var(--or); }
 .p5b-disparu-label { font-family: var(--mono); font-size: 7pt; color: var(--taupe); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 2mm; }
-.p5b-disparu-label::before { content: '« '; }
-.p5b-disparu-label::after { content: ' »'; }
 .p5b-disparu-text { font-family: var(--serif); font-size: 9pt; font-style: italic; color: var(--ardoise); line-height: 1.5; }
 .p5b-ettoi { background: var(--blanc); border: 1px solid var(--perle); padding: 4mm; flex: 1; display: flex; flex-direction: column; }
 .p5b-ettoi-header { display: flex; align-items: center; justify-content: center; gap: 3mm; margin-bottom: 3mm; }
@@ -1484,7 +1482,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
           <p class="p4-section-titre"><i class="fa-solid fa-heart"></i> On adorait</p>
           <div class="p4-section-content">
             <p class="p4-item"><i class="fa-solid fa-clapperboard"></i> {{film}}</p>
-            <p class="p4-item"><i class="fa-solid fa-masks-theater"></i> {{serie_tv_moodboard}}</p>
+            <p class="p4-item">📡 {{serie_tv_moodboard}}</p>
             <p class="p4-item"><i class="fa-solid fa-book"></i> {{livre_moodboard}}</p>
             <p class="p4-item"><i class="fa-solid fa-book-open"></i> {{bd}}</p>
           </div>
@@ -1713,7 +1711,7 @@ body { font-family: var(--sans); font-size: 14pt; line-height: 1.5; color: var(-
     
     <!-- CE QUI A DISPARU -->
     <div class="p5b-disparu">
-      <span class="p5b-disparu-label">Tu te souviens ?</span>
+      <span class="p5b-disparu-label">On vivait comme ça...</span>
       <p class="p5b-disparu-text">{{disparu_texte}}</p>
     </div>
     
